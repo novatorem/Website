@@ -51,7 +51,7 @@ function search(query){
 	case "-h":
 		query=query.substr(3);
 		window.location = 
-			"https://www.reddit.com/search" + 
+			"http://alpha.wallhaven.cc/search?q=" + 
 			query.concat("&categories=111&purity=100&resolutions=1920x1080&sorting=relevance&order=desc");
 			break;
 
@@ -61,6 +61,7 @@ function search(query){
                 "http://boards.4chan.org/" +
                 query.replaceChars(" ", "%20");
             break;
+
         default:
             window.location="https://www.google.com/#q=" +
                 query.replaceChars(" ", "+");
