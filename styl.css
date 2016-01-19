@@ -16,10 +16,6 @@ body {
         right:13%;
     }
 
-    @font-face{
-    	font-family: "Dense ";
-    	src: url('Dense-Regular.otf'),
-    }
 
    
     html *
@@ -474,4 +470,21 @@ a:visited,
 }
 #search .sub li a:hover{
 	color:#fff;
+}
+
+
+
+
+
+@font-face {
+    font-family: 'denseregular';
+    src: url('dense-regular-webfont.eot');
+    src: url('dense-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('dense-regular-webfont.woff2') format('woff2'),
+         url('dense-regular-webfont.woff') format('woff'),
+         url('dense-regular-webfont.ttf') format('truetype'),
+         url('dense-regular-webfont.svg#denseregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
 }
