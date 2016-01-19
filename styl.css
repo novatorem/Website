@@ -20,7 +20,7 @@ body {
    
     html *
     {
-       font-family: Dense !important;
+       font-family: 'denseregular' !important;
        letter-spacing: 1px !important;
     }
 
