@@ -16,6 +16,11 @@ body {
         right:13%;
     }
 
+    @font-face{
+    	font-family: "Dense ";
+    	src: url('Dense-Regular.otf'),
+    }
+
    
     html *
     {
