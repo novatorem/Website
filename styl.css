@@ -11,7 +11,7 @@ body {
     #mainframe {
         text-align: center;
         position: absolute;
-        top: 6%;
+        top: 30%;
         left: 9%;
         right:13%;
     }
@@ -172,11 +172,11 @@ body {
 
 div.flame
 {
-	position: absolute;
-    top: 70%;
+    position: absolute;
+    top: 27%;
     left: 50%;
     margin-top: -150px;
-  	margin-left: -100px;
+    margin-left: -100px;
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -235,7 +235,8 @@ table {
 	min-width:700px;
 	max-width:1000px;
 	width:60%;
-	padding-left: 880px;	margin:41% auto 0 auto;
+	padding-left: 880px;
+	margin:20% auto 0 auto;
 }
 a:link,
 a:visited,
