@@ -170,79 +170,6 @@ body {
     #footer a:active { text-decoration:none; font-weight:normal; color:#101010; }
     #footer a:focus { text-decoration:none; font-weight:normal; color:#101010; }
 
-@font-face {
-	font-family: 'Montecarlo';
-	src: url('Fonts/montecarlo.ttf');
-}
-
-@font-face {
-  font-family: 'Consola';
-  src: url('Fonts/consola.ttf');
-}
-
-html 
-{
-	font-family: 'Consola';
-}
-
-body 
-{ 
-  background: rgba(71,78,93,1)url('Images/Background.jpg') no-repeat bottom fixed;
-  background-size: cover; 
-  color: #000;
-  font-family: 'Consola';
-}
-
-div.container-fluid
-{
-	margin-top: 50px;
-	padding: 40px;
-}
-
-footer
-{
-   position: fixed;
-   left:0px;
-   bottom:0px;
-   height:100px;
-   width:100%;
-   text-align: left;
-}
-
-.panel > .panel-heading 
-{
-    background-image: none;
-    background-color: rgba(71,78,93,0.5);
-    color: white;
-
-}
-
-.panel > .panel-footer 
-{
-    background-image: none;
-    color: black;
-
-}
-
-.list-group > .list-group-item 
-{
-    background-image: none;
-    background-color: rgba(71,78,93,0.5);
-    color: white;
-}
-
-.form-group > .get
-{
-    background-color: rgba(71,78,93,0.5);
-    color: white;
-}
-
-form > .form-control
-{
-    background-color: rgba(71,78,93,0.5);
-    color: white;
-}
-
 div.flame
 {
 	position: absolute;
@@ -250,35 +177,6 @@ div.flame
     left: 50%;
     margin-top: -150px;
   	margin-left: -100px;
-}
-
-#clock {
-	text-align: left;
-	font-size: 56;
-	margin: 0;
-	padding-top: 144;
-  font-family: 'Montecarlo';
-}
-
-.bg-1 
-{
-    background-color: #1abc9c; /* Green */
-    color: #ffffff;
-}
-.bg-2 
-{
-    background-color: rgba(71,78,93,0.0); /* Transluscent Dark Blue */
-    color: #ffffff;
-}
-.bg-3 
-{
-    background-color: #ffffff; /* White */
-    color: #555555;
-}
-.bg-4 
-{
-    background-color: #003300; /* Dark Green */
-    color: #555555;
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
