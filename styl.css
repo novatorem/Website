@@ -50,13 +50,13 @@ body {
         padding-bottom:5px;
         color:#fff;
         text-align: left;
-        background-position:top 0px left 3px;;
+        background-position:top 0px left 1px;;
         background-repeat:no-repeat;
         font-family: 'Droid Sans', sans-serif;
         font-size:120%;
         display: inline-block;
         vertical-align: top;
-        border-left: 2px solid #5C6854;
+        border-left: 3px solid #5C6854;
     }
 
     #searchbox{
@@ -116,13 +116,13 @@ body {
         padding-bottom:5px;
         color:#000;
         text-align: left;
-        background-position:top 0px right 3px;;
+        background-position:top 0px right 1px;;
         background-repeat:no-repeat;
         font-family: 'Droid Sans', sans-serif;
         font-size:100%;
         display: inline-block;
         vertical-align: top;
-	border-right: 2px solid #5C6854;
+	border-right: 3px solid #5C6854;
     }
  
     ul {
