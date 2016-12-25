@@ -1,30 +1,27 @@
 body {
         background-color:#050505;
         color:ffffff;
-    }	
-   
+     }
+
         #stripe {
         width:100%;
         vertical-align:middle;
         }
- 
+
     #mainframe {
         text-align: center;
         position: absolute;
         top: 30%;
         left: 9%;
         right:13%;
-    }
-
+        }
 
     div.anythingSlider {
         position: relative;
         padding: 110px 350px 28px 45px;
-    }
+        }
 
-   
-    html *
-    {
+    html * {
        font-family: 'denseregular' !important;
        letter-spacing: 0px !important;
     }
@@ -37,7 +34,7 @@ body {
         padding: 10px;
         font-size:30%;
     }
-   
+
     #linkblock {
         height:130px;
         margin-left:25px;
@@ -59,25 +56,6 @@ body {
         border-left: 3px solid #5C6854;
     }
 
-    #searchbox{
-
-	width: 600;
-	height: 30px;
-	border: none;
-	border-radius: 2px;
-	text-align: center;
-	background-color: white;
-	color: #D3D3D3;
-	font-size: 20px;
-	font-family: 'Stellar Regular';
-	display: block;
-	margin: auto;
-	margin-top: 10px;
-        color : 000;
-        text-shadow : 0 0 0 #fff;
-    }
-
-   /*this is for mouse over */
     .link {
   width:0px;
   text-indent:-100px;
@@ -92,7 +70,6 @@ body {
   transition: all .5s ease;
   }
 
-
    #linkblock:hover .link {
   visibility: visible;
   opacity: 1;
@@ -101,11 +78,10 @@ body {
    #linkblock:hover .linkdent {
   text-indent:0px;
   }
-/*end of mouse over code*/
 
     #catblock {
-        width: 302;  
-	height: 130px;
+        width: 302;
+	      height: 130px;
         margin-left:25px;
         margin-right:30px;
         margin-top:15%;
@@ -122,48 +98,20 @@ body {
         font-size:100%;
         display: inline-block;
         vertical-align: top;
-	border-right: 3px solid #5C6854;
+	      border-right: 3px solid #5C6854;
     }
- 
+
     ul {
         list-style-type: none;
         padding-left: 0;
     }
-    #searchblock {
-	width: 800;  
-	height: 140px;
-	margin-top: 260px; 
-	color:#000;
-        background-position:top 0px right 0px;;
-        background-repeat:no-repeat;
-        font-family: 'Droid Sans', sans-serif;
-        font-size:100%;
-        padding-right:300px;
-        display: inline-block;
-  	visibility: visible;
- 	opacity: 1;
-	transition: all .5s ease;
-	}
 
-.searchbar {
-	background-color:#333;
-        color:ffffff;
-	border: 1px solid #fff;
-	height: 32px;
-	width: 314;
-        vertical-align: top;
-        margin-left:15px;
-        font-family: 'Droid Sans', sans-serif;
-        font-size:80%;
-        color:#808080;
-	}
-   
     a:link { text-decoration:none; line-height: 26px; font-weight:normal; color:#ddd; }
     a:visited { text-decoration:none; line-height: 26px; font-weight:normal; color:#ddd; }
     a:hover { text-decoration:none; line-height: 26px; font-weight:normal; color:#eee; }
     a:active { text-decoration:none; line-height: 26px; font-weight:normal; color:#ddd; }
     a:focus { text-decoration:none; line-height: 26px; font-weight:normal; color:#ddd; }
-   
+
     #footer a:link { text-decoration:none; font-weight:normal; color:#101010; }
     #footer a:visited { text-decoration:none; font-weight:normal; color:#101010; }
     #footer a:hover { text-decoration:none; font-weight:normal; color:#101010; }
@@ -179,10 +127,7 @@ div.flame
     margin-left: -100px;
 }
 
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+/* ------------ Ugly hack please ignore :) ------------ */
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -193,8 +138,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
@@ -204,33 +149,11 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
-body {
-	line-height: 1;
-	cursor:default;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-.clear{
-	clear:both;
-}
+
 #wrapper{
 	min-width:700px;
 	max-width:1000px;
@@ -238,267 +161,32 @@ table {
 	padding-left: 880px;
 	margin:20% auto 0 auto;
 }
-a:link,
-a:visited,
-a:active{
-	text-decoration:none;
-}
-/* ICONS */
-@font-face {
-    font-family: 'heydings_iconsregular';
-    src: url('fonts/heydings_icons-webfont.eot');
-    src: url('fonts/heydings_icons-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/heydings_icons-webfont.woff') format('woff'),
-         url('fonts/heydings_icons-webfont.ttf') format('truetype'),
-         url('fonts/heydings_icons-webfont.svg#heydings_iconsregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
 
-}
-/* TIME STYLES */
 #fulltime{
 	float:left;
 	text-transform:uppercase;
 	font-family:'Helvetica Neue';}
 #time{
-	font-size:1.2em;
-}
-#time span{
-	animation: blink 4s linear infinite;
-	-moz-animation: blink 4s linear infinite;
-	-webkit-animation: blink 4s linear infinite;
-	vertical-align:top;
-}
-@-webkit-keyframes blink {
-	0% {
-		opacity: 1.0;
-		}
-	25% {
-		opacity: .25;
-	}
-	50% {
-		opacity: .5;
-	}
-	75% {
-		opacity: .75;
-	}
-	100% {
-		opacity: 1.0;
-	}	
-}
-@-moz-keyframes blink {
-	0% {
-		opacity: 1.0;
-		}
-	25% {
-		opacity: .25;
-	}
-	50% {
-		opacity: .5;
-	}
-	75% {
-		opacity: .75;
-	}
-	100% {
-		opacity: 1.0;
-	}
+  text-align: center;
+  font-weight: bold;
+	font-size:3em;
+  opacity: 0.8;
 }
 #day{
 	font-size:4em;
 	font-weight:bold;
 	margin-top:-5%;
+  opacity: 0.8;
 }
-#date{
-	text-align:right;
-	font-size:1.2em;
-	margin-top:-76px;
-}
-/* WEATHER WIDGET STYLES*/
-#weather .weatherForecastRange,
-#weather .weatherForecastText,
-#weather .weatherForecastDate,
-#weather .weatherCity,
-#weather .weatherTemp,
-#weather .weatherDesc,
-#weather .weatherRange{
-	display:none;
-}
-#weather{
-	float:right;
-	width:50%;
-	margin-top:2%;
-	background:transparent !important;
-}
-#weather .weatherForecastItem{
-	float:left;
-	width:20%;
-	padding-top:40px;
-	background-position:top center;
-}
-#weather .weatherForecastDay{
-	text-align:center;
-	text-transform:uppercase;
-}
-/* BOOKMARK STYLES */
-#bm{
-	margin-top:5%;
-}
-#bm ul{
-	float:left;
-	width:22%;
-	border-left:1px solid #fff;
-	color:#fff;
-	padding:1%;
-}
-#bm li{
-	font-size:.9em;
-	margin:1% 0;
-}
-#bm .title{
-	text-transform:uppercase;
-	font-size:1.2em;	
-	margin-bottom:5%;
-	
-}
-#bm a{
-	display:block;
-}
-#bm a:hover{
-	margin-left:1%;
-}
-/* SEARCH STYLES */
-#search{
-	margin-top:5%;
-}
-#search ul, #search input,#search span{
-	float:left;
-}
-#search ul{
-	text-transform:uppercase;
-}
-#search .engine{
-	width:15%;
-}
-#search .type{
-	width:5%;
-}
-#search span{
-	padding:0 1%;
-	display:block;
-}
-#search input{
-	width:75%;
-	outline: none;
-	border:none;
-	border-bottom:1px solid #fff;
-	background:none;
-	padding:1%;
-	padding-top:0%;
-}
-#search .sub{
-	display:none;
-	opacity:0;
-	width:100%;
-}
-#search .sub li{
-	margin:5px 0;
-	font-size:.9em;
-}
-#search  li{
-	cursor:pointer;	
-}
-#search .engine .first{
-	text-align:right;
-}
-#search .first:hover > .sub{
-	opacity:1;
-	display:block;
-	transition: all 1s ease 0s;
-}
-#search  .engine .sub a{
-	display:block;
-	text-align:right;
-}
-#search .type, .webResult span{
-	 font-family: 'heydings_iconsregular';
-	 font-size:1em;
-}
-/* RESULTS STYLES */
-#resultsDiv,#resultsDiv .webResult{
-	margin-top:2%;
-}
-.webResult h2, .webResult p{
-	margin-bottom:1%;
-}
-.webResult h3{
-	text-align:right;
-}
-.webResult span{
-	font-size:1em;
-	margin-right:3px;
-}
-.imageResult{
-	float:left;
-	margin:1% 0 1% 1%;
-	width:24%;
-}
-.imageResult .pic{
-	display:block;
-	
-	background-size:cover;
-	background-position:center;
-	background-repeat:no-repeat;
-	padding:40% 0;
-	width:100%;
-}
-/* EDIT TXT COLORS, BACKGROUND COLOR/IMG, TXT EFFECT etc */
-body{	font-family:Helvetica Neue;
-}
-#loading,
-.webResult span,
-.webResult h2,
-#search input,
-#search span,
-#search .engine .first,
-#search .type .first,
-a:link,
-a:active,
-a:visited,
-.weatherForecastDay,
-#time,
-#day,
-#date{
-	color:#fff;
-}
-#bm li a{
-	color:#a5a5a5;
-}
-#bm li a:hover{
-	color:#fff;
-}
-#search .sub li a{
-	color:#a5a5a5;
-}
-.webResult p{
-	color:#a5a5a5;
-	text-shadow:1px 1px 1px rgba(0,0,0,.8);
-}
-#search .sub li a:hover{
-	color:#fff;
-}
-
-
-
-
 
 @font-face {
     font-family: 'denseregular';
-    src: url('dense-regular-webfont.eot');
-    src: url('dense-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('dense-regular-webfont.woff2') format('woff2'),
-         url('dense-regular-webfont.woff') format('woff'),
-         url('dense-regular-webfont.ttf') format('truetype'),
-         url('dense-regular-webfont.svg#denseregular') format('svg');
+    src: url('fonts/dense-regular-webfont.eot');
+    src: url('fonts/dense-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/dense-regular-webfont.woff2') format('woff2'),
+         url('fonts/dense-regular-webfont.woff') format('woff'),
+         url('fonts/dense-regular-webfont.ttf') format('truetype'),
+         url('fonts/dense-regular-webfont.svg#denseregular') format('svg');
     font-weight: normal;
     font-style: normal;
 
