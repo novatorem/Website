@@ -170,13 +170,13 @@ footer, header, hgroup, menu, nav, section {
   text-align: center;
   font-weight: bold;
 	font-size:3em;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 #day{
 	font-size:4em;
 	font-weight:bold;
 	margin-top:-5%;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 @font-face {
