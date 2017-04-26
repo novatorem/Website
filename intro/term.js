@@ -209,7 +209,7 @@ function clear(input) {
 }
 
 function about(input) {
-    print("Welcome to my resume site- features include tab autocompletion, a file editor, custom web searches and history, searchable with arrow keys.")
+    print("Welcome to my resume site- features include bookmarks, tab autocompletion, a file editor, custom web searches, and history searchable with arrow keys.")
 }
 
 function history(input) {
