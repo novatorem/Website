@@ -226,14 +226,7 @@ function help(input) {
     }
     print(printStr)
 
-    fancyRender("commands", "lightgray")
-    printStr = ""
-        if (typeof hookCommands != "undefined" && hookCommands.length > 0) {
-        for (var i=0; i<hookCommands.length; i++) {
-            printStr +=  "> " +(hookCommands[i]) + " ";
-        }
-        print(printStr)
-    }
+
 
     printStr = ""
     if (typeof bookmarks != "undefined" && bookmarks.length > 0) {
@@ -255,6 +248,15 @@ function help(input) {
         fancyRender("files", "lightgray")
         for(var prop in files) {
             printStr +=  "> " +(prop) + " "
+        }
+        print(printStr)
+    }
+
+    fancyRender("commands", "lightgray")
+    printStr = ""
+        if (typeof hookCommands != "undefined" && hookCommands.length > 0) {
+        for (var i=0; i<hookCommands.length; i++) {
+            printStr +=  "> " +(hookCommands[i]) + " ";
         }
         print(printStr)
     }

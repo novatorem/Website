@@ -95,11 +95,11 @@ function hook(str, args) {
 
 //==================== CHALLENGE COMMANDS ==========================
 var hookCommands = [
-    //'chan',
     'date',
     'dice',
-    //'reddit',
     'time',
+    //'chan',
+    //'reddit',
     //'weather',
 ];
 
