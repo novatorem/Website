@@ -103,7 +103,7 @@ var hookCommands = [
 ];
 
 var bookmarks = [
-    ['resume', 'http://tenumbra.github.io/intro/Resume.doc'],
+    ['resume', 'http://tenumbra.github.io/intro/Resume.pdf'],
     ['github', 'https://github.com/Tenumbra'],
     ['facebook', 'https://www.facebook.com/Tenumbra'],
     ['e-mail', 'mailto:abdulla.binhaji@mail.utoronto.ca'],
