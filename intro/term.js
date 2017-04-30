@@ -15,6 +15,8 @@ function handlePaste(e) {
 }
 
 $(document).ready(function() {
+    help();
+    print("\n");
     init();
 })
 
