@@ -58,57 +58,58 @@
 
 					</div>
 
-					<!-- Footer -->
-						<footer id="footer">
+				<!-- Footer -->
+					<footer id="footer">
+						<section>
+							<form id="gform" method="POST" action="https://script.google.com/macros/s/AKfycbzhXoeogmst9U2jsPZJRqGKd2ndpP-q-bKSBpDCtqnJYwMRSXc3/exec">
+								<div class="field">
+									<label for="name">Name</label>
+									<input type="text" name="name" id="name" />
+								</div>
+								<div class="field">
+									<label for="email">Email</label>
+									<input type="text" name="email" id="email" />
+								</div>
+								<div class="field">
+									<label for="message">Message</label>
+									<textarea name="message" id="message" rows="3"></textarea>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" /></li>
+								</ul>
+							</form>
+						</section>
+						<section class="split contact">
+							<section class="alt">
+								<h3>Address</h3>
+								<p>868 Francine Crescent<br />
+								Mississauga, ON L5V 0E2</p>
+							</section>
 							<section>
-								<form method="post" action="https://script.google.com/macros/s/AKfycbzhXoeogmst9U2jsPZJRqGKd2ndpP-q-bKSBpDCtqnJYwMRSXc3/exec">
-									<div class="field">
-										<label for="name">Name</label>
-										<input type="text" name="name" id="name" />
-									</div>
-									<div class="field">
-										<label for="email">Email</label>
-										<input type="text" name="email" id="email" />
-									</div>
-									<div class="field">
-										<label for="message">Message</label>
-										<textarea name="message" id="message" rows="3"></textarea>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send Message" /></li>
-									</ul>
-								</form>
+								<h3>Phone</h3>
+								<p><a href="tel:6475422497">(647) 542-2497</a></p>
 							</section>
-							<section class="split contact">
-								<section class="alt">
-									<h3>Address</h3>
-									<p>868 Francine Crescent<br />
-									Mississauga, ON L5V 0E2</p>
-								</section>
-								<section>
-									<h3>Phone</h3>
-									<p><a href="tel:6475422497">(647) 542-2497</a></p>
-								</section>
-								<section>
-									<h3>Email</h3>
-									<p><a href="mailto:abdulla.binhaji@mail.utoronto.ca">abdulla.binhaji@mail.utoronto.ca</a></p>
-								</section>
-								<section>
-									<h3>Social</h3>
-									<ul class="icons alt">
-										<li><a href="https://twitter.com/Omnitenebris" class="icon alt fa-twitter"><span class="label">Twitter</span></a></li>
-										<li><a href="https://www.facebook.com/Tenumbra" class="icon alt fa-facebook"><span class="label">Facebook</span></a></li>
-										<li><a href="https://www.instagram.com/tenumbra/" class="icon alt fa-instagram"><span class="label">Instagram</span></a></li>
-										<li><a href="https://github.com/Tenumbra" class="icon alt fa-github"><span class="label">GitHub</span></a></li>
-									</ul>
-								</section>
+							<section>
+								<h3>Email</h3>
+								<p><a href="mailto:abdulla.binhaji@mail.utoronto.ca">abdulla.binhaji@mail.utoronto.ca</a></p>
 							</section>
-						</footer>
+							<section>
+								<h3>Social</h3>
+								<ul class="icons alt">
+									<li><a href="https://twitter.com/Omnitenebris" class="icon alt fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="https://www.facebook.com/Tenumbra" class="icon alt fa-facebook"><span class="label">Facebook</span></a></li>
+									<li><a href="https://www.instagram.com/tenumbra/" class="icon alt fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="https://github.com/Tenumbra" class="icon alt fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</section>
+						</section>
+					</footer>
 
-					<!-- Copyright -->
-						<div id="copyright">
-							<ul><li>&copy; Tenumbra</li><li>A new game's begun, or the old one's just turned</a></li></ul>
-						</div>
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Tenumbra</li><li>A new game's begun, or the old one's just turned</a></li></ul>
+					</div>
+
 			</div>
 
 		<!-- Scripts -->
@@ -118,6 +119,8 @@
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script data-cfasync="false" type="text/javascript"
+		  src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script>
 
 	</body>
 </html>
