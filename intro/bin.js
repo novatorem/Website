@@ -108,7 +108,7 @@ var bookmarks = [
     ['facebook', 'https://www.facebook.com/Tenumbra'],
     ['e-mail', 'mailto:abdulla.binhaji@mail.utoronto.ca'],
     ['ERA-app' ,'https://github.com/Tenumbra/ERA-Emergency-Response-Aid'],
-    ['personal-website', 'http://tenumbra.github.io/pages/home'],
+    ['professional-website', 'http://tenumbra.github.io/main'],
 ]
 
 function name(str) {
