@@ -42,6 +42,66 @@
 		-webkit-text-size-adjust: none;
 	}
 
+	/** Donna Galletta | LIGHTBOX MARKUP **/
+
+	.lightbox {
+		/** Default lightbox to hidden */
+		display: none;
+
+		/** Position and style */
+		position: fixed;
+		z-index: 999;
+		width: 100%;
+		height: 100%;
+		text-align: center;
+		top: 0;
+		left: 0;
+		background: rgba(0,0,0,0.8);
+	}
+	.lightbox:target {
+		/** Remove default browser outline */
+		outline: none;
+
+		/** Unhide lightbox **/
+		display: block;
+	}
+
+	/** videoModal **/
+	#videoModal {
+	  border-radius: 0;
+	  width: 870px;
+	  margin:auto;}
+	  #videoModal .modal-header {
+	    /*background: #000;*/
+	    border: 0;
+	    color: #fff;
+	    position: relative;
+			  height:235px; }
+	    #videoModal .modal-header h3 {
+	      font-size: 18px;
+	      line-height: 22px;
+		  font-family:Arial, Helvetica, sans-serif;
+		  padding:5px;}
+	  #videoModal .modal-body {
+	    height: 489px;
+	    padding: 0;
+	    max-height: none;
+	    overflow: hidden; }
+	  #videoModal .modal-footer:empty {
+	    display: none !important; }
+	  #videoModal .close {
+	    background: #DB00B8;
+	    color: #fff;
+	    font-size: 24px;
+	    margin: 0;
+	    opacity: 1;
+	    position: absolute;
+	    right: 0;
+	    text-shadow: none;
+	    top: 0;
+	    width: 38px; }
+
+
 /* Box Model */
 
 	*, *:before, *:after {
