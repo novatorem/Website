@@ -9,7 +9,7 @@ body
         background: url('images/back1.gif');
         background-repeat: no-repeat;
         background-attachment: fixed;
-        font-family: 'Garamond', sans-serif;
+        font-family: 'Press Start 2P', cursive;
 }
 ::-webkit-scrollbar {display: none;}
 ul
