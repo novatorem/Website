@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Home</title>
+<link rel='icon' type='image/png' href='images/favicon.png'>
+<link rel="stylesheet" href="style.css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<link href='http://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'> <!-- Downloads the desired font -->
+</head>
+<body>
+<ul class="container">
+        <li><a class="parent" href="#">Communication</a>
+                <ul class="submenu">
+                  <li class="tab"><a href="https://mail.google.com/mail/u/0/#inbox">gmail</a></li>
+                  <li class="tab"><a href="https://mail.utoronto.ca">umail</a></li>
+                  <li class="tab"><a href="https://www.hotmail.com/">outlook</a></li>
+                  <li class="tab"><a href="https://dribbble.com/">dribbble</a></li>
+                  <li class="tab"><a href="https://www.facebook.com/?_rdr=p">facebook</a></li>
+                </ul>
+        </li>
+        <li><a class="parent" href="#">Entertainment</a>
+                <ul class="submenu">
+                  <li class="tab"><a href="http://www.reddit.com/r/all">reddit</a></li>
+                  <li class="tab"><a href="https://www.4chan.org">4chan</a></li>
+                  <li class="tab"><a href="http://www.reddit.com/r/overwatch">watch</a></li>
+                  <li class="tab"><a href="http://www.reddit.com/r/hearthstone/">hearth</a></li>
+                  <li class="tab"><a href="http://www.deviantart.com/browse/all/">deviant</a></li>
+                </ul>
+        </li>
+        <li><a class="parent" href="#">Education</a> <!-- Section title -->
+                <ul class="submenu"> <!-- Links Start -->
+                  <li class="tab"><a href="http://stackoverflow.com/">stack</a></li>
+                  <li class="tab"><a href="http://acorn.utoronto.ca/">acorn</a></li>
+                  <li class="tab"><a href="http://portal.utoronto.ca/">portal</a></li>
+                  <li class="tab"><a href="https://github.com/Tenumbra">github</a></li>
+                  <li class="tab"><a href="https://www.wolframalpha.com/">wolfram</a></li>
+                </ul> <!-- Links End -->
+        </li>
+        <li><a class="parent" href="#">Media</a>
+                <ul class="submenu">
+                  <li class="tab"><a href="https://www.youtube.com">utube</a></li>
+                  <li class="tab"><a href="https://kissanime.ru">anime</a></li>
+                  <li class="tab"><a href="http://netflix.com/">netflix</a></li>
+                  <li class="tab"><a href="https://www.twitch.tv/directory">twitch</a></li>
+                  <li class="tab"><a href="http://www.reddit.com/r/videos/">videos</a></li>
+                </ul>
+        </li>
+</ul>
+
+<script>
+$('.submenu').hide();
+$("li:has(ul)").click(function(){
+$("ul",this).slideToggle('200');
+});
+</script>
+</body>
+</html>
