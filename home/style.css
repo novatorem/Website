@@ -8,6 +8,8 @@ body
 {
         background: url('images/back1.gif');
         background-repeat: no-repeat;
+        background-size:     cover;
+        background-position: center center;
         background-attachment: fixed;
         font-family: 'Press Start 2P', cursive;
 }
