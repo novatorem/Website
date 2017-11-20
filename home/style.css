@@ -3,6 +3,7 @@ html
         margin: -1px;
         border: -1px;
         padding: -1px;
+        height: 100%; overflow: hidden;
 }
 body
 {
@@ -12,6 +13,7 @@ body
         background-position: center center;
         background-attachment: fixed;
         font-family: 'Press Start 2P', cursive;
+        height: 100%; overflow: hidden;
 }
 ::-webkit-scrollbar {display: none;}
 ul
@@ -44,5 +46,5 @@ a
 a:hover {color: #fff;transition: all .3s ease;}
 a.parent {transition: all .3s ease;color: #fff;background: #201C31;text-align: center;}
 a.tab {transition: all .3s ease;opacity: 0.5;}
-a.tab:hover {transition: all .3s ease;text-indent: 5px;opacity: 1; }
+a.tab:hover {transition: all .3s ease;text-indent: 5px;opacity: 1; background: #fff;}
 ul > li:hover > a.parent {transition: all .3s ease;opacity: .8;}
