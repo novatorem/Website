@@ -34,6 +34,12 @@ ul.submenu
         background:rgba(40,119,103,.87);
         text-align: left;
 }
+#spotify
+{
+    bottom: -20px;
+    right: 0px;
+    position:absolute;
+}
 a
 {
         display: block;

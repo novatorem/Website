@@ -1,112 +1,177 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
-	<head>
-		<title>Musical Journey</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="icon" type="image/png" href="images/favicon.png" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body>
+  <head>
+    <title>Musical Journey</title>
+    <meta charset="utf-8">
+    <meta property="og:site_name" content="Musical Journey">
+    <meta property="og:title" content="Musical Journey is a music discovery tool to to explore artists and music by browsing artists through a relationship tree">
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/sp-bootstrap.min.css">
+    <link rel="stylesheet" href="css/spoticons.css">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body id="mainn">
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+    <div class="main-container">
+      <div id="rightpane">
+        
+        <!-- Artist Info -->
+        <div data-bind="visible: isArtistInfoVisible" id="infobox">
+          <h4>Artist Info </h4>
+          <a target="_blank" data-bind="text: artistName, attr: { href:spotifyLink }" id="artistName"> </a>
+          <p </p>
+          <div id="chart_div" style="width: 350px; height: 120px;"></div>
 
-				<!-- Header -->
-					<header id="header">
-						<div class="logo">
-							<span class="icon fa-headphones"></span>
-						</div>
-						<div class="content">
-							<div class="inner">
-								<h1>Musical Journey</h1>
-								<p>A fully responsive web-app designed to help you discover new music and broaden your horizons</p>
-								<form id="mform" method="POST" action="#">
-									<div class="field">
-										<input type="text" name="music" id="music" />
-									</div>
-									<ul class="actions">
-										<input type="submit" value="Discover">
-									</ul>
-								</form>
-							</div>
-						</div>
-						<nav>
-							<ul>
-								<li><a href="#about">About</a></li>
-								<li><a href="#contact">Contact</a></li>
-							</ul>
-						</nav>
-					</header>
+          <h4>Popular Tracks</h4>
 
-				<!-- TODO
+          <table class="table" data-bind="visible: topTracks().length > 0, foreach: topTracks">
+            <tbody>
+              <tr>
+                <td class="tl-play">
+                  <button data-bind="css: {'spoticon-play-16': !isPlaying(), 'spoticon-spotify-connect-16': isPlaying()}, click: $parent.playTrackWithoutGap" class="astext"></button>
+                </td>
+                <td class="tl-save">
+                  <button type="button" data-bind="css: {'spoticon-plus-16': !isSaved(), 'spoticon-check-16': isSaved()}, click: $parent.saveTrack", class="astext"></button>
+                </td>
+                <td class="wrapp" data-bind="event: { mouseover: $parent.playTrack, mouseout: $parent.playTrackCancel }">
+                  <a target="_blank" data-bind="text: name, attr: { href:spotifyLink }"> </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
 
-1) Register form input, tag it to artist/song
-2) Use algo to discover single song (remember how you find new music)
-3) Allow users to like/dislike songs
-4) Map/Visualize for extra effect all songs
-5) Export as youtube/spotify playlist
+          <hr>
 
-			 -->
+          <div data-bind="visible: genres().length > 0">
+            <h4 id ="main-genres-label">Main Genres</h4>
+            <ul data-bind="foreach: genres" id="mainGenres">
+              <li>
+                <a data-bind="text: titleCaseName, click: $parent.switchToGenre"></a>
+              </li>
+            </ul>
+          </div>
 
-				<!-- Main -->
-					<div id="main">
+        </div>
+      </div>
 
-						<!-- About -->
-							<article id="about">
-								<h2 class="major">About</h2>
-								<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
-								<p>Website currently in Alpha, all credits given in source code. Names, images, and implementation subject to change. Explanation of services and how-to coming soon.</p>
-							</article>
+      <div class ="left">
+        <nav id="navbarup" class="navbar navbar-default navbar-static-top" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="">
+                <span class="navbar-logo"></span>
+                <span class="navbar-title">Musical Journey</span>
+              </a>
+            </div>
 
-						<!-- Contact -->
-							<article id="contact">
-								<h2 class="major">Contact</h2>
-								<form id="gform" method="POST" action="https://script.google.com/macros/s/AKfycbzhXoeogmst9U2jsPZJRqGKd2ndpP-q-bKSBpDCtqnJYwMRSXc3/exec">
-									<div class="field half first">
-										<label for="name">Name</label>
-										<input type="text" name="name" id="name" />
-									</div>
-									<div class="field half">
-										<label for="email">Email</label>
-										<input type="text" name="email" id="email" />
-									</div>
-									<div class="field">
-										<label for="message">Message</label>
-										<textarea name="message" id="message" rows="4"></textarea>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="special" /></li>
-										<li><input type="reset" value="Reset" /></li>
-									</ul>
-								</form>
-								<ul class="icons">
-									<li><a href="https://twitter.com/Omnitenebris" class="icon alt fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="https://www.facebook.com/Tenumbra" class="icon alt fa-facebook"><span class="label">Facebook</span></a></li>
-									<li><a href="https://www.instagram.com/tenumbra/" class="icon alt fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="https://github.com/Tenumbra" class="icon alt fa-github"><span class="label">GitHub</span></a></li>
-								</ul>
-							</article>
-					</div>
+            <!-- Collect the nav links, forms, and other content for toggling on mobile -->
+            <div class="collapse navbar-collapse" id="navbar-collapse-1">
 
-				<!-- Footer -->
-					<footer id="footer">
-						<p class="copyright">&copy; Tenumbra | A new game's begun </a>.</p>
-					</footer>
+              <ul class="nav navbar-nav navbar-right">
+                <li><a  href="#" data-bind="visible: !isLoggedIn()" onClick="AE.login()">Log In</a></li>
+                <li class="dropdown" data-bind="visible: isLoggedIn()">
+                  <img class="profile-image" data-bind="attr:{src: userImage}"/>
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  <span id="display-name" data-bind="text: displayName"></span>
+                  <span class="icon-chevron-down"></span></a>
+                  <ul class="dropdown-menu dropdown-menu-left" role="menu">
+                    <li><a href="#" onClick="AE.logout()">Log Out</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div><!-- /.navbar-collapse -->
+          </div><!-- /.container -->
+        </nav>
 
-			</div>
+        <div id="search" class="row">
+          <form id="search-artist" class="form-horizontal col-sm-6 col-md-6" role="form">
+            <input id="artist-search" class="form-control" placeholder="Search for an Artist">
+          </form>
+          <form id="search-genre" class="form-horizontal col-sm-6 col-md-6" role="form">
+            <input id="genre-search" class="form-control" placeholder="Search for a Genre">
+          </form>
+        </div>
+        <div id="tree-container"></div>
+          <div id="share-div">
+           <button type="button" class="btn btn-primary btn-sm" onClick="AE.createPlaylistModal()">
+             Create Playlist
+           </button>
+         </div>
+      </div>
 
-		<!-- BG -->
-			<div id="bg"></div>
+      <!-- Create Playlist Modal -->
+      <div class="modal fade" id="createPlaylistModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="exampleModalLabel">Playlist Details</h4>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div id="playlist-name-form-group" class="form-group">
+                  <label for="playlist-name" class="control-label">Playlist Name:</label>
+                  <input type="text" id="text-playlist-name" class="form-control" id="playlist-name" placeholder="Enter Playlist Name">
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary btn-sm" onClick="AE.createPlaylist()">Create</button>
+            </div>
+          </div>
+        </div>
+      </div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-			<script data-cfasync="false" type="text/javascript"
-			src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script>
+      <!-- Error Modal -->
+       <div class="modal fade" id="error-modal" tabindex="-1" role="dialog" aria-labelledby="smallModal" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title warning" id="exampleModalLabel">Error</h4>
+            </div>
+            <div class="modal-body" data-bind="text: errorMessage"></div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal">OK</button>
+            </div>
+          </div>
+        </div>
+      </div>
 
-	</body>
+      <!-- Playlist Created Modal -->
+      <div class="modal fade" id="playlistCreatedModal" tabindex="-1" role="dialog" aria-labelledby="smallModal" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-body">
+              <h3>Playlist Created!</h3>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal">OK</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  </body>
+  <script type="text/javascript" src="https://www.google.com/jsapi?autoload={'modules':[{'name':'visualization','version':'1','packages':['gauge']}]}"></script>
+  <script src="./bower_components/spotify-web-api-js/src/spotify-web-api.js"></script>
+  <script src="./bower_components/knockout/dist/knockout.js"></script>
+  <script src="./js/lib/jquery-1.10.2.min.js"></script>
+  <script src="./js/lib/jquery-ui-1.11.1.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.12/d3.min.js"></script>
+  <script src="js/util.js"></script>
+  <script src="js/dndTree.js"></script>
+  <script src="js/oauth-manager.js"></script>
+  <script src="js/oauth-config.js"></script>
+  <script src="js/local-api.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/audioPlayer.js"></script>
 </html>
