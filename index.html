@@ -7,6 +7,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script src='https://www.google.com/recaptcha/api.js'></script>
+		<script type="text/javascript">
+		document.getElementById("button1").disabled = true; function enableBtn(){document.getElementById("button1").disabled = false;} </script>
 	</head>
 	<body class="is-loading">
 
@@ -157,7 +160,8 @@
 									<textarea name="message" id="message" rows="3"></textarea>
 								</div>
 								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
+									<li><input type="submit" value="Send Message" id="submitButton"/></li>
+									<li><div class="g-recaptcha" data-sitekey="6LcZ_GYUAAAAADhEzedegvtcKWhIIEEQZQ4FHZ1r" style="transform:scale(0.85)" data-callback="enableBtn"></div></li>
 								</ul>
 							</form>
 						</section>
