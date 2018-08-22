@@ -7,7 +7,7 @@ function correctCaptcha() {
     });
 }
 $('form').submit(function(){
-    $.post('www.tenumbra.com/thankyou', function() {
+    $.post('/thankyou', function() {
         window.location = 'http://google.com';
     });
     return false;
