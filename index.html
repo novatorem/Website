@@ -146,22 +146,24 @@
 					<footer id="footer">
 						<section>
 							<form class="gform" method="POST" data-email="maxstickman@live.com" action="https://script.google.com/macros/s/AKfycbzhXoeogmst9U2jsPZJRqGKd2ndpP-q-bKSBpDCtqnJYwMRSXc3/exec">
-								<div class="field">
-									<label for="name">Name</label>
-									<input type="text" name="name" id="name" />
+								<div class="form-elements">
+									<div class="field">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" />
+									</div>
+									<div class="field">
+										<label for="email">Email</label>
+										<input type="text" name="email" id="email" />
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="3"></textarea>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Send Message" id="submitButton"/></li>
+										<li><div class="g-recaptcha" data-sitekey="6LcZ_GYUAAAAADhEzedegvtcKWhIIEEQZQ4FHZ1r" style="transform:scale(0.85)" data-callback="correctCaptcha"></div></li>
+									</ul>
 								</div>
-								<div class="field">
-									<label for="email">Email</label>
-									<input type="text" name="email" id="email" />
-								</div>
-								<div class="field">
-									<label for="message">Message</label>
-									<textarea name="message" id="message" rows="3"></textarea>
-								</div>
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" id="submitButton"/></li>
-									<li><div class="g-recaptcha" data-sitekey="6LcZ_GYUAAAAADhEzedegvtcKWhIIEEQZQ4FHZ1r" style="transform:scale(0.85)" data-callback="correctCaptcha"></div></li>
-								</ul>
 							</form>
 						</section>
 						<section class="split contact">
