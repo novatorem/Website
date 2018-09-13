@@ -63,7 +63,7 @@
       event.preventDefault();           // we are submitting via xhr below
       var form = event.target;
       var data = getFormData(form);         // get the values submitted in the form
-  
+      form.submitButton.disabled = true;
       /* OPTION: Remove this comment to enable SPAM prevention, see README.md
       if (validateHuman(data.honeypot)) {  //if form is filled, form will not be submitted
         return false;
