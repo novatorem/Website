@@ -162,13 +162,6 @@
 									<ul class="actions">
 										<li><input type="submit" value="Send Message" id="submitButton"/></li>
 										<li><div class="g-recaptcha" data-sitekey="6LcZ_GYUAAAAADhEzedegvtcKWhIIEEQZQ4FHZ1r" style="transform:scale(0.85)" data-callback="correctCaptcha"></div></li>
-										<script>
-											$("#submitButton").on("click", function(e){
-												 e.PreventDefault();
-												 $(this).closest("form")[0].submit();
-												 $(this).prop('disabled',true)
-											});
-									   </script>
 									</ul>
 							</form>
 						</section>
