@@ -52,8 +52,8 @@
   
       // add form-specific values into the data
       formData.formDataNameOrder = JSON.stringify(fields);
-      formData.formGoogleSheetName = ""; //form.dataset.sheet || "responses"; // default sheet name
-      formData.formGoogleSendEmail = ""; //form.dataset.email || ""; // no email by default
+      formData.formGoogleSheetName =  form.dataset.sheet || "responses"; // default sheet name
+      formData.formGoogleSendEmail = form.dataset.email || ""; // no email by default
       unset($_POST['g-recaptcha-response']);
   
       console.log(formData);
