@@ -18,7 +18,7 @@
       var elements = form.elements;
   
       var fields = Object.keys(elements).filter(function(k) {
-            return ((elements[k].name !== "honeypot") || (elements[k].name !== "G-Recaptcha-Response"));
+            return ((elements[k].name !== "honeypot") && (elements[k].name !== "G-Recaptcha-Response"));
       }).map(function(k) {
         if(elements[k].name !== undefined) {
           return elements[k].name;
