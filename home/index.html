@@ -2031,38 +2031,38 @@
     switch (((new Date().getDay()) + InputDays + NextDay) % 7) {
       case 0:
         console.log("Sunday, " + Output.list[InputHours].main.temp + "C°")
-        document.querySelector("div.Text.Obj" + InputDays).innerHTML = "Sunday, " + Output.list[InputHours].main.temp +
+        document.querySelector("div.Text.Obj" + InputDays).innerHTML = "Sunday, " + Math.round(Output.list[InputHours].main.temp) +
           "C°"
         break;
       case 1:
         console.log("Monday, " + Output.list[InputHours].main.temp + "C°")
-        document.querySelector("div.Text.Obj" + InputDays).innerHTML = "Monday, " + Output.list[InputHours].main.temp +
+        document.querySelector("div.Text.Obj" + InputDays).innerHTML = "Monday, " + Math.round(Output.list[InputHours].main.temp) +
           "C°"
         break;
       case 2:
         console.log("Tuesday, " + Output.list[InputHours].main.temp + "C°")
-        document.querySelector("div.Text.Obj" + InputDays).innerHTML = "Tuesday, " + Output.list[InputHours].main.temp +
+        document.querySelector("div.Text.Obj" + InputDays).innerHTML = "Tuesday, " + Math.round(Output.list[InputHours].main.temp) +
           "C°"
         break;
       case 3:
         console.log("Wednesday, " + Output.list[InputHours].main.temp + "C°")
-        document.querySelector("div.Text.Obj" + InputDays).innerHTML = "Wednesday, " + Output.list[InputHours].main.temp +
+        document.querySelector("div.Text.Obj" + InputDays).innerHTML = "Wednesday, " + Math.round(Output.list[InputHours].main.temp) +
           "C°"
         break;
       case 4:
         console.log("Thursday, " + Output.list[InputHours].main.temp + "C°")
-        document.querySelector("div.Text.Obj" + InputDays).innerHTML = "Thursday, " + Output.list[InputHours].main.temp +
+        document.querySelector("div.Text.Obj" + InputDays).innerHTML = "Thursday, " + Math.round(Output.list[InputHours].main.temp) +
           "C°"
         break;
       case 5:
         console.log(InputHours)
         console.log("Friday, " + Output.list[InputHours].main.temp + "C°")
-        document.querySelector("div.Text.Obj" + InputDays).innerHTML = "Friday, " + Output.list[InputHours].main.temp +
+        document.querySelector("div.Text.Obj" + InputDays).innerHTML = "Friday, " + Math.round(Output.list[InputHours].main.temp) +
           "C°"
         break;
       case 6:
         console.log("Saturday, " + Output.list[InputHours].main.temp + "C°")
-        document.querySelector("div.Text.Obj" + InputDays).innerHTML = "Saturday, " + Output.list[InputHours].main.temp +
+        document.querySelector("div.Text.Obj" + InputDays).innerHTML = "Saturday, " + Math.round(Output.list[InputHours].main.temp) +
           "C°"
         break;
       default:
@@ -3141,7 +3141,24 @@
 #Image {
   position: relative;
   background-size: cover;
-  background-image: url("back.gif");
+  background-image: url("back.mp4");
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+  margin: 0 auto;
+  -moz-transition: all 0.3s ease 0.6s;
+  -o-transition: all 0.3s ease 0.6s;
+  -webkit-transition: all 0.3s ease 0.6s;
+  -webkit-transition-delay: 0.6s;
+  transition-delay: 0.6s;
+  transition: all 0.3s ease 0.6s;
+  -ms-transition: all 0.3s ease 0.6s;
+}
+
+#myVideo {
+  position: relative;
+  background-size: cover;
+  background-image: url("back.mp4");
   background-position: center;
   height: 100vh;
   width: 100%;
