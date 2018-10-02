@@ -118,7 +118,7 @@
         </div>
 
         <div class="approx" onmouseover="SpeedEnter1()" onclick="SpeedEnter1()" onmouseout="SpeedLeave1()"></div>
-        <div class="stripe" id="SpeedId1" style="background-color:#223349">
+        <div class="stripe" id="SpeedId1" style="background-color:#22334999">
           <a href="http://www.reddit.com/r/all">
             <div class="title">
               <span>Reddit</span>
@@ -140,7 +140,7 @@
           </div>
         </div>
         <div class="approx" onmouseover="SpeedEnter2()" onclick="SpeedEnter2()" onmouseout="SpeedLeave2()"></div>
-        <div class="stripe" id="SpeedId2" style="background-color:#1A2832">
+        <div class="stripe" id="SpeedId2" style="background-color:#32324a99">
           <a href="http://www.netflix.com">
             <div class="title">
               <span>Media</span>
@@ -162,7 +162,7 @@
           </div>
         </div>
         <div class="approx" onmouseover="SpeedEnter3()" onclick="SpeedEnter3()" onmouseout="SpeedLeave3()"></div>
-        <div class="stripe" id="SpeedId3" style="background-color:#1C323B">
+        <div class="stripe" id="SpeedId3" style="background-color:#3a222e61">
           <a href="http://www.tenumbra.com">
             <div class="title">
               <span>Professional</span>
@@ -184,7 +184,7 @@
           </div>
         </div>
         <div class="approx" onmouseover="SpeedEnter4()" onclick="SpeedEnter4()" onmouseout="SpeedLeave4()"></div>
-        <div class="stripe" id="SpeedId4" style="background-color:#1D3F43">
+        <div class="stripe" id="SpeedId4" style="background-color:#2d1c1c69">
           <a href="http://www.unsplash.com/">
             <div class="title">
               <span>Background</span>
@@ -323,6 +323,11 @@
     goVar = setTimeout(function () {
       document.getElementById("SpeedId1").classList.add('Fast');
     }, 200);
+  }
+  
+  function HideClock() {
+    var temp = document.getElementById("center");
+    temp.style.display = "none";
   }
 
   function SpeedLeave1() {
@@ -609,9 +614,10 @@
     font-size: 7rem;
     letter-spacing: .05em;
     cursor: pointer;
-    color: #ffffffc4;
+    color: #3a2020b0;
     font-family: 'Lato', sans-serif;
-    /* Todo: Font for Clock */
+    text-shadow: 0 0 5px rgba(0,0,0,0.5);
+    /* #ffffffc4 */
   }
 
   .OrangeClock {
