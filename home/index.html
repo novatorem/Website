@@ -117,8 +117,8 @@
           <div class="rain back-row"></div>
         </div>
 
-        <div class="approx" onmouseover="SpeedEnter1()" onclick="SpeedEnter1()" onmouseout="SpeedLeave1()"></div>
-        <div class="stripe" id="SpeedId1" style="background-color:#22334999">
+        <div class="approx" onmouseover="SpeedEnter1()" onclick="SpeedEnter1()" onmouseout="SpeedLeave1()" ></div>
+        <div class="stripe" id="SpeedId1" style="background-color:#22334999" onmouseover="HideClock()" onmouseout="ShowClock()">
           <a href="http://www.reddit.com/r/all">
             <div class="title">
               <span>Reddit</span>
@@ -140,7 +140,7 @@
           </div>
         </div>
         <div class="approx" onmouseover="SpeedEnter2()" onclick="SpeedEnter2()" onmouseout="SpeedLeave2()"></div>
-        <div class="stripe" id="SpeedId2" style="background-color:#32324a99">
+        <div class="stripe" id="SpeedId2" style="background-color:#32324a99" onmouseover="HideClock()" onmouseout="ShowClock()">
           <a href="http://www.netflix.com">
             <div class="title">
               <span>Media</span>
@@ -162,7 +162,7 @@
           </div>
         </div>
         <div class="approx" onmouseover="SpeedEnter3()" onclick="SpeedEnter3()" onmouseout="SpeedLeave3()"></div>
-        <div class="stripe" id="SpeedId3" style="background-color:#3a222e61">
+        <div class="stripe" id="SpeedId3" style="background-color:#3a222e61" onmouseover="HideClock()" onmouseout="ShowClock()">
           <a href="http://www.tenumbra.com">
             <div class="title">
               <span>Professional</span>
@@ -184,7 +184,7 @@
           </div>
         </div>
         <div class="approx" onmouseover="SpeedEnter4()" onclick="SpeedEnter4()" onmouseout="SpeedLeave4()"></div>
-        <div class="stripe" id="SpeedId4" style="background-color:#2d1c1c69">
+        <div class="stripe" id="SpeedId4" style="background-color:#2d1c1c69" onmouseover="HideClock()" onmouseout="ShowClock()">
           <a href="http://www.unsplash.com/">
             <div class="title">
               <span>Background</span>
@@ -207,7 +207,7 @@
         </div>
 
 
-        <div class="center">
+        <div class="center" id="toHide">
           <time id="clock"></time>
         </div>
         <form class="overlay center" id="search-form" autocomplete="off" spellcheck="false">
@@ -326,8 +326,11 @@
   }
   
   function HideClock() {
-    var temp = document.getElementById("center");
-    temp.style.display = "none";
+    document.getElementById("toHide").style.visibility = "hidden";
+  }
+
+  function ShowClock() {
+    document.getElementById("toHide").style.visibility = "visible";
   }
 
   function SpeedLeave1() {
@@ -438,12 +441,12 @@
     // the category, name, key, url, search path and color for your commands
     // if none of the specified keys are matched, the '*' key is used
     commands: [
-      [null, 'Google', '*', 'https://encrypted.google.com', '/search?q={}', '#10161f'],
-      ['Work', 'GitHub', 'github', 'https://github.com', '/search?q={}', '#333'],
-      ['Work', 'Inbox', 'gmail', 'https://inbox.google.com', '/search/{}', '#4285f4'],
-      ['Work', 'Keep', 'keep', 'https://keep.google.com', '/#search/text={}', '#fb0'],
-      ['Lurk', 'Reddit', 'reddit', 'https://www.reddit.com', '/search?q={}', '#223349'],
-      ['Watch', 'YouTube', 'youtube', 'https://youtube.com/feed/subscriptions', '/results?search_query={}', '#1A2832'],
+      [null, 'Google', '*', 'https://encrypted.google.com', '/search?q={}', '#10161f99'],
+      ['Work', 'GitHub', 'github', 'https://github.com', '/search?q={}', '#33333399'],
+      ['Work', 'Inbox', 'gmail', 'https://inbox.google.com', '/search/{}', '#4285f499'],
+      ['Work', 'Keep', 'keep', 'https://keep.google.com', '/#search/text={}', '#ffbb00'],
+      ['Lurk', 'Reddit', 'reddit', 'https://www.reddit.com', '/search?q={}', '#22334999'],
+      ['Watch', 'YouTube', 'youtube', 'https://youtube.com/feed/subscriptions', '/results?search_query={}', '#1A283299'],
     ],
 
     // give suggestions as you type
@@ -1343,7 +1346,7 @@
       const color = this._commands
         .filter(c => this._getHostname(c[3]) === domain)
         .map(c => c[5])[0];
-
+      
       return color || null;
     }
 
