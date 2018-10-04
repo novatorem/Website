@@ -4,26 +4,27 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
 
 <url>
-  <loc>http://tenumbra.com/</loc>
-  <lastmod>2018-08-28T15:01:50+00:00</lastmod>
+  <loc>http://www.andrewnovac.com/</loc>
+  <lastmod>2018-10-04T15:28:09+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>http://tenumbra.com/index</loc>
-  <lastmod>2018-08-28T15:01:50+00:00</lastmod>
+  <loc>http://www.andrewnovac.com/index</loc>
+  <lastmod>2018-10-04T15:28:09+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://tenumbra.com/education</loc>
-  <lastmod>2018-08-28T15:01:50+00:00</lastmod>
+  <loc>http://www.andrewnovac.com/education</loc>
+  <lastmod>2018-10-04T15:28:08+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://tenumbra.com/about</loc>
-  <lastmod>2018-08-28T15:01:50+00:00</lastmod>
+  <loc>http://www.andrewnovac.com/about</loc>
+  <lastmod>2018-10-04T15:28:08+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 

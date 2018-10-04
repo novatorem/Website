@@ -103,12 +103,12 @@ var hookCommands = [
 ];
 
 var bookmarks = [
-    ['resume', 'http://tenumbra.github.io/intro/Resume.pdf'],
-    ['github', 'https://github.com/Tenumbra'],
+    ['resume', 'http://www.andrewnovac.com/intro/Resume.pdf'],
+    ['github', 'https://github.com/andrewnovac'],
     ['facebook', 'https://www.facebook.com/Tenumbra'],
     ['e-mail', 'mailto:abdulla.binhaji@mail.utoronto.ca'],
-    ['ERA-app' ,'https://github.com/Tenumbra/ERA-Emergency-Response-Aid'],
-    ['professional-website', 'http://tenumbra.github.io/main'],
+    ['ERA-app' ,'https://github.com/andrewnovac/ERA-Emergency-Response-Aid'],
+    ['professional-website', 'http://www.andrewnovac.com/main'],
 ]
 
 function name(str) {
