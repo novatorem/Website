@@ -103,12 +103,12 @@ var hookCommands = [
 ];
 
 var bookmarks = [
-    ['resume', 'http://www.andrewnovac.com/intro/Resume.pdf'],
-    ['github', 'https://github.com/andrewnovac'],
+    ['resume', 'http://www.andrewnova.com/intro/Resume.pdf'],
+    ['github', 'https://github.com/omnitenebris'],
     ['facebook', 'https://www.facebook.com/omnitenebris'],
     ['e-mail', 'mailto:abdulla.binhaji@mail.utoronto.ca'],
-    ['ERA-app' ,'https://github.com/andrewnovac/ERA-Emergency-Response-Aid'],
-    ['professional-website', 'http://www.andrewnovac.com/main'],
+    ['ERA-app' ,'https://github.com/omnitenebris/ERA-Emergency-Response-Aid'],
+    ['professional-website', 'http://www.andrewnova.com/main'],
 ]
 
 function name(str) {
