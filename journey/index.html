@@ -7,6 +7,7 @@
 		<link rel="icon" type="image/png" href="images/favicon.png" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script src='https://www.google.com/recaptcha/api.js'></script>
 	</head>
 	<body>
 
@@ -21,15 +22,7 @@
 						<div class="content">
 							<div class="inner">
 								<h1>Musical Journey</h1>
-								<p>A fully responsive web-app designed to help you discover new music and broaden your horizons</p>
-								<form id="mform" method="POST" action="#">
-									<div class="field">
-										<input type="text" name="music" id="music" />
-									</div>
-									<ul class="actions">
-										<input type="submit" value="Discover">
-									</ul>
-								</form>
+								<p>Thank you for using my script, where you will learn more about yourself</p>
 							</div>
 						</div>
 						<nav>
@@ -57,28 +50,28 @@
 							<article id="about">
 								<h2 class="major">About</h2>
 								<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
-								<p>Website currently in Alpha, all credits given in source code. Names, images, and implementation subject to change. Explanation of services and how-to coming soon.</p>
+								<p>This is still in development, you can look at the source code <a href="https://github.com/omnitenebris">here</a>.</p>
 							</article>
 
 						<!-- Contact -->
 							<article id="contact">
 								<h2 class="major">Contact</h2>
-								<form id="gform" method="POST" action="https://script.google.com/macros/s/AKfycbzhXoeogmst9U2jsPZJRqGKd2ndpP-q-bKSBpDCtqnJYwMRSXc3/exec">
-									<div class="field half first">
+								<form class="gform" method="POST" action="https://script.google.com/macros/s/AKfycbzhXoeogmst9U2jsPZJRqGKd2ndpP-q-bKSBpDCtqnJYwMRSXc3/exec">
+									<div class="field">
 										<label for="name">Name</label>
 										<input type="text" name="name" id="name" />
 									</div>
-									<div class="field half">
+									<div class="field">
 										<label for="email">Email</label>
 										<input type="text" name="email" id="email" />
 									</div>
 									<div class="field">
 										<label for="message">Message</label>
-										<textarea name="message" id="message" rows="4"></textarea>
+										<textarea name="message" id="message" rows="3"></textarea>
 									</div>
 									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="special" /></li>
-										<li><input type="reset" value="Reset" /></li>
+										<li><input type="submit" value="Send Message" id="submitButton"/></li>
+										<li><div class="g-recaptcha" data-sitekey="6LcZ_GYUAAAAADhEzedegvtcKWhIIEEQZQ4FHZ1r" style="transform:scale(0.76)" data-callback="correctCaptcha"></div></li>
 									</ul>
 								</form>
 								<ul class="icons">
@@ -92,7 +85,7 @@
 
 				<!-- Footer -->
 					<footer id="footer">
-						<p class="copyright">&copy; Andrew | A new game's begun </a>.</p>
+						<p class="copyright">&copy; Andrew | A new game's begun</p>
 					</footer>
 
 			</div>
@@ -105,8 +98,8 @@
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			<script data-cfasync="false" type="text/javascript"
-			src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script>
+			<script src="assets/js/formHandler.js"></script>
+			<script src="assets/js/gform.js"></script>
 
 	</body>
 </html>
