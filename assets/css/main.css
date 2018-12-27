@@ -1,6 +1,18 @@
 @import url(font-awesome.min.css);
 @import url("https://fonts.googleapis.com/css?family=Merriweather:300,700,300italic,700italic|Source+Sans+Pro:900");
 /* Reset */
+	#videoBg {
+		position:fixed;top:0;right:0;bottom:0;left:0;overflow:hidden
+	}
+	#videoBg>video{
+		xmargin-top:70px;position:absolute;top:0;left:0;width:100%;height:100%
+	}@media (min-aspect-ratio: 16 / 9){
+		#videoBg>video{height:300%;top:-100%}
+	}@media (max-aspect-ratio: 16 / 9){
+		#videoBg>video{width:300%;left:-100%}
+	}@supports (object-fit: cover){
+		#videoBg>video{top:0;left:0;width:100%;height:100%;object-fit:cover}
+	}.flexCon{margin-top:70px;display:flex;justify-content:center;align-items:center}
 
 	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
 		margin: 0;
@@ -3419,7 +3431,7 @@
 		background: rgba(255, 255, 255, 0.175);
 		height: 4rem;
 		line-height: 4rem;
-		margin: -4rem auto 0 auto;
+		margin: 0rem auto 0 auto;
 		overflow: hidden;
 		padding: 0 2rem 0 0;
 		position: relative;
@@ -3765,7 +3777,7 @@
 	}
 
 		#footer input, #footer select, #footer textarea {
-			color: #717981;
+			color: #71798100;
 		}
 
 		#footer a {
