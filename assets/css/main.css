@@ -3646,7 +3646,7 @@
 			#main > .post header.major > h1, #main > .post header.major h2 {
 				font-size: 4rem;
 				line-height: 1.1;
-				margin: 0 0 2rem 0;
+				margin: -4rem 0 0rem 0;
 			}
 
 			#main > .post.featured {
@@ -4531,3 +4531,16 @@
 		}
 
 	}
+
+#videoBg {
+	position:fixed;top:0;right:0;bottom:0;left:0;overflow:hidden
+	}
+	#videoBg>video{
+	xmargin-top:70px;position:absolute;top:0;left:0;width:100%;height:100%
+	}@media (min-aspect-ratio: 16 / 9){
+	#videoBg>video{height:300%;top:-100%}
+	}@media (max-aspect-ratio: 16 / 9){
+	#videoBg>video{width:300%;left:-100%}
+	}@supports (object-fit: cover){
+	#videoBg>video{top:0;left:0;width:100%;height:100%;object-fit:cover}
+	}.flexCon{margin-top:70px;display:flex;justify-content:center;align-items:center}
