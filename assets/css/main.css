@@ -1824,7 +1824,7 @@
 
 	a {
 		color: #ffffff;
-		border-bottom-color: rgba(33, 41, 49, 0.5);
+		border-bottom-color: rgba(180, 190, 200, 0.35);
 	}
 
 		a:hover {
@@ -3819,7 +3819,7 @@
 		display: -ms-flex;
 		display: flex;
 		background-color: #070f1cbb;
-		color: #909498;
+		color: #eee;
 		cursor: default;
 		position: relative;
 		margin: 0 auto;
@@ -3829,11 +3829,11 @@
 	}
 
 		#footer input, #footer select, #footer textarea {
-			color: #ffffff;
+			color: #eee;
 		}
 
 		#footer a {
-			color: #ffffff;
+			color: #eee;
 			border-bottom-color: rgba(113, 121, 129, 0.5);
 		}
 
@@ -3847,7 +3847,7 @@
 		}
 
 		#footer h1, #footer h2, #footer h3, #footer h4, #footer h5, #footer h6 {
-			color: #ffffff;
+			color: #eee;
 		}
 
 		#footer blockquote {
@@ -4163,7 +4163,7 @@
 			}
 
 				#footer > section {
-					border-top: solid 2px #e2e2e2;
+					border-top: solid 2px #403a5279;
 				}
 
 					#footer > section:first-child {
@@ -4418,9 +4418,9 @@
 		transition: transform 0.5s ease, box-shadow 0.5s ease, visibility 0.5s;
 		display: none;
 		-webkit-overflow-scrolling: touch;
-		background: #ffffff;
+		background: #070f1c;
 		box-shadow: none;
-		color: #ffffff;
+		color: #fff;
 		height: 100%;
 		max-width: 80%;
 		overflow-y: auto;
@@ -4466,7 +4466,7 @@
 			transition: color 0.2s ease-in-out;
 			-webkit-tap-highlight-color: transparent;
 			border: 0;
-			color: #909498;
+			color: #eee;
 			cursor: pointer;
 			display: block;
 			height: 3.25rem;
