@@ -7,4 +7,4 @@ Consists of:
 * Web terminal
 * Mandala
 * Journey
-* Omnify
+* Omnify Landing Page
