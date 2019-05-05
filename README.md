@@ -5,6 +5,6 @@ Main page: www.andrewnovac.com
 
 Consists of:
 * [Web terminal](andrewnovac.com/site/mandala)
-* Mandala
+* [Mandala](andrewnovac.com/mandala)
 * Journey
 * Omnify Landing Page
