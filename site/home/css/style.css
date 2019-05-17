@@ -29,7 +29,7 @@
 
 :root {
     --accent: crimson;
-    --bg: #0f0f12;
+    --bg: #0f0f1259;
     --done: #37eb94;
     --undone: #ff1b91;
 }
@@ -79,7 +79,7 @@ body {
 #todo .items h1 {
     font-weight: 100;
     font-size: 24pt;
-    color: rgba(255, 255, 255, .1);
+    color: rgba(255, 255, 255, 0);
     text-align: center;
     margin: 0 0 1.5em 0;
 }
@@ -126,7 +126,7 @@ body {
     position: relative;
     width: 100%;
     padding: 1em 0 .5em 1em;
-    max-height: 100px;
+    max-height: 50px;
     border-radius: 2px;
     background: #18181d;
     box-shadow: inset 0 2px 0 var(--state),
@@ -170,7 +170,7 @@ body {
 .items item::before {
     content: '';
     display: block;
-    background: var(--bg);
+    background: #e8e8e8;
     border-radius: 50%;
     margin: auto;
     top: 0;
@@ -297,9 +297,10 @@ body {
 
 
 #tabs {
-    bottom: 0;
-    width: 90%;
-    height: 32px;
+    right: 980px;
+    bottom: 750px;
+    width: 0%;
+    height: 48px;
     background: #18181d;
     margin: 2.5em auto;
     border-radius: 4px;
@@ -359,7 +360,7 @@ body {
     bottom: 0;
     margin: auto;
     box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
-    background: #18181d;
+    background: #181d1a33;
 }
 
 #panels ul {
@@ -368,7 +369,8 @@ body {
     width: 100%;
     height: 100%;
     right: 100%;
-    background: #fff url("../img/bg-1.gif") repeat center left fixed;
+    background: url("../img/bg-1.gif") no-repeat center left fixed;
+    background-size: 502px 600px;
     transition: all .6s;
 }
 
@@ -400,7 +402,7 @@ body {
     height: 100%;
     padding: 0 2em;
     color: #fff;
-    font-size: 12px;
+    font-size: 32px;
     background: #1d1d21;
 }
 
@@ -439,7 +441,7 @@ body {
     right: 0;
     width: 70%;
     height: 100%;
-    background: #18181d;
+    background: #00000044;
     padding: 5%;
     flex-wrap: wrap;
 }
@@ -452,7 +454,7 @@ body {
     display: inline-block;
     padding: .4em .7em;
     background: rgba(0, 0, 0, .35);
-    box-shadow: 0 3px rgba(0, 0, 0, 0.25), 0 5px 10px rgba(0, 0, 0, .5);
+    box-shadow: 0 3px rgb(0, 0, 0), 0 5px 10px rgba(0, 0, 0, .5);
     border-radius: 2px;
     margin-bottom: .7em;
 }
@@ -497,7 +499,7 @@ body {
 }
 
 #panels > ul:first-child .links li h1 {
-    color: #383838;
+    color: #dadada;
     font-size: 22px;
     margin-bottom: .5em;
     font-weight: 700;

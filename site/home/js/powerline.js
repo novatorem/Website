@@ -14,8 +14,8 @@ class Powerline {
         }
       }
     };
-
-    setInterval(() => { $('.time').innerHTML = `${strftime('H')}<span>:${strftime('i')}</span>`; }, 1000);
+    var hour = strftime('H') % 12 || 12
+    setInterval(() => { $('.time').innerHTML = `${hour}<span>:${strftime('i')}</span>`; }, 1000);
   }
 
   activate(obj, item) {
