@@ -10,3 +10,4 @@ Consists of:
 * Omnify Landing Page
 * Home 
 * Home #1
+* Home #2
