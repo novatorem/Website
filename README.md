@@ -8,3 +8,5 @@ Consists of:
 * [Mandala](andrewnovac.com/mandala)
 * [Journey](andrewnovac.com/site/journey)
 * Omnify Landing Page
+* Home 
+* Home #1
