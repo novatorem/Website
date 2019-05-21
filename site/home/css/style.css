@@ -81,7 +81,7 @@ body {
     font-size: 24pt;
     color: rgba(255, 255, 255, 0);
     text-align: center;
-    margin: 0 0 1.5em 0;
+    margin: 0 0 0.5em 0;
 }
 
 #todo .add {
@@ -126,14 +126,14 @@ body {
     position: relative;
     width: 100%;
     padding: 1em 0 .5em 1em;
-    max-height: 50px;
+    max-height: 55px;
     border-radius: 2px;
-    background: #18181d;
+    background: #d8d8d8;
     box-shadow: inset 0 2px 0 var(--state),
-    0 1px 0 0 rgba(0, 0, 0, .5),
-    0 4px 0 0 #18181d,
-    0 5px 0 rgba(0, 0, 0, .5),
-    0 8px 0 0 #18181d;
+    0 1px 0 0 rgba(212, 146, 146, 0.5),
+    0 4px 0 0 #d8d8d8,
+    0 5px 0 rgba(212, 146, 146, 0.5),
+    0 8px 0 0 #d8d8d8;
     transition: all .3s;
     animation: slide .4s ease;
 }
@@ -155,7 +155,7 @@ body {
 }
 
 .items item p:not(.added-at) {
-    color: #e8e8e8;
+    color: #000000;
     font: 400 14px 'Roboto', sans-serif;
     max-width: 250px;
     word-wrap: break-word;
@@ -164,7 +164,7 @@ body {
 }
 
 .items item:not(:last-child) {
-    margin: 0 0 1em 0;
+    margin: 0 0 -1em 0;
 }
 
 .items item::before {
@@ -221,13 +221,13 @@ body {
 .items item .added-at {
     font-size: 11px;
     letter-spacing: .5px;
-    color: #929292;
-    font-weight: 400;
+    color: #1d1d1d;
+    font-weight: 700;
 }
 
 .items item .added-at span {
-    color: #fff;
-    font-weight: 700 !important;
+    color: rgb(110, 110, 110);
+    font-weight: 400 !important;
     transition: color .2s;
 }
 
@@ -671,6 +671,7 @@ button{
   font-size:1.2em;
   padding:0 1em;
   cursor:pointer;
+  margin: 0 0.25em;
   transition:800ms ease all;
   outline:none;
 }
