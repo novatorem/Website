@@ -301,7 +301,7 @@ function myStory(parentJson, folder, addToDom) {
           <br />
           <span class="email-footer">${rootJson.subreddit} | ${
     rootJson.domain
-  } ${rootJson.over_18 ? "| NSFW" : ""}</span>
+  } ${rootJson.over_18 ? "| <font color='red'>NSFW</font>" : ""}</span>
         </div>
       </div>
     </div>
@@ -1160,6 +1160,9 @@ $(document).ready(function() {
       "programmerhumor",
       "programming",
       "askreddit",
+      "talesfromtechsupport",
+      "PettyRevenge",
+      "ProRevenge"
     ];
 
     localStorage.subs = JSON.stringify(subs);
