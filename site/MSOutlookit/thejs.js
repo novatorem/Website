@@ -471,9 +471,7 @@ function makeCommentHeader(
               ? `<span class="comment-controversiality">${controversialDisplay}</span>`
               : ""
           }
-          <span class="comment-date">${timestamp.fromNow()} (${timestamp.format(
-    "MMM D Y"
-  )})
+          <span class="comment-date">${timestamp.fromNow()}
         </div>
         <div class="commentbody">
           ${unEncode(body_html)}
