@@ -304,7 +304,6 @@ td.right * .commentroothi {
 }
 
 td.right  * .showhover {
-	opacity:0.8;
 }
 
 .showhover:hover {
@@ -359,8 +358,8 @@ td.right * img {
 .commentroot .hider {
 	height: 100%;
 	position: absolute;
-	width: 4px;
-	background: rgba(51, 102, 153, 0.219);
+	width: 8px;
+	background: rgba(51, 102, 153, 0.05);
 	cursor: pointer;
 	transition: 100ms all;
 	border-radius: 20px;
@@ -396,7 +395,7 @@ td.right * img {
 }
 
 .comment-date {
-	margin-left: 8px;
+	margin-left: 0px;
 }
 
 .commentroot .comment-content {
@@ -425,6 +424,8 @@ td.right * .childrencomments {
 	bottom:0px;
 	width:242px;
 	height:40px;
+	border: -1px solid transparent;
+	overflow: hidden;
 }
 
 @-moz-document url-prefix() { 
