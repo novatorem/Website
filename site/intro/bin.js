@@ -103,12 +103,12 @@ var hookCommands = [
 ];
 
 var bookmarks = [
-    ['resume', 'http://www.andrewnovac.com/site/intro/Resume.pdf'],
+    ['resume', 'https://www.novac.dev/site/intro/Resume.pdf'],
     ['github', 'https://github.com/omnitenebris'],
     ['facebook', 'https://www.facebook.com/omnitenebris'],
     ['e-mail', 'mailto:abdulla.binhaji@mail.utoronto.ca'],
-    ['main' ,'http://www.andrewnovac.com/'],
-    ['404', 'http://www.andrewnovac.com/iLoveYou'],
+    ['main' ,'https://www.novac.dev/'],
+    ['404', 'https://www.novac.dev/iLoveYou'],
 ]
 
 function name(str) {
