@@ -103,7 +103,7 @@ var hookCommands = [
 ];
 
 var bookmarks = [
-    ['resume', 'https://www.novac.dev/site/intro/Resume.pdf'],
+    ['resume', 'https://www.novac.dev/x/intro/Resume.pdf'],
     ['github', 'https://github.com/omnitenebris'],
     ['facebook', 'https://www.facebook.com/omnitenebris'],
     ['e-mail', 'mailto:abdulla.binhaji@mail.utoronto.ca'],
