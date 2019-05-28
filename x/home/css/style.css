@@ -662,7 +662,7 @@ body {
 }
 
 
-button{
+button.link{
   background:#00000088;
   color:#fff;
   border:none;
@@ -675,11 +675,11 @@ button{
   transition:800ms ease all;
   outline:none;
 }
-button:hover{
+button.link:hover{
   background:#ffffff;
   color:#000;
 }
-button:before,button:after{
+button.link:before,button.link:after{
   content:'';
   position:absolute;
   top:0;
@@ -689,13 +689,13 @@ button:before,button:after{
   background: #bd818d;
   transition:400ms ease all;
 }
-button:after{
-  right:inherit;
-  top:inherit;
-  left:0;
-  bottom:0;
+button.link:after{
+  right: inherit;
+  top: 37px;
+  left: 0px;
+  bottom: 0;
 }
-button:hover:before,button:hover:after{
+button.link:hover:before,button.link:hover:after{
   width:100%;
   transition:800ms ease all;
 }
