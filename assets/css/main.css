@@ -1716,7 +1716,7 @@
 	h1 {
 		font-size: 4rem;
 		line-height: 1.1;
-		margin: 0 0 2rem 0;
+		margin: 0 0 1rem 0;
 	}
 
 	h2 {
@@ -1912,11 +1912,13 @@
 			width: 4rem;
 			height: 4rem;
 			line-height: 4rem;
-			border-radius: 4rem;
+			border: 0 !important;
+			box-shadow: inset 0 0 0 0px #ffffff !important;
 			text-indent: 4rem;
 			overflow: hidden;
 			padding: 0;
 			white-space: nowrap;
+			transform: scale(2.4) rotate(90deg);
 		}
 
 			input[type="submit"].icon.solo:before,
