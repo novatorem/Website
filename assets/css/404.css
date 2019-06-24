@@ -82,8 +82,8 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: #000;
-    background-image: url("https://w.wallhaven.cc/full/49/wallhaven-492mox.jpg");
+    background-color: #1E1E1E;
+    background-image: url("/assets/images/404.jpg");/* --- url("https://w.wallhaven.cc/full/49/wallhaven-492mox.jpg"); --- */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 50%;
