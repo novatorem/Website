@@ -1681,6 +1681,7 @@
 		text-decoration: none;
 	}
 
+
 		a:hover {
 			border-bottom-color: transparent;
 		}
@@ -1919,6 +1920,7 @@
 			padding: 0;
 			white-space: nowrap;
 			transform: scale(2.4) rotate(90deg);
+			
 		}
 
 			input[type="submit"].icon.solo:before,
@@ -2571,6 +2573,7 @@
 			cursor: default;
 			list-style: none;
 			padding-left: 0;
+			/* white-space: nowrap; */
 		}
 
 			ul.actions li {
@@ -4863,4 +4866,3 @@
 		0% { transform: translate3d(0px, 0, 0); }
 		100% { transform: translate3d(-40px, 5px, 0); }
 	}
-
