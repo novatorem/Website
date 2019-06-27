@@ -4046,10 +4046,10 @@
 			-webkit-flex-grow: 1;
 			-ms-flex-grow: 1;
 			flex-grow: 1;
-			-moz-flex-shrink: 1;
-			-webkit-flex-shrink: 1;
-			-ms-flex-shrink: 1;
-			flex-shrink: 1;
+			-moz-flex-shrink: 0;
+			-webkit-flex-shrink: 0;
+			-ms-flex-shrink: 0;
+			flex-shrink: 0;
 			padding: 4rem 4rem 2rem 4rem ;
 			border-left: solid 2px #403a5279;
 		}
@@ -4246,7 +4246,7 @@
 		line-height: 1.5;
 		text-align: center;
 		text-transform: uppercase;
-		margin: 4rem auto 8rem auto;
+		margin: 4rem auto 4rem auto;
 		width: calc(100% - 4rem);
 		max-width: 72rem;
 		z-index: 2;
@@ -4865,4 +4865,13 @@
 	@keyframes wasting2 {
 		0% { transform: translate3d(0px, 0, 0); }
 		100% { transform: translate3d(-40px, 5px, 0); }
+	}
+
+	::-webkit-scrollbar
+	{
+		width:0px;
+	}
+	::-webkit-scrollbar-track-piece
+	{
+		background-color:transparent;
 	}
