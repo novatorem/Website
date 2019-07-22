@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
 
 * {
     margin:  0;
@@ -156,7 +157,7 @@ body {
 
 .items item p:not(.added-at) {
     color: #000000;
-    font: 400 14px 'Roboto', sans-serif;
+    font: 400 14px 'Open Sans', sans-serif;
     max-width: 250px;
     word-wrap: break-word;
 
@@ -187,7 +188,7 @@ body {
 .items item[done]::before {
     content: '\E876';
     color: var(--state);
-    font-family: 'Material Icons';
+    font-family: 'Open Sans', sans-serif;
     text-align: center;
     font-size: 11px;
 }
@@ -284,7 +285,7 @@ body {
     padding: .5em 0;
     width: 70%;
     color: #fff;
-    font: 400 15px 'Roboto', sans-serif;
+    font: 400 15px 'Open Sans', sans-serif;
 }
 
 #todo .addTodo.active {
@@ -324,7 +325,7 @@ body {
 #tabs ul li:not(:last-child) {
     width: 35px;
     text-align: center;
-    font: 400 13px 'Roboto', serif;
+    font: 400 13px 'Open Sans', sans-serif;
     color: #bbb;
     padding: 6px 0;
     transition: all .1s;
@@ -449,7 +450,7 @@ body {
 #panels > ul:first-child .links a {
     color: #bfbfbf;
     text-decoration: none;
-    font: 700 18px 'Roboto', sans-serif;
+    font: 700 18px 'Open Sans', sans-serif;
     transition: all .2s;
     display: inline-block;
     padding: .4em .7em;
@@ -484,7 +485,7 @@ body {
     background: rgba(0, 0, 0, .4);
     color: #fff;
     letter-spacing: 1px;
-    font: 100 30px 'Nunito', sans-serif;
+    font: 100 30px 'Open Sans', sans-serif;
     text-align: center;
     flex-wrap: wrap;
     word-break: break-all;
@@ -513,7 +514,7 @@ body {
 
 #panels > ul:not(:first-child) li a {
     color: grey;
-    font: 700 16px 'Roboto', sans-serif;
+    font: 700 16px 'Open Sans', sans-serif;
     text-decoration: none;
     letter-spacing: 1px;
 }
@@ -537,7 +538,7 @@ body {
     height: 100%;
     background: #1f1f1f;
     text-transform: uppercase;
-    font: 600 11px 'Roboto', sans-serif;
+    font: 600 11px 'Open Sans', sans-serif;
     letter-spacing: 1px;
     color: #fff;
     border: 0;
@@ -565,7 +566,7 @@ body {
     border: 0;
     background: 0;
     box-shadow: inset 0 -2px #fff;
-    font: 500 12px 'Roboto', sans-serif;
+    font: 500 12px 'Open Sans', sans-serif;
     color: #fff;
 }
 
@@ -606,7 +607,7 @@ body {
     box-shadow: inset 0 -2px #737373;
     padding: .5em 0;
     background: none;
-    font: 500 22px 'Roboto', sans-serif;
+    font: 500 22px 'Open Sans', sans-serif;
     letter-spacing: 1px;
     color: #fff;
 }
@@ -649,7 +650,7 @@ body {
     cursor: default;
     transition: all .2s;
     font-size: 12px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .search-engines li {
