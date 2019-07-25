@@ -4544,6 +4544,20 @@
 		margin: -3em; 
 		transform: rotate(90deg);
 	}
+
+	.rocket:hover {
+		display: inline-block;     
+		position: relative;  
+		z-index: 1;     
+		padding-top: 45px;
+		padding-right: 75px;
+		padding-bottom: 65px;
+		padding-left: 45px;   
+		margin: -3em; 
+		transform: rotate(90deg) !important;
+		animation: shake 5s; 
+  		animation-iteration-count: infinite; 
+	}
 	
 	.rocket span{
 		display: block;
@@ -4551,9 +4565,10 @@
 		height: 20px;
 		background-color: #d4d4ff;
 		position: absolute;
-		border-bottom-right-radius: 100%;
-		border-top-right-radius: 100%;
-		border-left: 3px solid #5b595d;
+		border-bottom-right-radius: 100% !important;
+		border-top-right-radius: 100% !important;
+		border-left: 3px solid #6e77ad98;
+		border-radius: 3px;
 		border-right: 3px solid rgb(166, 155, 209);
 			-webkit-animation: wiggling 300ms infinite;
 			-moz-animation: wiggling 300ms infinite;
@@ -4577,12 +4592,7 @@
 		right: 0;
 		border-bottom-right-radius: 100%;
 	}
-	
-	.rocket span:after{
-		left: -3px;
-		border-left: 3px solid #444244;
-	}
-	
+
 	
 	/* fins */
 	.rocket span i.fin-top,
@@ -4633,9 +4643,7 @@
 			transform: skew(-40deg, 0deg);
 	}
 	
-	
-	
-	.rocket span i.faya{
+	.rocket:hover span i.faya{
 		position: absolute;
 		display: block;
 		left: -33px;
@@ -4644,8 +4652,9 @@
 		overflow: hidden;
 	}
 	
-	.rocket span i.faya:before{
+	.rocket:hover span i.faya:before{
 		position: absolute;
+		opacity: 1;
 		content: '';
 		display: block;
 		width: 220px;
@@ -4660,8 +4669,9 @@
 			animation: vrouming 500ms infinite;
 	}
 	
-	.rocket span i.faya:after{
+	.rocket:hover span i.faya:after{
 		position: absolute;
+		opacity: 1;
 		content: '';
 		display: block;
 		width: 220px;
@@ -4674,6 +4684,43 @@
 			-moz-animation: vrouming 500ms infinite;
 			-o-animation: vrouming 500ms infinite;
 			animation: vrouming 500ms infinite;
+	}
+
+	.rocket span i.faya{
+		position: absolute;
+		display: block;
+		left: -33px;
+		width: 30px;
+		height: 100%;
+		overflow: hidden;
+	}
+
+	.rocket span i.faya:before{
+		position: absolute;
+		opacity: 0;
+		content: '';
+		display: block;
+		width: 220px;
+		height: 20px;
+		left: 0;
+		top:0;
+		border-radius: 100%;
+		transition: 1s;
+		background-color: #f45224;
+	}
+	
+	.rocket span i.faya:after{
+		position: absolute;
+		opacity: 0;
+		content: '';
+		display: block;
+		width: 220px;
+		height: 10px;
+		left: 10px;
+		top: 5px;
+		border-radius: 100%;
+		transition: 1s;
+		background-color: #ffedd5;
 	}
 	
 	.rocket span i.wastes{
@@ -4689,7 +4736,7 @@
 		width: 3px;
 		right: 0;
 		height: 1px;
-		background-color: rgba(160, 161, 197, 0.5);
+		background-color: rgba(168, 170, 29, 0.5);
 		-webkit-transition: all 0.75s ease-in-out !important;
 		-moz-transition: all 0.75s ease-in-out !important;
 		-o-transition: all 0.75s ease-in-out !important;
@@ -4867,6 +4914,20 @@
 		0% { transform: translate3d(0px, 0, 0); }
 		100% { transform: translate3d(-40px, 5px, 0); }
 	}
+
+	@keyframes shake {
+		0% { transform: translate(0px, 0px) rotate(90deg); }
+		10% { transform: translate(-1px, -1px) rotate(89deg); }
+		20% { transform: translate(-1px, 0px) rotate(89deg); }
+		30% { transform: translate(1px, 1px) rotate(91deg); }
+		40% { transform: translate(1px, -1px) rotate(90deg); }
+		50% { transform: translate(-1px, 1px) rotate(89deg); }
+		60% { transform: translate(-1px, 1px) rotate(89deg); }
+		70% { transform: translate(1px, 1px) rotate(91deg); }
+		80% { transform: translate(-1px, -1px) rotate(89deg); }
+		90% { transform: translate(1px, -1px) rotate(91deg); }
+		100% { transform: translate(0px, 0px) rotate(90deg); }
+	  }
 
 	::-webkit-scrollbar
 	{
