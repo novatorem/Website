@@ -3,7 +3,8 @@ let urlParams = new URLSearchParams(window.location.search)
 let urlParamString = urlParams.toString()
 let youtube = "https://www.youtube.com/embed/".concat(urlParams.get("videoCode"))
 youtube = youtube.concat("?autoplay=1&controls=0&disablekb=1&fs=0&modestbranding=1&start=")
-youtube = youtube.concat(urlParams.get("startTime"))
+youtube = youtube.concat(urlParams.get("startTime").slice(0, -1))
+alert(youtube)
 
 let element = document.createElement("iframe")
 element.src=youtube
