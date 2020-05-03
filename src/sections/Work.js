@@ -37,9 +37,9 @@ const Work = () => {
     <section id="work">
       <Heading icon={MdWork} title="Work" />
 
-      <div className="bg-primary-800 text-white rounded p-6 mb-8 lg:mr-12">
-        The current situation caused me to be furloughed, so I'm just working on personal projects!
-      </div>
+      {/* <div className="bg-primary-800 text-white rounded p-6 mb-8 lg:mr-12">
+        Announcement
+      </div> */}
 
       <div className="flex">
         <div className="w-1 bg-gray-500 rounded-full md:ml-6 opacity-25" />

@@ -106,7 +106,7 @@ var bookmarks = [
     ['resume', 'https://www.novac.dev/x/intro/Resume.pdf'],
     ['github', 'https://github.com/novatorem'],
     ['facebook', 'https://www.facebook.com/novatorem'],
-    ['e-mail', 'mailto:abdulla.binhaji@mail.utoronto.ca'],
+    ['e-mail', 'mailto:andrew.novac@mail.utoronto.ca'],
     ['main' ,'https://www.novac.dev/'],
     ['404', 'https://www.novac.dev/iLoveYou'],
 ]

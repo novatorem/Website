@@ -4,10 +4,10 @@ import Heading from "../components/Heading";
 import { AiFillSafetyCertificate, FaAngleRight } from "../components/Icons";
 import styles from "./Meta.module.css";
 
-const Certifications = () => {
+const Qualifications = () => {
   const data = useStaticQuery(graphql`
     {
-      allCertificationsJson {
+      allQualificationsJson {
         edges {
           node {
             id
@@ -20,10 +20,10 @@ const Certifications = () => {
   `);
 
   return (
-    <section id="certifications">
-      <Heading icon={AiFillSafetyCertificate} title="Certifications" />
+    <section id="qualifications">
+      <Heading icon={AiFillSafetyCertificate} title="Qualifications" />
 
-      {data.allCertificationsJson.edges.map(({ node }, index) => (
+      {data.allQualificationsJson.edges.map(({ node }, index) => (
         <div
           key={node.id}
           className={`${styles.container} wow fadeInDown`}
@@ -44,4 +44,4 @@ const Certifications = () => {
   );
 };
 
-export default Certifications;
+export default Qualifications;
