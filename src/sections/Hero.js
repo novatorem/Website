@@ -53,16 +53,16 @@ const Hero = () => {
           </div>
         </div>
         <div className="col-span-3">
-          <h1>
-            Andrew Novac <br />
-          </h1>
-
           <h1 className="sr-only">
             Andrew Novac&apos;s Home on the Web <br />
             University of Toronto - Computer Science & Mathematics
           </h1>
 
           <div className="text-center lg:text-left flex flex-col items-center lg:ml-4 lg:items-start">
+            <h1>
+              Andrew Novac <br />
+            </h1>
+            
             <Subtitle onDone={() => setShowSocial(true)} />
 
             <div className="w-full md:w-auto h-6 my-6">

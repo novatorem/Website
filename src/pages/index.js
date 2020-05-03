@@ -2,7 +2,7 @@ import React from "react";
 import Wrapper from "../components/Wrapper";
 import AboutMe from "../sections/AboutMe";
 import Achievements from "../sections/Achievements";
-import Certifications from "../sections/Certifications";
+import Qualifications from "../sections/Qualifications";
 import Education from "../sections/Education";
 import Footer from "../sections/Footer";
 import Hero from "../sections/Hero";
@@ -29,7 +29,7 @@ const IndexPage = () => {
             <Achievements />
           </div>
           <div>
-            <Certifications />
+            <Qualifications />
           </div>
         </div>
         <Resume />

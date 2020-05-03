@@ -18,8 +18,8 @@ const sections = [
   { id: "projects", title: "Projects", icon: FaDev },
   { id: "achievements", title: "Achievements", icon: FaAward },
   {
-    id: "certifications",
-    title: "Certifications",
+    id: "qualifications",
+    title: "Qualifications",
     icon: AiFillSafetyCertificate,
   },
   { id: "resume", title: "Resume", icon: IoIosDocument },
