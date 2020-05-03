@@ -72,12 +72,6 @@ module.exports = {
         path: path.join(__dirname, `src`, `images`),
       },
     },
-    {
-      resolve: `gatsby-source-dev`,
-      options: {
-        username: `andrewnovac`,
-      },
-    },
     `gatsby-transformer-remark`,
     {
       resolve: `gatsby-source-filesystem`,
