@@ -1,0 +1,33 @@
+.container {
+  @apply flex justify-between;
+}
+
+.container > a {
+  width: 24px;
+  height: 24px;
+  @apply cursor-pointer rounded-full flex justify-center items-center;
+}
+
+@screen md {
+  .container {
+    @apply max-w-sm;
+  }
+
+  .container > a:first-child {
+    @apply mr-4;
+  }
+
+  .container > a:last-child {
+    @apply ml-4;
+  }
+
+  .container > a:not(:first-child):not(:last-child) {
+    @apply mx-4;
+  }
+}
+
+@screen lg {
+  .container {
+    @apply justify-start;
+  }
+}
