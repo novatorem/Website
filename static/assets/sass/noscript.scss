@@ -1,0 +1,37 @@
+@import 'libs/vars';
+@import 'libs/functions';
+@import 'libs/mixins';
+@import 'libs/skel';
+@import 'font-awesome.min.css';
+
+/* Wrapper */
+
+	#wrapper {
+		background-color:		_palette(wrapper-bg);
+		background-image:		url('../../assets/images/overlay.png'),	linear-gradient(0deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1)),	url('../../assets/images/bg.jpg');
+		background-size:		auto,								auto,														100% auto;
+		background-position:	center,								center,														top center;
+		background-repeat:		repeat,								no-repeat,													no-repeat;
+		background-attachment:	fixed,								fixed,														fixed;
+
+		&.fade-in {
+			&:before {
+				display: none;
+			}
+		}
+	}
+
+/* Intro */
+
+	#intro {
+		body.is-loading & {
+			opacity: 1;
+
+			&:not(.hidden) {
+				& + #header + #nav {
+					@include vendor('transform', 'none');
+					opacity: 1;
+				}
+			}
+		}
+	}

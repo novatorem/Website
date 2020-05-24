@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Andrew's Home</title>
+    <link rel='icon' type='image/png' href='images/favicon.png'>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <link href="http://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet" type='text/css'></link>
+    <meta name="description" content="Andrew's homepage that leads and links to other pages to browse the internet">
+  </head>
+<body>
+<ul class="container">
+        <li><a class="parent" href="#">Communication</a>
+                <ul class="submenu">
+                  <li class="tab"><a href="https://mail.google.com/mail/u/0/#inbox">gmail</a></li>
+                  <li class="tab"><a href="https://mail.utoronto.ca">umail</a></li>
+                  <li class="tab"><a href="https://www.hotmail.com/">outlook</a></li>
+                  <li class="tab"><a href="https://dribbble.com/">dribbble</a></li>
+                  <li class="tab"><a href="https://www.facebook.com/?_rdr=p">facebook</a></li>
+                </ul>
+        </li>
+        <li><a class="parent" href="#">Entertainment</a>
+                <ul class="submenu">
+                  <li class="tab"><a href="http://www.reddit.com/r/all">reddit</a></li>
+                  <li class="tab"><a href="https://www.4chan.org">4chan</a></li>
+                  <li class="tab"><a href="http://www.reddit.com/r/overwatch">watch</a></li>
+                  <li class="tab"><a href="http://www.reddit.com/r/hearthstone/">hearth</a></li>
+                  <li class="tab"><a href="https://unsplash.com/">unsplash</a></li>
+                </ul>
+        </li>
+        <li><a class="parent" href="#">Education</a>
+                <ul class="submenu">
+                  <li class="tab"><a href="http://stackoverflow.com/">stack</a></li>
+                  <li class="tab"><a href="http://acorn.utoronto.ca/">acorn</a></li>
+                  <li class="tab"><a href="http://portal.utoronto.ca/">portal</a></li>
+                  <li class="tab"><a href="https://github.com/novatorem">github</a></li>
+                  <li class="tab"><a href="https://www.wolframalpha.com/">wolfram</a></li>
+                </ul>
+        </li>
+        <li><a class="parent" href="#">Media</a>
+                <ul class="submenu">
+                  <li class="tab"><a href="https://masterani.me">anime</a></li>
+                  <li class="tab"><a href="https://www.twitch.tv/directory">twitch</a></li>
+                  <li class="tab"><a href="http://www.reddit.com/r/videos/">videos</a></li>
+                  <li class="tab"><a href="http://netflix.com/">netflix</a></li>
+                  <li class="tab"><a href="https://www.youtube.com">youtube</a></li>
+                </ul>
+        </li>
+        <center><div id = "spotify">
+          <iframe src="https://open.spotify.com/embed/user/novatorem/playlist/5NkULdNQ2U7VBZjGcyXGL3?theme=white" width="79" height="100" frameborder="0" allowtransparency="true">
+          </iframe>
+        </div></center>
+
+</ul>
+
+<script>
+$('.submenu').hide();
+$("li:has(ul)").hover(function(){
+  $("ul",this).slideToggle('100000');
+});
+</script>
+</body>
+
+<body id="t" class="offline">
+    <div id="main-frame-error" class="interstitial-wrapper">
+        <div id="main-content">
+            <div class="icon icon-offline" alt=""></div>
+        </div>
+        <div id="offline-resources">
+            <img id="offline-resources-1x" src="assets/default_100_percent/100-offline-sprite.png">
+            <img id="offline-resources-2x" src="assets/default_200_percent/200-offline-sprite.png">
+            <template id="audio-resources">
+                <audio id="offline-sound-press"></audio>
+                <audio id="offline-sound-hit"></audio>
+                <audio id="offline-sound-reached"></audio>
+            </template>
+        </div>
+</body>
+</html>

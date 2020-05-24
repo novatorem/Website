@@ -1,0 +1,57 @@
+.transition-default {
+  transition: all 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.container {
+  @apply relative inline-flex cursor-pointer;
+}
+
+.container:focus {
+  @apply outline-none;
+}
+
+.container > div:first-child {
+  color: #121212;
+  background-color: #e0e0e0;
+  @apply relative flex items-center font-semibold px-8 py-2 z-20;
+  @apply transition-default;
+  top: 0;
+  left: 0;
+  border-radius: 5px;
+}
+
+.container.light > div:first-child {
+  color: #e0e0e0;
+  background-color: #222222;
+  @apply transition-default;
+  border-radius: 5px;
+}
+
+.container > div:first-child svg {
+  @apply mr-3;
+}
+
+.container:hover > div:first-child {
+  @apply transition-default;
+  top: 2px;
+  left: 2px;
+}
+
+.container:active > div:first-child {
+  @apply transition-default;
+  top: 4px;
+  left: 4px;
+}
+
+.container > div:last-child {
+  border-color: #e0e0e0;
+  @apply absolute w-full h-full border-2 z-10;
+  top: 3px;
+  left: 3px;
+  border-radius: 5px;
+}
+
+.container.light > div:last-child {
+  border-color: #222222;
+  @apply transition-default;
+}

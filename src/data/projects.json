@@ -1,0 +1,46 @@
+[
+  {
+    "image": "../images/projects/melodify.png",
+    "title": "Melodify",
+    "description": "Spotify miniplayer interface with user stats, recommendations, youtube music videos, and more",
+    "tags": ["cSharp", "wpf", "spotify", "api"],
+    "website": "https://github.com/novatorem/Melodify/releases",
+    "github": "https://github.com/novatorem/Melodify"
+  },
+  {
+    "image": "../images/projects/coverhack.png",
+    "title": "Cover Hack",
+    "description": "Create custom cover letters that you can customize per application",
+    "tags": ["react", "mongoose", "webdev", "fullstack"],
+    "website": "https://cover-hack.glitch.me/",
+    "github": "https://github.com/novatorem/Cover-Hack"
+  },
+  {
+    "image": "../images/projects/robotics.png",
+    "title": "Robotics",
+    "description": "Using the V-Rep program, simulated motion planning and tracking",
+    "tags": ["python", "robots", "paths", "algorithms"],
+    "github": "https://github.com/novatorem/Robotics"
+  },
+  {
+    "image": "../images/projects/era.png",
+    "title": "Emergency Response Aid",
+    "description": "Team application designed as a mediatery to help users seek medical attention",
+    "tags": ["android", "java", "mongodb", "app"],
+    "github": "https://github.com/novatorem/ERA-Emergency-Response-Aid"
+  },
+  {
+    "image": "../images/projects/facial.png",
+    "title": "FacialRecognition",
+    "description": "A python program that takes a video and identifies faces",
+    "tags": ["numpy", "ml", "ai", "cv"],
+    "github": "https://github.com/novatorem/FacialRecognition"
+  },
+  {
+    "image": "../images/projects/graphics.png",
+    "title": "Graphics",
+    "description": "A repository to experiment graphical options under CAST",
+    "tags": ["c++", "graphics", "kinetic", "mesh"],
+    "github": "https://github.com/novatorem/Graphics"
+  }
+]
