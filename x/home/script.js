@@ -1,6 +1,8 @@
 function updateClock() {
     var now = new Date();
 	hours = now.getHours();
+	hours = hours % 12;
+  	hours = hours ? hours : 12;
 	minutes = now.getMinutes();
 	if (minutes < 10) {
 		time = hours + ':' + "0" + minutes;
