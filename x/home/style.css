@@ -69,8 +69,8 @@ a, a:visited, a:hover {
 .container .time {
 	font-family: 'Ubuntu', sans-serif;
 	font-size: 80px;
-	margin-bottom: 50px;
-	margin-top: -50px;
+	margin-bottom: 100px;
+	margin-top: -100px;
 }
 
 /* ------------- BOX STYLING ------------- */ 
