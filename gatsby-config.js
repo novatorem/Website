@@ -7,7 +7,7 @@ require(`dotenv`).config({ path: `.env` });
 module.exports = {
   siteMetadata: {
     title: `Andrew Novac`,
-    description: `The home page of Andrew Novac, the one of many!`,
+    description: `The home page of Andrew Novac, one of many! A software developer currently living in Toronto, Canada.`,
     author: `Andrew Novac`,
     siteUrl: `https://novac.dev`,
   },
