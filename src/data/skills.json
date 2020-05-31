@@ -2,41 +2,41 @@
   {
     "icon": "../images/skills/tensorflow.png",
     "name": "Machine Learning",
-    "tech": "OpenCV/TensorFlow/Numpy"
+    "tech": "OpenCV | TensorFlow | Numpy"
   },
   {
     "icon": "../images/skills/python.png",
     "name": "Python Scripting",
-    "tech": "Python 3/BeautifulSoup/PyMongo"
+    "tech": "Python 3 | BeautifulSoup | PyMongo"
   },
   {
     "icon": "../images/skills/database.png",
     "name": "Database Management System",
-    "tech": "MySQL/MariaDB/MongoDB"
+    "tech": "MySQL | MariaDB | MongoDB"
   },
   {
-    "icon": "../images/skills/web.png",
-    "name": "Web Design & Development",
-    "tech": "HTML/CSS/Javascript"
+    "icon": "../images/skills/dotnet.png",
+    "name": ".NET Platform",
+    "tech": "C# | WPF | Core"
   },
   {
-    "icon": "../images/skills/angular.png",
+    "icon": "../images/skills/visual.png",
+    "name": "Visual & Networking",
+    "tech": "C++ | Unreal | Unity"
+  },
+  {
+    "icon": "../images/skills/react.png",
     "name": "Frontend Javascript Frameworks",
-    "tech": "Angular/React/Vue.js"
+    "tech": "React | Vue.js | HandleBars"
   },
   {
     "icon": "../images/skills/nodejs.png",
     "name": "Backend Javascript Frameworks",
-    "tech": "Node.js/Express.js/Mongoose"
+    "tech": "Node.js | Express.js | Mongoose"
   },
   {
     "icon": "../images/skills/android.png",
     "name": "Android App Development",
-    "tech": "Android Studio/Java/Kotlin/XML"
-  },
-  {
-    "icon": "../images/skills/sketch.png",
-    "name": "UI/UX Design",
-    "tech": "Paint.NET/Figma"
+    "tech": "Java | Kotlin | XML"
   }
 ]
