@@ -52,7 +52,7 @@ const Skills = () => {
                   className="mt-2 leading-none"
                   style={{ fontSize: "0.65rem" }}
                 >
-                  ({node.tech})
+                  {node.tech}
                 </h6>
               </div>
             </div>
