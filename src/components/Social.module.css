@@ -5,7 +5,7 @@
 .container > a {
   width: 24px;
   height: 24px;
-  @apply cursor-pointer rounded-full flex justify-center items-center;
+  @apply cursor-pointer rounded flex justify-center items-center;
 }
 
 @screen md {

@@ -12,22 +12,21 @@ const Subtitle = ({ onDone }) => (
   >
     <code className="w-full text-sm leading-loose">
       <div>
-        <span className="text-blue-600">const</span>{" "}
-        <span className="text-orange-400">novatorem</span>:{" "}
-        <span className="text-orange-400">Array</span>&lt;
-        <span className="text-green-400">Values</span>&gt;{" "}
-        <span className="text-blue-600">=</span> [
+        <span className="text-blue-600">traits</span>
+        []{" "}
+        <span className="text-orange-400">novatorem</span>{" "}
+        <span className="text-blue-600">=</span> {"{"}
       </div>
       <div className="lg:pl-8">
         <span className="text-red-500">Developer</span>,{" "}
         <span className="text-red-500">Reader</span>,{" "}
-        <span className="text-red-500">Listener</span>,{" "}
+        <span className="text-red-500">Curator</span>,{" "}
         <span className="text-red-500">Techie</span>,{" "}
       </div>
       <div className="lg:pl-8">
         <span className="text-red-500">...</span>{" "}
       </div>
-      <div>];</div>
+      <div>{"}"};</div>
     </code>
   </Typist>
 );
