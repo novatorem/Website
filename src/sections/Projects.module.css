@@ -1,5 +1,11 @@
 .container {
   @apply flex overflow-x-auto pb-8;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.container::-webkit-scrollbar {
+  display: none;
 }
 
 .project {
