@@ -37,7 +37,7 @@ const Resume = () => {
               imgStyle={{ objectPosition: "top" }}
               {...data.file.childImageSharp}
             />
-            <span className="sr-only">Download Resume</span>
+            <span className="sr-only">Preview Resume</span>
           </OutboundLink>
         </div>
         <div className="col-span-1 md:col-span-3">
@@ -48,7 +48,7 @@ const Resume = () => {
           <Button
             className="mt-8"
             icon={IoIosDocument}
-            title="Download Resume"
+            title="Preview Resume"
             onClick={() =>
               window.open("https://novac.dev/x/intro/Resume.pdf", "_blank")
             }
