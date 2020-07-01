@@ -22,8 +22,8 @@ const Projects = () => {
             github
             image {
               childImageSharp {
-                fluid(maxWidth: 400) {
-                  ...GatsbyImageSharpFluid_withWebp
+                fluid(maxWidth: 400, quality: 100) {
+                  ...GatsbyImageSharpFluid
                 }
               }
             }
@@ -70,7 +70,7 @@ const Projects = () => {
               ))}
             </p>
 
-            <div className="flex mt-2">
+            {/* <div className="flex mt-2">
               {node.website && (
                 <Tooltip title="Go to Website" placement="bottom">
                   <OutboundLink
@@ -98,7 +98,7 @@ const Projects = () => {
                   </OutboundLink>
                 </Tooltip>
               )}
-            </div>
+            </div> */}
           </div>
         ))}
       </div>
