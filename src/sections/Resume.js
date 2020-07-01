@@ -11,7 +11,7 @@ const Resume = () => {
     {
       file(relativePath: { eq: "resume/preview.png" }) {
         childImageSharp {
-          fluid(maxWidth: 600) {
+          fluid(maxWidth: 600, quality: 100) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
@@ -42,7 +42,7 @@ const Resume = () => {
         </div>
         <div className="col-span-1 md:col-span-3">
           <h5 className="text-lg lg:text-xl font-semibold">
-            If you'd like to check out my Resume, you can access the PDF here:
+            If you'd like to check out my Resume, you can access the PDF here!
           </h5>
 
           <Button

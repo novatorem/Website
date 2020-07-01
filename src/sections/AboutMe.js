@@ -9,8 +9,8 @@ const AboutMe = () => {
     {
       photo: file(relativePath: { eq: "about-me/me.png" }) {
         childImageSharp {
-          fluid(maxWidth: 512) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(maxWidth: 512, quality: 100) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
