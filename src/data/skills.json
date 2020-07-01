@@ -1,23 +1,23 @@
 [
   {
+    "icon": "../images/skills/dotnet.png",
+    "name": ".NET Platform",
+    "tech": "C# | WPF | Core"
+  },
+  {
     "icon": "../images/skills/tensorflow.png",
     "name": "Machine Learning",
     "tech": "OpenCV | TensorFlow | Numpy"
   },
   {
     "icon": "../images/skills/python.png",
-    "name": "Python Scripting",
+    "name": "Python Programming",
     "tech": "Python 3 | BeautifulSoup | PyMongo"
   },
   {
     "icon": "../images/skills/database.png",
     "name": "Database Management System",
     "tech": "MySQL | MariaDB | MongoDB"
-  },
-  {
-    "icon": "../images/skills/dotnet.png",
-    "name": ".NET Platform",
-    "tech": "C# | WPF | Core"
   },
   {
     "icon": "../images/skills/visual.png",

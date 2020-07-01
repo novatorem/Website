@@ -3,7 +3,7 @@ import { useEffect } from "react";
 
 const NotFoundPage = () => {
   useEffect(() => {
-    navigate("/404");
+    navigate("/404.html");
   }, []);
 
   return null;
