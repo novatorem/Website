@@ -16,8 +16,7 @@ const Social = () => {
               href={x.link}
               target="_blank"
               rel="noopener noreferrer"
-              className={`${x.class} animated fadeIn`}
-              style={{ animationDelay: `${i * 0.25 + 0.25}s` }}
+              className={`${x.class}`}
             >
               <Icon color="#FFF" size="0.9em" />
               <span className="sr-only">{x.title}</span>

@@ -33,7 +33,7 @@
 
 @screen lg {
   .container {
-    @apply inset-x-auto inset-y-0 left-0 flex-col;
+    @apply inset-x-0 inset-y-auto right-0 left-0 flex-row;
   }
 
   .container:hover .menu {

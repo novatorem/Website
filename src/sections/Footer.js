@@ -3,6 +3,7 @@ import Heading from "../components/Heading";
 import { FaInfoCircle, FaStar } from "../components/Icons";
 import { useStaticQuery, graphql } from "gatsby";
 import Button from "../components/Button";
+import Social from "../components/Social";
 
 const Footer = () => {
   const data = useStaticQuery(graphql`
@@ -21,8 +22,12 @@ const Footer = () => {
         className="text-justify w-full md:w-4/5 lg:w-3/4 wow fadeIn"
         dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
       />
+      
+      <div className="w-full md:w-auto h-6 my-6">
+        {<Social />}
+      </div>
 
-      <Button
+      {/* <Button
         className="mt-6"
         icon={FaStar}
         title="Check it out on Github!"
@@ -32,7 +37,7 @@ const Footer = () => {
             "_blank",
           )
         }
-      />
+      /> */}
 
       <div className="pt-24 pb-8 text-xs leading-relaxed opacity-25">
         <div>Licensed under MIT.</div>

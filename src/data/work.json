@@ -8,6 +8,14 @@
     "specialization": "Low level C++, Unreal Engine, Networking"
   },
   {
+    "icon": "../images/work/liminal.png",
+    "title": "Liminal Entertainment Technologies",
+    "subtitle": "Consultant - Developer",
+    "period": "Jul '20 - Aug '20",
+    "location": "Virginia, United States",
+    "specialization": "Package routing, Encapsulation, C# Cross-Platform GUI"
+  },
+  {
     "icon": "../images/work/cast.png",
     "title": "Cast Software",
     "subtitle": "Research Developer Intern",
