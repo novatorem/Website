@@ -65,9 +65,9 @@ const Hero = () => {
             
             <Subtitle onDone={() => setShowSocial(true)} />
 
-            <div className="w-full md:w-auto h-6 my-6">
+            {/* <div className="w-full md:w-auto h-6 my-6">
               {showSocial && <Social />}
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

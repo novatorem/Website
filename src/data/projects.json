@@ -2,7 +2,7 @@
   {
     "image": "../images/projects/melodify.png",
     "title": "Melodify",
-    "description": "Spotify miniplayer interface with user stats, music videos, suggestions, and more",
+    "description": "Spotify interface with user stats, music videos, suggestions, and more",
     "tags": ["cSharp", "wpf", "spotify", "api"],
     "website": "https://github.com/novatorem/Melodify/releases",
     "github": "https://github.com/novatorem/Melodify"
@@ -32,14 +32,14 @@
   {
     "image": "../images/projects/facial.png",
     "title": "FacialRecognition",
-    "description": "A trained python program that takes a user's video and identifies faces",
+    "description": "A trained python program that takes a user's mp4 and identifies faces in the video",
     "tags": ["numpy", "ml", "ai", "cv"],
     "github": "https://github.com/novatorem/FacialRecognition"
   },
   {
     "image": "../images/projects/graphics.png",
     "title": "Graphics",
-    "description": "A repository to experiment and push the capabilities of graphics",
+    "description": "A repository to experiment and push the capabilities of graphics and physics",
     "tags": ["c++", "graphics", "kinetic", "mesh"],
     "github": "https://github.com/novatorem/Graphics"
   }

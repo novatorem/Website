@@ -63,20 +63,20 @@ const Navigation = () => {
         isMobile ? "fadeInDown" : "fadeInLeft"
       }`}
     >
-      <Tooltip title="Go to Top" placement="right" arrow>
+      <Tooltip title="Home" placement="right" arrow>
         <div className="flex-center cursor-pointer" onClick={scrollToTop}>
           <GatsbyImage className="grayscale" {...data.icon.childImageSharp} />
         </div>
       </Tooltip>
 
-      <div className="hidden md:flex flex-col justify-center items-center">
+      {/* <div className="hidden md:flex flex-col justify-center items-center">
         <div className={styles.menu}>
           <MdMenu />
         </div>
         <div className={styles.sectionLinks}>{sections.map(SectionLink)}</div>
-      </div>
+      </div> */}
 
-      <Tooltip title={dark ? "Toggle Light Mode" : "Toggle Dark Mode"} placement="right" arrow>
+      <Tooltip title={dark ? "Light Mode" : "Dark Mode"} placement="right" arrow>
         <div
           className="flex-center cursor-pointer hover:text-primary-500"
           onClick={toggleDark}
