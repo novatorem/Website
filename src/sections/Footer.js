@@ -39,7 +39,7 @@ const Footer = () => {
         }
       /> */}
 
-      <div className="pt-24 pb-8 text-xs leading-relaxed opacity-25">
+      <div className="pt-8 pb-8 text-xs leading-relaxed opacity-25">
         <div>Licensed under MIT.</div>
         <div>Copyright {new Date().getFullYear()} Novatorem</div>
       </div>
