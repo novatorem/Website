@@ -7,7 +7,6 @@
   float: left;
   min-width: 280px;
   max-width: 280px;
-  padding-bottom: 2rem;
   @apply mr-10 rounded-lg flex flex-col;
 }
 
