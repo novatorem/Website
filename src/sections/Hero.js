@@ -4,6 +4,7 @@ import Parallax from "parallax-js";
 import React, { useRef, useState, useEffect } from "react";
 import Social from "../components/Social";
 import Subtitle from "../components/Subtitle";
+import styles from "./Hero.module.css";
 
 const Hero = () => {
   const parallaxRef = useRef(null);
@@ -59,7 +60,7 @@ const Hero = () => {
           </h1>
 
           <div className="text-center lg:text-left flex flex-col items-center lg:ml-4 lg:items-start">
-            <h1>
+            <h1 className={`${styles.header}`}>
               Andrew Novac <br />
             </h1>
             

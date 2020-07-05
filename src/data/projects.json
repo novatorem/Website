@@ -11,8 +11,8 @@
     "image": "../images/projects/coverhack.png",
     "title": "Cover Hack",
     "description": "Create custom cover letters where users can customize per application",
-    "tags": ["react", "mongoose", "webdev", "fullstack"],
-    "website": "https://cover-hack.glitch.me/",
+    "tags": ["react", "mongoose", "node", "fullstack"],
+    "website": "https://cover-hack.novac.dev/",
     "github": "https://github.com/novatorem/Cover-Hack"
   },
   {

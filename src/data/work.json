@@ -3,23 +3,23 @@
     "icon": "../images/work/cast.png",
     "title": "Cast Software",
     "subtitle": "Software Developer",
-    "period": "Jan '20 - Current",
+    "period": "Jan 2020 - Current",
     "location": "Toronto, Canada",
-    "specialization": "Low level C++, Unreal Engine, Networking"
+    "specialization": "Low level C++, Unreal Engine, Unity"
   },
   {
     "icon": "../images/work/liminal.png",
     "title": "Liminal Entertainment Technologies",
     "subtitle": "Consultant - Developer",
-    "period": "Jul '20 - Aug '20",
+    "period": "Summer 2020",
     "location": "Virginia, United States",
-    "specialization": "Package routing, Encapsulation, C# Cross-Platform GUI"
+    "specialization": "Package routing, Network Encapsulation, C# GUI"
   },
   {
     "icon": "../images/work/cast.png",
     "title": "Cast Software",
     "subtitle": "Research Developer Intern",
-    "period": "May '18 - Aug '19",
+    "period": "May 2018 - Aug 2019",
     "location": "Toronto, Canada",
     "specialization": "Python machine learning, data simulation, process optimization"
   }
