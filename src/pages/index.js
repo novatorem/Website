@@ -24,14 +24,14 @@ const IndexPage = () => {
         </div>
         <Skills />
         <Projects />
-        <div className={styles.achievementsCertificationPhilanthropy}>
+        {/* <div className={styles.achievementsCertificationPhilanthropy}>
           <div>
             <Achievements />
           </div>
           <div>
             <Qualifications />
           </div>
-        </div>
+        </div> */}
         <Resume />
         <Footer />
       </div>

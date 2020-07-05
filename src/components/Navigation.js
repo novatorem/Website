@@ -63,11 +63,11 @@ const Navigation = () => {
         isMobile ? "fadeInDown" : "fadeInLeft"
       }`}
     >
-      <Tooltip title="Home" placement="right" arrow>
-        <div className="flex-center cursor-pointer" onClick={scrollToTop}>
-          <GatsbyImage className="grayscale" {...data.icon.childImageSharp} />
-        </div>
-      </Tooltip>
+      {/* <Tooltip title="Home" placement="right" arrow> */}
+      <div className="flex-center cursor-pointer" onClick={scrollToTop}>
+        <GatsbyImage className="grayscale" {...data.icon.childImageSharp} />
+      </div>
+      {/* </Tooltip> */}
 
       {/* <div className="hidden md:flex flex-col justify-center items-center">
         <div className={styles.menu}>
@@ -76,14 +76,14 @@ const Navigation = () => {
         <div className={styles.sectionLinks}>{sections.map(SectionLink)}</div>
       </div> */}
 
-      <Tooltip title={dark ? "Light Mode" : "Dark Mode"} placement="right" arrow>
-        <div
-          className="flex-center cursor-pointer hover:text-primary-500"
-          onClick={toggleDark}
-        >
-          {dark ? <IoIosSunny /> : <IoIosMoon />}
-        </div>
-      </Tooltip>
+      {/* <Tooltip title={dark ? "Light Mode" : "Dark Mode"} placement="right" arrow> */}
+      <div
+        className="flex-center cursor-pointer hover:text-primary-500"
+        onClick={toggleDark}
+      >
+        {dark ? <IoIosSunny /> : <IoIosMoon />}
+      </div>
+      {/* </Tooltip> */}
     </div>
   );
 };

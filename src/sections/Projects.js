@@ -62,7 +62,7 @@ const Projects = () => {
             <h5 className="mt-4 font-semibold">{node.title}</h5>
             <p className="mt-2 pb-5 text-sm text-justify">{node.description}</p>
 
-            <p className="pb-2 flex text-xs font-semibold">
+            <p className="pb-5 flex text-xs font-semibold">
               {node.tags.map(x => (
                 <span key={x} className="mr-2">
                   #{x}
@@ -104,7 +104,7 @@ const Projects = () => {
       </div>
 
       <Button
-        className="mt-6"
+        className="m-0"
         icon={FaGithub}
         title="Projects on GitHub"
         onClick={() => window.open("https://github.com/novatorem", "_blank")}
