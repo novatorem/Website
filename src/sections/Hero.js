@@ -60,7 +60,7 @@ const Hero = () => {
           </h1>
 
           <div className="text-center lg:text-left flex flex-col items-center lg:ml-4 lg:items-start">
-            <h1 className={`${styles.header}`}>
+            <h1 className={`${styles.header} leading-tight`}>
               Andrew Novac <br />
             </h1>
             
