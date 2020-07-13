@@ -21,7 +21,7 @@ const social = [
   {
     title: "LinkedIn",
     icon: FaLinkedinIn,
-    link: "https://www.linkedin.com/in/andrewnovac",
+    link: "https://www.linkedin.com/in/andrew-novac",
     class: "bg-linkedin",
   },
   {

@@ -40,7 +40,7 @@ npm install -g gatsby-cli
 
 ```console
 git clone https://github.com/Novatorem/Website.git
-cd NewWeb
+cd Website
 ```
 
 3. Then, just run this command to install the necessary dependencies. It might take a while for it to finish, so keep an episode of 'Friends' running, just in case.
@@ -60,3 +60,9 @@ gatsby develop
 ```console
 gatsby build
 ```
+
+## Netlify
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/fe6b65bf-64de-498f-9ae1-72e127ad003c/deploy-status)](https://app.netlify.com/sites/novatorem/deploys)
+
+**Build command**: `gatsby build`
