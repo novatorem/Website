@@ -6,7 +6,11 @@
 }
 
 body {
-	background-color: #252934;
+	background-color: #252934F1;
+	background-image: url("https://source.unsplash.com/featured/?water,wallpaper");
+	background-blend-mode: multiply;
+	background-repeat: no-repeat;
+	background-size: cover;
 	color: white;
 }
 
@@ -71,6 +75,7 @@ a, a:visited, a:hover {
 	font-size: 80px;
 	margin-bottom: 100px;
 	margin-top: -100px;
+	text-shadow: 2px 2px #2E3441;
 }
 
 /* ------------- BOX STYLING ------------- */ 
