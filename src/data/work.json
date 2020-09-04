@@ -1,19 +1,19 @@
 [
   {
+    "icon": "../images/work/liminal.png",
+    "title": "Liminal",
+    "subtitle": "Consultant - Engineer",
+    "period": "July 2020 - Current",
+    "location": "Virginia, United States",
+    "specialization": "Package routing, Network Encapsulation, C# GUI"
+  },
+  {
     "icon": "../images/work/cast.png",
     "title": "Cast Software",
     "subtitle": "Software Developer",
-    "period": "Jan 2020 - Current",
+    "period": "Jan 2020 - Aug 2020",
     "location": "Toronto, Canada",
     "specialization": "Low level C++, Unreal Engine, Unity"
-  },
-  {
-    "icon": "../images/work/liminal.png",
-    "title": "Liminal Entertainment Technologies",
-    "subtitle": "Consultant - Developer",
-    "period": "Summer 2020",
-    "location": "Virginia, United States",
-    "specialization": "Package routing, Network Encapsulation, C# GUI"
   },
   {
     "icon": "../images/work/cast.png",

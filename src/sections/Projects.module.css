@@ -1,5 +1,5 @@
 .container {
-  @apply overflow-x-auto pb-8;
+  @apply overflow-x-auto pb-8 items-center;
   display: inline-block;
 }
 

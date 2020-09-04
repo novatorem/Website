@@ -2,7 +2,7 @@
   {
     "icon": "../images/skills/dotnet.png",
     "name": ".NET Platform",
-    "tech": "C# | WPF | Core"
+    "tech": "C# | Core | ASP"
   },
   {
     "icon": "../images/skills/tensorflow.png",

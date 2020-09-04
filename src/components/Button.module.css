@@ -1,7 +1,3 @@
-.transition-default {
-  transition: all 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
-}
-
 .container {
   @apply relative inline-flex cursor-pointer;
 }
@@ -11,21 +7,21 @@
 }
 
 .container > div:first-child {
-  color: #121212;
-  background-color: #e0e0e0;
-  @apply relative flex items-center font-semibold px-8 py-2 z-20;
+  color: #ffffffbb;
+  @apply relative flex items-center font-semibold px-8 py-2 z-20 bg-gradient-to-br from-teal-400 to-blue-500;
   /* @apply transition-default; */
   top: 0;
   left: 0;
   border-radius: 5px;
 }
 
-.container.light > div:first-child {
-  color: #e0e0e0;
-  background-color: #222222;
-  /* @apply transition-default; */
-  border-radius: 5px;
+.container > div:first-child:hover {
+  @apply from-teal-500 to-blue-600;
 }
+
+.container.light > div:first-child {
+  color: #ffffffee;
+} 
 
 .container > div:first-child svg {
   @apply mr-3;

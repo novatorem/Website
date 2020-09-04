@@ -3,6 +3,10 @@
   @apply border pl-5 py-3 rounded-lg mt-5;
 }
 
+.skill.dark {
+  background-color: #00ff00;
+}
+
 .skill:hover {
   border-color: rgba(128, 128, 128, 0.3);
 }

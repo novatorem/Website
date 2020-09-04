@@ -11,19 +11,20 @@ import Resume from "../sections/Resume";
 import Skills from "../sections/Skills";
 import Work from "../sections/Work";
 import styles from "./index.module.css";
+import Music from "../sections/Music";
 
 const IndexPage = () => {
   return (
     <Wrapper>
       <div className={`container ${styles.layout}`}>
         <Hero />
-        <AboutMe />
+        {/* <AboutMe /> */}
+        <Projects />
+        <Skills />
         <div className={styles.workEducation}>
           <Work />
           <Education />
         </div>
-        <Skills />
-        <Projects />
         {/* <div className={styles.achievementsCertificationPhilanthropy}>
           <div>
             <Achievements />
@@ -33,6 +34,7 @@ const IndexPage = () => {
           </div>
         </div> */}
         <Resume />
+        <Music />
         <Footer />
       </div>
     </Wrapper>
