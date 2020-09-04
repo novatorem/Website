@@ -60,10 +60,10 @@ const Hero = () => {
           </h1>
 
           <div className="text-center lg:text-left flex flex-col items-center lg:ml-4 lg:items-start">
-            <h1 className={`${styles.header} leading-tight`}>
+            {/* <h1 className={`${styles.header} leading-tight`}>
               Hi<h1 className="text-blue-600 inline-block text-6xl">.</h1> <br />
               I'm Andrew<br />
-            </h1>
+            </h1> */}
             
             <Subtitle onDone={() => setShowSocial(true)} />
 

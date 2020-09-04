@@ -33,7 +33,7 @@ const IndexPage = () => {
             <Qualifications />
           </div>
         </div> */}
-        <Resume />
+        {/* <Resume /> */}
         <Music />
         <Footer />
       </div>
