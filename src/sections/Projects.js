@@ -59,16 +59,16 @@ const Projects = () => {
               />
               <span className="sr-only">{node.title}</span>
             </OutboundLink>
-            <h5 className="mt-4 font-semibold">{node.title}</h5>
+            <h5 className="mt-4 font-semibold text-center">{node.title}</h5>
             <p className="mt-2 pb-5 text-sm text-justify">{node.description}</p>
 
-            <p className="pb-5 flex text-xs font-semibold">
+            {/* <p className="pb-5 flex text-xs font-semibold">
               {node.tags.map(x => (
                 <span key={x} className="mr-2">
                   #{x}
                 </span>
               ))}
-            </p>
+            </p> */}
 
             {/* <div className="flex mt-2">
               {node.website && (
@@ -106,7 +106,7 @@ const Projects = () => {
       <Button
         className="m-0"
         icon={FaGithub}
-        title="Projects on GitHub"
+        title="More on GitHub"
         onClick={() => window.open("https://github.com/novatorem", "_blank")}
       />
     </section>

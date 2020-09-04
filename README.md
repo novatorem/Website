@@ -43,22 +43,16 @@ git clone https://github.com/Novatorem/Website.git
 cd Website
 ```
 
-3. Then, just run this command to install the necessary dependencies. It might take a while for it to finish, so keep an episode of 'Friends' running, just in case.
+3. Then, just run this command to install the necessary dependencies.
 
 ```console
 npm install
 ```
 
-4. Watch the project come to life by firing up a server, brought to you by `gatsby-cli` which you installed in Step 1
+4. Locally work on the website via `gatsby-cli`.
 
 ```console
 gatsby develop
-```
-
-5. If you want to build the application in production, just make use of `gatsby-cli` again
-
-```console
-gatsby build
 ```
 
 ## Netlify

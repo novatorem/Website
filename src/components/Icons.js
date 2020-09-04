@@ -15,7 +15,6 @@ import {
   FaPaintBrush,
   FaSignLanguage,
   FaStar,
-  FaTwitter,
 } from "react-icons/fa";
 import { GoTools } from "react-icons/go";
 import {
@@ -32,6 +31,7 @@ import {
   MdPerson,
   MdSchool,
   MdWork,
+  MdMusicNote,
 } from "react-icons/md";
 
 export {
@@ -52,7 +52,6 @@ export {
   FaPaintBrush,
   FaSignLanguage,
   FaStar,
-  FaTwitter,
   GoTools,
   IoIosDocument,
   IoIosJournal,
@@ -65,4 +64,5 @@ export {
   MdPerson,
   MdSchool,
   MdWork,
+  MdMusicNote,
 };

@@ -8,6 +8,7 @@ import {
   MdPerson,
   MdSchool,
   MdWork,
+  MdMusicNote,
 } from "../components/Icons";
 
 const sections = [
@@ -17,6 +18,7 @@ const sections = [
   { id: "skills", title: "Skills", icon: GoTools },
   { id: "projects", title: "Projects", icon: FaDev },
   { id: "achievements", title: "Achievements", icon: FaAward },
+  { id: "music", title: "Music", icon: MdMusicNote },
   {
     id: "qualifications",
     title: "Qualifications",

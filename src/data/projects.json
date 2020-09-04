@@ -2,7 +2,7 @@
   {
     "image": "../images/projects/melodify.png",
     "title": "Melodify",
-    "description": "Spotify interface with user stats, music videos, suggestions, and more",
+    "description": "Spotify interface with user stats, music videos, pane views, suggestions, and more",
     "tags": ["cSharp", "wpf", "spotify", "api"],
     "website": "https://github.com/novatorem/Melodify/releases",
     "github": "https://github.com/novatorem/Melodify"
@@ -10,7 +10,7 @@
   {
     "image": "../images/projects/coverhack.png",
     "title": "Cover Hack",
-    "description": "Create custom cover letters where users can customize per application",
+    "description": "Create custom cover letters where users can input custom fields",
     "tags": ["react", "mongoose", "node", "fullstack"],
     "website": "https://cover-hack.novac.dev/",
     "github": "https://github.com/novatorem/Cover-Hack"
@@ -18,23 +18,23 @@
   {
     "image": "../images/projects/robotics.png",
     "title": "Robotics",
-    "description": "Using the V-Rep program, simulated motion planning, tracking, and pathing",
+    "description": "Using the V-Rep program, integrated motion planning, dynamic tracking, and pathing",
     "tags": ["python", "robots", "paths", "algorithms"],
     "github": "https://github.com/novatorem/Robotics"
   },
   {
-    "image": "../images/projects/era.png",
-    "title": "Emergency Response Aid",
-    "description": "Team application designed as a mediatery to help users seek medical attention",
-    "tags": ["android", "java", "mongodb", "app"],
-    "github": "https://github.com/novatorem/ERA-Emergency-Response-Aid"
-  },
-  {
     "image": "../images/projects/facial.png",
     "title": "FacialRecognition",
-    "description": "A trained python program that takes a user's mp4 and identifies faces in the video",
+    "description": "A trained python program that takes an mp4 and identifies all faces in the video",
     "tags": ["numpy", "ml", "ai", "cv"],
     "github": "https://github.com/novatorem/FacialRecognition"
+  },
+  {
+    "image": "../images/projects/era.png",
+    "title": "Emergency Response Aid",
+    "description": "Team application designed as an intermediatery to help users seek medical attention",
+    "tags": ["android", "java", "mongodb", "app"],
+    "github": "https://github.com/novatorem/ERA-Emergency-Response-Aid"
   },
   {
     "image": "../images/projects/graphics.png",

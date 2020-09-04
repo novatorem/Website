@@ -18,7 +18,7 @@ const Social = () => {
               rel="noopener noreferrer"
               className={`${x.class}`}
             >
-              <Icon color="#FFF" size="0.9em" />
+              <Icon color="#FFF" size="0.9em"/>
               <span className="sr-only">{x.title}</span>
             </OutboundLink>
           </Tooltip>

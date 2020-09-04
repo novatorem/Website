@@ -1,7 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
-
 .header {
     font-size: 400%;
     font-weight: 300;
-    font-family: 'Montserrat', sans-serif;
+    font-family: Questrial,sans-serif;
+    margin-bottom: 20px;
   }

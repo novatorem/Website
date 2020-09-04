@@ -5,7 +5,7 @@
 .container > a {
   width: 24px;
   height: 24px;
-  @apply cursor-pointer rounded flex justify-center items-center;
+  @apply cursor-pointer rounded flex justify-center items-center bg-gradient-to-br from-blue-500 to-teal-400;
 }
 
 @screen md {

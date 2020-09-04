@@ -28,7 +28,7 @@ const Skills = () => {
   `);
   return (
     <section id="skills">
-      <Heading icon={GoTools} title="Skills" />
+      <Heading icon={GoTools} title="Experiences" />
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {data.allSkillsJson.edges.map(({ node }, index) => (

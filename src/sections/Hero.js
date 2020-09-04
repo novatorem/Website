@@ -55,13 +55,14 @@ const Hero = () => {
         </div>
         <div className="col-span-3">
           <h1 className="sr-only">
-            Andrew Novac&apos;s Home on the Web <br />
+            Andrew Novac's Home on the Web
             University of Toronto - Computer Science & Mathematics
           </h1>
 
           <div className="text-center lg:text-left flex flex-col items-center lg:ml-4 lg:items-start">
             <h1 className={`${styles.header} leading-tight`}>
-              Andrew Novac <br />
+              Hi<h1 className="text-blue-600 inline-block text-6xl">.</h1> <br />
+              I'm Andrew<br />
             </h1>
             
             <Subtitle onDone={() => setShowSocial(true)} />
