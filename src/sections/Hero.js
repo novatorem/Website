@@ -5,6 +5,7 @@ import React, { useRef, useState, useEffect } from "react";
 import Social from "../components/Social";
 import Subtitle from "../components/Subtitle";
 import styles from "./Hero.module.css";
+import Typist from "react-typist";
 
 const Hero = () => {
   const parallaxRef = useRef(null);
@@ -60,10 +61,12 @@ const Hero = () => {
           </h1>
 
           <div className="text-center lg:text-left flex flex-col items-center lg:ml-4 lg:items-start">
-            {/* <h1 className={`${styles.header} leading-tight`}>
-              Hi<h1 className="text-blue-600 inline-block text-6xl">.</h1> <br />
-              I'm Andrew<br />
-            </h1> */}
+            <h1 className={`${styles.header} leading-tight`}>
+              <span class="bg-clip-text text-transparent bg-gradient-to-br from-blue-700 via-blue-500 to-teal-400">
+                I'm Andrew
+              </span> <br />
+              {/* I'm Andrew<br /> */}
+            </h1>
             
             <Subtitle onDone={() => setShowSocial(true)} />
 
