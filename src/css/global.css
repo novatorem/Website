@@ -6,6 +6,7 @@ body {
   overflow-x: hidden;
   position: relative;
   -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 ::-webkit-scrollbar {
