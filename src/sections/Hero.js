@@ -63,9 +63,8 @@ const Hero = () => {
           <div className="text-center lg:text-left flex flex-col items-center lg:ml-4 lg:items-start">
             <h1 className={`${styles.header} leading-tight`}>
               <span class="bg-clip-text text-transparent bg-gradient-to-br from-blue-700 via-blue-500 to-teal-400">
-                I'm Andrew
+                Hi, I'm Andrew
               </span> <br />
-              {/* I'm Andrew<br /> */}
             </h1>
             
             <Subtitle onDone={() => setShowSocial(true)} />
