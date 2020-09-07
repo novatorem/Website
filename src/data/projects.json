@@ -4,8 +4,7 @@
     "title": "Melodify",
     "description": "Spotify interface with user stats, music videos, pane views, suggestions, and more",
     "tags": ["cSharp", "wpf", "spotify", "api"],
-    "website": "https://github.com/novatorem/Melodify/releases",
-    "github": "https://github.com/novatorem/Melodify"
+    "website": "https://github.com/novatorem/Melodify"
   },
   {
     "image": "../images/projects/coverhack.png",
