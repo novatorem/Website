@@ -42,4 +42,4 @@ Otherwise, to navigate to one of the other publically accessible pages, choose f
   </td>
   </table>
 
-As for my social presence, you can find via:
+As for my social presence, you can find me via:
