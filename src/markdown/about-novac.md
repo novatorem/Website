@@ -41,3 +41,5 @@ Otherwise, to navigate to one of the other publically accessible pages, choose f
 </p>
   </td>
   </table>
+
+As for my social presence, you can find via:

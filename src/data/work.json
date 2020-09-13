@@ -4,23 +4,23 @@
     "title": "Liminal",
     "subtitle": "Consultant - Engineer",
     "period": "July 2020 - Current",
-    "location": "Virginia, United States",
+    "location": "Washington DC, US",
     "specialization": "Package routing, Network Encapsulation, C# GUI"
   },
   {
     "icon": "../images/work/cast.png",
-    "title": "Cast Software",
+    "title": "Cast Soft",
     "subtitle": "Software Developer",
     "period": "Jan 2020 - Aug 2020",
-    "location": "Toronto, Canada",
+    "location": "Toronto, CA",
     "specialization": "Low level C++, Unreal Engine, Unity"
   },
   {
     "icon": "../images/work/cast.png",
-    "title": "Cast Software",
+    "title": "Cast Soft",
     "subtitle": "Research Developer Intern",
     "period": "May 2018 - Aug 2019",
-    "location": "Toronto, Canada",
+    "location": "Toronto, CA",
     "specialization": "Python machine learning, data simulation, process optimization"
   }
 ]

@@ -19,7 +19,7 @@ const Footer = () => {
       <Heading icon={FaInfoCircle} title="About novac.dev" />
 
       <div
-        className="text-justify w-full md:w-4/5 lg:w-3/4 wow fadeIn"
+        className="text-justify w-full md:w-4/5 lg:w-3/4 wow fadeIn -mb-6"
         dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
       />
       
