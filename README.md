@@ -4,6 +4,7 @@ Personal website with multiple subpages for projects
 Main page: [novac.dev](https://novac.dev)
 
 Consists of:
+* [AD&Conquer](https://novac.dev/x/ADC)
 * [Terminal](https://novac.dev/x/intro)
 * [Mandala](https://novac.dev/x/mandala)
 * [Journey](https://novac.dev/x/journey)

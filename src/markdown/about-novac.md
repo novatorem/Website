@@ -25,7 +25,7 @@ Otherwise, to navigate to one of the other publically accessible pages, choose f
     <td width="20%">
 
 <a><p align="center">
-[Outlook](https://novac.dev/x/outlook)‌‌
+[Conquer](https://novac.dev/x/ADC)‌‌
 </p>
   </td>
     <td width="20%">
