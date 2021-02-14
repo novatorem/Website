@@ -2,8 +2,15 @@ html,
 body {
   font-size: 14px;
   font-family: "Fira Sans", sans-serif;
+  overflow: scroll;
   overflow-x: hidden;
   position: relative;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
 }
 
 h1 {
