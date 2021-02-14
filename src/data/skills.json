@@ -1,8 +1,13 @@
 [
   {
     "icon": "../images/skills/dotnet.png",
-    "name": ".NET Platform",
+    "name": ".NET Development",
     "tech": "C# | Core | ASP"
+  },
+  {
+    "icon": "../images/skills/database.png",
+    "name": "Database Management System",
+    "tech": "MySQL | MariaDB | MongoDB"
   },
   {
     "icon": "../images/skills/tensorflow.png",
@@ -13,11 +18,6 @@
     "icon": "../images/skills/python.png",
     "name": "Python Programming",
     "tech": "Python 3 | BeautifulSoup | PyMongo"
-  },
-  {
-    "icon": "../images/skills/database.png",
-    "name": "Database Management System",
-    "tech": "MySQL | MariaDB | MongoDB"
   },
   {
     "icon": "../images/skills/visual.png",
