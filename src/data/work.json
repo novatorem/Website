@@ -1,11 +1,11 @@
 [
   {
-    "icon": "../images/work/liminal.png",
-    "title": "Liminal",
-    "subtitle": "Consultant - Engineer",
-    "period": "July 2020 - Current",
-    "location": "Virginia, United States",
-    "specialization": "Package routing, Network Encapsulation, C# GUI"
+    "icon": "../images/work/savvyy.png",
+    "title": "Savvyy AI",
+    "subtitle": "Backend Software Developer",
+    "period": "September 2020 - Current",
+    "location": "Toronto, Canada",
+    "specialization": "Event-driven distributed computing; Asynchronous microservices; CQRS"
   },
   {
     "icon": "../images/work/cast.png",
@@ -13,7 +13,7 @@
     "subtitle": "Software Developer",
     "period": "Jan 2020 - Aug 2020",
     "location": "Toronto, Canada",
-    "specialization": "Low level C++, Unreal Engine, Unity"
+    "specialization": "Low level C++; Unreal Engine; Unity"
   },
   {
     "icon": "../images/work/cast.png",
@@ -21,6 +21,6 @@
     "subtitle": "Research Developer Intern",
     "period": "May 2018 - Aug 2019",
     "location": "Toronto, Canada",
-    "specialization": "Python machine learning, data simulation, process optimization"
+    "specialization": "Python machine learning; data simulation; process optimization"
   }
 ]
