@@ -4,13 +4,12 @@
     "title": "Melodify",
     "description": "Spotify interface with user stats, music videos, pane views, suggestions, and more",
     "tags": ["cSharp", "wpf", "spotify", "api"],
-    "website": "https://github.com/novatorem/Melodify/releases",
-    "github": "https://github.com/novatorem/Melodify"
+    "website": "https://github.com/novatorem/Melodify"
   },
   {
     "image": "../images/projects/coverhack.png",
     "title": "Cover Hack",
-    "description": "Create custom cover letters where users can input custom fields",
+    "description": "Create custom cover letters where users can input reactive fields",
     "tags": ["react", "mongoose", "node", "fullstack"],
     "website": "https://cover-hack.novac.dev/",
     "github": "https://github.com/novatorem/Cover-Hack"

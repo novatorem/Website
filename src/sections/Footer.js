@@ -19,7 +19,7 @@ const Footer = () => {
       <Heading icon={FaInfoCircle} title="About novac.dev" />
 
       <div
-        className="text-justify w-full md:w-4/5 lg:w-3/4 wow fadeIn"
+        className="text-justify w-full md:w-4/5 lg:w-3/4 wow fadeIn -mb-4"
         dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
       />
       
@@ -40,8 +40,7 @@ const Footer = () => {
       /> */}
 
       <div className="pt-8 pb-8 text-xs leading-relaxed opacity-25">
-        <div>Licensed under MIT.</div>
-        <div>Copyright {new Date().getFullYear()} Novatorem</div>
+        <div>Copyleft {new Date().getFullYear()} Novatorem</div>
       </div>
     </section>
   );
