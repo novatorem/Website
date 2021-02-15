@@ -1,294 +1,294 @@
 var noTaskbar = 0;
 var alwaysHideNSFW = true;
 var randomNames = [
-  "Rick Deckard",
-  "James Bond",
-  "Korben Dallas",
-  "Danny Ocean",
-  "Cha Tae-sik",
-  "Homer Hickam",
-  "Ben Wade",
-  "Jon Osterman",
-  "Vincent Freeman",
-  "Llewelyn Moss",
-  "Richard Winters",
-  "Lewis Nixon",
-  "George Luz",
-  "Lynn Compton",
-  "Ronald Speirs",
-  "Anton Chigurh",
-  "Irene Cassini",
-  "Sam Bell",
-  "Gerty",
-  "Edward Blake",
-  "Dan Evans",
-  "Charlie Prince",
-  "Quentin",
-  "Jeong So-mi",
-  "Bryan Mills",
-  "Rusty Ryan",
-  "Linus Caldwell",
-  "Jean-Baptiste Emanuel Zorg",
-  "Father Vito Cornelius",
-  "Ruby Rhod",
-  "Chief John Anderton"
+    "Rick Deckard",
+    "James Bond",
+    "Korben Dallas",
+    "Danny Ocean",
+    "Cha Tae-sik",
+    "Homer Hickam",
+    "Ben Wade",
+    "Jon Osterman",
+    "Vincent Freeman",
+    "Llewelyn Moss",
+    "Richard Winters",
+    "Lewis Nixon",
+    "George Luz",
+    "Lynn Compton",
+    "Ronald Speirs",
+    "Anton Chigurh",
+    "Irene Cassini",
+    "Sam Bell",
+    "Gerty",
+    "Edward Blake",
+    "Dan Evans",
+    "Charlie Prince",
+    "Quentin",
+    "Jeong So-mi",
+    "Bryan Mills",
+    "Rusty Ryan",
+    "Linus Caldwell",
+    "Jean-Baptiste Emanuel Zorg",
+    "Father Vito Cornelius",
+    "Ruby Rhod",
+    "Chief John Anderton"
 ];
 var idList = [];
 var globalStoryDict = {};
 
 function getRandomName() {
-  return randomNames[Number(Math.floor(Math.random() * randomNames.length))];
+    return randomNames[Number(Math.floor(Math.random() * randomNames.length))];
 }
 
 function myFolder() {
-  this.after = "";
-  this.count = 0;
-  this.emailDict = {};
-  this.subredditname = "";
-  this.strippedID = "";
+    this.after = "";
+    this.count = 0;
+    this.emailDict = {};
+    this.subredditname = "";
+    this.strippedID = "";
 }
 var spawnEdge = 100;
 
 function generateUid() {
-  var uid = Math.floor(Math.random() * 100000 + 1);
-  if (idList.indexOf(uid) > -1) {
-    generateUid();
-    return;
-  }
-  return uid;
+    var uid = Math.floor(Math.random() * 100000 + 1);
+    if (idList.indexOf(uid) > -1) {
+        generateUid();
+        return;
+    }
+    return uid;
 }
 
 function myWindow(
-  type,
-  state,
-  tofield,
-  ccfield,
-  subjectfield,
-  bodyfield,
-  isLogin
+    type,
+    state,
+    tofield,
+    ccfield,
+    subjectfield,
+    bodyfield,
+    isLogin
 ) {
-  this.type = type;
-  this.state = state;
-  this.id = String(generateUid());
-  this.tofield = tofield;
-  this.ccfield = ccfield;
-  this.subjectfield = subjectfield;
-  this.bodyfield = bodyfield;
-  this.idfinder = "#" + String(this.id);
-  this.minfinder = "#m" + String(this.id);
-  this.isMaxed = false;
-  this.oldHeight = null;
-  this.oldWidth = null;
-  this.oldLeft = null;
-  this.oldTop = null;
-  globalWindowDict[this.id] = this;
-  var html =
-    '<div id="%id" class="emailwindow" style="position:absolute;left:100px;top:300px;"><div class="closebuttons"></div><div class="minimize"></div><div class="maximize"></div><div class="windowclose"></div><div class="upperleftemailwindow"></div><div class="emailwindowbanner"></div><div class="emailbuttons"></div><div class="emailbuttonsbanner"></div><div class="emailcomposewindow"><input type="button" value="Send" class="sendbutton"  tabindex="%tabindex5"><div class="emailcomposebuttons"></div><input type="text" rows="1" cols="40" class="afield tofield" tabindex="%tabindex1" value="%tofield"><input type="text" rows="1" cols="19" class="afield ccfield" tabindex="%tabindex2" value="%ccfield"><input type="text" rows="1" cols="19" tabindex="%tabindex3" class="afield subjectfield" value="%subjectfield"><textarea tabindex="%tabindex4" class="emailcomposebody">%bodyfield</textarea></div></div>';
-  if (isLogin) {
-    html = html.replace(
-      'type="text" rows="1" cols="19" class="afield ccfield',
-      'type="password" rows="1" cols="19" class="afield ccfield'
-    );
-  }
-  $(".outlookminhi").removeClass("outlookminhi");
-  var tempNum = Math.floor(Math.random() * 1000);
-  html = html.replace("%tabindex1", tempNum + 1);
-  html = html.replace("%tabindex2", tempNum + 2);
-  html = html.replace("%tabindex3", tempNum + 3);
-  html = html.replace("%tabindex4", tempNum + 4);
-  html = html.replace("%tabindex5", tempNum + 5);
-  html = html.replace("%id", String(this.id));
-  html = html.replace("%bodyfield", bodyfield);
-  html = html.replace("%tofield", tofield);
-  html = html.replace("%subjectfield", subjectfield);
-  html = html.replace("%ccfield", ccfield);
-  $("body").append(html);
-  $(this.idfinder).css({
-    left: spawnEdge,
-    top: spawnEdge
-  });
-  spawnEdge += 50;
-  if (spawnEdge > $(window).height() - 200) {
-    spawnEdge = 50;
-  }
-  $(this.idfinder)
-    .children(".emailcomposewindow")
-    .children(".tofield")
-    .focus();
-  if (tofield.substr(0, 5) == "reply") {
+    this.type = type;
+    this.state = state;
+    this.id = String(generateUid());
+    this.tofield = tofield;
+    this.ccfield = ccfield;
+    this.subjectfield = subjectfield;
+    this.bodyfield = bodyfield;
+    this.idfinder = "#" + String(this.id);
+    this.minfinder = "#m" + String(this.id);
+    this.isMaxed = false;
+    this.oldHeight = null;
+    this.oldWidth = null;
+    this.oldLeft = null;
+    this.oldTop = null;
+    globalWindowDict[this.id] = this;
+    var html =
+        '<div id="%id" class="emailwindow" style="position:absolute;left:100px;top:300px;"><div class="closebuttons"></div><div class="minimize"></div><div class="maximize"></div><div class="windowclose"></div><div class="upperleftemailwindow"></div><div class="emailwindowbanner"></div><div class="emailbuttons"></div><div class="emailbuttonsbanner"></div><div class="emailcomposewindow"><input type="button" value="Send" class="sendbutton"  tabindex="%tabindex5"><div class="emailcomposebuttons"></div><input type="text" rows="1" cols="40" class="afield tofield" tabindex="%tabindex1" value="%tofield"><input type="text" rows="1" cols="19" class="afield ccfield" tabindex="%tabindex2" value="%ccfield"><input type="text" rows="1" cols="19" tabindex="%tabindex3" class="afield subjectfield" value="%subjectfield"><textarea tabindex="%tabindex4" class="emailcomposebody">%bodyfield</textarea></div></div>';
+    if (isLogin) {
+        html = html.replace(
+            'type="text" rows="1" cols="19" class="afield ccfield',
+            'type="password" rows="1" cols="19" class="afield ccfield'
+        );
+    }
+    $(".outlookminhi").removeClass("outlookminhi");
+    var tempNum = Math.floor(Math.random() * 1000);
+    html = html.replace("%tabindex1", tempNum + 1);
+    html = html.replace("%tabindex2", tempNum + 2);
+    html = html.replace("%tabindex3", tempNum + 3);
+    html = html.replace("%tabindex4", tempNum + 4);
+    html = html.replace("%tabindex5", tempNum + 5);
+    html = html.replace("%id", String(this.id));
+    html = html.replace("%bodyfield", bodyfield);
+    html = html.replace("%tofield", tofield);
+    html = html.replace("%subjectfield", subjectfield);
+    html = html.replace("%ccfield", ccfield);
+    $("body").append(html);
+    $(this.idfinder).css({
+        left: spawnEdge,
+        top: spawnEdge
+    });
+    spawnEdge += 50;
+    if (spawnEdge > $(window).height() - 200) {
+        spawnEdge = 50;
+    }
     $(this.idfinder)
-      .children(".emailcomposewindow")
-      .children(".emailcomposebody")
-      .focus();
-  }
-  var html = '<div id="m%id" class="emailmin emailminhigh"></div>';
-  html = html.replace("%id", String(this.id));
-  $(".emailminhigh").removeClass("emailminhigh");
-  $(".minholder").append(html);
-  var scopeidfinder = this.idfinder;
-  var resizeFunc = function() {
-    $(scopeidfinder)
-      .children(".emailcomposewindow")
-      .height($(scopeidfinder).height() - 152);
-    var tempheight = $(scopeidfinder)
-      .children(".emailcomposewindow")
-      .height();
-    var tempwidth = $(scopeidfinder)
-      .children(".emailcomposewindow")
-      .width();
-    $(scopeidfinder)
-      .children(".emailcomposewindow")
-      .children(".emailcomposebody")
-      .height(tempheight - 112);
-    $(scopeidfinder)
-      .children(".emailcomposewindow")
-      .children(".emailcomposebody")
-      .width(tempwidth - 34);
-    $(scopeidfinder)
-      .children(".emailcomposewindow")
-      .children(".afield")
-      .width(tempwidth - 133);
-  };
-  resizeFunc();
-  this.resizeFunc = resizeFunc;
-  $(this.idfinder).draggable({
-    containment: "window"
-  });
-  $(this.idfinder).resizable({
-    minHeight: 320,
-    minWidth: 673,
-    resize: resizeFunc
-  });
-  $(this.idfinder)
-    .children(".emailcomposewindow")
-    .children(".sendbutton")
-    .click(function() {
-      var tofield = $(this)
-        .parent()
+        .children(".emailcomposewindow")
         .children(".tofield")
-        .val();
-      var ccfield = $(this)
-        .parent()
-        .children(".ccfield")
-        .val();
-      var subjectfield = $(this)
-        .parent()
-        .children(".subjectfield")
-        .val();
-      var body = $(this)
-        .parent()
-        .children(".emailcomposebody")
-        .val();
-      var id = $(this)
-        .parent()
-        .parent()
-        .attr("id");
-      handleEmailSend(id, tofield, ccfield, subjectfield, body);
-    });
-  $(this.minfinder).click(function() {
-    var minid = $(this).attr("id");
-    var id = minid.substr(1);
-    if ($(this).hasClass("emailminhigh")) {
-      $("#" + id).css("display", "none");
-      $("#" + minid).removeClass("emailminhigh");
-    } else {
-      globalWindowDict[id].bringToFront();
+        .focus();
+    if (tofield.substr(0, 5) == "reply") {
+        $(this.idfinder)
+            .children(".emailcomposewindow")
+            .children(".emailcomposebody")
+            .focus();
     }
-  });
-  $(this.idfinder).mousedown(function() {
-    globalWindowDict[$(this).attr("id")].bringToFront();
-  });
-  $(this.idfinder)
-    .children(".minimize")
-    .click(function() {
-      globalWindowDict[
-        $(this)
-          .parent()
-          .attr("id")
-      ].minimize();
-    });
-  $(this.idfinder)
-    .children(".windowclose")
-    .click(function() {
-      globalWindowDict[
-        $(this)
-          .parent()
-          .attr("id")
-      ].close();
-    });
-  $(this.idfinder)
-    .children(".maximize")
-    .click(function() {
-      globalWindowDict[
-        $(this)
-          .parent()
-          .attr("id")
-      ].maximize();
-    });
-  this.bringToFront = function() {
-    $(".outlookminhi").removeClass("outlookminhi");
-    $(".emailwindow").css("z-index", 50);
-    $(this.idfinder).css("z-index", 51);
-    $(this.idfinder).css("display", "block");
+    var html = '<div id="m%id" class="emailmin emailminhigh"></div>';
+    html = html.replace("%id", String(this.id));
     $(".emailminhigh").removeClass("emailminhigh");
-    $(this.minfinder).addClass("emailminhigh");
-  };
-  this.minimize = function() {
-    $(this.minfinder).removeClass("emailminhigh");
-    $(this.idfinder).css("display", "none");
-  };
-  this.close = function() {
-    delete globalWindowDict[this.id];
-    $(this.minfinder).css("display", "none");
-    $(this.idfinder).css("display", "none");
-    spawnEdge = 100;
-  };
-  this.maximize = function() {
-    $(".outlookminhi").removeClass("outlookminhi");
-    if (!this.isMaxed) {
-      this.bringToFront();
-      var width = $(window).width();
-      var height = $(window).height() - 55;
-      this.oldWidth = $(this.idfinder).css("width");
-      this.oldHeight = $(this.idfinder).css("height");
-      this.oldLeft = $(this.idfinder).css("left");
-      this.oldTop = $(this.idfinder).css("top");
-      $(this.idfinder).css("width", String(width) + "px");
-      $(this.idfinder).css("height", String(height) + "px");
-      $(this.idfinder).css("position", "absolute");
-      $(this.idfinder).css("top", "0px");
-      $(this.idfinder).css("left", "0px");
-      $(this.idfinder).draggable("disable");
-      this.resizeFunc();
-      this.isMaxed = true;
-    } else {
-      this.bringToFront();
-      $(this.idfinder).css({
-        width: this.oldWidth,
-        height: this.oldHeight,
-        left: this.oldLeft,
-        top: this.oldTop
-      });
-      this.resizeFunc();
-      $(this.idfinder).draggable("enable");
-      this.isMaxed = false;
-    }
-  };
+    $(".minholder").append(html);
+    var scopeidfinder = this.idfinder;
+    var resizeFunc = function() {
+        $(scopeidfinder)
+            .children(".emailcomposewindow")
+            .height($(scopeidfinder).height() - 152);
+        var tempheight = $(scopeidfinder)
+            .children(".emailcomposewindow")
+            .height();
+        var tempwidth = $(scopeidfinder)
+            .children(".emailcomposewindow")
+            .width();
+        $(scopeidfinder)
+            .children(".emailcomposewindow")
+            .children(".emailcomposebody")
+            .height(tempheight - 112);
+        $(scopeidfinder)
+            .children(".emailcomposewindow")
+            .children(".emailcomposebody")
+            .width(tempwidth - 34);
+        $(scopeidfinder)
+            .children(".emailcomposewindow")
+            .children(".afield")
+            .width(tempwidth - 133);
+    };
+    resizeFunc();
+    this.resizeFunc = resizeFunc;
+    $(this.idfinder).draggable({
+        containment: "window"
+    });
+    $(this.idfinder).resizable({
+        minHeight: 320,
+        minWidth: 673,
+        resize: resizeFunc
+    });
+    $(this.idfinder)
+        .children(".emailcomposewindow")
+        .children(".sendbutton")
+        .click(function() {
+            var tofield = $(this)
+                .parent()
+                .children(".tofield")
+                .val();
+            var ccfield = $(this)
+                .parent()
+                .children(".ccfield")
+                .val();
+            var subjectfield = $(this)
+                .parent()
+                .children(".subjectfield")
+                .val();
+            var body = $(this)
+                .parent()
+                .children(".emailcomposebody")
+                .val();
+            var id = $(this)
+                .parent()
+                .parent()
+                .attr("id");
+            handleEmailSend(id, tofield, ccfield, subjectfield, body);
+        });
+    $(this.minfinder).click(function() {
+        var minid = $(this).attr("id");
+        var id = minid.substr(1);
+        if ($(this).hasClass("emailminhigh")) {
+            $("#" + id).css("display", "none");
+            $("#" + minid).removeClass("emailminhigh");
+        } else {
+            globalWindowDict[id].bringToFront();
+        }
+    });
+    $(this.idfinder).mousedown(function() {
+        globalWindowDict[$(this).attr("id")].bringToFront();
+    });
+    $(this.idfinder)
+        .children(".minimize")
+        .click(function() {
+            globalWindowDict[
+                $(this)
+                .parent()
+                .attr("id")
+            ].minimize();
+        });
+    $(this.idfinder)
+        .children(".windowclose")
+        .click(function() {
+            globalWindowDict[
+                $(this)
+                .parent()
+                .attr("id")
+            ].close();
+        });
+    $(this.idfinder)
+        .children(".maximize")
+        .click(function() {
+            globalWindowDict[
+                $(this)
+                .parent()
+                .attr("id")
+            ].maximize();
+        });
+    this.bringToFront = function() {
+        $(".outlookminhi").removeClass("outlookminhi");
+        $(".emailwindow").css("z-index", 50);
+        $(this.idfinder).css("z-index", 51);
+        $(this.idfinder).css("display", "block");
+        $(".emailminhigh").removeClass("emailminhigh");
+        $(this.minfinder).addClass("emailminhigh");
+    };
+    this.minimize = function() {
+        $(this.minfinder).removeClass("emailminhigh");
+        $(this.idfinder).css("display", "none");
+    };
+    this.close = function() {
+        delete globalWindowDict[this.id];
+        $(this.minfinder).css("display", "none");
+        $(this.idfinder).css("display", "none");
+        spawnEdge = 100;
+    };
+    this.maximize = function() {
+        $(".outlookminhi").removeClass("outlookminhi");
+        if (!this.isMaxed) {
+            this.bringToFront();
+            var width = $(window).width();
+            var height = $(window).height() - 55;
+            this.oldWidth = $(this.idfinder).css("width");
+            this.oldHeight = $(this.idfinder).css("height");
+            this.oldLeft = $(this.idfinder).css("left");
+            this.oldTop = $(this.idfinder).css("top");
+            $(this.idfinder).css("width", String(width) + "px");
+            $(this.idfinder).css("height", String(height) + "px");
+            $(this.idfinder).css("position", "absolute");
+            $(this.idfinder).css("top", "0px");
+            $(this.idfinder).css("left", "0px");
+            $(this.idfinder).draggable("disable");
+            this.resizeFunc();
+            this.isMaxed = true;
+        } else {
+            this.bringToFront();
+            $(this.idfinder).css({
+                width: this.oldWidth,
+                height: this.oldHeight,
+                left: this.oldLeft,
+                top: this.oldTop
+            });
+            this.resizeFunc();
+            $(this.idfinder).draggable("enable");
+            this.isMaxed = false;
+        }
+    };
 }
 
 function myStory(parentJson, folder, addToDom) {
-  var rootJson = parentJson.data;
-  this.rootJson = rootJson;
-  this.folder = folder;
-  var name = getRandomName();
-  var author = rootJson.author;
-  this.id = rootJson.name;
-  var num_comments = rootJson.num_comments;
-  var score = rootJson.score;
-  this.url = rootJson.url;
-  this.title = rootJson.title;
+    var rootJson = parentJson.data;
+    this.rootJson = rootJson;
+    this.folder = folder;
+    var name = getRandomName();
+    var author = rootJson.author;
+    this.id = rootJson.name;
+    var num_comments = rootJson.num_comments;
+    var score = rootJson.score;
+    this.url = rootJson.url;
+    this.title = rootJson.title;
 
-  const previewHTML = `
+    const previewHTML = `
     <div id="${this.id}" class="anemail emailunread">
       <div class="emailicon"></div>
       <div class="emailiconright"></div>
@@ -307,152 +307,151 @@ function myStory(parentJson, folder, addToDom) {
     </div>
   `;
 
-  this.previewHTML = previewHTML;
-  this.bodyHTML = "";
-  folder.emailDict[this.id] = this;
-  globalStoryDict[this.id] = this;
-  if (addToDom) {
-    $("#previewarea").append(previewHTML);
-  }
-  this.addToArea = function() {
-    $("#previewarea").append(this.previewHTML);
-  };
+    this.previewHTML = previewHTML;
+    this.bodyHTML = "";
+    folder.emailDict[this.id] = this;
+    globalStoryDict[this.id] = this;
+    if (addToDom) {
+        $("#previewarea").append(previewHTML);
+    }
+    this.addToArea = function() {
+        $("#previewarea").append(this.previewHTML);
+    };
 }
 
 function getRedditDomain() {
-  return window.location.protocol === "https:"
-    ? "https://pay.reddit.com"
-    : "http://www.reddit.com";
+    return window.location.protocol === "https:" ?
+        "https://pay.reddit.com" :
+        "https://www.reddit.com";
 }
 
 function populateStory(id) {
-  var story = globalStoryDict[id];
-  currentStory = id;
-  if (story == null) {
-    return 0;
-  }
-  if (story.bodyHTML.length > 1) {
-    return 0;
-  }
-  $("div.theemailbody").html('<img src="loading.gif">');
-  var storyName = id.substr(3);
-  var link = getRedditDomain() + "/comments/" + storyName + ".json";
-  link = link + "?jsonp=commentsCallback";
-  $.get(link, commentsCallback, "jsonp");
-  return true;
+    var story = globalStoryDict[id];
+    currentStory = id;
+    if (story == null) {
+        return 0;
+    }
+    if (story.bodyHTML.length > 1) {
+        return 0;
+    }
+    $("div.theemailbody").html('<img src="loading.gif">');
+    var storyName = id.substr(3);
+    var link = getRedditDomain() + "/comments/" + storyName + ".json";
+    link = link + "?jsonp=commentsCallback";
+    $.get(link, commentsCallback, "jsonp");
+    return true;
 }
 currentStory = null;
 
 function commentsCallback(storyJSON) {
-  mainJSON = storyJSON[0].data.children[0].data;
-  var theStoryID = mainJSON.name;
-  var story = globalStoryDict[theStoryID];
-  if (isImgur(mainJSON.url)) {
-    var expando = makeImgurExpando(mainJSON.url, mainJSON.title);
-    story.bodyHTML += expando;
-  } else {
-    story.bodyHTML +=
-      '<a href="' + mainJSON.url + '">' + mainJSON.title + "</a><br/>";
-    if (mainJSON.selftext_html) {
-      story.bodyHTML += mainJSON.selftext_html;
+    mainJSON = storyJSON[0].data.children[0].data;
+    var theStoryID = mainJSON.name;
+    var story = globalStoryDict[theStoryID];
+    if (isImgur(mainJSON.url)) {
+        var expando = makeImgurExpando(mainJSON.url, mainJSON.title);
+        story.bodyHTML += expando;
+    } else {
+        story.bodyHTML +=
+            '<a href="' + mainJSON.url + '">' + mainJSON.title + "</a><br/>";
+        if (mainJSON.selftext_html) {
+            story.bodyHTML += mainJSON.selftext_html;
+        }
     }
-  }
-  if (mainJSON.isSelf) {
-    if (mainJSON.selftext_html != null) {
-      story.bodyHTML += mainJSON.selftext_html;
+    if (mainJSON.isSelf) {
+        if (mainJSON.selftext_html != null) {
+            story.bodyHTML += mainJSON.selftext_html;
+        }
     }
-  }
-  story.bodyHTML = unEncode(story.bodyHTML);
-  story.bodyHTML += '<div class="storycommentline"></div>';
-  var commentsRoot = storyJSON[1].data.children;
-  var commentsHTML = "";
-  const originalPoster = story.rootJson.author;
+    story.bodyHTML = unEncode(story.bodyHTML);
+    story.bodyHTML += '<div class="storycommentline"></div>';
+    var commentsRoot = storyJSON[1].data.children;
+    var commentsHTML = "";
+    const originalPoster = story.rootJson.author;
 
-  for (var i = 0; i < commentsRoot.length; i++) {
-    if (commentsRoot[i].kind == "more") {
-      continue;
+    for (var i = 0; i < commentsRoot.length; i++) {
+        if (commentsRoot[i].kind == "more") {
+            continue;
+        }
+        var commentJSON = commentsRoot[i].data;
+        console.log("com", commentJSON);
+        commentsHTML += makeCommentHeader(commentJSON, originalPoster, 0);
+        // commentsHTML += '<div class="childrencomments child0">';
+        // commentsHTML += getChildComments(commentJSON.replies.data.children, 1, originalPoster);
+        // // try {
+
+        // // } catch (err) {
+        // //   console.log("Failed", err);
+        // // }
+        // commentsHTML += "</div></div>";
     }
-    var commentJSON = commentsRoot[i].data;
-    console.log("com", commentJSON);
-    commentsHTML += makeCommentHeader(commentJSON, originalPoster, 0);
-    // commentsHTML += '<div class="childrencomments child0">';
-    // commentsHTML += getChildComments(commentJSON.replies.data.children, 1, originalPoster);
-    // // try {
 
-    // // } catch (err) {
-    // //   console.log("Failed", err);
-    // // }
-    // commentsHTML += "</div></div>";
-  }
+    story.bodyHTML += commentsHTML;
+    if (currentStory == theStoryID) {
+        $(".theemailbody").html(story.bodyHTML);
+        onStoryLoad();
 
-  story.bodyHTML += commentsHTML;
-  if (currentStory == theStoryID) {
-    $(".theemailbody").html(story.bodyHTML);
-    onStoryLoad();
-
-    $(".hider").click(function() {
-      $(this)
-        .parent()
-        .toggleClass("hidden");
-    });
-  }
+        $(".hider").click(function() {
+            $(this)
+                .parent()
+                .toggleClass("hidden");
+        });
+    }
 }
 
-function makeCommentHeader(
-  {
-    ups,
-    downs,
-    author,
-    body_html,
-    name,
-    created,
-    controversiality,
-    gildings,
-    replies
-  },
-  originalPoster,
-  level
+function makeCommentHeader({
+        ups,
+        downs,
+        author,
+        body_html,
+        name,
+        created,
+        controversiality,
+        gildings,
+        replies
+    },
+    originalPoster,
+    level
 ) {
-  const timestamp = moment.unix(created);
+    const timestamp = moment.unix(created);
 
-  let controversialDisplay = "";
+    let controversialDisplay = "";
 
-  for (let i = 1; i <= controversiality; i++) {
-    controversialDisplay += `⚔️`;
-  }
+    for (let i = 1; i <= controversiality; i++) {
+        controversialDisplay += `⚔️`;
+    }
 
-  let gildingsDisplay = "";
+    let gildingsDisplay = "";
 
-  if (gildings && gildings.gild_1) {
-    gildingsDisplay += `💎(${gildings.gild_1}) `;
-  }
+    if (gildings && gildings.gild_1) {
+        gildingsDisplay += `💎(${gildings.gild_1}) `;
+    }
 
-  if (gildings && gildings.gild_2) {
-    gildingsDisplay += `🏅(${gildings.gild_2}) `;
-  }
+    if (gildings && gildings.gild_2) {
+        gildingsDisplay += `🏅(${gildings.gild_2}) `;
+    }
 
-  if (gildings && gildings.gild_3) {
-    gildingsDisplay += `🥈(${gildings.gild_3})`;
-  }
+    if (gildings && gildings.gild_3) {
+        gildingsDisplay += `🥈(${gildings.gild_3})`;
+    }
 
-  let childrenHTML = "";
-  console.log("rep", replies);
+    let childrenHTML = "";
+    console.log("rep", replies);
 
-  if (replies && replies.data && replies.data.children && replies.data.children.length > 0) {
-    const childrenComments = replies.data.children.map(
-      reply => makeCommentHeader(reply.data, originalPoster, level + 1)
-    );
+    if (replies && replies.data && replies.data.children && replies.data.children.length > 0) {
+        const childrenComments = replies.data.children.map(
+            reply => makeCommentHeader(reply.data, originalPoster, level + 1)
+        );
 
-    childrenHTML = `
+        childrenHTML = `
       <div class="childrencomments child${level}">
         ${childrenComments.join("\n")}
       </div>
     `;
-  }
+    }
 
-  console.log("ChildrenHTML", childrenHTML);
+    console.log("ChildrenHTML", childrenHTML);
 
-  return `
+    return `
     <div id="${name}" class="commentroot">
       <div class="hider"></div>
       <div class="comment-content">
@@ -519,9 +518,9 @@ function unEncode(text) {
       var code = results[i + 2];
       var title = results[i + 3];
       if (url.toLowerCase().indexOf(".gifv") > -1) {
-        url = "http://i.imgur.com/" + code;
+        url = "https://i.imgur.com/" + code;
       } else {
-        url = "http://i.imgur.com/" + code + ".jpg";
+        url = "https://i.imgur.com/" + code + ".jpg";
       }
       var tempHTML = makeImgurExpando(url, title);
       text = text.replace(complete, tempHTML);
@@ -702,7 +701,7 @@ function makeYoutubeExpando(externallink, title) {
   expando += '<div style="display:none" id="img' + videoid + '">';
   expando += "<iframe " + videoid + '" width="560" height="349"';
   expando +=
-    ' src="http://www.youtube.com/embed/' +
+    ' src="https://www.youtube.com/embed/' +
     videoid +
     '" frameborder="0" allowfullscreen></iframe>';
   expando += "</div>";
@@ -953,7 +952,7 @@ function handleEmailSend(id, tofield, ccfield, subjectfield, body) {
     }
     return 0;
   }
-  if (tofield.indexOf("http://") != -1 && tofield.indexOf("reddit.com") != -1) {
+  if (tofield.indexOf("https://") != -1 && tofield.indexOf("reddit.com") != -1) {
     $(globalWindowDict[id].idfinder).css("display", "none");
     $(globalWindowDict[id].minfinder).css("display", "none");
     if (tofield.substr(-1) != "/") {
@@ -1127,7 +1126,7 @@ function spawnCommandWindow() {
   usage +=
     "\n\nGo to a comments page:\n\tJust paste in the link in the to field and hit send! example:\n";
   usage +=
-    "\thttp://www.reddit.com/r/gaming/comments/jkiu2/battlefield_3_caspian_border_gameplay_hd";
+    "\thttps://www.reddit.com/r/gaming/comments/jkiu2/battlefield_3_caspian_border_gameplay_hd";
   var asd = new myWindow("", "", "", "", "", usage, true);
 }
 

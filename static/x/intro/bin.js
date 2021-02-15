@@ -1,4 +1,3 @@
-
 function hook(str, args) {
 
     if (str[0] == '~') {
@@ -7,14 +6,14 @@ function hook(str, args) {
     }
 
     //check for a subreddit
-    if (str.slice(0,3) === "/r/" || str.slice(0,3) === "/u/") {
+    if (str.slice(0, 3) === "/r/" || str.slice(0, 3) === "/u/") {
         loadURL("https://www.reddit.com" + str)
         return true
     }
 
     //check for a 4chan board
-    if(str[0] === "/" && (
-        str[str.length-1] === "/" || str.length < 5)) {
+    if (str[0] === "/" && (
+            str[str.length - 1] === "/" || str.length < 5)) {
         //then it's not guaranteed to be a 4chan board, but let's try it anyway
         //everything but the slash at the beginning
         loadURL("https://boards.4chan.org/" + str.substr(1))
@@ -37,8 +36,8 @@ function hook(str, args) {
 
     //and now check for bookmarks
     if (typeof bookmarks != "undefined" && bookmarks.length > 0) {
-        for (var i=0; i<bookmarks.length; i++) {
-            if(bookmarks[i][0] === str) {
+        for (var i = 0; i < bookmarks.length; i++) {
+            if (bookmarks[i][0] === str) {
                 loadURL(bookmarks[i][1])
                 return true;
             }
@@ -54,9 +53,9 @@ function hook(str, args) {
         if (numDice === 0) numDice = 1
         var numSides = Number(tempArr[1])
         var output = ""
-        for (var i=0; i<numDice; i++) {
+        for (var i = 0; i < numDice; i++) {
             var outcome = randRange(numSides)
-            //highlight max rolls
+                //highlight max rolls
             if (outcome === numSides) outcome = cssColor(outcome, "#b0b0b0")
             output += outcome + " "
         }
@@ -72,10 +71,10 @@ function hook(str, args) {
         if (numDice === 0) numDice = 1
         var numSides = Number(tempArr[1].split("+")[0]) //gross, but works
         var output = ""
-        for (var i=0; i<numDice; i++) {
+        for (var i = 0; i < numDice; i++) {
             var outcome = randRange(numSides)
             var temp = outcome + modifier
-            //highlight max rolls
+                //highlight max rolls
             if (outcome === numSides) temp = cssColor(temp, "#b0b0b0")
             output += temp + " "
         }
@@ -84,12 +83,12 @@ function hook(str, args) {
     }
 
     //test for a web url
-      var pattern = /[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/
-      if (pattern.test(str)) {
-          if (!str.startsWith("http")) str = "https://" + str
-          loadURL(str);
-          return true;
-      }
+    var pattern = /[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/
+    if (pattern.test(str)) {
+        if (!str.startsWith("http")) str = "https://" + str
+        loadURL(str);
+        return true;
+    }
 }
 
 //==================== CHALLENGE COMMANDS ==========================
@@ -107,7 +106,7 @@ var bookmarks = [
     ['github', 'https://github.com/novatorem'],
     ['facebook', 'https://www.facebook.com/novatorem'],
     ['e-mail', 'mailto:andrew.novac@mail.utoronto.ca'],
-    ['main' ,'https://www.novac.dev/'],
+    ['main', 'https://www.novac.dev/'],
     ['404', 'https://www.novac.dev/iLoveYou'],
 ]
 
@@ -140,7 +139,7 @@ function weather() {
     }
     //You'll get an error here (and thus no weather) if you're not opening this page from a local file.
     //Sucks to suck.
-    var json_url = "http://api.openweathermap.org/data/2.5/weather?q=Morningside+Heights,ny&appid=6e131a2916d5d45d8367b72a4675be0a";
+    var json_url = "https://api.openweathermap.org/data/2.5/weather?q=Morningside+Heights,ny&appid=6e131a2916d5d45d8367b72a4675be0a";
     $.when(
         $.getJSON(json_url)
     ).done(function(json_obj) {
@@ -191,18 +190,18 @@ function time(str) {
 }
 
 function checkTime(i) {
-    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    if (i < 10) { i = "0" + i }; // add zero in front of numbers < 10
     return i;
 }
 
 function date(s) {
     var monthNames = [
-      "January", "February", "March",
-      "April", "May", "June", "July",
-      "August", "September", "October",
-      "November", "December"
+        "January", "February", "March",
+        "April", "May", "June", "July",
+        "August", "September", "October",
+        "November", "December"
     ];
-    var days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+    var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
     var date = new Date();
     var day = date.getDate();

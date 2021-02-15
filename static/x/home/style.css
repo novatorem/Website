@@ -1,173 +1,220 @@
-/* ------------- STARTER ------------- */ 
+/* ------------- STARTER ------------- */
 
-*{
-  margin:0;
-  padding:0;
+* {
+    margin: 0;
+    padding: 0;
 }
 
 body {
-	background-color: #252934F1;
-	background-image: url("https://source.unsplash.com/featured/?water,wallpaper");
-	background-blend-mode: multiply;
-	background-repeat: no-repeat;
-	background-size: cover;
-	color: white;
+    background-color: #252934F1;
+    background-image: url("https://source.unsplash.com/3840x2160/?mountain,forest/");
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
 }
+
 
 /* ------------- TRANSITIONS AND SHADOWS ------------- */
 
-a, a:visited, a:hover, .box .box-container:hover, .box .box-container {
-	-webkit-transition: all 150ms ease-in-out;
-	-moz-transition: all 150ms ease-in-out;
-	-ms-transition: all 150ms ease-in-out;
-	-o-transition: all 150ms ease-in-out;
-	transition: all 150ms ease-in-out;
+a,
+a:visited,
+a:hover {
+    -webkit-transition: all 150ms ease-in-out;
+    -moz-transition: all 150ms ease-in-out;
+    -ms-transition: all 150ms ease-in-out;
+    -o-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out;
 }
 
-.box .box-container:hover {
-	-webkit-box-shadow: 4px 4px 15px -5px rgba(0,0,0,0.75);
-	-moz-box-shadow: 4px 4px 15px -5px rgba(0,0,0,0.75);
-	box-shadow: 4px 4px 15px -5px rgba(0,0,0,0.75);
-}
 
-.container form, .box .box-container {
-	-webkit-box-shadow: 4px 4px 15px -5px rgba(0,0,0,0.25);
-	-moz-box-shadow: 4px 4px 15px -5px rgba(0,0,0,0.25);
-	box-shadow: 4px 4px 15px -5px rgba(0,0,0,0.25);
-}
-
-/* ------------- CONTAINER STYLING ------------- */ 
+/* ------------- CONTAINER STYLING ------------- */
 
 .container {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-	min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    min-width: 100vh;
 }
 
-/* ------------- LINK STYLING ------------- */ 
 
-a, a:visited {
-	color: #6C7789;
+/* ------------- LINK STYLING ------------- */
+
+a,
+a:visited {
+    color: #6C7789;
+    font-size: 90px;
+    color: rgba(0, 0, 0, 0);
+    filter: grayscale(0%);
+    margin: 5%;
 }
 
 a:hover {
-	color: white;
+    color: white;
 }
 
-a, a:visited, a:hover {
-	text-decoration: none;
+a:not(:hover) {
+    transition: opacity 1s;
+    filter: grayscale(75%);
+}
+
+a,
+a:visited,
+a:hover {
+    text-decoration: none;
 }
 
 .box .box-container .link {
-	font-family: 'Ubuntu', sans-serif;
-	font-size: 18px;
-	padding: 10px 0px 10px 0px;
-	text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 32px;
+    padding: 2% 0% 2% 0%;
+    text-align: center;
 }
 
-/* ------------- TIME STYLING ------------- */ 
+
+/* ------------- TIME STYLING ------------- */
 
 .container .time {
-	font-family: 'Ubuntu', sans-serif;
-	font-size: 80px;
-	margin-bottom: 100px;
-	margin-top: -100px;
-	text-shadow: 2px 2px #2E3441;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 124px;
+    margin-bottom: 5%;
+    text-shadow: 2px 2px #2E3441;
 }
 
-/* ------------- BOX STYLING ------------- */ 
 
-.box .box-container {
-	background-color: #2E3441;
-	width: 200px;
-	height: 220px;
-	float: left;
-	border-radius: 5px;
-}
+/* ------------- BOX STYLING ------------- */
 
-.box .box-container:not(:last-child) {
-	margin-right: 50px;
+.box {
+    width: 100%;
+    height: 50%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-flow: row wrap;
 }
 
-.box .box-container .heading {
-	margin: 15px 0 5px 0px;
-	font-family: 'Ubuntu', sans-serif;
-	font-size: 24px;
-	text-align: center;
+.box-container {
+    width: 80%;
+    height: 10%;
+    border-radius: 5px;
+    margin-bottom: 5%;
 }
 
-/* ------------- WAVE ANIMATION ------------- */ 
 
-.wave-container .wave{
-	position:absolute;
-	bottom:0;
-	left:0;
-	width:100%;
-	height:100px;
-	background:url('wave.svg');
-	background-size:990px 100px;
-	background-repeat: repeat-x;
-}
+/* ------------- WAVE ANIMATION ------------- */
 
-.wave-container .wave.wave1{
-	animation:animate 30s linear infinite;
-	z-index:1000;
-	opacity:1;
-	animation-delay:0s;
-	bottom: 0;
-}
-.wave-container .wave.wave2{
-	animation:animate2 15s linear infinite;
-	z-index:999;
-	opacity:0.5;
-	animation-delay:-5s;
-	bottom: 10px;
-}
-.wave-container .wave.wave3{
-	animation:animate 30s linear infinite;
-	z-index:998;
-	opacity:0.2;
-	animation-delay:-2s;
-	bottom: 15px;
-	
-}
-.wave-container .wave.wave4{
-	animation:animate2 5s linear infinite;
-	z-index:997;
-	opacity:0.7;
-	animation-delay:-5s;
-	bottom: 20px;
-}
-@keyframes animate{
-	0%{
-		background-position-x: 0;
-	}
-	100%{
-		background-position-x: 990px;
-	}
-}
-@keyframes animate2{
-	0%{
-		background-position-x: 0;
-	}
-	100%{
-		background-position-x: -990px;
-	}
+.waves {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    min-width: 100vh;
+    height: 15vh;
+    min-height: 10vh;
+    max-height: 15vh;
 }
 
-/* ------------- MEDIA QUERY ------------- */ 
+.parallax>use {
+    animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
+}
+
+.parallax>use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+}
+
+.parallax>use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+}
+
+.parallax>use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+}
+
+.parallax>use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+}
+
+@keyframes move-forever {
+    0% {
+        transform: translate3d(-90px, 0, 0);
+    }
+    100% {
+        transform: translate3d(85px, 0, 0);
+    }
+}
+
+@media (max-width: 768px) {
+    .waves {
+        height: 40px;
+        min-height: 40px;
+    }
+    .content {
+        height: 30vh;
+    }
+    h1 {
+        font-size: 24px;
+    }
+}
+
+
+/* ------------- MEDIA QUERY ------------- */
 
 @media only screen and (max-width: 985px) {
-	.box-container:nth-child(4), .box-container:nth-child(3) {
-		margin-top: 50px;
-	}
-	.box .box-container:nth-child(2), .box .box-container:nth-child(4) {
-		margin-right: 0;
-	}
-	.box {
-		width: 450px;
-	}  
+    .box-container:nth-child(4),
+    .box-container:nth-child(3) {
+        margin-top: 50px;
+    }
+    .box .box-container:nth-child(2),
+    .box .box-container:nth-child(4) {
+        margin-right: 0;
+    }
+    .box {
+        width: 30%;
+    }
+}
+
+
+/* ------------- FA STYLING ------------- */
+
+.youtube i {
+    color: #e52d27;
+}
+
+.torii i {
+    color: #81a2be;
+}
+
+.kaleidosync i {
+    color: #1DB954;
+}
+
+.twitch i {
+    color: #6441a5;
+}
+
+.anime i {
+    color: #1069DB;
+}
+
+.github i {
+    color: #9CDAF1;
+}
+
+.reddit i {
+    color: #FF5700;
+}
+
+.outlook i {
+    color: #0072C6;
+}
+
+.office i {
+    color: #DC3E15;
 }

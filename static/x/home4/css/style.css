@@ -1,31 +1,26 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
-
 * {
-    margin:  0;
-    border:  0;
+    margin: 0;
+    border: 0;
     padding: 0;
     outline: 0;
-
-    list-style:      none;
+    list-style: none;
     text-decoration: none;
-    text-rendering:  optimizeLegibility;
-
+    text-rendering: optimizeLegibility;
     -webkit-box-sizing: border-box;
-       -moz-box-sizing: border-box;
-            box-sizing: border-box;
-
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
     -webkit-font-smoothing: subpixel-antialiased;
-       -moz-font-smoothing: subpixel-antialiased;
-        -ms-font-smoothing: subpixel-antialiased;
-         -o-font-smoothing: subpixel-antialiased;
-
+    -moz-font-smoothing: subpixel-antialiased;
+    -ms-font-smoothing: subpixel-antialiased;
+    -o-font-smoothing: subpixel-antialiased;
     -webkit-user-select: none;
-      -webkit-user-drag: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-         -o-user-select: none;
-            user-select: none;
+    -webkit-user-drag: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
 }
 
 :root {
@@ -37,7 +32,7 @@
 
 body {
     background-color: var(--bg);
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='12' viewBox='0 0 20 12'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='charlie-brown' fill='%23585858' fill-opacity='0.05'%3E%3Cpath d='M9.8 12L0 2.2V.8l10 10 10-10v1.4L10.2 12h-.4zm-4 0L0 6.2V4.8L7.2 12H5.8zm8.4 0L20 6.2V4.8L12.8 12h1.4zM9.8 0l.2.2.2-.2h-.4zm-4 0L10 4.2 14.2 0h-1.4L10 2.8 7.2 0H5.8z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='https://www.w3.org/2000/svg' width='20' height='12' viewBox='0 0 20 12'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='charlie-brown' fill='%23585858' fill-opacity='0.05'%3E%3Cpath d='M9.8 12L0 2.2V.8l10 10 10-10v1.4L10.2 12h-.4zm-4 0L0 6.2V4.8L7.2 12H5.8zm8.4 0L20 6.2V4.8L12.8 12h1.4zM9.8 0l.2.2.2-.2h-.4zm-4 0L10 4.2 14.2 0h-1.4L10 2.8 7.2 0H5.8z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
     height: 100vh;
     overflow: hidden;
 }
@@ -56,7 +51,8 @@ body {
 .items item::before,
 .items item::after,
 #tabs ul li:last-child,
-#panels, #panels ul,
+#panels,
+#panels ul,
 #tabs .widgets {
     position: absolute;
 }
@@ -120,8 +116,13 @@ body {
     box-sizing: border-box;
 }
 
-.items item[done] { --state: var(--done); }
-.items item[undone] { --state: var(--undone); }
+.items item[done] {
+    --state: var(--done);
+}
+
+.items item[undone] {
+    --state: var(--undone);
+}
 
 .items item {
     position: relative;
@@ -130,11 +131,7 @@ body {
     max-height: 55px;
     border-radius: 2px;
     background: #d8d8d8;
-    box-shadow: inset 0 2px 0 var(--state),
-    0 1px 0 0 rgba(212, 146, 146, 0.5),
-    0 4px 0 0 #d8d8d8,
-    0 5px 0 rgba(212, 146, 146, 0.5),
-    0 8px 0 0 #d8d8d8;
+    box-shadow: inset 0 2px 0 var(--state), 0 1px 0 0 rgba(212, 146, 146, 0.5), 0 4px 0 0 #d8d8d8, 0 5px 0 rgba(212, 146, 146, 0.5), 0 8px 0 0 #d8d8d8;
     transition: all .3s;
     animation: slide .4s ease;
 }
@@ -160,7 +157,6 @@ body {
     font: 400 14px 'Open Sans', sans-serif;
     max-width: 250px;
     word-wrap: break-word;
-
     -webkit-user-select: initial;
 }
 
@@ -296,7 +292,6 @@ body {
     box-shadow: inset 0 -2px 0 #fff;
 }
 
-
 #tabs {
     right: 980px;
     bottom: 750px;
@@ -347,8 +342,13 @@ body {
     padding: 6px 0;
 }
 
-#tabs ul li[active]:nth-child(2) ~ li:last-child { margin: 0 0 0 35px; }
-#tabs ul li[active]:nth-child(3) ~ li:last-child { margin: 0 0 0 70px; }
+#tabs ul li[active]:nth-child(2)~li:last-child {
+    margin: 0 0 0 35px;
+}
+
+#tabs ul li[active]:nth-child(3)~li:last-child {
+    margin: 0 0 0 70px;
+}
 
 #panels {
     overflow: hidden;
@@ -376,12 +376,12 @@ body {
 }
 
 #panels ul:nth-child(2),
-#tabs ul li[active]:nth-child(2) ~ li:last-child {
+#tabs ul li[active]:nth-child(2)~li:last-child {
     --flavour: #16a2a2;
 }
 
 #panels ul:nth-child(3),
-#tabs ul li[active]:nth-child(3) ~ li:last-child {
+#tabs ul li[active]:nth-child(3)~li:last-child {
     --flavour: #5b52e4;
 }
 
@@ -389,8 +389,13 @@ body {
     box-shadow: inset -1px 0 var(--flavour);
 }
 
-#panels ul:nth-child(2) { background: #fff url("../img/bg-2.gif") repeat center left fixed; }
-#panels ul:nth-child(3) { background: #fff url("../img/bg-3.gif") repeat center left fixed; }
+#panels ul:nth-child(2) {
+    background: #fff url("../img/bg-2.gif") repeat center left fixed;
+}
+
+#panels ul:nth-child(3) {
+    background: #fff url("../img/bg-3.gif") repeat center left fixed;
+}
 
 #panels ul[active] {
     right: 0;
@@ -407,7 +412,7 @@ body {
     background: #1d1d21;
 }
 
-#tabs > cols {
+#tabs>cols {
     position: relative;
 }
 
@@ -434,9 +439,13 @@ body {
     font-size: 21px !important;
 }
 
-#tabs i[sunny] { color: #fd6697; }
+#tabs i[sunny] {
+    color: #fd6697;
+}
 
-#tabs i[cloudy] { color: #88d8d8; }
+#tabs i[cloudy] {
+    color: #88d8d8;
+}
 
 #panels .links {
     right: 0;
@@ -447,7 +456,7 @@ body {
     flex-wrap: wrap;
 }
 
-#panels > ul:first-child .links a {
+#panels>ul:first-child .links a {
     color: #bfbfbf;
     text-decoration: none;
     font: 700 18px 'Open Sans', sans-serif;
@@ -460,9 +469,11 @@ body {
     margin-bottom: .7em;
 }
 
-#panels > ul:first-child .links a:not(:last-child) { margin-right: .3em }
+#panels>ul:first-child .links a:not(:last-child) {
+    margin-right: .3em
+}
 
-#panels > ul:first-child .links a:hover {
+#panels>ul:first-child .links a:hover {
     transform: scale(1.2);
     box-shadow: 0 0 rgba(0, 0, 0, 0.25), 0 0 0 rgba(0, 0, 0, .5), 0 -4px 5px rgba(0, 0, 0, .1);
     color: #fff;
@@ -493,13 +504,13 @@ body {
     mix-blend-mode: overlay;
 }
 
-#panels > ul:first-child .links li:not(:last-child) {
+#panels>ul:first-child .links li:not(:last-child) {
     box-shadow: 0 1px 0 rgba(255, 255, 255, .07);
     padding: 0 0 .5em 0;
     margin-bottom: 1.5em;
 }
 
-#panels > ul:first-child .links li h1 {
+#panels>ul:first-child .links li h1 {
     color: #dadada;
     font-size: 22px;
     margin-bottom: .5em;
@@ -507,27 +518,27 @@ body {
     letter-spacing: 1px;
 }
 
-#panels > ul:not(:first-child) li {
+#panels>ul:not(:first-child) li {
     padding: .5em;
     /* display: inline; */
 }
 
-#panels > ul:not(:first-child) li a {
+#panels>ul:not(:first-child) li a {
     color: grey;
     font: 700 16px 'Open Sans', sans-serif;
     text-decoration: none;
     letter-spacing: 1px;
 }
 
-#panels > ul:not(:first-child) li a:hover {
+#panels>ul:not(:first-child) li a:hover {
     color: #fff;
 }
 
-#panels > ul:not(:first-child) li a:hover::before {
+#panels>ul:not(:first-child) li a:hover::before {
     display: inline;
 }
 
-#panels > ul:not(:first-child) li a::before {
+#panels>ul:not(:first-child) li a::before {
     content: '> ';
     font-weight: 400;
     display: none;
@@ -662,41 +673,46 @@ body {
     font-weight: 700;
 }
 
+button.link {
+    background: #00000088;
+    color: #fff;
+    border: none;
+    position: relative;
+    height: 40px;
+    font-size: 1.2em;
+    padding: 0 1em;
+    cursor: pointer;
+    margin: 0 0.25em;
+    transition: 800ms ease all;
+    outline: none;
+}
 
-button.link{
-  background:#00000088;
-  color:#fff;
-  border:none;
-  position:relative;
-  height:40px;
-  font-size:1.2em;
-  padding:0 1em;
-  cursor:pointer;
-  margin: 0 0.25em;
-  transition:800ms ease all;
-  outline:none;
+button.link:hover {
+    background: #ffffff;
+    color: #000;
 }
-button.link:hover{
-  background:#ffffff;
-  color:#000;
+
+button.link:before,
+button.link:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 3px;
+    width: 0;
+    background: #bd818d;
+    transition: 400ms ease all;
 }
-button.link:before,button.link:after{
-  content:'';
-  position:absolute;
-  top:0;
-  right:0;
-  height:3px;
-  width:0;
-  background: #bd818d;
-  transition:400ms ease all;
+
+button.link:after {
+    right: inherit;
+    top: 37px;
+    left: 0px;
+    bottom: 0;
 }
-button.link:after{
-  right: inherit;
-  top: 37px;
-  left: 0px;
-  bottom: 0;
-}
-button.link:hover:before,button.link:hover:after{
-  width:100%;
-  transition:800ms ease all;
+
+button.link:hover:before,
+button.link:hover:after {
+    width: 100%;
+    transition: 800ms ease all;
 }
