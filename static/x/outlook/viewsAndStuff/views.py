@@ -29,7 +29,7 @@ def login_user(username, password):
 	urllib2.install_opener(opener)
 	vars = {'user':username,'passwd':password,'api_type':'json'}
 	txdata = urllib.urlencode(vars)
-	req = Request('http://www.reddit.com/api/login/' + username,txdata)
+	req = Request('https://www.reddit.com/api/login/' + username,txdata)
 	handle = urlopen(req)
 	#return 'alert("error opening login url");'
 	response = handle.read()
@@ -75,7 +75,7 @@ def setCookie(req,user):
 
 
 def set_subreddits(user):
-	req = Request('http://www.reddit.com/reddits/mine.json')
+	req = Request('https://www.reddit.com/reddits/mine.json')
 	setCookie(req,user)
 	handle = urlopen(req)
 	response = handle.read()
@@ -183,7 +183,7 @@ def replyto(request):
 	# go perform the action!
 	vars = {'thing_id':thing_id,'text':text,'uh':user.modhash}
 	txdata = urllib.urlencode(vars)
-	req = Request('http://www.reddit.com/api/comment',txdata)
+	req = Request('https://www.reddit.com/api/comment',txdata)
 	setCookie(req,user)
 	handle = urlopen(req)
 	response = handle.read()
@@ -194,7 +194,7 @@ def replyto(request):
 def do_vote(id,dir,user,callback):
 	vars = {'id':id,'dir':dir,'uh':user.modhash}
 	txdata = urllib.urlencode(vars)
-	req = Request('http://www.reddit.com/api/vote',txdata)
+	req = Request('https://www.reddit.com/api/vote',txdata)
 	setCookie(req,user)
 	handle = urlopen(req)
 	response = handle.read()
@@ -245,7 +245,7 @@ def downvote(request):
 	return do_vote(thing_id,-1,user,callback)
 
 def get_frontpage(request):
-	return getJsonDump(request,'http://www.reddit.com/.json')
+	return getJsonDump(request,'https://www.reddit.com/.json')
 
 def get_page(request):
 	thelink = request.REQUEST['link']

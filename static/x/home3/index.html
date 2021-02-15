@@ -3,353 +3,355 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <link rel="shortcut icon" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-  <link rel='icon' type='image/png' href='favicon.png'>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel='icon' type='image/png' href='favicon.png'>
 </head>
 
 <body onLoad="LoadReminders()">
-  <div id="BackgroundM">
-    <div class="Information">
-      <h4 class="TimeOfWeather"></h4>
-    </div>
-    <div id="Image" class="NoTransitions">
-        <div id="videoBg">
-          <video loop muted autoplay poster="assets/screencap.jpg">
+    <div id="BackgroundM">
+        <div class="Information">
+            <h4 class="TimeOfWeather"></h4>
+        </div>
+        <div id="Image" class="NoTransitions">
+            <div id="videoBg">
+                <video loop muted autoplay poster="assets/screencap.jpg">
             <source src="intro.mp4" type="video/mp4">
           </video>
-        </div>
-      <div id="StripesAndMoreWrapper">
+            </div>
+            <div id="StripesAndMoreWrapper">
 
-        <div class="approx" onmouseover="SpeedEnter1()" onclick="SpeedEnter1()" onmouseout="SpeedLeave1()" ></div>
-        <div class="stripe" id="SpeedId1" style="background-color:#22334999">
-          
-          <a href="http://www.reddit.com/r/all">
-            <div class="title">
-              <span>Reddit</span>
-            </div>
-          </a>
-          <div class="content">
-            <span class="itemStripes buttonS">
-              <a href="http://www.reddit.com/">Home</a>
+                <div class="approx" onmouseover="SpeedEnter1()" onclick="SpeedEnter1()" onmouseout="SpeedLeave1()"></div>
+                <div class="stripe" id="SpeedId1" style="background-color:#22334999">
+
+                    <a href="https://www.reddit.com/r/all">
+                        <div class="title">
+                            <span>Reddit</span>
+                        </div>
+                    </a>
+                    <div class="content">
+                        <span class="itemStripes buttonS">
+              <a href="https://www.reddit.com/">Home</a>
             </span>
-            <span class="itemStripes buttonS">
-              <a href="http://www.reddit.com/r/Toronto">Toronto</a>
+                        <span class="itemStripes buttonS">
+              <a href="https://www.reddit.com/r/Toronto">Toronto</a>
             </span>
-            <span class="itemStripes buttonS">
-              <a href="http://www.reddit.com/r/UofT">UofT</a>
+                        <span class="itemStripes buttonS">
+              <a href="https://www.reddit.com/r/UofT">UofT</a>
             </span>
-            <span class="itemStripes buttonS">
-              <a href="http://www.reddit.com/r/WoW">WoW</a>
+                        <span class="itemStripes buttonS">
+              <a href="https://www.reddit.com/r/WoW">WoW</a>
             </span>
-          </div>
-        </div>
-        <div class="approx" onmouseover="SpeedEnter2()" onclick="SpeedEnter2()" onmouseout="SpeedLeave2()"></div>
-        <div class="stripe" id="SpeedId2" style="background-color:#32324a99" onmouseover="HideClock()" onmouseout="ShowClock()">
-          <a href="http://www.netflix.com">
-            <div class="title">
-              <span>Media</span>
-            </div>
-          </a>
-          <div class="content">
-            <span class="itemStripes buttonS">
+                    </div>
+                </div>
+                <div class="approx" onmouseover="SpeedEnter2()" onclick="SpeedEnter2()" onmouseout="SpeedLeave2()"></div>
+                <div class="stripe" id="SpeedId2" style="background-color:#32324a99" onmouseover="HideClock()" onmouseout="ShowClock()">
+                    <a href="https://www.netflix.com">
+                        <div class="title">
+                            <span>Media</span>
+                        </div>
+                    </a>
+                    <div class="content">
+                        <span class="itemStripes buttonS">
               <a href="https://www.youtube.com/">YouTube</a>
             </span>
-            <span class="itemStripes buttonS">
+                        <span class="itemStripes buttonS">
               <a href="https://www.twist.moe">Anime</a>
             </span>
-            <span class="itemStripes buttonS">
+                        <span class="itemStripes buttonS">
               <a href="https://www.twitch.tv">Twitch</a>
             </span>
-            <span class="itemStripes buttonS">
-              <a href="http://www.reddit.com/r/videos">Reddit</a>
+                        <span class="itemStripes buttonS">
+              <a href="https://www.reddit.com/r/videos">Reddit</a>
             </span>
-          </div>
-        </div>
-        <div class="approx" onmouseover="SpeedEnter3()" onclick="SpeedEnter3()" onmouseout="SpeedLeave3()"></div>
-        <div class="stripe" id="SpeedId3" style="background-color:#3a222e61" onmouseover="HideClock()" onmouseout="ShowClock()">
-          <a href="https://www.novac.dev">
-            <div class="title">
-              <span>Professional</span>
-            </div>
-          </a>
-          <div class="content">
-            <span class="itemStripes buttonS">
+                    </div>
+                </div>
+                <div class="approx" onmouseover="SpeedEnter3()" onclick="SpeedEnter3()" onmouseout="SpeedLeave3()"></div>
+                <div class="stripe" id="SpeedId3" style="background-color:#3a222e61" onmouseover="HideClock()" onmouseout="ShowClock()">
+                    <a href="https://www.novac.dev">
+                        <div class="title">
+                            <span>Professional</span>
+                        </div>
+                    </a>
+                    <div class="content">
+                        <span class="itemStripes buttonS">
               <a href="https://mail.utoronto.ca">UofT Mail</a>
             </span>
-            <span class="itemStripes buttonS">
+                        <span class="itemStripes buttonS">
               <a href="https://mail.google.com/mail/u/0/#inbox">GMail</a>
             </span>
-            <span class="itemStripes buttonS">
+                        <span class="itemStripes buttonS">
               <a href="https://github.com/novatorem">GitHub</a>
             </span>
-            <span class="itemStripes buttonS">
-              <a href="http://acorn.utoronto.ca/">Acorn</a>
+                        <span class="itemStripes buttonS">
+              <a href="https://acorn.utoronto.ca/">Acorn</a>
             </span>
-          </div>
-        </div>
-        <div class="approx" onmouseover="SpeedEnter4()" onclick="SpeedEnter4()" onmouseout="SpeedLeave4()"></div>
-        <div class="stripe" id="SpeedId4" style="background-color:#2d1c1c69">
-          <a href="http://www.unsplash.com/">
-            <div class="title">
-              <span>Background</span>
-            </div>
-          </a>
-          <div class="content">
-            <span class="itemStripes buttonS">
+                    </div>
+                </div>
+                <div class="approx" onmouseover="SpeedEnter4()" onclick="SpeedEnter4()" onmouseout="SpeedLeave4()"></div>
+                <div class="stripe" id="SpeedId4" style="background-color:#2d1c1c69">
+                    <a href="https://www.unsplash.com/">
+                        <div class="title">
+                            <span>Background</span>
+                        </div>
+                    </a>
+                    <div class="content">
+                        <span class="itemStripes buttonS">
               <a href="https://kaleidosync.herokuapp.com/">Visualizer</a>
             </span>
-            <span class="itemStripes buttonS">
+                        <span class="itemStripes buttonS">
               <a href="https://www.youtube.com/watch?v=MW4fASDkQXA&list=PLdSUTU0oamrzflitm5wLvphEMVbsZwt7L">WoW Scenery</a>
             </span>
-            <span class="itemStripes buttonS">
+                        <span class="itemStripes buttonS">
               <a href="https://www.twitch.tv/monstercat">Monstercat</a>
             </span>
-            <span class="itemStripes buttonS">
+                        <span class="itemStripes buttonS">
               <a href="https://www.youtube.com/channel/UCxcnsr1R5Ge_fbTu5ajt8DQ">Bob Ross</a>
             </span>
-          </div>
-        </div>
+                    </div>
+                </div>
 
 
-        <div class="center" id="toHide">
-          <time id="clock"></time>
-        </div>
-        
-        <form class="overlay center" id="search-form" autocomplete="off" spellcheck="false">
-          <div class="divInput">
-            <div id="WrapperForInput">
-              <p Id="OutputIDBefore">&nbsp;</p>
-              <input id="search-input" type="text" oninput="InputDo()" onblur="InputBlur()">
-              <p Id="OutputID">&nbsp;</p>
+                <div class="center" id="toHide">
+                    <time id="clock"></time>
+                </div>
+
+                <form class="overlay center" id="search-form" autocomplete="off" spellcheck="false">
+                    <div class="divInput">
+                        <div id="WrapperForInput">
+                            <p Id="OutputIDBefore">&nbsp;</p>
+                            <input id="search-input" type="text" oninput="InputDo()" onblur="InputBlur()">
+                            <p Id="OutputID">&nbsp;</p>
+                        </div>
+                        <ul id="search-suggestions"></ul>
+                    </div>
+                </form>
+
+                <aside class="overlay center" id="help"></aside>
             </div>
-            <ul id="search-suggestions"></ul>
-          </div>
-        </form>
-
-        <aside class="overlay center" id="help"></aside>
-      </div>
-      <div class="MenuMoveIn" id="wrapperWrapper">
-        <div class="Wrapper">
-          <nav>
-            <ul>
-              <li class="active" id="tab1" onclick="DefinVariables(1)">
-                <div>First</div>
-              </li>
-              <li id="tab2" onclick="DefinVariables(2)">
-                <div>Second</div>
-              </li>
-              <li id="tab3" onclick="DefinVariables(3)">
-                <div>Third</div>
-              </li>
-            </ul>
-            <div id="lineId" class="line"></div>
-          </nav>
-          <textarea id="idTextarea" cols="30" rows="10" placeholder="Add your notes here..." onfocus="NoteFocus()" onblur="writeNote(1)"></textarea>
+            <div class="MenuMoveIn" id="wrapperWrapper">
+                <div class="Wrapper">
+                    <nav>
+                        <ul>
+                            <li class="active" id="tab1" onclick="DefinVariables(1)">
+                                <div>First</div>
+                            </li>
+                            <li id="tab2" onclick="DefinVariables(2)">
+                                <div>Second</div>
+                            </li>
+                            <li id="tab3" onclick="DefinVariables(3)">
+                                <div>Third</div>
+                            </li>
+                        </ul>
+                        <div id="lineId" class="line"></div>
+                    </nav>
+                    <textarea id="idTextarea" cols="30" rows="10" placeholder="Add your notes here..." onfocus="NoteFocus()" onblur="writeNote(1)"></textarea>
+                </div>
+            </div>
+            <div id="NotesMenuTrigger" onmouseover="ToggleMenu()"></div>
         </div>
-      </div>
-      <div id="NotesMenuTrigger" onmouseover="ToggleMenu()"></div>
     </div>
-  </div>
-  
+
 </body>
+
 </html>
 
 <style>
-  html, body {margin: 0; height: 100%; overflow: hidden}
-
-  noscript {
-    position: fixed;
-    z-index: 10;
-    text-align: center;
-    width: 100vw;
-    pointer-events: none;
-    margin-top: 0.5em;
-  }
-
-  #BackgroundM {
-    background-color: #17191d;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    overflow: hidden;
-  }
-
-  .stripe {
-    transition: width 125ms ease-in-out;
-  }
-
-  .stripe:hover {
-    width: 100%;
-    transition: width 400ms ease !important;
-  }
-
-  .approx {
-    position: fixed;
-    background-color: red;
-    width: 20vw;
-    height: 100%;
-    z-index: 0;
-    height: 25vh;
-    opacity: 0;
-    margin-left: 40px;
-    z-index: 3;
-  }
-
-  .approx:hover {
-    background-color: green !important;
-  }
-
-  /* old Code
+    html,
+    body {
+        margin: 0;
+        height: 100%;
+        overflow: hidden
+    }
+    
+    noscript {
+        position: fixed;
+        z-index: 10;
+        text-align: center;
+        width: 100vw;
+        pointer-events: none;
+        margin-top: 0.5em;
+    }
+    
+    #BackgroundM {
+        background-color: #17191d;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        overflow: hidden;
+    }
+    
+    .stripe {
+        transition: width 125ms ease-in-out;
+    }
+    
+    .stripe:hover {
+        width: 100%;
+        transition: width 400ms ease !important;
+    }
+    
+    .approx {
+        position: fixed;
+        background-color: red;
+        width: 20vw;
+        height: 100%;
+        z-index: 0;
+        height: 25vh;
+        opacity: 0;
+        margin-left: 40px;
+        z-index: 3;
+    }
+    
+    .approx:hover {
+        background-color: green !important;
+    }
+    /* old Code
 .approx:hover + .stripe {
  width: 70px;
 }
 */
-
-  .approx:hover+.stripe {
-    width: calc(0.0015 / var(--mouse-x, 0) * 100vw + 26.5px);
-    /*Code not responsive (only 1920x)*/
-  }
-
-  .Fast {
-    transition: width 0s !important;
-  }
+    
+    .approx:hover+.stripe {
+        width: calc(0.0015 / var(--mouse-x, 0) * 100vw + 26.5px);
+        /*Code not responsive (only 1920x)*/
+    }
+    
+    .Fast {
+        transition: width 0s !important;
+    }
 </style>
 
 <script>
-  /* Todo: It should be possible to do this in one, not for every part indiviually*/
-  const root = document.documentElement;
-  var goVar;
+    /* Todo: It should be possible to do this in one, not for every part indiviually*/
+    const root = document.documentElement;
+    var goVar;
 
-  document.addEventListener('mousemove', evt => {
-    let x = evt.clientX / innerWidth;
+    document.addEventListener('mousemove', evt => {
+        let x = evt.clientX / innerWidth;
 
-    root.style.setProperty('--mouse-x', x);
-  });
+        root.style.setProperty('--mouse-x', x);
+    });
 
-  function SpeedEnter1() {
-    goVar = setTimeout(function () {
-      document.getElementById("SpeedId1").classList.add('Fast');
-    }, 200);
-  }
-  
-  function HideClock() {
-    document.getElementById("toHide").style.visibility = "hidden";
-  }
+    function SpeedEnter1() {
+        goVar = setTimeout(function() {
+            document.getElementById("SpeedId1").classList.add('Fast');
+        }, 200);
+    }
 
-  function ShowClock() {
-    document.getElementById("toHide").style.visibility = "visible";
-  }
+    function HideClock() {
+        document.getElementById("toHide").style.visibility = "hidden";
+    }
 
-  function SpeedLeave1() {
-    document.getElementById("SpeedId1").classList.remove('Fast');
-    clearTimeout(goVar);
-  }
+    function ShowClock() {
+        document.getElementById("toHide").style.visibility = "visible";
+    }
 
-  function SpeedEnter2() {
-    goVar = setTimeout(function () {
-      document.getElementById("SpeedId2").classList.add('Fast');
-    }, 200);
-  }
+    function SpeedLeave1() {
+        document.getElementById("SpeedId1").classList.remove('Fast');
+        clearTimeout(goVar);
+    }
 
-  function SpeedLeave2() {
-    document.getElementById("SpeedId2").classList.remove('Fast');
-    clearTimeout(goVar);
-  }
+    function SpeedEnter2() {
+        goVar = setTimeout(function() {
+            document.getElementById("SpeedId2").classList.add('Fast');
+        }, 200);
+    }
 
-  function SpeedEnter3() {
-    goVar = setTimeout(function () {
-      document.getElementById("SpeedId3").classList.add('Fast');
-    }, 200);
-  }
+    function SpeedLeave2() {
+        document.getElementById("SpeedId2").classList.remove('Fast');
+        clearTimeout(goVar);
+    }
 
-  function SpeedLeave3() {
-    document.getElementById("SpeedId3").classList.remove('Fast');
-    clearTimeout(goVar);
-  }
+    function SpeedEnter3() {
+        goVar = setTimeout(function() {
+            document.getElementById("SpeedId3").classList.add('Fast');
+        }, 200);
+    }
 
-  function SpeedEnter4() {
-    goVar = setTimeout(function () {
-      document.getElementById("SpeedId4").classList.add('Fast');
-    }, 200);
-  }
+    function SpeedLeave3() {
+        document.getElementById("SpeedId3").classList.remove('Fast');
+        clearTimeout(goVar);
+    }
 
-  function SpeedLeave4() {
-    document.getElementById("SpeedId4").classList.remove('Fast');
-    clearTimeout(goVar);
-  }
+    function SpeedEnter4() {
+        goVar = setTimeout(function() {
+            document.getElementById("SpeedId4").classList.add('Fast');
+        }, 200);
+    }
+
+    function SpeedLeave4() {
+        document.getElementById("SpeedId4").classList.remove('Fast');
+        clearTimeout(goVar);
+    }
 </script>
 
 <script>
-  const CONFIG = {
-    // the category, name, key, url, search path and color for your commands
-    // if none of the specified keys are matched, the '*' key is used
-    commands: [
-      [null, 'Google', '*', 'https://encrypted.google.com', '/search?q={}', '#10161f99'],
-      ['Work', 'GitHub', 'github', 'https://github.com', '/search?q={}', '#33333399'],
-      ['Work', 'Inbox', 'gmail', 'https://inbox.google.com', '/search/{}', '#4285f499'],
-      ['Work', 'Keep', 'keep', 'https://keep.google.com', '/#search/text={}', '#ffbb00'],
-      ['Lurk', 'Reddit', 'reddit', 'https://www.reddit.com', '/search?q={}', '#22334999'],
-      ['Watch', 'YouTube', 'youtube', 'https://youtube.com/feed/subscriptions', '/results?search_query={}', '#1A283299'],
-    ],
+    const CONFIG = {
+        // the category, name, key, url, search path and color for your commands
+        // if none of the specified keys are matched, the '*' key is used
+        commands: [
+            [null, 'Google', '*', 'https://encrypted.google.com', '/search?q={}', '#10161f99'],
+            ['Work', 'GitHub', 'github', 'https://github.com', '/search?q={}', '#33333399'],
+            ['Work', 'Inbox', 'gmail', 'https://inbox.google.com', '/search/{}', '#4285f499'],
+            ['Work', 'Keep', 'keep', 'https://keep.google.com', '/#search/text={}', '#ffbb00'],
+            ['Lurk', 'Reddit', 'reddit', 'https://www.reddit.com', '/search?q={}', '#22334999'],
+            ['Watch', 'YouTube', 'youtube', 'https://youtube.com/feed/subscriptions', '/results?search_query={}', '#1A283299'],
+        ],
 
-    // give suggestions as you type
-    suggestions: true,
+        // give suggestions as you type
+        suggestions: true,
 
-    // max amount of suggestions that will ever be displayed
-    suggestionsLimit: 5,
+        // max amount of suggestions that will ever be displayed
+        suggestionsLimit: 5,
 
-    // the order and limit for each suggestion influencer
-    // "Default" suggestions come from CONFIG.defaultSuggestions
-    // "DuckDuckGo" suggestions come from the duck duck go search api
-    // "History" suggestions come from your previously entered queries
-    influencers: [{
-        name: 'Default',
-        limit: 5
-      },
-      {
-        name: 'History',
-        limit: 1
-      },
-      {
-        name: 'DuckDuckGo',
-        limit: 5
-      },
-    ],
+        // the order and limit for each suggestion influencer
+        // "Default" suggestions come from CONFIG.defaultSuggestions
+        // "DuckDuckGo" suggestions come from the duck duck go search api
+        // "History" suggestions come from your previously entered queries
+        influencers: [{
+            name: 'Default',
+            limit: 5
+        }, {
+            name: 'History',
+            limit: 1
+        }, {
+            name: 'DuckDuckGo',
+            limit: 5
+        }, ],
 
-    // default search suggestions for the specified queries
-    //defaultSuggestions: {
-    //  'github': ['g/issues', 'g/pulls', 'gist.github.com'],
-    //  'reddit': ['r/r/piracy', 'r/r/startpages'],
-    //},
+        // default search suggestions for the specified queries
+        //defaultSuggestions: {
+        //  'github': ['g/issues', 'g/pulls', 'gist.github.com'],
+        //  'reddit': ['r/r/piracy', 'r/r/startpages'],
+        //},
 
-    // instantly redirect when a key is matched
-    // put a space before any other queries to prevent unwanted redirects
-    instantRedirect: false,
+        // instantly redirect when a key is matched
+        // put a space before any other queries to prevent unwanted redirects
+        instantRedirect: false,
 
-    // open queries in a new tab
-    newTab: false,
+        // open queries in a new tab
+        newTab: false,
 
-    // dynamic background colors when command domains are matched
-    colors: true,
+        // dynamic background colors when command domains are matched
+        colors: true,
 
-    // the delimiter between the key and your search query
-    // e.g. to search GitHub for potatoes you'd type "g:potatoes"
-    searchDelimiter: ' ',
+        // the delimiter between the key and your search query
+        // e.g. to search GitHub for potatoes you'd type "g:potatoes"
+        searchDelimiter: ' ',
 
-    // the delimiter between the key and a path
-    // e.g. type "r/r/unixporn" to go to "reddit.com/r/unixporn"
-    pathDelimiter: '/',
+        // the delimiter between the key and a path
+        // e.g. type "r/r/unixporn" to go to "reddit.com/r/unixporn"
+        pathDelimiter: '/',
 
-    // the delimiter between the hours and minutes in the clock
-    clockDelimiter: ':',
+        // the delimiter between the hours and minutes in the clock
+        clockDelimiter: ':',
 
-    // note: you can pass in your search query via the q query param
-    // e.g. going to file:///path/to/tilde/index.html?q=hamsters is equivalent
-    // to typing "hamsters" and pressing enter
-  };
+        // note: you can pass in your search query via the q query param
+        // e.g. going to file:///path/to/tilde/index.html?q=hamsters is equivalent
+        // to typing "hamsters" and pressing enter
+    };
 </script>
 
 <meta charset="utf-8">
@@ -360,672 +362,665 @@
 <title>Home</title>
 
 <style type="text/css">
-  .NoTransitions {
-    /*causes bug*/
-    -webkit-transition: all 0s !important;
-    -moz-transition: all 0s !important;
-    -ms-transition: all 0s !important;
-    -o-transition: all 0s !important;
-    transition: all 0s !important;
-    transition-delay: 0s !important;
-    -webkit-transition-delay: 0s !important;
-    -moz-transition-delay: 0s !important;
-    -ms-transition-delay: 0s !important;
-    -o-transition-delay: 0s !important;
-    animation-duration: 0s !important;
-    animation-delay: 0s !important;
-  }
-
-  /*WorkingOn*/
-
-  #WrapperForInput {
-    display: flex;
-    justify-content: center;
-  }
-
-  #OutputIDBefore {
-    background-color: transparent;
-    margin-top: 0;
-    flex: auto;
-    margin-bottom: 20px;
-    font-size: 3em;
-    font-weight: 500;
-    letter-spacing: .05em;
-    z-index: 1;
-    visibility: hidden;
-    pointer-events: none;
-    font-family: 'Lato', sans-serif;
-  }
-
-  #OutputID {
-    background-color: transparent;
-    text-align: left;
-    margin-top: 0;
-    flex: auto;
-    margin-bottom: 20px;
-    font-size: 3em;
-    font-weight: 500;
-    letter-spacing: .05em;
-    z-index: 1;
-    color: #FF7620;
-    font-family: 'Lato', sans-serif;
-
-  }
-
-  ::-webkit-scrollbar {
-    width: 0px;
-    /* remove scrollbar space */
-  }
-
-  body {
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    transition: background .2s;
-    color: #fff;
-  }
-
-  input,
-  input:focus {
-    display: block;
-    box-sizing: border-box;
-    margin: 0;
-    border: 0;
-    outline: 0;
-    background: transparent;
-    color: #fff;
-    text-align: center;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-  }
-
-
-  ul#search-suggestions,
-  ul#search-suggestions>li {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-
-  a,
-  a:focus {
-    color: inherit;
-    outline: 0;
-  }
-
-  #clock {
-    z-index: 2;
-    display: block;
-    margin-top: -.06em;
-    font-size: 7rem;
-    letter-spacing: .05em;
-    cursor: pointer;
-    color: #3a2020b0;
-    font-family: 'Lato', sans-serif;
-    text-shadow: 0 0 5px rgba(0,0,0,0.5);
-    /* #ffffffc4 */
-  }
-
-  .OrangeClock {
-    color: #FF7620 !important;
-  }
-
-  #search-form {
-    padding: 1em;
-    box-sizing: border-box;
-    z-index: 2;
-    position: absolute;
-    width: 100%;
-  }
-
-  #search-form>div {
-    width: 100%;
-  }
-
-  /*WorkingOn*/
-
-  #search-input,
-  #search-input:focus {
-    flex: auto;
-    margin-bottom: 20px;
-    font-size: 1.5em;
-    font-weight: 400;
-    letter-spacing: .05em;
-    text-transform: capitalize;
-    font-family: 'Lato', sans-serif;
-    z-index: 2;
-  }
-
-  #search-suggestions {
-    display: none;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  body.suggestions #search-suggestions {
-    display: flex;
-  }
-
-  .search-suggestion {
-    padding: .7em 1em;
-    white-space: nowrap;
-    font-size: 1.1em;
-    cursor: pointer;
-  }
-
-  /* .search-suggestion.highlight {
-    //come back
-  } */
-
-  .search-suggestion b {
-    position: relative;
-    font-weight: 400;
-  }
-
-  .search-suggestion b::after {
-    content: ' ';
-    position: absolute;
-    top: 51%;
-    right: 0;
-    left: 0;
-    height: 3px;
-    background-color: #fff;
-    opacity: .8;
-  }
-
-  .search-suggestion.highlight b::after {
-    opacity: 0;
-  }
-
-  #help {
-    display: block;
-    padding: 8vw;
-    background-image: url("back.mp4");
-    background-size: cover;
-    font-size: 1.3rem;
-    z-index: 1;
-  }
-
-  .category {
-    margin-bottom: 2rem;
-    color: #853E1A;
-  }
-
-  .category:last-of-type {
-    margin-bottom: 0;
-  }
-
-  .category-name {
-    margin: 0 0 2rem;
-    font-size: .7em;
-    letter-spacing: .2em;
-    text-transform: uppercase;
-  }
-
-  .command a {
-    display: block;
-    position: relative;
-    margin: 1em 0;
-    font-size: .9em;
-    line-height: 2em;
-    text-decoration: none;
-  }
-
-  .command:last-of-type a {
-    margin-bottom: 0;
-  }
-
-  /*help Circles*/
-
-  .command-key {
-    display: block;
-    float: left;
-    width: 2.5em;
-    margin-right: 1em;
-    border-radius: 50%;
-    background-color: #FF7620;
-    color: #fff;
-    font-size: .8em;
-    text-align: center;
-  }
-
-  .command-name {
-    position: relative;
-  }
-
-  .command-name::after {
-    content: ' ';
-    position: absolute;
-    right: 0;
-    bottom: -.35em;
-    left: 0;
-    height: 2px;
-    transition: .2s;
-    transform: translateX(-2em);
-    background-color: #ff0000;
-    opacity: 0;
-  }
-
-  .command a:hover .command-name::after,
-  .command a:focus .command-name::after {
-    transform: translateX(0);
-    opacity: 1;
-  }
-
-  .overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    overflow: auto;
-    box-sizing: border-box;
-    width: 100%;
-    height: 100%;
-    visibility: hidden;
-    overflow: hidden;
-  }
-
-  body.help #help.overlay,
-  body.form #search-form.overlay {
-    visibility: visible;
-  }
-
-  .center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: inherit;
-    height: 100%;
-    width: 100%;
-    box-sizing: border-box;
-    position: absolute;
-    bottom: 0;
-  }
-
-  @media (min-width: 500px) {
-    .categories {
-      display: grid;
-      grid-template-columns: 250px 185px;
-      justify-content: space-around;
+    .NoTransitions {
+        /*causes bug*/
+        -webkit-transition: all 0s !important;
+        -moz-transition: all 0s !important;
+        -ms-transition: all 0s !important;
+        -o-transition: all 0s !important;
+        transition: all 0s !important;
+        transition-delay: 0s !important;
+        -webkit-transition-delay: 0s !important;
+        -moz-transition-delay: 0s !important;
+        -ms-transition-delay: 0s !important;
+        -o-transition-delay: 0s !important;
+        animation-duration: 0s !important;
+        animation-delay: 0s !important;
     }
-
-    .category:nth-last-child(2) {
-      margin-bottom: 0;
+    /*WorkingOn*/
+    
+    #WrapperForInput {
+        display: flex;
+        justify-content: center;
     }
-
+    
+    #OutputIDBefore {
+        background-color: transparent;
+        margin-top: 0;
+        flex: auto;
+        margin-bottom: 20px;
+        font-size: 3em;
+        font-weight: 500;
+        letter-spacing: .05em;
+        z-index: 1;
+        visibility: hidden;
+        pointer-events: none;
+        font-family: 'Lato', sans-serif;
+    }
+    
+    #OutputID {
+        background-color: transparent;
+        text-align: left;
+        margin-top: 0;
+        flex: auto;
+        margin-bottom: 20px;
+        font-size: 3em;
+        font-weight: 500;
+        letter-spacing: .05em;
+        z-index: 1;
+        color: #FF7620;
+        font-family: 'Lato', sans-serif;
+    }
+    
+     ::-webkit-scrollbar {
+        width: 0px;
+        /* remove scrollbar space */
+    }
+    
+    body {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        transition: background .2s;
+        color: #fff;
+    }
+    
+    input,
+    input:focus {
+        display: block;
+        box-sizing: border-box;
+        margin: 0;
+        border: 0;
+        outline: 0;
+        background: transparent;
+        color: #fff;
+        text-align: center;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+    }
+    
+    ul#search-suggestions,
+    ul#search-suggestions>li {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    
+    a,
+    a:focus {
+        color: inherit;
+        outline: 0;
+    }
+    
+    #clock {
+        z-index: 2;
+        display: block;
+        margin-top: -.06em;
+        font-size: 7rem;
+        letter-spacing: .05em;
+        cursor: pointer;
+        color: #3a2020b0;
+        font-family: 'Lato', sans-serif;
+        text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        /* #ffffffc4 */
+    }
+    
+    .OrangeClock {
+        color: #FF7620 !important;
+    }
+    
+    #search-form {
+        padding: 1em;
+        box-sizing: border-box;
+        z-index: 2;
+        position: absolute;
+        width: 100%;
+    }
+    
+    #search-form>div {
+        width: 100%;
+    }
+    /*WorkingOn*/
+    
     #search-input,
     #search-input:focus {
-      font-size: 3em;
+        flex: auto;
+        margin-bottom: 20px;
+        font-size: 1.5em;
+        font-weight: 400;
+        letter-spacing: .05em;
+        text-transform: capitalize;
+        font-family: 'Lato', sans-serif;
+        z-index: 2;
     }
-  }
-
-  @media (min-width: 1000px) {
+    
+    #search-suggestions {
+        display: none;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    body.suggestions #search-suggestions {
+        display: flex;
+    }
+    
+    .search-suggestion {
+        padding: .7em 1em;
+        white-space: nowrap;
+        font-size: 1.1em;
+        cursor: pointer;
+    }
+    /* .search-suggestion.highlight {
+    //come back
+  } */
+    
+    .search-suggestion b {
+        position: relative;
+        font-weight: 400;
+    }
+    
+    .search-suggestion b::after {
+        content: ' ';
+        position: absolute;
+        top: 51%;
+        right: 0;
+        left: 0;
+        height: 3px;
+        background-color: #fff;
+        opacity: .8;
+    }
+    
+    .search-suggestion.highlight b::after {
+        opacity: 0;
+    }
+    
     #help {
-      display: flex;
-      padding: 0;
+        display: block;
+        padding: 8vw;
+        background-image: url("back.mp4");
+        background-size: cover;
+        font-size: 1.3rem;
+        z-index: 1;
     }
-
+    
     .category {
-      margin: 2rem 0;
+        margin-bottom: 2rem;
+        color: #853E1A;
     }
-
-    .categories {
-      grid-template-columns: repeat(2, 300px) 185px;
+    
+    .category:last-of-type {
+        margin-bottom: 0;
     }
-  }
-
-  @media (min-width: 1700px) {
-    .categories {
-      grid-template-columns: repeat(5, 250px) 185px;
+    
+    .category-name {
+        margin: 0 0 2rem;
+        font-size: .7em;
+        letter-spacing: .2em;
+        text-transform: uppercase;
     }
-  }
+    
+    .command a {
+        display: block;
+        position: relative;
+        margin: 1em 0;
+        font-size: .9em;
+        line-height: 2em;
+        text-decoration: none;
+    }
+    
+    .command:last-of-type a {
+        margin-bottom: 0;
+    }
+    /*help Circles*/
+    
+    .command-key {
+        display: block;
+        float: left;
+        width: 2.5em;
+        margin-right: 1em;
+        border-radius: 50%;
+        background-color: #FF7620;
+        color: #fff;
+        font-size: .8em;
+        text-align: center;
+    }
+    
+    .command-name {
+        position: relative;
+    }
+    
+    .command-name::after {
+        content: ' ';
+        position: absolute;
+        right: 0;
+        bottom: -.35em;
+        left: 0;
+        height: 2px;
+        transition: .2s;
+        transform: translateX(-2em);
+        background-color: #ff0000;
+        opacity: 0;
+    }
+    
+    .command a:hover .command-name::after,
+    .command a:focus .command-name::after {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        overflow: auto;
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+        visibility: hidden;
+        overflow: hidden;
+    }
+    
+    body.help #help.overlay,
+    body.form #search-form.overlay {
+        visibility: visible;
+    }
+    
+    .center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: inherit;
+        height: 100%;
+        width: 100%;
+        box-sizing: border-box;
+        position: absolute;
+        bottom: 0;
+    }
+    
+    @media (min-width: 500px) {
+        .categories {
+            display: grid;
+            grid-template-columns: 250px 185px;
+            justify-content: space-around;
+        }
+        .category:nth-last-child(2) {
+            margin-bottom: 0;
+        }
+        #search-input,
+        #search-input:focus {
+            font-size: 3em;
+        }
+    }
+    
+    @media (min-width: 1000px) {
+        #help {
+            display: flex;
+            padding: 0;
+        }
+        .category {
+            margin: 2rem 0;
+        }
+        .categories {
+            grid-template-columns: repeat(2, 300px) 185px;
+        }
+    }
+    
+    @media (min-width: 1700px) {
+        .categories {
+            grid-template-columns: repeat(5, 250px) 185px;
+        }
+    }
 </style>
 
 
 
 <script>
-  const _ = {
-    bodyClassAdd: c => _.el('body').classList.add(c),
-    bodyClassHas: c => _.el('body').classList.contains(c),
-    bodyClassRemove: c => _.el('body').classList.remove(c),
-    el: s => document.querySelector(s),
-    els: s => [].slice.call(document.querySelectorAll(s) || []),
-    escapeRegex: s => s.replace(/[-\/\\^_*+?.()|[\]{}]/g, '\\_&'),
-    ieq: (a, b) => a.toLowerCase() === b.toLowerCase(),
-    iin: (a, b) => a.toLowerCase().indexOf(b.toLowerCase()) !== -1,
-    isDown: e => ['c-n', 'down', 'tab'].includes(_.key(e)),
-    isRemove: e => ['backspace', 'delete'].includes(_.key(e)),
-    isUp: e => ['c-p', 'up', 's-tab'].includes(_.key(e)),
+    const _ = {
+        bodyClassAdd: c => _.el('body').classList.add(c),
+        bodyClassHas: c => _.el('body').classList.contains(c),
+        bodyClassRemove: c => _.el('body').classList.remove(c),
+        el: s => document.querySelector(s),
+        els: s => [].slice.call(document.querySelectorAll(s) || []),
+        escapeRegex: s => s.replace(/[-\/\\^_*+?.()|[\]{}]/g, '\\_&'),
+        ieq: (a, b) => a.toLowerCase() === b.toLowerCase(),
+        iin: (a, b) => a.toLowerCase().indexOf(b.toLowerCase()) !== -1,
+        isDown: e => ['c-n', 'down', 'tab'].includes(_.key(e)),
+        isRemove: e => ['backspace', 'delete'].includes(_.key(e)),
+        isUp: e => ['c-p', 'up', 's-tab'].includes(_.key(e)),
 
-    jsonp: url => {
-      let script = document.createElement('script');
-      script.src = url;
-      _.el('head').appendChild(script);
-    },
+        jsonp: url => {
+            let script = document.createElement('script');
+            script.src = url;
+            _.el('head').appendChild(script);
+        },
 
-    key: e => {
-      const ctrl = e.ctrlKey;
-      const shift = e.shiftKey; //has This Button been pressed
-      
-      //Jump
-      switch (e.which) {
-        case 8:
-          return 'backspace';
-        case 9:
-          return shift ? 's-tab' : 'tab';
-        case 13:
-          return 'enter';
-        case 16:
-          return 'shift';
-        case 17:
-          return 'ctrl';
-        case 18:
-          return 'alt';
-        case 27:
-          return 'escape';
-        case 38:
-          return 'up';
-        case 40:
-          return 'down';
-        case 46:
-          return 'delete';
-        case 78:
-          return ctrl ? 'c-n' : 'n';
-        case 80:
-          return ctrl ? 'c-p' : 'n';
-        case 91:
-          return 'super';
-      }
-    },
-  };
-  
+        key: e => {
+            const ctrl = e.ctrlKey;
+            const shift = e.shiftKey; //has This Button been pressed
 
-  class Clock {
-    constructor(options) {
-      this._el = _.el('#clock');
-      this._delimiter = options.delimiter;
-      this._form = options.form;
-      this._setTime = this._setTime.bind(this);
-      this._registerEvents();
-      this._start();
+            //Jump
+            switch (e.which) {
+                case 8:
+                    return 'backspace';
+                case 9:
+                    return shift ? 's-tab' : 'tab';
+                case 13:
+                    return 'enter';
+                case 16:
+                    return 'shift';
+                case 17:
+                    return 'ctrl';
+                case 18:
+                    return 'alt';
+                case 27:
+                    return 'escape';
+                case 38:
+                    return 'up';
+                case 40:
+                    return 'down';
+                case 46:
+                    return 'delete';
+                case 78:
+                    return ctrl ? 'c-n' : 'n';
+                case 80:
+                    return ctrl ? 'c-p' : 'n';
+                case 91:
+                    return 'super';
+            }
+        },
+    };
+
+
+    class Clock {
+        constructor(options) {
+            this._el = _.el('#clock');
+            this._delimiter = options.delimiter;
+            this._form = options.form;
+            this._setTime = this._setTime.bind(this);
+            this._registerEvents();
+            this._start();
+        }
+
+        _pad(num) {
+            return ('0' + num.toString()).slice(-2);
+        }
+
+        _registerEvents() {
+            this._el.addEventListener('click', this._form.show);
+        }
+
+        _setTime() {
+            const date = new Date();
+
+            function hours12(d) {
+                return (d.getHours() + 24) % 12 || 12;
+            }
+            const hours = this._pad(hours12(date));
+            const minutes = this._pad(date.getMinutes());
+            this._el.innerHTML = hours + this._delimiter + minutes;
+        }
+
+        _start() {
+            this._setTime();
+            setInterval(this._setTime, 1000);
+        }
     }
 
-    _pad(num) {
-      return ('0' + num.toString()).slice(-2);
-    }
+    class Help {
+        constructor(options) {
+            this._el = _.el('#help');
+            this._commands = options.commands;
+            this._newTab = options.newTab;
+            this._toggled = false;
+            this._buildAndAppendLists();
+            this._bindMethods();
+            this._registerEvents();
+        }
 
-    _registerEvents() {
-      this._el.addEventListener('click', this._form.show);
-    }
+        toggle(show) {
+            this._toggled = (typeof show !== 'undefined') ? show : !this._toggled;
+            this._toggled ? _.bodyClassAdd('help') : _.bodyClassRemove('help');
+        }
 
-    _setTime() {
-      const date = new Date();
-      function hours12(d) { return (d.getHours() + 24) % 12 || 12; }
-      const hours = this._pad(hours12(date));
-      const minutes = this._pad(date.getMinutes());
-      this._el.innerHTML = hours + this._delimiter + minutes;
-    }
+        _bindMethods() {
+            this._handleKeydown = this._handleKeydown.bind(this);
+        }
 
-    _start() {
-      this._setTime();
-      setInterval(this._setTime, 1000);
-    }
-  }
+        _buildAndAppendLists() {
+            const lists = document.createElement('ul');
+            lists.classList.add('categories');
 
-  class Help {
-    constructor(options) {
-      this._el = _.el('#help');
-      this._commands = options.commands;
-      this._newTab = options.newTab;
-      this._toggled = false;
-      this._buildAndAppendLists();
-      this._bindMethods();
-      this._registerEvents();
-    }
-
-    toggle(show) {
-      this._toggled = (typeof show !== 'undefined') ? show : !this._toggled;
-      this._toggled ? _.bodyClassAdd('help') : _.bodyClassRemove('help');
-    }
-
-    _bindMethods() {
-      this._handleKeydown = this._handleKeydown.bind(this);
-    }
-
-    _buildAndAppendLists() {
-      const lists = document.createElement('ul');
-      lists.classList.add('categories');
-
-      this._getCategories().forEach(category => {
-        lists.insertAdjacentHTML(
-          'beforeend',
-          `<li class="category">
+            this._getCategories().forEach(category => {
+                lists.insertAdjacentHTML(
+                    'beforeend',
+                    `<li class="category">
             <h2 class="category-name">${category}</h2>
             <ul>${this._buildListCommands(category)}</ul>
           </li>`
-        );
-      });
+                );
+            });
 
-      this._el.appendChild(lists);
-    }
+            this._el.appendChild(lists);
+        }
 
-    _buildListCommands(category) {
-      return this._commands.map(([cmdCategory, name, key, url]) => {
-        if (cmdCategory === category) {
-          return (
-            `<li class="command">
+        _buildListCommands(category) {
+            return this._commands.map(([cmdCategory, name, key, url]) => {
+                if (cmdCategory === category) {
+                    return (
+                        `<li class="command">
               <a href="${url}" target="${this._newTab ? '_blank' : '_self'}">
                 <span class="command-key">${key}</span>
                 <span class="command-name">${name}</span>
               </a>
             </li>`
-          );
+                    );
+                }
+            }).join('');
         }
-      }).join('');
-    }
 
-    _getCategories() {
-      const categories = this._commands
-        .map(([category]) => category)
-        .filter(category => category);
+        _getCategories() {
+            const categories = this._commands
+                .map(([category]) => category)
+                .filter(category => category);
 
-      return [...new Set(categories)];
-    }
-
-    _handleKeydown(e) {
-      if (_.key(e) === 'escape') this.toggle(false);
-    }
-
-    _registerEvents() {
-      document.addEventListener('keydown', this._handleKeydown);
-    }
-  }
-
-  class Influencer {
-    constructor(options) {
-      this._limit = options.limit;
-      this._queryParser = options.queryParser;
-    }
-
-    addItem() {}
-    getSuggestions() {}
-
-    _addSearchPrefix(items, query) {
-      const searchPrefix = this._getSearchPrefix(query)
-      return items.map(s => searchPrefix ? searchPrefix + s : s);
-    }
-
-    _getSearchPrefix(query) {
-      const {
-        isSearch,
-        key,
-        split
-      } = this._parseQuery(query);
-      return isSearch ? `${key}${split} ` : false;
-    }
-
-    _parseQuery(query) {
-      return this._queryParser.parse(query);
-    }
-  }
-
-  class DefaultInfluencer extends Influencer {
-    constructor({
-      defaultSuggestions
-    }) {
-      super(...arguments);
-      this._defaultSuggestions = defaultSuggestions;
-    }
-
-    getSuggestions(query) {
-      return new Promise(resolve => {
-        const suggestions = this._defaultSuggestions[query];
-        resolve(suggestions ? suggestions.slice(0, this._limit) : []);
-      });
-    }
-  }
-
-  class DuckDuckGoInfluencer extends Influencer {
-    constructor({
-      queryParser
-    }) {
-      super(...arguments);
-    }
-
-    getSuggestions(rawQuery) {
-      const {
-        query
-      } = this._parseQuery(rawQuery);
-      if (!query) return Promise.resolve([]);
-
-      return new Promise(resolve => {
-        const endpoint = 'https://duckduckgo.com/ac/';
-        const callback = 'autocompleteCallback';
-
-        window[callback] = res => {
-          const suggestions = res.map(i => i.phrase)
-            .filter(s => !_.ieq(s, query))
-            .slice(0, this._limit)
-
-          resolve(this._addSearchPrefix(suggestions, rawQuery));
-        };
-
-        _.jsonp(`${endpoint}?callback=${callback}&q=${query}`);
-      });
-    }
-  }
-
-  class HistoryInfluencer extends Influencer {
-    constructor() {
-      super(...arguments);
-      this._storeName = 'history';
-    }
-
-    addItem(query) {
-      if (query.length < 2) return;
-      let exists;
-
-      const history = this._getHistory().map(([item, count]) => {
-        const match = _.ieq(item, query);
-        if (match) exists = true;
-        return [item, match ? count + 1 : count];
-      });
-
-      if (!exists) history.push([query, 1]);
-      this._setHistory(this._sort(history));
-    }
-
-    getSuggestions(query) {
-      return new Promise(resolve => {
-        const suggestions = this._getHistory()
-          .map(([item]) => item)
-          .filter(item => this._itemContainsQuery(query, item))
-          .slice(0, this._limit);
-
-        resolve(suggestions);
-      });
-    }
-
-    _fetch() {
-      return JSON.parse(localStorage.getItem(this._storeName)) || [];
-    }
-
-    _getHistory() {
-      this._history = this._history || this._fetch();
-      return this._history;
-    }
-
-    _itemContainsQuery(query, item) {
-      return query && !_.ieq(item, query) && _.iin(item, query);
-    }
-
-    _save(history) {
-      localStorage.setItem(this._storeName, JSON.stringify(history));
-    }
-
-    _setHistory(history) {
-      this._history = history;
-      this._save(history);
-    }
-
-    _sort(history) {
-      return history.sort((current, next) => current[1] - next[1]).reverse();
-    }
-  }
-
-  class Suggester {
-    constructor(options) {
-      this._el = _.el('#search-suggestions');
-      this._influencers = options.influencers;
-      this._limit = options.limit;
-      this._suggestionEls = [];
-      this._bindMethods();
-      this._registerEvents();
-    }
-
-    setOnClick(callback) {
-      this._onClick = callback;
-    }
-
-    setOnHighlight(callback) {
-      this._onHighlight = callback;
-    }
-
-    setOnUnhighlight(callback) {
-      this._onUnhighlight = callback;
-    }
-
-    success(query) {
-      this._clearSuggestions();
-      this._influencers.forEach(i => i.addItem(query));
-    }
-
-    suggest(input) {
-      input = input.trim();
-      if (input === '') this._clearSuggestions();
-
-      Promise.all(this._getInfluencerPromises(input)).then(res => {
-        const suggestions = this._flattenAndUnique(res);
-        this._clearSuggestions();
-
-        if (suggestions.length) {
-          this._appendSuggestions(suggestions, input);
-          this._registerSuggestionEvents();
-          _.bodyClassAdd('suggestions');
+            return [...new Set(categories)];
         }
-      });
+
+        _handleKeydown(e) {
+            if (_.key(e) === 'escape') this.toggle(false);
+        }
+
+        _registerEvents() {
+            document.addEventListener('keydown', this._handleKeydown);
+        }
     }
 
-    _appendSuggestions(suggestions, input) {
-      suggestions.some((suggestion, i) => {
-        const match = new RegExp(_.escapeRegex(input), 'ig');
-        const suggestionHtml = suggestion.replace(match, `<u id="written">${input}</u>`);
+    class Influencer {
+        constructor(options) {
+            this._limit = options.limit;
+            this._queryParser = options.queryParser;
+        }
 
-        this._el.insertAdjacentHTML(
-          'beforeend',
-          `<li>
+        addItem() {}
+        getSuggestions() {}
+
+        _addSearchPrefix(items, query) {
+            const searchPrefix = this._getSearchPrefix(query)
+            return items.map(s => searchPrefix ? searchPrefix + s : s);
+        }
+
+        _getSearchPrefix(query) {
+            const {
+                isSearch,
+                key,
+                split
+            } = this._parseQuery(query);
+            return isSearch ? `${key}${split} ` : false;
+        }
+
+        _parseQuery(query) {
+            return this._queryParser.parse(query);
+        }
+    }
+
+    class DefaultInfluencer extends Influencer {
+        constructor({
+            defaultSuggestions
+        }) {
+            super(...arguments);
+            this._defaultSuggestions = defaultSuggestions;
+        }
+
+        getSuggestions(query) {
+            return new Promise(resolve => {
+                const suggestions = this._defaultSuggestions[query];
+                resolve(suggestions ? suggestions.slice(0, this._limit) : []);
+            });
+        }
+    }
+
+    class DuckDuckGoInfluencer extends Influencer {
+        constructor({
+            queryParser
+        }) {
+            super(...arguments);
+        }
+
+        getSuggestions(rawQuery) {
+            const {
+                query
+            } = this._parseQuery(rawQuery);
+            if (!query) return Promise.resolve([]);
+
+            return new Promise(resolve => {
+                const endpoint = 'https://duckduckgo.com/ac/';
+                const callback = 'autocompleteCallback';
+
+                window[callback] = res => {
+                    const suggestions = res.map(i => i.phrase)
+                        .filter(s => !_.ieq(s, query))
+                        .slice(0, this._limit)
+
+                    resolve(this._addSearchPrefix(suggestions, rawQuery));
+                };
+
+                _.jsonp(`${endpoint}?callback=${callback}&q=${query}`);
+            });
+        }
+    }
+
+    class HistoryInfluencer extends Influencer {
+        constructor() {
+            super(...arguments);
+            this._storeName = 'history';
+        }
+
+        addItem(query) {
+            if (query.length < 2) return;
+            let exists;
+
+            const history = this._getHistory().map(([item, count]) => {
+                const match = _.ieq(item, query);
+                if (match) exists = true;
+                return [item, match ? count + 1 : count];
+            });
+
+            if (!exists) history.push([query, 1]);
+            this._setHistory(this._sort(history));
+        }
+
+        getSuggestions(query) {
+            return new Promise(resolve => {
+                const suggestions = this._getHistory()
+                    .map(([item]) => item)
+                    .filter(item => this._itemContainsQuery(query, item))
+                    .slice(0, this._limit);
+
+                resolve(suggestions);
+            });
+        }
+
+        _fetch() {
+            return JSON.parse(localStorage.getItem(this._storeName)) || [];
+        }
+
+        _getHistory() {
+            this._history = this._history || this._fetch();
+            return this._history;
+        }
+
+        _itemContainsQuery(query, item) {
+            return query && !_.ieq(item, query) && _.iin(item, query);
+        }
+
+        _save(history) {
+            localStorage.setItem(this._storeName, JSON.stringify(history));
+        }
+
+        _setHistory(history) {
+            this._history = history;
+            this._save(history);
+        }
+
+        _sort(history) {
+            return history.sort((current, next) => current[1] - next[1]).reverse();
+        }
+    }
+
+    class Suggester {
+        constructor(options) {
+            this._el = _.el('#search-suggestions');
+            this._influencers = options.influencers;
+            this._limit = options.limit;
+            this._suggestionEls = [];
+            this._bindMethods();
+            this._registerEvents();
+        }
+
+        setOnClick(callback) {
+            this._onClick = callback;
+        }
+
+        setOnHighlight(callback) {
+            this._onHighlight = callback;
+        }
+
+        setOnUnhighlight(callback) {
+            this._onUnhighlight = callback;
+        }
+
+        success(query) {
+            this._clearSuggestions();
+            this._influencers.forEach(i => i.addItem(query));
+        }
+
+        suggest(input) {
+            input = input.trim();
+            if (input === '') this._clearSuggestions();
+
+            Promise.all(this._getInfluencerPromises(input)).then(res => {
+                const suggestions = this._flattenAndUnique(res);
+                this._clearSuggestions();
+
+                if (suggestions.length) {
+                    this._appendSuggestions(suggestions, input);
+                    this._registerSuggestionEvents();
+                    _.bodyClassAdd('suggestions');
+                }
+            });
+        }
+
+        _appendSuggestions(suggestions, input) {
+            suggestions.some((suggestion, i) => {
+                const match = new RegExp(_.escapeRegex(input), 'ig');
+                const suggestionHtml = suggestion.replace(match, `<u id="written">${input}</u>`);
+
+                this._el.insertAdjacentHTML(
+                    'beforeend',
+                    `<li>
             <button
               type="button"
               class="button button button button Lined Thick search-suggestion"
@@ -1035,1512 +1030,1544 @@
               ${suggestionHtml}
             </button>
           </li>`
-        );
+                );
 
-        return i + 1 >= this._limit;
-      });
+                return i + 1 >= this._limit;
+            });
 
-      this._suggestionEls = _.els('.button');
-    }
-
-    _bindMethods() {
-      this._handleKeydown = this._handleKeydown.bind(this);
-    }
-
-    _clearClickEvents() {
-      this._suggestionEls.forEach(el => {
-        const callback = this._onClick.bind(null, el.value);
-        el.removeEventListener('click', callback);
-      });
-    }
-
-    _clearSuggestions() {
-      _.bodyClassRemove('suggestions');
-      this._clearClickEvents();
-      this._suggestionEls = [];
-      this._el.innerHTML = '';
-    }
-
-    // [[1, 2], [1, 2, 3, 4]] -> [1, 2, 3, 4]
-    _flattenAndUnique(array) {
-      return [...new Set([].concat.apply([], array))];
-    }
-
-    _focusNext(e) {
-      const exists = this._suggestionEls.some((el, i) => {
-        if (el.classList.contains('highlight')) {
-          this._highlight(this._suggestionEls[i + 1], e);
-          return true;
+            this._suggestionEls = _.els('.button');
         }
-      });
 
-      if (!exists) this._highlight(this._suggestionEls[0], e);
-    }
-
-    _focusPrevious(e) {
-      const exists = this._suggestionEls.some((el, i) => {
-        if (el.classList.contains('highlight') && i) {
-          this._highlight(this._suggestionEls[i - 1], e);
-          return true;
+        _bindMethods() {
+            this._handleKeydown = this._handleKeydown.bind(this);
         }
-      });
 
-      if (!exists) this._unHighlight(e);
+        _clearClickEvents() {
+            this._suggestionEls.forEach(el => {
+                const callback = this._onClick.bind(null, el.value);
+                el.removeEventListener('click', callback);
+            });
+        }
+
+        _clearSuggestions() {
+            _.bodyClassRemove('suggestions');
+            this._clearClickEvents();
+            this._suggestionEls = [];
+            this._el.innerHTML = '';
+        }
+
+        // [[1, 2], [1, 2, 3, 4]] -> [1, 2, 3, 4]
+        _flattenAndUnique(array) {
+            return [...new Set([].concat.apply([], array))];
+        }
+
+        _focusNext(e) {
+            const exists = this._suggestionEls.some((el, i) => {
+                if (el.classList.contains('highlight')) {
+                    this._highlight(this._suggestionEls[i + 1], e);
+                    return true;
+                }
+            });
+
+            if (!exists) this._highlight(this._suggestionEls[0], e);
+        }
+
+        _focusPrevious(e) {
+            const exists = this._suggestionEls.some((el, i) => {
+                if (el.classList.contains('highlight') && i) {
+                    this._highlight(this._suggestionEls[i - 1], e);
+                    return true;
+                }
+            });
+
+            if (!exists) this._unHighlight(e);
+        }
+
+        _getInfluencerPromises(input) {
+            return this._influencers
+                .map(influencer => influencer.getSuggestions(input));
+        }
+
+        _handleKeydown(e) {
+            if (_.isDown(e)) this._focusNext(e);
+            if (_.isUp(e)) this._focusPrevious(e);
+        }
+
+        _highlight(el, e) {
+            this._unHighlight();
+
+            if (el) {
+                this._onHighlight(el.getAttribute('data-suggestion'));
+                el.classList.add('highlight');
+                e.preventDefault();
+            }
+        }
+
+        _registerEvents() {
+            document.addEventListener('keydown', this._handleKeydown);
+        }
+
+        _registerSuggestionEvents() {
+            this._suggestionEls.forEach(el => {
+                const value = el.getAttribute('data-suggestion');
+                el.addEventListener('mouseover', this._highlight.bind(this, el));
+                el.addEventListener('mouseout', this._unHighlight.bind(this));
+                el.addEventListener('click', this._onClick.bind(null, value));
+            });
+        }
+
+        _unHighlight(e) {
+            const el = _.el('.highlight');
+
+            if (el) {
+                this._onUnhighlight();
+                el.classList.remove('highlight');
+                if (e) e.preventDefault();
+            }
+        }
     }
 
-    _getInfluencerPromises(input) {
-      return this._influencers
-        .map(influencer => influencer.getSuggestions(input));
-    }
+    class QueryParser {
+        constructor(options) {
+            this._commands = options.commands;
+            this._searchDelimiter = options.searchDelimiter;
+            this._pathDelimiter = options.pathDelimiter;
+            this._protocolRegex = /^[a-zA-Z]+:\/\//i;
+            this._urlRegex = /^((https?:\/\/)?[\w-]+(\.[\w-]+)+\.?(:\d+)?(\/\S*)?)_/i;
+        }
 
-    _handleKeydown(e) {
-      if (_.isDown(e)) this._focusNext(e);
-      if (_.isUp(e)) this._focusPrevious(e);
-    }
+        parse(query) {
+            const res = {
+                query: query,
+                split: null
+            };
 
-    _highlight(el, e) {
-      this._unHighlight();
-
-      if (el) {
-        this._onHighlight(el.getAttribute('data-suggestion'));
-        el.classList.add('highlight');
-        e.preventDefault();
-      }
-    }
-
-    _registerEvents() {
-      document.addEventListener('keydown', this._handleKeydown);
-    }
-
-    _registerSuggestionEvents() {
-      this._suggestionEls.forEach(el => {
-        const value = el.getAttribute('data-suggestion');
-        el.addEventListener('mouseover', this._highlight.bind(this, el));
-        el.addEventListener('mouseout', this._unHighlight.bind(this));
-        el.addEventListener('click', this._onClick.bind(null, value));
-      });
-    }
-
-    _unHighlight(e) {
-      const el = _.el('.highlight');
-
-      if (el) {
-        this._onUnhighlight();
-        el.classList.remove('highlight');
-        if (e) e.preventDefault();
-      }
-    }
-  }
-
-  class QueryParser {
-    constructor(options) {
-      this._commands = options.commands;
-      this._searchDelimiter = options.searchDelimiter;
-      this._pathDelimiter = options.pathDelimiter;
-      this._protocolRegex = /^[a-zA-Z]+:\/\//i;
-      this._urlRegex = /^((https?:\/\/)?[\w-]+(\.[\w-]+)+\.?(:\d+)?(\/\S*)?)_/i;
-    }
-
-    parse(query) {
-      const res = {
-        query: query,
-        split: null
-      };
-
-      if (query.match(this._urlRegex)) {
-        const hasProtocol = query.match(this._protocolRegex);
-        res.redirect = hasProtocol ? query : 'http://' + query;
-      } else {
-        const splitSearch = query.split(this._searchDelimiter);
-        const splitPath = query.split(this._pathDelimiter);
-
-        this._commands.some(([category, name, key, url, searchPath]) => {
-          res.isKey = query === key;
-          res.isSearch = !res.isKey && splitSearch[0] === key;
-          res.isPath = !res.isKey && splitPath[0] === key;
-
-          if (res.isKey || res.isSearch || res.isPath) {
-            res.key = key;
-
-            if (res.isSearch && searchPath) {
-              res.split = this._searchDelimiter;
-              res.query = this._shiftAndTrim(splitSearch, res.split);
-              res.redirect = this._prepSearch(url, searchPath, res.query);
-            } else if (res.isPath) {
-              res.split = this._pathDelimiter;
-              res.path = this._shiftAndTrim(splitPath, res.split);
-              res.redirect = this._prepPath(url, res.path);
+            if (query.match(this._urlRegex)) {
+                const hasProtocol = query.match(this._protocolRegex);
+                res.redirect = hasProtocol ? query : 'https://' + query;
             } else {
-              res.redirect = url;
+                const splitSearch = query.split(this._searchDelimiter);
+                const splitPath = query.split(this._pathDelimiter);
+
+                this._commands.some(([category, name, key, url, searchPath]) => {
+                    res.isKey = query === key;
+                    res.isSearch = !res.isKey && splitSearch[0] === key;
+                    res.isPath = !res.isKey && splitPath[0] === key;
+
+                    if (res.isKey || res.isSearch || res.isPath) {
+                        res.key = key;
+
+                        if (res.isSearch && searchPath) {
+                            res.split = this._searchDelimiter;
+                            res.query = this._shiftAndTrim(splitSearch, res.split);
+                            res.redirect = this._prepSearch(url, searchPath, res.query);
+                        } else if (res.isPath) {
+                            res.split = this._pathDelimiter;
+                            res.path = this._shiftAndTrim(splitPath, res.split);
+                            res.redirect = this._prepPath(url, res.path);
+                        } else {
+                            res.redirect = url;
+                        }
+
+                        return true;
+                    }
+
+                    if (key === '*') {
+                        res.redirect = this._prepSearch(url, searchPath, query);
+                    }
+                });
             }
 
-            return true;
-          }
+            res.color = this._getColorFromUrl(res.redirect);
+            return res;
+        }
 
-          if (key === '*') {
-            res.redirect = this._prepSearch(url, searchPath, query);
-          }
-        });
-      }
+        _getColorFromUrl(url) {
+            const domain = this._getHostname(url);
+            const color = this._commands
+                .filter(c => this._getHostname(c[3]) === domain)
+                .map(c => c[5])[0];
 
-      res.color = this._getColorFromUrl(res.redirect);
-      return res;
+            return color || null;
+        }
+
+        _getHostname(url) {
+            const parser = document.createElement('a');
+            parser.href = url;
+            return parser.hostname.replace(/^www./, '');
+        }
+
+        _prepPath(url, path) {
+            return this._stripUrlPath(url) + '/' + path;
+        }
+
+        _prepSearch(url, searchPath, query) {
+            if (!searchPath) return url;
+            const baseUrl = this._stripUrlPath(url);
+            const urlQuery = encodeURIComponent(query);
+            searchPath = searchPath.replace('{}', urlQuery);
+            return baseUrl + searchPath;
+        }
+
+        _shiftAndTrim(arr, delimiter) {
+            arr.shift();
+            return arr.join(delimiter).trim();
+        }
+
+        _stripUrlPath(url) {
+            const parser = document.createElement('a');
+            parser.href = url;
+            return `${parser.protocol}//${parser.hostname}`;
+        }
     }
 
-    _getColorFromUrl(url) {
-      const domain = this._getHostname(url);
-      const color = this._commands
-        .filter(c => this._getHostname(c[3]) === domain)
-        .map(c => c[5])[0];
-      
-      return color || null;
+    class Form {
+        constructor(options) {
+            this._formEl = _.el('#search-form');
+            this._inputEl = _.el('#search-input');
+            this._colors = options.colors;
+            this._help = options.help;
+            this._suggester = options.suggester;
+            this._queryParser = options.queryParser;
+            this._instantRedirect = options.instantRedirect;
+            this._newTab = options.newTab;
+            this._inputElVal = '';
+            this._bindMethods();
+            this._registerEvents();
+            this._loadQueryParam();
+        }
+
+        hide() {
+            _.bodyClassRemove('form')
+            this._inputEl.value = '';
+            this._inputElVal = '';
+        }
+
+        show() {
+            _.bodyClassAdd('form');
+            this._inputEl.focus();
+            console.log("show")
+        }
+
+        _bindMethods() {
+            this.hide = this.hide.bind(this);
+            this.show = this.show.bind(this);
+            this._clearPreview = this._clearPreview.bind(this);
+            this._handleKeydown = this._handleKeydown.bind(this);
+            this._handleInput = this._handleInput.bind(this);
+            this._previewValue = this._previewValue.bind(this);
+            this._submitForm = this._submitForm.bind(this);
+            this._submitWithValue = this._submitWithValue.bind(this);
+        }
+
+        _clearPreview() {
+            this._previewValue(this._inputElVal);
+            this._inputEl.focus();
+        }
+
+        _handleKeydown(e) {
+            if (_.isUp(e) || _.isDown(e) || _.isRemove(e) || NoteHasFocus || _.key(e) == "tab") return;
+            //Jump
+
+            console.log("switch is done", _.key(e), _.key(e) == "tab");
+            switch (_.key(e)) {
+                case 'alt':
+                case 'ctrl':
+                case 'enter':
+                case 'shift':
+                case 'super':
+                    return;
+                case 'escape':
+                    this.hide();
+                    return;
+            }
+
+            this.show();
+        }
+
+        _handleInput() {
+            const newQuery = this._inputEl.value;
+            const isHelp = newQuery === '?';
+            const {
+                isKey
+            } = this._queryParser.parse(newQuery);
+            this._inputElVal = newQuery;
+            this._setBackgroundFromQuery(newQuery);
+            if (!newQuery || isHelp) this.hide();
+            if (isHelp) this._help.toggle();
+            if (this._instantRedirect && isKey) this._submitWithValue(newQuery);
+            if (this._suggester) this._suggester.suggest(newQuery);
+        }
+
+        _loadQueryParam() {
+            const q = new URLSearchParams(window.location.search).get('q');
+            if (q) this._submitWithValue(q);
+        }
+
+        _previewValue(value) {
+            this._inputEl.value = value;
+            this._setBackgroundFromQuery(value);
+        }
+
+        _redirect(redirect) {
+            if (this._newTab) window.open(redirect, '_blank');
+            else window.location.href = redirect;
+        }
+
+        _registerEvents() {
+            document.addEventListener('keydown', this._handleKeydown);
+            this._inputEl.addEventListener('input', this._handleInput);
+            this._formEl.addEventListener('submit', this._submitForm, false);
+
+            if (this._suggester) {
+                this._suggester.setOnClick(this._submitWithValue);
+                this._suggester.setOnHighlight(this._previewValue);
+                this._suggester.setOnUnhighlight(this._clearPreview);
+            }
+        }
+
+        _setBackgroundFromQuery(query) {
+            if (!this._colors) return;
+            const {
+                color
+            } = this._queryParser.parse(query);
+            this._formEl.style.backgroundColor = color;
+        }
+
+        _submitForm(e) { //Search Enter Maybe
+            if (e) e.preventDefault();
+            const query = this._inputEl.value;
+            if (this._suggester) this._suggester.success(query);
+            this.hide();
+            this._redirect(this._queryParser.parse(query).redirect);
+        }
+
+        _submitWithValue(value) {
+            this._inputEl.value = value;
+            this._submitForm();
+        }
     }
-
-    _getHostname(url) {
-      const parser = document.createElement('a');
-      parser.href = url;
-      return parser.hostname.replace(/^www./, '');
-    }
-
-    _prepPath(url, path) {
-      return this._stripUrlPath(url) + '/' + path;
-    }
-
-    _prepSearch(url, searchPath, query) {
-      if (!searchPath) return url;
-      const baseUrl = this._stripUrlPath(url);
-      const urlQuery = encodeURIComponent(query);
-      searchPath = searchPath.replace('{}', urlQuery);
-      return baseUrl + searchPath;
-    }
-
-    _shiftAndTrim(arr, delimiter) {
-      arr.shift();
-      return arr.join(delimiter).trim();
-    }
-
-    _stripUrlPath(url) {
-      const parser = document.createElement('a');
-      parser.href = url;
-      return `${parser.protocol}//${parser.hostname}`;
-    }
-  }
-
-  class Form {
-    constructor(options) {
-      this._formEl = _.el('#search-form');
-      this._inputEl = _.el('#search-input');
-      this._colors = options.colors;
-      this._help = options.help;
-      this._suggester = options.suggester;
-      this._queryParser = options.queryParser;
-      this._instantRedirect = options.instantRedirect;
-      this._newTab = options.newTab;
-      this._inputElVal = '';
-      this._bindMethods();
-      this._registerEvents();
-      this._loadQueryParam();
-    }
-
-    hide() {
-      _.bodyClassRemove('form')
-      this._inputEl.value = '';
-      this._inputElVal = '';
-    }
-
-    show() {
-      _.bodyClassAdd('form');
-      this._inputEl.focus();
-      console.log("show")
-    }
-
-    _bindMethods() {
-      this.hide = this.hide.bind(this);
-      this.show = this.show.bind(this);
-      this._clearPreview = this._clearPreview.bind(this);
-      this._handleKeydown = this._handleKeydown.bind(this);
-      this._handleInput = this._handleInput.bind(this);
-      this._previewValue = this._previewValue.bind(this);
-      this._submitForm = this._submitForm.bind(this);
-      this._submitWithValue = this._submitWithValue.bind(this);
-    }
-
-    _clearPreview() {
-      this._previewValue(this._inputElVal);
-      this._inputEl.focus();
-    }
-
-    _handleKeydown(e) {
-      if (_.isUp(e) || _.isDown(e) || _.isRemove(e) || NoteHasFocus || _.key(e) == "tab") return;
-      //Jump
-      
-      console.log("switch is done", _.key(e), _.key(e) == "tab");
-      switch (_.key(e)) {
-        case 'alt':
-        case 'ctrl':
-        case 'enter':
-        case 'shift':
-        case 'super':
-          return;
-        case 'escape':
-          this.hide();
-          return;
-      }
-
-      this.show();
-    }
-
-    _handleInput() {
-      const newQuery = this._inputEl.value;
-      const isHelp = newQuery === '?';
-      const {
-        isKey
-      } = this._queryParser.parse(newQuery);
-      this._inputElVal = newQuery;
-      this._setBackgroundFromQuery(newQuery);
-      if (!newQuery || isHelp) this.hide();
-      if (isHelp) this._help.toggle();
-      if (this._instantRedirect && isKey) this._submitWithValue(newQuery);
-      if (this._suggester) this._suggester.suggest(newQuery);
-    }
-
-    _loadQueryParam() {
-      const q = new URLSearchParams(window.location.search).get('q');
-      if (q) this._submitWithValue(q);
-    }
-
-    _previewValue(value) {
-      this._inputEl.value = value;
-      this._setBackgroundFromQuery(value);
-    }
-
-    _redirect(redirect) {
-      if (this._newTab) window.open(redirect, '_blank');
-      else window.location.href = redirect;
-    }
-
-    _registerEvents() {
-      document.addEventListener('keydown', this._handleKeydown);
-      this._inputEl.addEventListener('input', this._handleInput);
-      this._formEl.addEventListener('submit', this._submitForm, false);
-
-      if (this._suggester) {
-        this._suggester.setOnClick(this._submitWithValue);
-        this._suggester.setOnHighlight(this._previewValue);
-        this._suggester.setOnUnhighlight(this._clearPreview);
-      }
-    }
-
-    _setBackgroundFromQuery(query) {
-      if (!this._colors) return;
-      const {
-        color
-      } = this._queryParser.parse(query);
-      this._formEl.style.backgroundColor = color;
-    }
-
-    _submitForm(e) { //Search Enter Maybe
-      if (e) e.preventDefault();
-      const query = this._inputEl.value;
-      if (this._suggester) this._suggester.success(query);
-      this.hide();
-      this._redirect(this._queryParser.parse(query).redirect);
-    }
-
-    _submitWithValue(value) {
-      this._inputEl.value = value;
-      this._submitForm();
-    }
-  }
 </script>
 
 <script>
-  const getHelp = () => {
-    return new Help({
-      commands: CONFIG.commands,
-      newTab: CONFIG.newTab,
-    });
-  };
-
-  const getInfluencers = () => {
-    const availableInfluencers = {
-      Default: DefaultInfluencer,
-      DuckDuckGo: DuckDuckGoInfluencer,
-      History: HistoryInfluencer,
+    const getHelp = () => {
+        return new Help({
+            commands: CONFIG.commands,
+            newTab: CONFIG.newTab,
+        });
     };
 
-    return CONFIG.influencers.map(i => {
-      return new availableInfluencers[i.name]({
-        limit: i.limit,
-        queryParser: getQueryParser(),
-        defaultSuggestions: CONFIG.defaultSuggestions,
-      });
-    });
-  };
+    const getInfluencers = () => {
+        const availableInfluencers = {
+            Default: DefaultInfluencer,
+            DuckDuckGo: DuckDuckGoInfluencer,
+            History: HistoryInfluencer,
+        };
 
-  const getSuggester = () => {
-    return new Suggester({
-      influencers: getInfluencers(),
-      limit: CONFIG.suggestionsLimit,
-    });
-  };
+        return CONFIG.influencers.map(i => {
+            return new availableInfluencers[i.name]({
+                limit: i.limit,
+                queryParser: getQueryParser(),
+                defaultSuggestions: CONFIG.defaultSuggestions,
+            });
+        });
+    };
 
-  const getQueryParser = () => {
-    return new QueryParser({
-      commands: CONFIG.commands,
-      pathDelimiter: CONFIG.pathDelimiter,
-      searchDelimiter: CONFIG.searchDelimiter,
-    });
-  };
+    const getSuggester = () => {
+        return new Suggester({
+            influencers: getInfluencers(),
+            limit: CONFIG.suggestionsLimit,
+        });
+    };
 
-  const getForm = () => {
-    return new Form({
-      colors: CONFIG.colors,
-      help: getHelp(),
-      instantRedirect: CONFIG.instantRedirect,
-      newTab: CONFIG.newTab,
-      queryParser: getQueryParser(),
-      suggester: CONFIG.suggestions ? getSuggester() : false,
-    });
-  };
+    const getQueryParser = () => {
+        return new QueryParser({
+            commands: CONFIG.commands,
+            pathDelimiter: CONFIG.pathDelimiter,
+            searchDelimiter: CONFIG.searchDelimiter,
+        });
+    };
 
-  new Clock({
-    delimiter: CONFIG.clockDelimiter,
-    form: getForm(),
-  });
+    const getForm = () => {
+        return new Form({
+            colors: CONFIG.colors,
+            help: getHelp(),
+            instantRedirect: CONFIG.instantRedirect,
+            newTab: CONFIG.newTab,
+            queryParser: getQueryParser(),
+            suggester: CONFIG.suggestions ? getSuggester() : false,
+        });
+    };
+
+    new Clock({
+        delimiter: CONFIG.clockDelimiter,
+        form: getForm(),
+    });
 </script>
 
 
 <script>
-  function InputBlur() {
-    UserInputA = document.getElementById("search-input").value;
-    if (UserInputA.length == 0) {
-      document.getElementById("OutputID").style.visibility = "hidden";
+    function InputBlur() {
+        UserInputA = document.getElementById("search-input").value;
+        if (UserInputA.length == 0) {
+            document.getElementById("OutputID").style.visibility = "hidden";
+        }
     }
-  }
 
-  var Password = "";
-  var GenNumber = "";
-  var TimesWrong = 0;
+    var Password = "";
+    var GenNumber = "";
+    var TimesWrong = 0;
 
-  function InputDo() {
-    UserInputA = document.getElementById("search-input").value;
-    if (UserInputA.length != 0) {
-      if (/(( ?[0-9]+ ?)[\*\-\/\+\=\%\^])+( ?[0-9]+ ?)/.test(UserInputA)) {
-        TimesWrong = 0;
-        CalculatedNumber = eval(UserInputA.replace(UserInputA.replace(/(( ?[0-9]+ ?)[\*\-\/\+\=\%\^])+( ?[0-9]+ ?)/, ""),
-          ""))
-        if (CalculatedNumber % 1 != 0) {
-          CalculatedNumber = CalculatedNumber.toFixed(2)
-        }
+    function InputDo() {
+        UserInputA = document.getElementById("search-input").value;
+        if (UserInputA.length != 0) {
+            if (/(( ?[0-9]+ ?)[\*\-\/\+\=\%\^])+( ?[0-9]+ ?)/.test(UserInputA)) {
+                TimesWrong = 0;
+                CalculatedNumber = eval(UserInputA.replace(UserInputA.replace(/(( ?[0-9]+ ?)[\*\-\/\+\=\%\^])+( ?[0-9]+ ?)/, ""),
+                    ""))
+                if (CalculatedNumber % 1 != 0) {
+                    CalculatedNumber = CalculatedNumber.toFixed(2)
+                }
 
-        if (/(( ?[0-9]+ ?)[\*\-\/\+\=\%\^])+( ?[0-9]+ ?)>c/g.test(UserInputA)) {
+                if (/(( ?[0-9]+ ?)[\*\-\/\+\=\%\^])+( ?[0-9]+ ?)>c/g.test(UserInputA)) {
 
-        }
+                }
 
-        if (/(( ?[0-9]+ ?)[\*\-\/\+\=\%\^])+( ?[0-9]+ ?)>[1-3]/g.test(UserInputA)) {
-          NoteNr = UserInputA.match(/(?<=>)[1-3]/)
-          var CurrentStorage = localStorage.getItem("Note" + NoteNr)
-          localStorage.setItem("Note" + NoteNr, CurrentStorage + "\n" + CalculatedNumber);
-          document.getElementById("wrapperWrapper").classList.remove("MenuMoveIn");
-          DefinVariables(NoteNr)
-        }
-        if (/(( ?[0-9]+ ?)[\*\-\/\+\=\%\^])+( ?[0-9]+ ?)>c/g.test(UserInputA)) {
-          AddToClipboard(CalculatedNumber)
-          console.log("Text has been copied to the clipboard")
-        }
+                if (/(( ?[0-9]+ ?)[\*\-\/\+\=\%\^])+( ?[0-9]+ ?)>[1-3]/g.test(UserInputA)) {
+                    NoteNr = UserInputA.match(/(?<=>)[1-3]/)
+                    var CurrentStorage = localStorage.getItem("Note" + NoteNr)
+                    localStorage.setItem("Note" + NoteNr, CurrentStorage + "\n" + CalculatedNumber);
+                    document.getElementById("wrapperWrapper").classList.remove("MenuMoveIn");
+                    DefinVariables(NoteNr)
+                }
+                if (/(( ?[0-9]+ ?)[\*\-\/\+\=\%\^])+( ?[0-9]+ ?)>c/g.test(UserInputA)) {
+                    AddToClipboard(CalculatedNumber)
+                    console.log("Text has been copied to the clipboard")
+                }
 
-        document.getElementById("OutputID").innerHTML = CalculatedNumber;
-        document.getElementById("OutputIDBefore").innerHTML = CalculatedNumber;
-        document.getElementById("OutputID").style.visibility = "visible";
-      } else if (/password ?[0-9]+/.test(UserInputA.toLowerCase())) {
-        TimesWrong = 0;
-        var number = Number(UserInputA.match(/\d+/)[0])
-        if (number > 32) {
-          number = 32
-        }
-        if (number < 6) {
-          number = 6
-        }
-        var chars = "abcdefghijklmnopqrstuvwxyz!@#$%^&*()-+<>ABCDEFGHIJKLMNOP1234567890";
+                document.getElementById("OutputID").innerHTML = CalculatedNumber;
+                document.getElementById("OutputIDBefore").innerHTML = CalculatedNumber;
+                document.getElementById("OutputID").style.visibility = "visible";
+            } else if (/password ?[0-9]+/.test(UserInputA.toLowerCase())) {
+                TimesWrong = 0;
+                var number = Number(UserInputA.match(/\d+/)[0])
+                if (number > 32) {
+                    number = 32
+                }
+                if (number < 6) {
+                    number = 6
+                }
+                var chars = "abcdefghijklmnopqrstuvwxyz!@#$%^&*()-+<>ABCDEFGHIJKLMNOP1234567890";
 
-        if (number != Password.length) {
-          GeneratePw()
+                if (number != Password.length) {
+                    GeneratePw()
 
-          function GeneratePw() {
-            Password = "";
-            for (var i = 0; i < number; i++) {
-              var x = Math.floor(Math.random() * (chars.length));
-              Password += chars.charAt(x);
-            }
-            if (Password.includes("<")) { // < Cant be displayed, has to be replaced
-              Password = Password.replace("<", "&lt;")
-              console.log("Password Included <", Password) 
-            }
-            if (!/^(?=.{6,33}$)(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%^&*()-+<>]).*$/.test(Password)) {
-              console.log("PW didnt match the requirements ")
-              GeneratePw()
+                    function GeneratePw() {
+                        Password = "";
+                        for (var i = 0; i < number; i++) {
+                            var x = Math.floor(Math.random() * (chars.length));
+                            Password += chars.charAt(x);
+                        }
+                        if (Password.includes("<")) { // < Cant be displayed, has to be replaced
+                            Password = Password.replace("<", "&lt;")
+                            console.log("Password Included <", Password)
+                        }
+                        if (!/^(?=.{6,33}$)(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%^&*()-+<>]).*$/.test(Password)) {
+                            console.log("PW didnt match the requirements ")
+                            GeneratePw()
+                        } else {
+                            console.log('Password', Password);
+
+                        }
+                    }
+                }
+                if (/password ?[0-9]+ ?> ?[1-3]/.test(UserInputA.toLowerCase())) {
+                    NoteNr = Number(UserInputA.match(/\d+/g)[1])
+                    var CurrentStorage = localStorage.getItem("Note" + NoteNr)
+                    localStorage.setItem("Note" + NoteNr, CurrentStorage + "\n" + Password);
+                    document.getElementById("wrapperWrapper").classList.remove("MenuMoveIn");
+                    DefinVariables(NoteNr)
+                }
+                if (/password ?[0-9]+ ?> ?c/.test(UserInputA.toLowerCase())) {
+                    AddToClipboard(Password)
+                    console.log("Text has been copied to the clipboard")
+                }
+                document.getElementById("OutputID").innerHTML = Password;
+                document.getElementById("OutputIDBefore").innerHTML = Password;
+                document.getElementById("OutputID").style.visibility = "visible";
+            } else if (/number ?[0-9]+/.test(UserInputA.toLowerCase())) {
+                TimesWrong = 0;
+                var number = Number(UserInputA.match(/\d+/)[0])
+
+                if (number != GenNumber.length) {
+                    GenNumber = "";
+                    for (var i = 0; i < number; i++) {
+                        var x = Math.floor(Math.random() * 10);
+                        GenNumber += x;
+                    }
+                }
+
+                if (/number ?[0-9]+ ?> ?[1-3]/.test(UserInputA.toLowerCase())) {
+                    NoteNr = Number(UserInputA.match(/\d+/g)[1])
+                    var CurrentStorage = localStorage.getItem("Note" + NoteNr)
+                    localStorage.setItem("Note" + NoteNr, CurrentStorage + "\n" + GenNumber);
+                    document.getElementById("wrapperWrapper").classList.remove("MenuMoveIn");
+                    DefinVariables(NoteNr)
+                }
+
+                if (/number ?[0-9]+ ?> ?c/.test(UserInputA.toLowerCase())) {
+                    AddToClipboard(GenNumber)
+                    console.log("Text has been copied to the clipboard")
+                }
+                document.getElementById("OutputID").innerHTML = GenNumber;
+                document.getElementById("OutputIDBefore").innerHTML = GenNumber;
+                document.getElementById("OutputID").style.visibility = "visible";
+            } else if (TimesWrong >= 5) {
+                document.getElementById("OutputID").style.visibility = "hidden";
+                TimesWrong = 0;
             } else {
-              console.log('Password', Password);
-
+                TimesWrong++;
             }
-          }
+        } else {
+            document.getElementById("OutputID").style.visibility = "hidden";
         }
-        if (/password ?[0-9]+ ?> ?[1-3]/.test(UserInputA.toLowerCase())) {
-          NoteNr = Number(UserInputA.match(/\d+/g)[1])
-          var CurrentStorage = localStorage.getItem("Note" + NoteNr)
-          localStorage.setItem("Note" + NoteNr, CurrentStorage + "\n" + Password);
-          document.getElementById("wrapperWrapper").classList.remove("MenuMoveIn");
-          DefinVariables(NoteNr)
-        }
-        if (/password ?[0-9]+ ?> ?c/.test(UserInputA.toLowerCase())) {
-          AddToClipboard(Password)
-          console.log("Text has been copied to the clipboard")
-        }
-        document.getElementById("OutputID").innerHTML = Password;
-        document.getElementById("OutputIDBefore").innerHTML = Password;
-        document.getElementById("OutputID").style.visibility = "visible";
-      } else if (/number ?[0-9]+/.test(UserInputA.toLowerCase())) {
-        TimesWrong = 0;
-        var number = Number(UserInputA.match(/\d+/)[0])
-
-        if (number != GenNumber.length) {
-          GenNumber = "";
-          for (var i = 0; i < number; i++) {
-            var x = Math.floor(Math.random() * 10);
-            GenNumber += x;
-          }
-        }
-
-        if (/number ?[0-9]+ ?> ?[1-3]/.test(UserInputA.toLowerCase())) {
-          NoteNr = Number(UserInputA.match(/\d+/g)[1])
-          var CurrentStorage = localStorage.getItem("Note" + NoteNr)
-          localStorage.setItem("Note" + NoteNr, CurrentStorage + "\n" + GenNumber);
-          document.getElementById("wrapperWrapper").classList.remove("MenuMoveIn");
-          DefinVariables(NoteNr)
-        }
-
-        if (/number ?[0-9]+ ?> ?c/.test(UserInputA.toLowerCase())) {
-          AddToClipboard(GenNumber)
-          console.log("Text has been copied to the clipboard")
-        }
-        document.getElementById("OutputID").innerHTML = GenNumber;
-        document.getElementById("OutputIDBefore").innerHTML = GenNumber;
-        document.getElementById("OutputID").style.visibility = "visible";
-      } else if (TimesWrong >= 5) {
-        document.getElementById("OutputID").style.visibility = "hidden";
-        TimesWrong = 0;
-      } else {
-        TimesWrong++;
-      }
-    } else {
-      document.getElementById("OutputID").style.visibility = "hidden";
     }
-  }
 
-  // Credit: https://hackernoon.com/copying-text-to-clipboard-with-javascript-df4d4988697f
-  function AddToClipboard(CopyText) {
-    console.log("Creating Textarea to copy")
-    const el = document.createElement('textarea');
-    el.value = CopyText;
-    el.setAttribute('readonly', '');
-    el.style.position = 'absolute';
-    el.style.left = '-9999px';
-    document.body.appendChild(el);
-    el.select();
-    document.execCommand('copy');
-    document.body.removeChild(el);
-  }
+    // Credit: https://hackernoon.com/copying-text-to-clipboard-with-javascript-df4d4988697f
+    function AddToClipboard(CopyText) {
+        console.log("Creating Textarea to copy")
+        const el = document.createElement('textarea');
+        el.value = CopyText;
+        el.setAttribute('readonly', '');
+        el.style.position = 'absolute';
+        el.style.left = '-9999px';
+        document.body.appendChild(el);
+        el.select();
+        document.execCommand('copy');
+        document.body.removeChild(el);
+    }
 </script>
 
 
 <style type="text/css">
-  /*Buttons*/
-
-  .buttonS > a,
-  .button {
-    min-width: 120px;
-    margin: 0.8em;
-    padding: 0.6em 1.2em;
-    background: none;
-    color: inherit;
-    vertical-align: middle;
-    position: relative;
-    z-index: 1;
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-    font-size: 127.5%;
-    font-weight: 400;
-    border: 2px solid;
-    border-color: #ffffff66 !important;
-    -webkit-transition: border-color 0.4s, color 0.4s;
-    transition: border-color 0.4s, color 0.4s;
-  }
-
-  .buttonS > a:focus,
-  .button:focus {
-    outline: none;
-  }
-
-  .button>span {
-    vertical-align: middle;
-  }
-
-  .buttonS > a::before,
-  .button::before {
-    content: '';
-    position: absolute;
-    top: -95px;
-    left: -100px;
-    width: 600%;
-    height: 500%;
-    /*background: #71C7F2;
+    /*Buttons*/
+    
+    .buttonS>a,
+    .button {
+        min-width: 120px;
+        margin: 0.8em;
+        padding: 0.6em 1.2em;
+        background: none;
+        color: inherit;
+        vertical-align: middle;
+        position: relative;
+        z-index: 1;
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+        font-size: 127.5%;
+        font-weight: 400;
+        border: 2px solid;
+        border-color: #ffffff66 !important;
+        -webkit-transition: border-color 0.4s, color 0.4s;
+        transition: border-color 0.4s, color 0.4s;
+    }
+    
+    .buttonS>a:focus,
+    .button:focus {
+        outline: none;
+    }
+    
+    .button>span {
+        vertical-align: middle;
+    }
+    
+    .buttonS>a::before,
+    .button::before {
+        content: '';
+        position: absolute;
+        top: -95px;
+        left: -100px;
+        width: 600%;
+        height: 500%;
+        /*background: #71C7F2;
     /* 10161f */
-    /* Area Hover*/
-    z-index: -1;
-    opacity: 0;
-    -webkit-transform: scale3d(0.6, 1, 1);
-    transform: scale3d(0.6, 1, 1);
-    -webkit-transition: -webkit-transform 0.4s, opacity 0.4s ease-in-out;
-    transition: transform 0.4s, opacity 0.4s ease-in-out;
-  }
-
-  .buttonS > a,
-  .buttonS > a::before,
-  .button,
-  .button::before {
-    -webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
-    transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
-  }
-
-  .buttonS > a:focus,
-  .buttonS > a:hover,
-  .button:focus,
-  .button:hover {
-    color: #fff;
-    /*Font Color Hover*/
-    border-color: #fff;
-    /*Border Color Hover*/
-  }
-
-  .buttonS > a:focus::before,
-  .buttonS > a:hover::before,
-  .button:focus::before,
-  .button:hover::before {
-    opacity: 0.08;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-
-  button,
-  button:focus {
-    font-family: 'Lato', sans-serif;
-  }
+        /* Area Hover*/
+        z-index: -1;
+        opacity: 0;
+        -webkit-transform: scale3d(0.6, 1, 1);
+        transform: scale3d(0.6, 1, 1);
+        -webkit-transition: -webkit-transform 0.4s, opacity 0.4s ease-in-out;
+        transition: transform 0.4s, opacity 0.4s ease-in-out;
+    }
+    
+    .buttonS>a,
+    .buttonS>a::before,
+    .button,
+    .button::before {
+        -webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+        transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+    }
+    
+    .buttonS>a:focus,
+    .buttonS>a:hover,
+    .button:focus,
+    .button:hover {
+        color: #fff;
+        /*Font Color Hover*/
+        border-color: #fff;
+        /*Border Color Hover*/
+    }
+    
+    .buttonS>a:focus::before,
+    .buttonS>a:hover::before,
+    .button:focus::before,
+    .button:hover::before {
+        opacity: 0.08;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+    
+    button,
+    button:focus {
+        font-family: 'Lato', sans-serif;
+    }
 </style>
 
 
 <style>
-  /* Style for Notes */
-
-  .MenuMoveIn {
-    margin-right: -350px;
-  }
-
-  #NotesMenuTrigger {
-    height: 100vh;
-    width: 1px;
-    position: fixed;
-    top: 0;
-    right: 0;
-    background-color: transparent;
-    z-index: 5;
-  }
-
-  #wrapperWrapper {
-    top: 0;
-    position: absolute;
-    right: 0px;
-    box-shadow: 0px 0px 30px 7.5px rgba(0, 0, 0, 0.5);
-    height: 100%;
-    width: 306.2px;
-    padding-left: 15px;
-    background: #1A1E23;
-    display: flex;
-    justify-content: flex-end;
-    transition: all 0.2s ease-out;
-    font-family: "Lato", sans-serif;
-    -webkit-font-smoothing: antialiased;
-    z-index: 2;
-  }
-
-  .Wrapper {
-    margin-right: 25px;
-  }
-
-  .Wrapper nav {
-    right: 0;
-    margin-top: 10%;
-    position: relative;
-    padding-bottom: 10px;
-  }
-
-  .line {
-    height: 2px;
-    position: absolute;
-    bottom: 0;
-    margin: 10px 0 0 0;
-    background: #FF1847;
-    transition: 0.3s;
-  }
-
-  .Wrapper nav ul {
-    padding: 0;
-    margin: 0 2px 0 2px;
-    list-style: none;
-    display: flex;
-  }
-
-  .Wrapper nav ul li {
-    margin: 0 40px 0 0;
-    opacity: 0.4;
-    transition: all 0.4s ease;
-  }
-
-  .Wrapper nav ul li:hover {
-    opacity: 0.7;
-  }
-
-  .Wrapper nav ul li.active {
-    opacity: 1;
-  }
-
-  .Wrapper nav ul li:last-child {
-    margin-right: 0;
-  }
-
-  .Wrapper nav ul li div {
-    text-decoration: none;
-    color: #fff;
-    text-transform: uppercase;
-    display: block;
-    font-weight: 600;
-    letter-spacing: 0.2em;
-    font-size: 14px;
-    cursor: pointer;
-  }
-
-  textarea {
-    font-family: "Lato", sans-serif !important;
-    font-size: 1em;
-    margin-top: 15px;
-    color: #eee;
-    width: 100%;
-    height: 90%;
-    outline: none;
-    border: none;
-    resize: none;
-    background-color: transparent
-  }
+    /* Style for Notes */
+    
+    .MenuMoveIn {
+        margin-right: -350px;
+    }
+    
+    #NotesMenuTrigger {
+        height: 100vh;
+        width: 1px;
+        position: fixed;
+        top: 0;
+        right: 0;
+        background-color: transparent;
+        z-index: 5;
+    }
+    
+    #wrapperWrapper {
+        top: 0;
+        position: absolute;
+        right: 0px;
+        box-shadow: 0px 0px 30px 7.5px rgba(0, 0, 0, 0.5);
+        height: 100%;
+        width: 306.2px;
+        padding-left: 15px;
+        background: #1A1E23;
+        display: flex;
+        justify-content: flex-end;
+        transition: all 0.2s ease-out;
+        font-family: "Lato", sans-serif;
+        -webkit-font-smoothing: antialiased;
+        z-index: 2;
+    }
+    
+    .Wrapper {
+        margin-right: 25px;
+    }
+    
+    .Wrapper nav {
+        right: 0;
+        margin-top: 10%;
+        position: relative;
+        padding-bottom: 10px;
+    }
+    
+    .line {
+        height: 2px;
+        position: absolute;
+        bottom: 0;
+        margin: 10px 0 0 0;
+        background: #FF1847;
+        transition: 0.3s;
+    }
+    
+    .Wrapper nav ul {
+        padding: 0;
+        margin: 0 2px 0 2px;
+        list-style: none;
+        display: flex;
+    }
+    
+    .Wrapper nav ul li {
+        margin: 0 40px 0 0;
+        opacity: 0.4;
+        transition: all 0.4s ease;
+    }
+    
+    .Wrapper nav ul li:hover {
+        opacity: 0.7;
+    }
+    
+    .Wrapper nav ul li.active {
+        opacity: 1;
+    }
+    
+    .Wrapper nav ul li:last-child {
+        margin-right: 0;
+    }
+    
+    .Wrapper nav ul li div {
+        text-decoration: none;
+        color: #fff;
+        text-transform: uppercase;
+        display: block;
+        font-weight: 600;
+        letter-spacing: 0.2em;
+        font-size: 14px;
+        cursor: pointer;
+    }
+    
+    textarea {
+        font-family: "Lato", sans-serif !important;
+        font-size: 1em;
+        margin-top: 15px;
+        color: #eee;
+        width: 100%;
+        height: 90%;
+        outline: none;
+        border: none;
+        resize: none;
+        background-color: transparent
+    }
 </style>
 
 <script>
-  // Script for Notes
-  var sSaveIn;
+    // Script for Notes
+    var sSaveIn;
 
-  function Load(NumberL) {
-    document.getElementById("idTextarea").value = localStorage.getItem("Note" + NumberL);
-  }
-
-  function writeNote() {
-    console.log('Out');
-    RemindMeFormate();
-    localStorage.setItem("Note" + sSaveIn, document.getElementById("idTextarea").value);
-    LoadReminders();
-    NoteHasFocus = !NoteHasFocus;
-    console.log('NoteHasFocus', NoteHasFocus);
-
-  }
-
-  function DefinVariables(activeTab) {
-    var vTab1 = document.getElementById("tab" + activeTab);
-    var nOffsetLeft = vTab1.offsetLeft;
-    var nOffsetWidth = vTab1.offsetWidth;
-    document.getElementById("lineId").style = "left: " + nOffsetLeft + "px; width:" + nOffsetWidth +
-      "px;"
-    document.querySelector(".active").classList.remove("active");
-    vTab1.classList.add("active");
-    Load(activeTab);
-    sSaveIn = activeTab
-  }
-  DefinVariables(1)
-
-  function ToggleMenu() {
-    console.log("Toggle");
-    document.getElementById("wrapperWrapper").classList.toggle("MenuMoveIn");
-    document.activeElement.blur();
-  }
-
-  var NoteHasFocus = false;
-
-  function NoteFocus() {
-    NoteHasFocus = !NoteHasFocus;
-    console.log('NoteHasFocus', NoteHasFocus);
-  }
-
-  var IsMouseOverNotes = false;
-
-  function NotesUp() {
-    if (sSaveIn < 3) {
-      writeNote()
-      DefinVariables(1 + sSaveIn)
+    function Load(NumberL) {
+        document.getElementById("idTextarea").value = localStorage.getItem("Note" + NumberL);
     }
-  }
 
-  function NotesDown() {
-    if (sSaveIn > 1) {
-      writeNote()
-      DefinVariables(sSaveIn - 1)
+    function writeNote() {
+        console.log('Out');
+        RemindMeFormate();
+        localStorage.setItem("Note" + sSaveIn, document.getElementById("idTextarea").value);
+        LoadReminders();
+        NoteHasFocus = !NoteHasFocus;
+        console.log('NoteHasFocus', NoteHasFocus);
+
     }
-  }
 
-  // Script for remindme
+    function DefinVariables(activeTab) {
+        var vTab1 = document.getElementById("tab" + activeTab);
+        var nOffsetLeft = vTab1.offsetLeft;
+        var nOffsetWidth = vTab1.offsetWidth;
+        document.getElementById("lineId").style = "left: " + nOffsetLeft + "px; width:" + nOffsetWidth +
+            "px;"
+        document.querySelector(".active").classList.remove("active");
+        vTab1.classList.add("active");
+        Load(activeTab);
+        sSaveIn = activeTab
+    }
+    DefinVariables(1)
 
-  function RemindMeFormate() {
-    var TextInNote = document.getElementById("idTextarea").value.toLowerCase().split(/[ ]|(?=\n)/).join(" ").replace(
-      /\n/g, "").split(" ")
-    // this may seem unnessesary complicated, but it is needed to keep the array in line with TextInNoteBackup
-    var TextInNoteBackup = document.getElementById("idTextarea").value.split(/[ ]|(?=\n)/); // To keep formatting
-    console.log(TextInNote);
-    console.log(TextInNoteBackup);
-    var positionOfRemindMe = TextInNote.indexOf("remindme");
-    if (positionOfRemindMe >= 0) {
-      console.log('remindme at position ', positionOfRemindMe);
-      console.log("Remind Me is followed by ", TextInNote[positionOfRemindMe + 1]);
-      var d = 0;
+    function ToggleMenu() {
+        console.log("Toggle");
+        document.getElementById("wrapperWrapper").classList.toggle("MenuMoveIn");
+        document.activeElement.blur();
+    }
 
-      function WorkWithWords(nextOne) {
-        console.log("Debug WorkWithWords")
-        switch (TextInNote[positionOfRemindMe + nextOne + 1]) {
-          case ("at"):
-            MoreRemindMes();
-            break;
-          case ("in"):
-            if (isNumeric(TextInNote[positionOfRemindMe + nextOne + 2])) {
-              var UserNumber = TextInNote[positionOfRemindMe + nextOne + 2];
-              var m = 0;
-              var h = 0;
-              var HasAnd = 0;
+    var NoteHasFocus = false;
 
-              function mhOrd() {
-                switch (TextInNote[positionOfRemindMe + nextOne + HasAnd + 3]) {
-                  case "hours":
-                  case "hour":
-                  case "h":
-                    // Hours
-                    h += Number(TextInNote[positionOfRemindMe + nextOne + HasAnd + 2])
-                    break;
-                  case "minutes":
-                  case "minute":
-                  case "min":
-                  case "m":
-                    // Minutes
-                    m += Number(TextInNote[positionOfRemindMe + nextOne + HasAnd + 2])
-                    break;
-                  case "days":
-                  case "day":
-                  case "d":
-                    // Days
-                    d += Number(TextInNote[positionOfRemindMe + nextOne + HasAnd + 2])
-                    break;
+    function NoteFocus() {
+        NoteHasFocus = !NoteHasFocus;
+        console.log('NoteHasFocus', NoteHasFocus);
+    }
+
+    var IsMouseOverNotes = false;
+
+    function NotesUp() {
+        if (sSaveIn < 3) {
+            writeNote()
+            DefinVariables(1 + sSaveIn)
+        }
+    }
+
+    function NotesDown() {
+        if (sSaveIn > 1) {
+            writeNote()
+            DefinVariables(sSaveIn - 1)
+        }
+    }
+
+    // Script for remindme
+
+    function RemindMeFormate() {
+        var TextInNote = document.getElementById("idTextarea").value.toLowerCase().split(/[ ]|(?=\n)/).join(" ").replace(
+                /\n/g, "").split(" ")
+            // this may seem unnessesary complicated, but it is needed to keep the array in line with TextInNoteBackup
+        var TextInNoteBackup = document.getElementById("idTextarea").value.split(/[ ]|(?=\n)/); // To keep formatting
+        console.log(TextInNote);
+        console.log(TextInNoteBackup);
+        var positionOfRemindMe = TextInNote.indexOf("remindme");
+        if (positionOfRemindMe >= 0) {
+            console.log('remindme at position ', positionOfRemindMe);
+            console.log("Remind Me is followed by ", TextInNote[positionOfRemindMe + 1]);
+            var d = 0;
+
+            function WorkWithWords(nextOne) {
+                console.log("Debug WorkWithWords")
+                switch (TextInNote[positionOfRemindMe + nextOne + 1]) {
+                    case ("at"):
+                        MoreRemindMes();
+                        break;
+                    case ("in"):
+                        if (isNumeric(TextInNote[positionOfRemindMe + nextOne + 2])) {
+                            var UserNumber = TextInNote[positionOfRemindMe + nextOne + 2];
+                            var m = 0;
+                            var h = 0;
+                            var HasAnd = 0;
+
+                            function mhOrd() {
+                                switch (TextInNote[positionOfRemindMe + nextOne + HasAnd + 3]) {
+                                    case "hours":
+                                    case "hour":
+                                    case "h":
+                                        // Hours
+                                        h += Number(TextInNote[positionOfRemindMe + nextOne + HasAnd + 2])
+                                        break;
+                                    case "minutes":
+                                    case "minute":
+                                    case "min":
+                                    case "m":
+                                        // Minutes
+                                        m += Number(TextInNote[positionOfRemindMe + nextOne + HasAnd + 2])
+                                        break;
+                                    case "days":
+                                    case "day":
+                                    case "d":
+                                        // Days
+                                        d += Number(TextInNote[positionOfRemindMe + nextOne + HasAnd + 2])
+                                        break;
+                                }
+                            }
+                            mhOrd()
+
+                            if (TextInNote[positionOfRemindMe + nextOne + 4] == "and") {
+                                console.log("and")
+                                HasAnd += 3;
+                                mhOrd()
+                                GoOn(true)
+                            } else {
+                                GoOn(false)
+                            }
+
+                            function GoOn(And) {
+
+                                // Positions RemindMe (Monday/tomorrow)     in        4        hours          (and 15 minutes)
+                                // Numbers      0             (1)       1+nextOne 2+nextOne  3+nextOne      4+nextOne()           
+                                // Output    RemindMe       Monday          at    hh:mm am
+
+                                var today = new Date();
+
+                                var minutes = (today.getMinutes() + m) % 60;
+
+                                var hours = (today.getHours() + h + Math.floor((today.getMinutes() + m) / 60)) % 24;
+
+                                var day = WhatDayIsIt((today.getDay() + d + Math.floor((today.getHours() + h + Math.floor((today.getMinutes() +
+                                    m) / 60)) / 24)) % 7);
+
+                                console.log('minutes', minutes, 'hours', hours, "day", day, 'm', m, 'h', h, 'd', d);
+
+
+                                var minutesW0 = function() {
+                                    if (minutes < 10) {
+                                        return "0" + minutes;
+                                    } else {
+                                        return minutes;
+                                    }
+                                }
+
+
+
+                                var TimeWAmPm = function() {
+                                    if (hours > 12) {
+                                        return (hours - 1) % 12 + 1 + ":" + minutesW0() + " pm"
+                                    } else {
+                                        return hours + ":" + minutesW0() + " am"
+                                    }
+                                }
+
+                                console.log("positionOfRemindMe + 1", positionOfRemindMe + 1)
+                                TextInNoteBackup[positionOfRemindMe + 1] = day
+                                TextInNoteBackup[positionOfRemindMe + 2] = "at"
+                                TextInNoteBackup[positionOfRemindMe + 3] = TimeWAmPm()
+
+                                if (nextOne == 1 && And) {
+                                    // remove last 4
+                                    console.log("1")
+                                    TextInNoteBackup.splice(positionOfRemindMe + 4, 4)
+                                } else if (nextOne == 1 && !And) {
+                                    console.log("2")
+                                        //remove last one
+                                    TextInNoteBackup.splice(positionOfRemindMe + 4, 1)
+                                } else if (!nextOne == 1 && And) {
+                                    console.log("3")
+                                        //remove last 3
+                                    TextInNoteBackup.splice(positionOfRemindMe + 4, 3)
+                                }
+
+                                // Put it all together
+                                console.log("Yay!")
+                                document.getElementById("idTextarea").value = TextInNoteBackup.join(' ');
+                                MoreRemindMes()
+                            }
+                            break;
+                        }
+                    case ("tomorrow"):
+                        // convert to day of week
+                        if (nextOne != 1) {
+                            TextInNoteBackup[positionOfRemindMe + 1] = WhatDayIsIt((new Date().getDay()) % 7 + 1)
+                                // Update Textarea
+                            document.getElementById("idTextarea").value = TextInNoteBackup.join(' ');
+                            d += 1;
+                            WorkWithWords(1);
+                            break;
+                        } else {
+                            console.log("This dosent make sence a");
+                            break;
+                        }
+                    case ("today"):
+                        // convert to day of week
+                        if (nextOne != 1) {
+                            TextInNoteBackup[positionOfRemindMe + 1] = WhatDayIsIt((new Date().getDay()))
+                                // Update Textarea
+                            document.getElementById("idTextarea").value = TextInNoteBackup.join(' ');
+                            d = 0;
+                            WorkWithWords(1);
+                            break;
+                        } else {
+                            console.log("This dosent make sence b");
+                            break;
+                        }
+                    case ("monday"):
+                        //  d += how many days till x? 
+                        if (nextOne != 1) {
+                            d += ((1 + 7) - (new Date().getDay())) % 7;
+                            WorkWithWords(1);
+                            break;
+                        }
+                    case ("tuesday"):
+                        if (nextOne != 1) {
+                            d += ((2 + 7) - (new Date().getDay())) % 7;
+                            WorkWithWords(1);
+                            break;
+                        }
+                    case ("wednesday"):
+                        if (nextOne != 1) {
+                            d += ((3 + 7) - (new Date().getDay())) % 7;
+                            WorkWithWords(1);
+                            break;
+                        }
+                    case ("thursday"):
+                        if (nextOne != 1) {
+                            d += ((4 + 7) - (new Date().getDay())) % 7;
+                            WorkWithWords(1);
+                            break;
+                        }
+                    case ("friday"):
+                        if (nextOne != 1) {
+                            d += ((5 + 7) - (new Date().getDay())) % 7;
+                            WorkWithWords(1);
+                            break;
+                        }
+                    case ("saturday"):
+                        if (nextOne != 1) {
+                            d += ((6 + 7) - (new Date().getDay())) % 7;
+                            WorkWithWords(1);
+                            break;
+                        }
+                    case ("sunday"):
+                        if (nextOne != 1) {
+                            d += ((0 + 7) - (new Date().getDay())) % 7;
+
+                            WorkWithWords(1);
+                            break;
+                        }
+                    default:
+                        MoreRemindMes();
                 }
-              }
-              mhOrd()
+            }
+            WorkWithWords(0)
 
-              if (TextInNote[positionOfRemindMe + nextOne + 4] == "and") {
-                console.log("and")
-                HasAnd += 3;
-                mhOrd()
-                GoOn(true)
-              } else {
-                GoOn(false)
-              }
+            function MoreRemindMes() { // Could Call RemindMeFormate() instead, with positionOfRemindMe, maybe some other day
+                console.log("Debug x")
+                if (TextInNote.indexOf("remindme", positionOfRemindMe + 1) >= 0) {
+                    positionOfRemindMe = TextInNote.indexOf("remindme", (positionOfRemindMe + 1))
+                    console.log("found another RemindMe at ", positionOfRemindMe, "Resetting Variabls");
+                    d = 0;
+                    TextInNote = document.getElementById("idTextarea").value.toLowerCase().split(/[ ]|.(?=\n)/).join(" ").replace(
+                        /\n/g, "").split(" ")
+                    TextInNoteBackup = document.getElementById("idTextarea").value.split(/[ ]|.(?=\n)/);
+                    WorkWithWords(0)
+                } else {
+                    console.log("all RemindMes found")
+                }
+            }
+        }
+    }
 
-              function GoOn(And) {
+    var WhatDayIsIt = function(Days) {
+        switch (Days) {
+            case 0:
+                return "Sunday"
+            case 1:
+                return "Monday"
+            case 2:
+                return "Tuesday"
+            case 3:
+                return "Wednesday"
+            case 4:
+                return "Thursday"
+            case 5:
+                return "Friday"
+            case 6:
+                return "Saturday"
 
-                // Positions RemindMe (Monday/tomorrow)     in        4        hours          (and 15 minutes)
-                // Numbers      0             (1)       1+nextOne 2+nextOne  3+nextOne      4+nextOne()           
-                // Output    RemindMe       Monday          at    hh:mm am
+        }
+    }
 
+    function isNumeric(n) {
+        return !isNaN(parseFloat(n)) && isFinite(n);
+    }
+
+    function LoadReminders() { // onload
+        var LoadedArray = (localStorage.getItem("Note1") + " " + localStorage.getItem("Note2") + " " + localStorage.getItem(
+            "Note3")).toLowerCase().split(/[ ]|(?=\n)/).join(" ").replace(/\n/g, "").split(" ")
+        console.log(LoadedArray)
+
+        LookForRemindme(0)
+
+        function LookForRemindme(Advanced) {
+            console.log("Start looking at position", Advanced)
+            if (LoadedArray.indexOf("remindme", Advanced) >= 0) {
+                // RemindMe in Array
+                positionOfRemindMe = LoadedArray.indexOf("remindme", Advanced);
+                console.log("Found remind me at Position ", positionOfRemindMe);
                 var today = new Date();
+                var InputDay = 0;
+                var InputTime = function() {
+                    var TimeTemp = Number(LoadedArray[positionOfRemindMe + 3].split(":")[0]) + (Number(LoadedArray[
+                        positionOfRemindMe + 3].split(":")[1]) / 60)
+                    if (LoadedArray[positionOfRemindMe + 4] == "pm") {
+                        TimeTemp += 12;
+                        return TimeTemp;
+                    } else {
+                        return TimeTemp;
+                    }
+                };
 
-                var minutes = (today.getMinutes() + m) % 60;
-
-                var hours = (today.getHours() + h + Math.floor((today.getMinutes() + m) / 60)) % 24;
-
-                var day = WhatDayIsIt((today.getDay() + d + Math.floor((today.getHours() + h + Math.floor((today.getMinutes() +
-                  m) / 60)) / 24)) % 7);
-
-                console.log('minutes', minutes, 'hours', hours, "day", day, 'm', m, 'h', h, 'd', d);
-
-
-                var minutesW0 = function () {
-                  if (minutes < 10) {
-                    return "0" + minutes;
-                  } else {
-                    return minutes;
-                  }
+                switch (LoadedArray[positionOfRemindMe + 1]) {
+                    case ("sunday"):
+                        InputDay = 0;
+                        break;
+                    case ("monday"):
+                        InputDay = 1;
+                        break;
+                    case ("tuesday"):
+                        InputDay = 2;
+                        break;
+                    case ("wednesday"):
+                        InputDay = 3;
+                        break;
+                    case ("thursday"):
+                        InputDay = 4;
+                        break;
+                    case ("friday"):
+                        InputDay = 5;
+                        break;
+                    case ("saturday"):
+                        InputDay = 6;
+                        break;
                 }
 
-
-
-                var TimeWAmPm = function () {
-                  if (hours > 12) {
-                    return (hours - 1) % 12 + 1 + ":" + minutesW0() + " pm"
-                  } else {
-                    return hours + ":" + minutesW0() + " am"
-                  }
+                if (InputDay == today.getDay() && today.getHours() + (today.getMinutes() / 60) <= InputTime() && today.getHours() +
+                    (today.getMinutes() / 60) + 1 / 3 >= InputTime()) {
+                    console.log("RemindMe in next 20 min found");
+                    ColorClock();
+                } else if ((InputDay + 6) % 7 == today.getDay() && ((today.getHours() + today.getMinutes() / 60) + 1 / 3) % 24 >=
+                    InputTime()) {
+                    console.log("RemindMe in next 20 min found (Next day)");
+                    ColorClock();
+                } else {
+                    // No Remindme for Today
+                    console.log("Not in 20 min")
+                    LookForRemindme(positionOfRemindMe + 1)
+                    document.getElementById("clock").classList.remove("OrangeClock")
                 }
 
-                console.log("positionOfRemindMe + 1", positionOfRemindMe + 1)
-                TextInNoteBackup[positionOfRemindMe + 1] = day
-                TextInNoteBackup[positionOfRemindMe + 2] = "at"
-                TextInNoteBackup[positionOfRemindMe + 3] = TimeWAmPm()
-
-                if (nextOne == 1 && And) {
-                  // remove last 4
-                  console.log("1")
-                  TextInNoteBackup.splice(positionOfRemindMe + 4, 4)
-                } else if (nextOne == 1 && !And) {
-                  console.log("2")
-                  //remove last one
-                  TextInNoteBackup.splice(positionOfRemindMe + 4, 1)
-                } else if (!nextOne == 1 && And) {
-                  console.log("3")
-                  //remove last 3
-                  TextInNoteBackup.splice(positionOfRemindMe + 4, 3)
+                function ColorClock() {
+                    document.getElementById("clock").classList.add("OrangeClock")
                 }
-
-                // Put it all together
-                console.log("Yay!")
-                document.getElementById("idTextarea").value = TextInNoteBackup.join(' ');
-                MoreRemindMes()
-              }
-              break;
-            }
-          case ("tomorrow"):
-            // convert to day of week
-            if (nextOne != 1) {
-              TextInNoteBackup[positionOfRemindMe + 1] = WhatDayIsIt((new Date().getDay()) % 7 + 1)
-              // Update Textarea
-              document.getElementById("idTextarea").value = TextInNoteBackup.join(' ');
-              d += 1;
-              WorkWithWords(1);
-              break;
             } else {
-              console.log("This dosent make sence a");
-              break;
+                console.log("No RemindMe found");
+                document.getElementById("clock").classList.remove("OrangeClock")
             }
-          case ("today"):
-            // convert to day of week
-            if (nextOne != 1) {
-              TextInNoteBackup[positionOfRemindMe + 1] = WhatDayIsIt((new Date().getDay()))
-              // Update Textarea
-              document.getElementById("idTextarea").value = TextInNoteBackup.join(' ');
-              d = 0;
-              WorkWithWords(1);
-              break;
-            } else {
-              console.log("This dosent make sence b");
-              break;
-            }
-          case ("monday"):
-            //  d += how many days till x? 
-            if (nextOne != 1) {
-              d += ((1 + 7) - (new Date().getDay())) % 7;
-              WorkWithWords(1);
-              break;
-            }
-          case ("tuesday"):
-            if (nextOne != 1) {
-              d += ((2 + 7) - (new Date().getDay())) % 7;
-              WorkWithWords(1);
-              break;
-            }
-          case ("wednesday"):
-            if (nextOne != 1) {
-              d += ((3 + 7) - (new Date().getDay())) % 7;
-              WorkWithWords(1);
-              break;
-            }
-          case ("thursday"):
-            if (nextOne != 1) {
-              d += ((4 + 7) - (new Date().getDay())) % 7;
-              WorkWithWords(1);
-              break;
-            }
-          case ("friday"):
-            if (nextOne != 1) {
-              d += ((5 + 7) - (new Date().getDay())) % 7;
-              WorkWithWords(1);
-              break;
-            }
-          case ("saturday"):
-            if (nextOne != 1) {
-              d += ((6 + 7) - (new Date().getDay())) % 7;
-              WorkWithWords(1);
-              break;
-            }
-          case ("sunday"):
-            if (nextOne != 1) {
-              d += ((0 + 7) - (new Date().getDay())) % 7;
-
-              WorkWithWords(1);
-              break;
-            }
-          default:
-            MoreRemindMes();
         }
-      }
-      WorkWithWords(0)
-
-      function MoreRemindMes() { // Could Call RemindMeFormate() instead, with positionOfRemindMe, maybe some other day
-        console.log("Debug x")
-        if (TextInNote.indexOf("remindme", positionOfRemindMe + 1) >= 0) {
-          positionOfRemindMe = TextInNote.indexOf("remindme", (positionOfRemindMe + 1))
-          console.log("found another RemindMe at ", positionOfRemindMe, "Resetting Variabls");
-          d = 0;
-          TextInNote = document.getElementById("idTextarea").value.toLowerCase().split(/[ ]|.(?=\n)/).join(" ").replace(
-            /\n/g, "").split(" ")
-          TextInNoteBackup = document.getElementById("idTextarea").value.split(/[ ]|.(?=\n)/);
-          WorkWithWords(0)
-        } else {
-          console.log("all RemindMes found")
-        }
-      }
     }
-  }
-
-  var WhatDayIsIt = function (Days) {
-    switch (Days) {
-      case 0:
-        return "Sunday"
-      case 1:
-        return "Monday"
-      case 2:
-        return "Tuesday"
-      case 3:
-        return "Wednesday"
-      case 4:
-        return "Thursday"
-      case 5:
-        return "Friday"
-      case 6:
-        return "Saturday"
-
-    }
-  }
-
-  function isNumeric(n) {
-    return !isNaN(parseFloat(n)) && isFinite(n);
-  }
-
-  function LoadReminders() { // onload
-    var LoadedArray = (localStorage.getItem("Note1") + " " + localStorage.getItem("Note2") + " " + localStorage.getItem(
-      "Note3")).toLowerCase().split(/[ ]|(?=\n)/).join(" ").replace(/\n/g, "").split(" ")
-    console.log(LoadedArray)
-
-    LookForRemindme(0)
-
-    function LookForRemindme(Advanced) {
-      console.log("Start looking at position", Advanced)
-      if (LoadedArray.indexOf("remindme", Advanced) >= 0) {
-        // RemindMe in Array
-        positionOfRemindMe = LoadedArray.indexOf("remindme", Advanced);
-        console.log("Found remind me at Position ", positionOfRemindMe);
-        var today = new Date();
-        var InputDay = 0;
-        var InputTime = function () {
-          var TimeTemp = Number(LoadedArray[positionOfRemindMe + 3].split(":")[0]) + (Number(LoadedArray[
-            positionOfRemindMe + 3].split(":")[1]) / 60)
-          if (LoadedArray[positionOfRemindMe + 4] == "pm") {
-            TimeTemp += 12;
-            return TimeTemp;
-          } else {
-            return TimeTemp;
-          }
-        };
-
-        switch (LoadedArray[positionOfRemindMe + 1]) {
-          case ("sunday"):
-            InputDay = 0;
-            break;
-          case ("monday"):
-            InputDay = 1;
-            break;
-          case ("tuesday"):
-            InputDay = 2;
-            break;
-          case ("wednesday"):
-            InputDay = 3;
-            break;
-          case ("thursday"):
-            InputDay = 4;
-            break;
-          case ("friday"):
-            InputDay = 5;
-            break;
-          case ("saturday"):
-            InputDay = 6;
-            break;
-        }
-
-        if (InputDay == today.getDay() && today.getHours() + (today.getMinutes() / 60) <= InputTime() && today.getHours() +
-          (today.getMinutes() / 60) + 1 / 3 >= InputTime()) {
-          console.log("RemindMe in next 20 min found");
-          ColorClock();
-        } else if ((InputDay + 6) % 7 == today.getDay() && ((today.getHours() + today.getMinutes() / 60) + 1 / 3) % 24 >=
-          InputTime()) {
-          console.log("RemindMe in next 20 min found (Next day)");
-          ColorClock();
-        } else {
-          // No Remindme for Today
-          console.log("Not in 20 min")
-          LookForRemindme(positionOfRemindMe + 1)
-          document.getElementById("clock").classList.remove("OrangeClock")
-        }
-
-        function ColorClock() {
-          document.getElementById("clock").classList.add("OrangeClock")
-        }
-      } else {
-        console.log("No RemindMe found");
-        document.getElementById("clock").classList.remove("OrangeClock")
-      }
-    }
-  }
 
 
-  // case (sunday):
-  // case (monday):
-  // case (tuesday):
-  // case (wednesday):
-  // case (thursday):
-  // case (friday):
-  // case (saturday):
+    // case (sunday):
+    // case (monday):
+    // case (tuesday):
+    // case (wednesday):
+    // case (thursday):
+    // case (friday):
+    // case (saturday):
 
 
-  // function RemindMeFormate() {
-  //   var TextInNote = document.getElementById("idTextarea").value.toLowerCase().split(/[\s]+/);
-  //   var TextInNoteBackup = document.getElementById("idTextarea").value.toLowerCase().split(/[ ]+/);
-  //   console.log(TextInNote);
-  //   var positionOfRemindMe = TextInNote.indexOf("remindme");
-  //   if (positionOfRemindMe > 0) { //should be while console.log('remindme
-  //     at position
-  //       ', positionOfRemindMe); console.log(TextInNote[positionOfRemindMe + 1]); switch (TextInNote[positionOfRemindMe +
-  //       1]) {
-  //   case ("in"):
-  //     console.log(TextInNote[positionOfRemindMe + 3]);
-  //     switch (TextInNote[positionOfRemindMe + 3]) {
-  //       case ("hours"):
-  //       case ("h"):
-  //         var today = new Date();
-  //         var hour = function () {
-  //           var CalculatedTime = Number(TextInNote[positionOfRemindMe +
-  //             2]) + today.getHours() if (CalculatedTime < 13) {
-  //             TextInNoteBackup[positionOfRemindMe + 3] = "am"
-  //             return (CalculatedTime -
-  //               1) % 12 + 1;
-  //           } else
-  //           if (CalculatedTime < 24) {
-  //             TextInNoteBackup[positionOfRemindMe + 3] = "pm"
-  //             return (CalculatedTime - 1) %
-  //               12 + 1;
-  //           } else {
-  //             console.log("time is not today"); // Get Day return (CalculatedTime - 1) % 12 + 1; } } var min=f unction
-  //             () {
-  //               if (today.getMinutes() < 10) {
-  //                 return "0" + today.getMinutes()
-  //               } else {
-  //                 return today.getMinutes()
-  //               }
-  //             };
-  //             console.log(hour() +
-  //               ":" + min());
-  //             TextInNoteBackup[positionOfRemindMe + 2] = h our() + ":" + min();
-  //             TextInNoteBackup[positionOfRemindMe + 1] = "at"
-  //             document.getElementById("idTextarea").value = T extInNoteBackup.join(' ');
-  //           }
-  //         }
-  //     }
-  // }
+    // function RemindMeFormate() {
+    //   var TextInNote = document.getElementById("idTextarea").value.toLowerCase().split(/[\s]+/);
+    //   var TextInNoteBackup = document.getElementById("idTextarea").value.toLowerCase().split(/[ ]+/);
+    //   console.log(TextInNote);
+    //   var positionOfRemindMe = TextInNote.indexOf("remindme");
+    //   if (positionOfRemindMe > 0) { //should be while console.log('remindme
+    //     at position
+    //       ', positionOfRemindMe); console.log(TextInNote[positionOfRemindMe + 1]); switch (TextInNote[positionOfRemindMe +
+    //       1]) {
+    //   case ("in"):
+    //     console.log(TextInNote[positionOfRemindMe + 3]);
+    //     switch (TextInNote[positionOfRemindMe + 3]) {
+    //       case ("hours"):
+    //       case ("h"):
+    //         var today = new Date();
+    //         var hour = function () {
+    //           var CalculatedTime = Number(TextInNote[positionOfRemindMe +
+    //             2]) + today.getHours() if (CalculatedTime < 13) {
+    //             TextInNoteBackup[positionOfRemindMe + 3] = "am"
+    //             return (CalculatedTime -
+    //               1) % 12 + 1;
+    //           } else
+    //           if (CalculatedTime < 24) {
+    //             TextInNoteBackup[positionOfRemindMe + 3] = "pm"
+    //             return (CalculatedTime - 1) %
+    //               12 + 1;
+    //           } else {
+    //             console.log("time is not today"); // Get Day return (CalculatedTime - 1) % 12 + 1; } } var min=f unction
+    //             () {
+    //               if (today.getMinutes() < 10) {
+    //                 return "0" + today.getMinutes()
+    //               } else {
+    //                 return today.getMinutes()
+    //               }
+    //             };
+    //             console.log(hour() +
+    //               ":" + min());
+    //             TextInNoteBackup[positionOfRemindMe + 2] = h our() + ":" + min();
+    //             TextInNoteBackup[positionOfRemindMe + 1] = "at"
+    //             document.getElementById("idTextarea").value = T extInNoteBackup.join(' ');
+    //           }
+    //         }
+    //     }
+    // }
 </script>
 
 <script>
-  function AnimationsBugFixOnLoad() {
-    setTimeout(function () {
-      document.getElementById("Image").classList.remove("NoTransitions");
-      console.log("Removed NoTransitions")
-    }, 400); // Need delady to load image - Its a FEATURE, you can instantly open the weathereiget when opening a new Tab
-  }
+    function AnimationsBugFixOnLoad() {
+        setTimeout(function() {
+            document.getElementById("Image").classList.remove("NoTransitions");
+            console.log("Removed NoTransitions")
+        }, 400); // Need delady to load image - Its a FEATURE, you can instantly open the weathereiget when opening a new Tab
+    }
 
-  window.onload = AnimationsBugFixOnLoad()
+    window.onload = AnimationsBugFixOnLoad()
 </script>
 
 <style>
-
-  @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400');
-@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
-@import url('https://fonts.googleapis.com/css?family=Poor+Story');
-* {
-  font-family: 'Lato', sans-serif;
-  -webkit-font-smoothing: antialiased;
-}
-
-.title>span {
-  font-family: 'Lato', sans-serif;
-  font-size: 1.05em;
-}
-
-.nav-open {
-  width: 90% !important;
-  margin-top: 9em !important;
-  transition: all 0.3s ease !important;
-  -webkit-transition: all 0.3s ease !important;
-  -moz-transition: all 0.3s ease !important;
-  -ms-transition: all 0.3s ease !important;
-  -o-transition: all 0.3s ease !important;
-}
-
-.Text {
-  color: white;
-  margin-top: -1em;
-}
-
-#BackgroundM>nav {
-  /* Position Menu */
-  position: absolute;
-  top: 0;
-  z-index: 0;
-  margin-top: -0.5em;
-  left: 20.8%;
-  /* Not responsive */
-}
-
-#BackgroundM>nav ul {
-  margin: 0;
-  padding: 0;
-}
-
-#BackgroundM>nav ul li.animate {
-  /* Triggered to fly in */
-  top: 0;
-}
-
-.Information {
-  position: absolute;
-  left: 5%;
-  margin-top: 6em;
-}
-
-#BackgroundM>nav ul li {
-  /* Arrangement of Elements */
-  display: inline-block;
-  text-align: center;
-  margin: 1em 2em;
-  cursor: pointer;
-  position: relative;
-  top: -8em;
-}
-
-#BackgroundM>nav ul li:nth-child(1) {
-  /* Fly in + Delay */
-  -moz-transition: top 0.3s ease 0.15s;
-  -o-transition: top 0.3s ease 0.15s;
-  -webkit-transition: top 0.3s ease;
-  -webkit-transition-delay: 0.15s;
-  transition-delay: 0.15s;
-  transition: top 0.3s ease 0.15s;
-}
-
-#BackgroundM>nav ul li:nth-child(2) {
-  -moz-transition: top 0.3s ease 0.2s;
-  -o-transition: top 0.3s ease 0.2s;
-  -webkit-transition: top 0.3s ease;
-  -webkit-transition-delay: 0.2s;
-  transition-delay: 0.2s;
-  transition: top 0.3s ease 0.2s;
-}
-
-#BackgroundM>nav ul li:nth-child(3) {
-  -moz-transition: top 0.3s ease 0.25s;
-  -o-transition: top 0.3s ease 0.25s;
-  -webkit-transition: top 0.3s ease;
-  -webkit-transition-delay: 0.25s;
-  transition-delay: 0.25s;
-  transition: top 0.3s ease 0.25s;
-}
-
-#BackgroundM>nav ul li:nth-child(4) {
-  -moz-transition: top 0.3s ease 0.3s;
-  -o-transition: top 0.3s ease 0.3s;
-  -webkit-transition: top 0.3s ease 0.3s;
-  -webkit-transition-delay: 0.3s;
-  transition-delay: 0.3s;
-  transition: top 0.3s ease 0.3s;
-  -ms-transition: top 0.3s ease 0.3s;
-}
-
-#BackgroundM>nav ul li:nth-child(5) {
-  -moz-transition: top 0.3s ease 0.35s;
-  -o-transition: top 0.3s ease 0.35s;
-  -webkit-transition: top 0.3s ease;
-  -webkit-transition-delay: 0.35s;
-  transition-delay: 0.35s;
-  transition: top 0.3s ease 0.35s;
-}
-
-#BackgroundM>nav ul li:nth-child(6) {
-  -moz-transition: top 0.3s ease 0.35s;
-  -o-transition: top 0.3s ease 0.35s;
-  -webkit-transition: top 0.3s ease;
-  -webkit-transition-delay: 0.35s;
-  transition-delay: 0.35s;
-  transition: top 0.3s ease 0.35s;
-}
-
-#BackgroundM>nav ul li:nth-child(7) {
-  -moz-transition: top 0.3s ease 0.35s;
-  -o-transition: top 0.3s ease 0.35s;
-  -webkit-transition: top 0.3s ease;
-  -webkit-transition-delay: 0.35s;
-  transition-delay: 0.35s;
-  transition: top 0.3s ease 0.35s;
-}
-
-#BackgroundM>nav ul li h4 {
-  line-height: 2.5;
-  /* Space Above */
-}
-
-#Image {
-  position: relative;
-  background-size: cover;
-  background-image: url("back.mp4");
-  background-position: center;
-  height: 100vh;
-  width: 100%;
-  margin: 0 auto;
-  -moz-transition: all 0.3s ease 0.6s;
-  -o-transition: all 0.3s ease 0.6s;
-  -webkit-transition: all 0.3s ease 0.6s;
-  -webkit-transition-delay: 0.6s;
-  transition-delay: 0.6s;
-  transition: all 0.3s ease 0.6s;
-  -ms-transition: all 0.3s ease 0.6s;
-}
-
-.stripe {
-  position: relative;
-  width: 40px;
-  height: 25vh;
-  color: lightgrey;
-  z-index: 3;
-  box-shadow: 20px 0 60px -6px rgba(0, 0, 0, 0.4);
-  overflow: hidden;
-  clip: rect(-100vh, 10vw, 100vh, 0%);
-}
-
-.stripe .title {
-  position: relative;
-  width: 40px;
-  height: 100%;
-  float: left;
-  box-sizing: border-box;
-}
-
-.stripe .title span {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  display: block;
-  transform: translateX(-50%) translateY(-50%) rotate(-90deg);
-  font-weight: 300;
-  /* Title Font weight */
-}
-
-.stripe .content {
-  /* make moevable */
-  position: absolute;
-  left: calc(5vw + 20px);
-  width: calc(90vw - 20px);
-  padding: 20px;
-  box-sizing: border-box;
-  height: 100%;
-  font-weight: 400;
-  /* Stripes Font weight */
-  display: flex;
-  justify-content: space-between;
-}
-
-.stripe .content div {
-  height: 100%;
-  width: 150px;
-}
-
-.stripe .content span {
-  line-height: calc(25vh - 50px);
-}
-
-.stripe .content span a {
-  text-decoration: none;
-  color: white;
-}
-
-.button {
-  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
-  transition: box-shadow 0.5s ease !important;
-  transition: transform 0.5s ease !important;
-  box-shadow: 20px 38px 34px -26px rgba(0, 0, 0, 0.25);
-}
-
-.button::before {
-  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
-}
-
-.button:hover {
-  box-shadow: 2px 8px 4px -6px rgba(0, 0, 0, 0.375);
-  transform: scale(0.97521);
-}
-
-/* Credit for Button Shape + Shadow https://codepen.io/tmrDevelops/pen/VeRvKX */
-
-/* Rain CSS */
-
-
-.rain {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 2;
-}
-
-#WeatherWrapper>.rain {
-  /* Scrollbar fix for rain */
-  overflow: hidden;
-}
-
-.rain.back-row {
-  display: none;
-  z-index: 1;
-  bottom: 60px;
-  opacity: 0.5;
-}
-
-.drop {
-  position: absolute;
-  bottom: 100%;
-  width: 15px;
-  height: 120px;
-  pointer-events: none;
-  animation: drop 0.5s linear infinite;
-}
-
-@keyframes drop {
-  0% {
-    transform: translateY(0);
-  }
-  75% {
-    transform: translateY(100vh);
-  }
-  100% {
-    transform: translateY(100vh);
-  }
-}
-
-.stem {
-  width: 1px;
-  height: 60%;
-  margin-left: 7px;
-  background: linear-gradient(to bottom, rgba(200, 200, 255, 0), rgba(200, 200, 255, 0.25));
-  animation: stem 0.5s linear infinite;
-}
-
-@keyframes stem {
-  0% {
-    opacity: 1;
-  }
-  65% {
-    opacity: 1;
-  }
-  75% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-.splat {
-  width: 15px;
-  height: 10px;
-  border-top: 2px dotted rgba(255, 255, 255, 0.5);
-  border-radius: 50%;
-  opacity: 1;
-  transform: scale(0);
-  animation: splat 0.5s linear infinite;
-}
-
-#WeatherWrapper>.splat {
-  display: block;
-}
-
-@keyframes splat {
-  0% {
-    opacity: 1;
-    transform: scale(0);
-  }
-  80% {
-    opacity: 1;
-    transform: scale(0);
-    -webkit-transform: scale(0);
-    -moz-transform: scale(0);
-    -ms-transform: scale(0);
-    -o-transform: scale(0);
-  }
-  90% {
-    opacity: 0.5;
-    transform: scale(1);
-    -webkit-transform: scale(1);
-    -moz-transform: scale(1);
-    -ms-transform: scale(1);
-    -o-transform: scale(1);
-  }
-  100% {
-    opacity: 0;
-    transform: scale(1.5);
-  }
-}
-
-#WeatherWrapper.single-toggle .drop {
-  display: none;
-}
-
-#WeatherWrapper.single-toggle .drop:nth-child(10) {
-  display: block;
-}
-
-#videoBg {
-  position:fixed;top:0;right:0;bottom:0;left:0;overflow:hidden
-}
-#videoBg>video{
-  xmargin-top:70px;position:absolute;top:0;left:0;width:100%;height:100%
-}@media (min-aspect-ratio: 16 / 9){
-  #videoBg>video{height:300%;top:-100%}
-}@media (max-aspect-ratio: 16 / 9){
-  #videoBg>video{width:300%;left:-100%}
-}@supports (object-fit: cover){
-  #videoBg>video{top:0;left:0;width:100%;height:100%;object-fit:cover}
-}.flexCon{margin-top:70px;display:flex;justify-content:center;align-items:center}
+    @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
+    @import url('https://fonts.googleapis.com/css?family=Open+Sans:400');
+    @import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+    @import url('https://fonts.googleapis.com/css?family=Poor+Story');
+    * {
+        font-family: 'Lato', sans-serif;
+        -webkit-font-smoothing: antialiased;
+    }
+    
+    .title>span {
+        font-family: 'Lato', sans-serif;
+        font-size: 1.05em;
+    }
+    
+    .nav-open {
+        width: 90% !important;
+        margin-top: 9em !important;
+        transition: all 0.3s ease !important;
+        -webkit-transition: all 0.3s ease !important;
+        -moz-transition: all 0.3s ease !important;
+        -ms-transition: all 0.3s ease !important;
+        -o-transition: all 0.3s ease !important;
+    }
+    
+    .Text {
+        color: white;
+        margin-top: -1em;
+    }
+    
+    #BackgroundM>nav {
+        /* Position Menu */
+        position: absolute;
+        top: 0;
+        z-index: 0;
+        margin-top: -0.5em;
+        left: 20.8%;
+        /* Not responsive */
+    }
+    
+    #BackgroundM>nav ul {
+        margin: 0;
+        padding: 0;
+    }
+    
+    #BackgroundM>nav ul li.animate {
+        /* Triggered to fly in */
+        top: 0;
+    }
+    
+    .Information {
+        position: absolute;
+        left: 5%;
+        margin-top: 6em;
+    }
+    
+    #BackgroundM>nav ul li {
+        /* Arrangement of Elements */
+        display: inline-block;
+        text-align: center;
+        margin: 1em 2em;
+        cursor: pointer;
+        position: relative;
+        top: -8em;
+    }
+    
+    #BackgroundM>nav ul li:nth-child(1) {
+        /* Fly in + Delay */
+        -moz-transition: top 0.3s ease 0.15s;
+        -o-transition: top 0.3s ease 0.15s;
+        -webkit-transition: top 0.3s ease;
+        -webkit-transition-delay: 0.15s;
+        transition-delay: 0.15s;
+        transition: top 0.3s ease 0.15s;
+    }
+    
+    #BackgroundM>nav ul li:nth-child(2) {
+        -moz-transition: top 0.3s ease 0.2s;
+        -o-transition: top 0.3s ease 0.2s;
+        -webkit-transition: top 0.3s ease;
+        -webkit-transition-delay: 0.2s;
+        transition-delay: 0.2s;
+        transition: top 0.3s ease 0.2s;
+    }
+    
+    #BackgroundM>nav ul li:nth-child(3) {
+        -moz-transition: top 0.3s ease 0.25s;
+        -o-transition: top 0.3s ease 0.25s;
+        -webkit-transition: top 0.3s ease;
+        -webkit-transition-delay: 0.25s;
+        transition-delay: 0.25s;
+        transition: top 0.3s ease 0.25s;
+    }
+    
+    #BackgroundM>nav ul li:nth-child(4) {
+        -moz-transition: top 0.3s ease 0.3s;
+        -o-transition: top 0.3s ease 0.3s;
+        -webkit-transition: top 0.3s ease 0.3s;
+        -webkit-transition-delay: 0.3s;
+        transition-delay: 0.3s;
+        transition: top 0.3s ease 0.3s;
+        -ms-transition: top 0.3s ease 0.3s;
+    }
+    
+    #BackgroundM>nav ul li:nth-child(5) {
+        -moz-transition: top 0.3s ease 0.35s;
+        -o-transition: top 0.3s ease 0.35s;
+        -webkit-transition: top 0.3s ease;
+        -webkit-transition-delay: 0.35s;
+        transition-delay: 0.35s;
+        transition: top 0.3s ease 0.35s;
+    }
+    
+    #BackgroundM>nav ul li:nth-child(6) {
+        -moz-transition: top 0.3s ease 0.35s;
+        -o-transition: top 0.3s ease 0.35s;
+        -webkit-transition: top 0.3s ease;
+        -webkit-transition-delay: 0.35s;
+        transition-delay: 0.35s;
+        transition: top 0.3s ease 0.35s;
+    }
+    
+    #BackgroundM>nav ul li:nth-child(7) {
+        -moz-transition: top 0.3s ease 0.35s;
+        -o-transition: top 0.3s ease 0.35s;
+        -webkit-transition: top 0.3s ease;
+        -webkit-transition-delay: 0.35s;
+        transition-delay: 0.35s;
+        transition: top 0.3s ease 0.35s;
+    }
+    
+    #BackgroundM>nav ul li h4 {
+        line-height: 2.5;
+        /* Space Above */
+    }
+    
+    #Image {
+        position: relative;
+        background-size: cover;
+        background-image: url("back.mp4");
+        background-position: center;
+        height: 100vh;
+        width: 100%;
+        margin: 0 auto;
+        -moz-transition: all 0.3s ease 0.6s;
+        -o-transition: all 0.3s ease 0.6s;
+        -webkit-transition: all 0.3s ease 0.6s;
+        -webkit-transition-delay: 0.6s;
+        transition-delay: 0.6s;
+        transition: all 0.3s ease 0.6s;
+        -ms-transition: all 0.3s ease 0.6s;
+    }
+    
+    .stripe {
+        position: relative;
+        width: 40px;
+        height: 25vh;
+        color: lightgrey;
+        z-index: 3;
+        box-shadow: 20px 0 60px -6px rgba(0, 0, 0, 0.4);
+        overflow: hidden;
+        clip: rect(-100vh, 10vw, 100vh, 0%);
+    }
+    
+    .stripe .title {
+        position: relative;
+        width: 40px;
+        height: 100%;
+        float: left;
+        box-sizing: border-box;
+    }
+    
+    .stripe .title span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        display: block;
+        transform: translateX(-50%) translateY(-50%) rotate(-90deg);
+        font-weight: 300;
+        /* Title Font weight */
+    }
+    
+    .stripe .content {
+        /* make moevable */
+        position: absolute;
+        left: calc(5vw + 20px);
+        width: calc(90vw - 20px);
+        padding: 20px;
+        box-sizing: border-box;
+        height: 100%;
+        font-weight: 400;
+        /* Stripes Font weight */
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .stripe .content div {
+        height: 100%;
+        width: 150px;
+    }
+    
+    .stripe .content span {
+        line-height: calc(25vh - 50px);
+    }
+    
+    .stripe .content span a {
+        text-decoration: none;
+        color: white;
+    }
+    
+    .button {
+        border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+        transition: box-shadow 0.5s ease !important;
+        transition: transform 0.5s ease !important;
+        box-shadow: 20px 38px 34px -26px rgba(0, 0, 0, 0.25);
+    }
+    
+    .button::before {
+        border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+    }
+    
+    .button:hover {
+        box-shadow: 2px 8px 4px -6px rgba(0, 0, 0, 0.375);
+        transform: scale(0.97521);
+    }
+    /* Credit for Button Shape + Shadow https://codepen.io/tmrDevelops/pen/VeRvKX */
+    /* Rain CSS */
+    
+    .rain {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+    }
+    
+    #WeatherWrapper>.rain {
+        /* Scrollbar fix for rain */
+        overflow: hidden;
+    }
+    
+    .rain.back-row {
+        display: none;
+        z-index: 1;
+        bottom: 60px;
+        opacity: 0.5;
+    }
+    
+    .drop {
+        position: absolute;
+        bottom: 100%;
+        width: 15px;
+        height: 120px;
+        pointer-events: none;
+        animation: drop 0.5s linear infinite;
+    }
+    
+    @keyframes drop {
+        0% {
+            transform: translateY(0);
+        }
+        75% {
+            transform: translateY(100vh);
+        }
+        100% {
+            transform: translateY(100vh);
+        }
+    }
+    
+    .stem {
+        width: 1px;
+        height: 60%;
+        margin-left: 7px;
+        background: linear-gradient(to bottom, rgba(200, 200, 255, 0), rgba(200, 200, 255, 0.25));
+        animation: stem 0.5s linear infinite;
+    }
+    
+    @keyframes stem {
+        0% {
+            opacity: 1;
+        }
+        65% {
+            opacity: 1;
+        }
+        75% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+    
+    .splat {
+        width: 15px;
+        height: 10px;
+        border-top: 2px dotted rgba(255, 255, 255, 0.5);
+        border-radius: 50%;
+        opacity: 1;
+        transform: scale(0);
+        animation: splat 0.5s linear infinite;
+    }
+    
+    #WeatherWrapper>.splat {
+        display: block;
+    }
+    
+    @keyframes splat {
+        0% {
+            opacity: 1;
+            transform: scale(0);
+        }
+        80% {
+            opacity: 1;
+            transform: scale(0);
+            -webkit-transform: scale(0);
+            -moz-transform: scale(0);
+            -ms-transform: scale(0);
+            -o-transform: scale(0);
+        }
+        90% {
+            opacity: 0.5;
+            transform: scale(1);
+            -webkit-transform: scale(1);
+            -moz-transform: scale(1);
+            -ms-transform: scale(1);
+            -o-transform: scale(1);
+        }
+        100% {
+            opacity: 0;
+            transform: scale(1.5);
+        }
+    }
+    
+    #WeatherWrapper.single-toggle .drop {
+        display: none;
+    }
+    
+    #WeatherWrapper.single-toggle .drop:nth-child(10) {
+        display: block;
+    }
+    
+    #videoBg {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        overflow: hidden
+    }
+    
+    #videoBg>video {
+        xmargin-top: 70px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%
+    }
+    
+    @media (min-aspect-ratio: 16 / 9) {
+        #videoBg>video {
+            height: 300%;
+            top: -100%
+        }
+    }
+    
+    @media (max-aspect-ratio: 16 / 9) {
+        #videoBg>video {
+            width: 300%;
+            left: -100%
+        }
+    }
+    
+    @supports (object-fit: cover) {
+        #videoBg>video {
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover
+        }
+    }
+    
+    .flexCon {
+        margin-top: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center
+    }
 </style>

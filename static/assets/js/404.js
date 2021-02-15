@@ -103,7 +103,7 @@ particlesJS('particles-js', {
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 // extract from chromium source code by @liuwayong
-(function () {
+(function() {
     'use strict';
     /**
      * T-Rex runner.
@@ -113,9 +113,10 @@ particlesJS('particles-js', {
      * @export
      */
 
-     window.onkeydown = function(e) {
-       return !(e.keyCode == 32 && e.target == document.body);
-     };
+    window.onkeydown = function(e) {
+        return !(e.keyCode == 32 && e.target == document.body);
+    };
+
     function Runner(outerContainerId, opt_config) {
         // Singleton
         if (Runner.instance_) {
@@ -294,8 +295,7 @@ particlesJS('particles-js', {
      * Sound FX. Reference to the ID of the audio tag on interstitial page.
      * @enum {string}
      */
-    Runner.sounds = {
-    };
+    Runner.sounds = {};
 
 
     /**
@@ -303,9 +303,9 @@ particlesJS('particles-js', {
      * @enum {Object}
      */
     Runner.keycodes = {
-        JUMP: { '38': 1, '32': 1 },  // Up, spacebar
-        DUCK: { '40': 1 },  // Down
-        RESTART: { '13': 1 }  // Enter
+        JUMP: { '38': 1, '32': 1 }, // Up, spacebar
+        DUCK: { '40': 1 }, // Down
+        RESTART: { '13': 1 } // Enter
     };
 
 
@@ -335,7 +335,7 @@ particlesJS('particles-js', {
          * Whether the easter egg has been disabled. CrOS enterprise enrolled devices.
          * @return {boolean}
          */
-        isDisabled: function () {
+        isDisabled: function() {
             // return loadTimeData && loadTimeData.valueExists('disabledEasterEgg');
             return false;
         },
@@ -343,14 +343,14 @@ particlesJS('particles-js', {
         /**
          * For disabled instances, set up a snackbar with the disabled message.
          */
-        setupDisabledRunner: function () {
+        setupDisabledRunner: function() {
             this.containerEl = document.createElement('div');
             this.containerEl.className = Runner.classes.SNACKBAR;
             this.containerEl.textContent = loadTimeData.getValue('disabledEasterEgg');
             this.outerContainerEl.appendChild(this.containerEl);
 
             // Show notification when the activation key is pressed.
-            document.addEventListener(Runner.events.KEYDOWN, function (e) {
+            document.addEventListener(Runner.events.KEYDOWN, function(e) {
                 if (Runner.keycodes.JUMP[e.keyCode]) {
                     this.containerEl.classList.add(Runner.classes.SNACKBAR_SHOW);
                     document.querySelector('.icon').classList.add('icon-disabled');
@@ -363,7 +363,7 @@ particlesJS('particles-js', {
          * @param {string} setting
          * @param {*} value
          */
-        updateConfigSetting: function (setting, value) {
+        updateConfigSetting: function(setting, value) {
             if (setting in this.config && value != undefined) {
                 this.config[setting] = value;
 
@@ -387,7 +387,7 @@ particlesJS('particles-js', {
          * Cache the appropriate image sprite from the page and get the sprite sheet
          * definition.
          */
-        loadImages: function () {
+        loadImages: function() {
             if (IS_HIDPI) {
                 Runner.imageSprite = document.getElementById('offline-resources-2x');
                 this.spriteDef = Runner.spriteDefinition.HDPI;
@@ -408,7 +408,7 @@ particlesJS('particles-js', {
         /**
          * Load and decode base 64 encoded sounds.
          */
-        loadSounds: function () {
+        loadSounds: function() {
             if (!IS_IOS) {
                 this.audioContext = new AudioContext();
 
@@ -422,7 +422,7 @@ particlesJS('particles-js', {
                     var buffer = decodeBase64ToArrayBuffer(soundSrc);
 
                     // Async, so no guarantee of order in array.
-                    this.audioContext.decodeAudioData(buffer, function (index, audioData) {
+                    this.audioContext.decodeAudioData(buffer, function(index, audioData) {
                         this.soundFx[index] = audioData;
                     }.bind(this, sound));
                 }
@@ -433,7 +433,7 @@ particlesJS('particles-js', {
          * Sets the game speed. Adjust the speed accordingly if on a smaller screen.
          * @param {number} opt_speed
          */
-        setSpeed: function (opt_speed) {
+        setSpeed: function(opt_speed) {
             var speed = opt_speed || this.currentSpeed;
 
             // Reduce the speed on smaller mobile screens.
@@ -449,7 +449,7 @@ particlesJS('particles-js', {
         /**
          * Game initialiser.
          */
-        init: function () {
+        init: function() {
             // Hide the static icon.
             document.querySelector('.' + Runner.classes.ICON).style.visibility =
                 'hidden';
@@ -496,7 +496,7 @@ particlesJS('particles-js', {
         /**
          * Create the touch controller. A div that covers whole screen.
          */
-        createTouchController: function () {
+        createTouchController: function() {
             this.touchController = document.createElement('div');
             this.touchController.className = Runner.classes.TOUCH_CONTROLLER;
             this.outerContainerEl.appendChild(this.touchController);
@@ -505,7 +505,7 @@ particlesJS('particles-js', {
         /**
          * Debounce the resize event.
          */
-        debounceResize: function () {
+        debounceResize: function() {
             if (!this.resizeTimerId_) {
                 this.resizeTimerId_ =
                     setInterval(this.adjustDimensions.bind(this), 250);
@@ -515,7 +515,7 @@ particlesJS('particles-js', {
         /**
          * Adjust game space dimensions on resize.
          */
-        adjustDimensions: function () {
+        adjustDimensions: function() {
             clearInterval(this.resizeTimerId_);
             this.resizeTimerId_ = null;
 
@@ -559,7 +559,7 @@ particlesJS('particles-js', {
          * Play the game intro.
          * Canvas container width expands out to the full width.
          */
-        playIntro: function () {
+        playIntro: function() {
             if (!this.activated && !this.crashed) {
                 this.playingIntro = true;
                 this.tRex.playingIntro = true;
@@ -591,7 +591,7 @@ particlesJS('particles-js', {
         /**
          * Update the game status to started.
          */
-        startGame: function () {
+        startGame: function() {
             this.runningTime = 0;
             this.playingIntro = false;
             this.tRex.playingIntro = false;
@@ -609,7 +609,7 @@ particlesJS('particles-js', {
                 this.onVisibilityChange.bind(this));
         },
 
-        clearCanvas: function () {
+        clearCanvas: function() {
             this.canvasCtx.clearRect(0, 0, this.dimensions.WIDTH,
                 this.dimensions.HEIGHT);
         },
@@ -617,7 +617,7 @@ particlesJS('particles-js', {
         /**
          * Update the game frame and schedules the next one.
          */
-        update: function () {
+        update: function() {
             this.updatePending = false;
 
             var now = getTimeStamp();
@@ -693,7 +693,7 @@ particlesJS('particles-js', {
             }
 
             if (this.playing || (!this.activated &&
-                this.tRex.blinkCount < Runner.config.MAX_BLINK_COUNT)) {
+                    this.tRex.blinkCount < Runner.config.MAX_BLINK_COUNT)) {
                 this.tRex.update(deltaTime);
                 this.scheduleNextUpdate();
             }
@@ -702,8 +702,8 @@ particlesJS('particles-js', {
         /**
          * Event handler.
          */
-        handleEvent: function (e) {
-            return (function (evtType, events) {
+        handleEvent: function(e) {
+            return (function(evtType, events) {
                 switch (evtType) {
                     case events.KEYDOWN:
                     case events.TOUCHSTART:
@@ -722,7 +722,7 @@ particlesJS('particles-js', {
         /**
          * Bind relevant key / mouse / touch listeners.
          */
-        startListening: function () {
+        startListening: function() {
             // Keys.
             document.addEventListener(Runner.events.KEYDOWN, this);
             document.addEventListener(Runner.events.KEYUP, this);
@@ -742,7 +742,7 @@ particlesJS('particles-js', {
         /**
          * Remove all listeners.
          */
-        stopListening: function () {
+        stopListening: function() {
             document.removeEventListener(Runner.events.KEYDOWN, this);
             document.removeEventListener(Runner.events.KEYUP, this);
 
@@ -760,7 +760,7 @@ particlesJS('particles-js', {
          * Process keydown.
          * @param {Event} e
          */
-        onKeyDown: function (e) {
+        onKeyDown: function(e) {
             // Prevent native page scrolling whilst tapping on mobile.
             if (IS_MOBILE && this.playing) {
                 e.preventDefault();
@@ -768,7 +768,7 @@ particlesJS('particles-js', {
 
             if (e.target != this.detailsButton) {
                 if (!this.crashed && (Runner.keycodes.JUMP[e.keyCode] ||
-                    e.type == Runner.events.TOUCHSTART)) {
+                        e.type == Runner.events.TOUCHSTART)) {
                     if (!this.playing) {
                         this.loadSounds();
                         this.playing = true;
@@ -807,7 +807,7 @@ particlesJS('particles-js', {
          * Process key up.
          * @param {Event} e
          */
-        onKeyUp: function (e) {
+        onKeyUp: function(e) {
             var keyCode = String(e.keyCode);
             var isjumpKey = Runner.keycodes.JUMP[keyCode] ||
                 e.type == Runner.events.TOUCHEND ||
@@ -840,7 +840,7 @@ particlesJS('particles-js', {
          * @param {Event} e
          * @return {boolean}
          */
-        isLeftClickOnCanvas: function (e) {
+        isLeftClickOnCanvas: function(e) {
             return e.button != null && e.button < 2 &&
                 e.type == Runner.events.MOUSEUP && e.target == this.canvas;
         },
@@ -848,7 +848,7 @@ particlesJS('particles-js', {
         /**
          * RequestAnimationFrame wrapper.
          */
-        scheduleNextUpdate: function () {
+        scheduleNextUpdate: function() {
             if (!this.updatePending) {
                 this.updatePending = true;
                 this.raqId = requestAnimationFrame(this.update.bind(this));
@@ -859,14 +859,14 @@ particlesJS('particles-js', {
          * Whether the game is running.
          * @return {boolean}
          */
-        isRunning: function () {
+        isRunning: function() {
             return !!this.raqId;
         },
 
         /**
          * Game over state.
          */
-        gameOver: function () {
+        gameOver: function() {
             this.playSound(this.soundFx.HIT);
             vibrate(200);
 
@@ -895,14 +895,14 @@ particlesJS('particles-js', {
             this.time = getTimeStamp();
         },
 
-        stop: function () {
+        stop: function() {
             this.playing = false;
             this.paused = true;
             cancelAnimationFrame(this.raqId);
             this.raqId = 0;
         },
 
-        play: function () {
+        play: function() {
             if (!this.crashed) {
                 this.playing = true;
                 this.paused = false;
@@ -912,7 +912,7 @@ particlesJS('particles-js', {
             }
         },
 
-        restart: function () {
+        restart: function() {
             if (!this.raqId) {
                 this.playCount++;
                 this.runningTime = 0;
@@ -935,7 +935,7 @@ particlesJS('particles-js', {
         /**
          * Pause the game if the tab is not in focus.
          */
-        onVisibilityChange: function (e) {
+        onVisibilityChange: function(e) {
             if (document.hidden || document.webkitHidden || e.type == 'blur' ||
                 document.visibilityState != 'visible') {
                 this.stop();
@@ -949,7 +949,7 @@ particlesJS('particles-js', {
          * Play a sound.
          * @param {SoundBuffer} soundBuffer
          */
-        playSound: function (soundBuffer) {
+        playSound: function(soundBuffer) {
             if (soundBuffer) {
                 var sourceNode = this.audioContext.createBufferSource();
                 sourceNode.buffer = soundBuffer;
@@ -962,7 +962,7 @@ particlesJS('particles-js', {
          * Inverts the current page / canvas colors.
          * @param {boolean} Whether to reset colors.
          */
-        invert: function (reset) {
+        invert: function(reset) {
             if (reset) {
                 document.body.classList.toggle(Runner.classes.INVERTED, false);
                 this.invertTimer = 0;
@@ -981,14 +981,14 @@ particlesJS('particles-js', {
      * the device pixel ratio.
      *
      * See article by Paul Lewis:
-     * http://www.html5rocks.com/en/tutorials/canvas/hidpi/
+     * https://www.html5rocks.com/en/tutorials/canvas/hidpi/
      *
      * @param {HTMLCanvasElement} canvas
      * @param {number} opt_width
      * @param {number} opt_height
      * @return {boolean} Whether the canvas was scaled.
      */
-    Runner.updateCanvasScaling = function (canvas, opt_width, opt_height) {
+    Runner.updateCanvasScaling = function(canvas, opt_width, opt_height) {
         var context = canvas.getContext('2d');
 
         // Query the various pixel ratios
@@ -1130,7 +1130,7 @@ particlesJS('particles-js', {
          * @param {number} width New canvas width.
          * @param {number} opt_height Optional new canvas height.
          */
-        updateDimensions: function (width, opt_height) {
+        updateDimensions: function(width, opt_height) {
             this.canvasDimensions.WIDTH = width;
             if (opt_height) {
                 this.canvasDimensions.HEIGHT = opt_height;
@@ -1140,7 +1140,7 @@ particlesJS('particles-js', {
         /**
          * Draw the panel.
          */
-        draw: function () {
+        draw: function() {
             var dimensions = GameOverPanel.dimensions;
 
             var centerX = this.canvasDimensions.WIDTH / 2;
@@ -1378,7 +1378,7 @@ particlesJS('particles-js', {
              * Initialise the DOM for the obstacle.
              * @param {number} speed
              */
-            init: function (speed) {
+            init: function(speed) {
                 this.cloneCollisionBoxes();
 
                 // Only allow sizing if we're at the right speed.
@@ -1425,7 +1425,7 @@ particlesJS('particles-js', {
             /**
              * Draw and crop based on size.
              */
-            draw: function () {
+            draw: function() {
                 var sourceWidth = this.typeConfig.width;
                 var sourceHeight = this.typeConfig.height;
 
@@ -1455,7 +1455,7 @@ particlesJS('particles-js', {
              * @param {number} deltaTime
              * @param {number} speed
              */
-            update: function (deltaTime, speed) {
+            update: function(deltaTime, speed) {
                 if (!this.remove) {
                     if (this.typeConfig.speedOffset) {
                         speed += this.speedOffset;
@@ -1468,7 +1468,7 @@ particlesJS('particles-js', {
                         if (this.timer >= this.typeConfig.frameRate) {
                             this.currentFrame =
                                 this.currentFrame == this.typeConfig.numFrames - 1 ?
-                                    0 : this.currentFrame + 1;
+                                0 : this.currentFrame + 1;
                             this.timer = 0;
                         }
                     }
@@ -1487,7 +1487,7 @@ particlesJS('particles-js', {
              * @param {number} speed
              * @return {number} The gap size.
              */
-            getGap: function (gapCoefficient, speed) {
+            getGap: function(gapCoefficient, speed) {
                 var minGap = Math.round(this.width * speed +
                     this.typeConfig.minGap * gapCoefficient);
                 var maxGap = Math.round(minGap * Obstacle.MAX_GAP_COEFFICIENT);
@@ -1498,7 +1498,7 @@ particlesJS('particles-js', {
              * Check if obstacle is visible.
              * @return {boolean} Whether the obstacle is in the game area.
              */
-            isVisible: function () {
+            isVisible: function() {
                 return this.xPos + this.width > 0;
             },
 
@@ -1506,7 +1506,7 @@ particlesJS('particles-js', {
              * Make a copy of the collision boxes, since these will change based on
              * obstacle type and size.
              */
-            cloneCollisionBoxes: function () {
+            cloneCollisionBoxes: function() {
                 var collisionBoxes = this.typeConfig.collisionBoxes;
 
                 for (var i = collisionBoxes.length - 1; i >= 0; i--) {
@@ -1525,8 +1525,7 @@ particlesJS('particles-js', {
      * speedOffset: speed faster / slower than the horizon.
      * minSpeed: Minimum speed which the obstacle can make an appearance.
      */
-    Obstacle.types = [
-        {
+    Obstacle.types = [{
             type: 'CACTUS_SMALL',
             width: 17,
             height: 35,
@@ -1707,7 +1706,7 @@ particlesJS('particles-js', {
          * T-rex player initaliser.
          * Sets the t-rex to blink at random intervals.
          */
-        init: function () {
+        init: function() {
             this.groundYPos = Runner.defaultDimensions.HEIGHT - this.config.HEIGHT -
                 Runner.config.BOTTOM_PAD;
             this.yPos = this.groundYPos;
@@ -1721,7 +1720,7 @@ particlesJS('particles-js', {
          * Setter for the jump velocity.
          * The approriate drop velocity is also set.
          */
-        setJumpVelocity: function (setting) {
+        setJumpVelocity: function(setting) {
             this.config.INIITAL_JUMP_VELOCITY = -setting;
             this.config.DROP_VELOCITY = -setting / 2;
         },
@@ -1731,7 +1730,7 @@ particlesJS('particles-js', {
          * @param {!number} deltaTime
          * @param {Trex.status} status Optional status to switch to.
          */
-        update: function (deltaTime, opt_status) {
+        update: function(deltaTime, opt_status) {
             this.timer += deltaTime;
 
             // Update the status.
@@ -1778,7 +1777,7 @@ particlesJS('particles-js', {
          * @param {number} x
          * @param {number} y
          */
-        draw: function (x, y) {
+        draw: function(x, y) {
             var sourceX = x;
             var sourceY = y;
             var sourceWidth = this.ducking && this.status != Trex.status.CRASHED ?
@@ -1818,7 +1817,7 @@ particlesJS('particles-js', {
         /**
          * Sets a random time for the blink to happen.
          */
-        setBlinkDelay: function () {
+        setBlinkDelay: function() {
             this.blinkDelay = Math.ceil(Math.random() * Trex.BLINK_TIMING);
         },
 
@@ -1826,7 +1825,7 @@ particlesJS('particles-js', {
          * Make t-rex blink at random intervals.
          * @param {number} time Current time in milliseconds.
          */
-        blink: function (time) {
+        blink: function(time) {
             var deltaTime = time - this.animStartTime;
 
             if (deltaTime >= this.blinkDelay) {
@@ -1845,7 +1844,7 @@ particlesJS('particles-js', {
          * Initialise a jump.
          * @param {number} speed
          */
-        startJump: function (speed) {
+        startJump: function(speed) {
             if (!this.jumping) {
                 this.update(0, Trex.status.JUMPING);
                 // Tweak the jump velocity based on the speed.
@@ -1859,7 +1858,7 @@ particlesJS('particles-js', {
         /**
          * Jump is complete, falling down.
          */
-        endJump: function () {
+        endJump: function() {
             if (this.reachedMinHeight &&
                 this.jumpVelocity < this.config.DROP_VELOCITY) {
                 this.jumpVelocity = this.config.DROP_VELOCITY;
@@ -1871,7 +1870,7 @@ particlesJS('particles-js', {
          * @param {number} deltaTime
          * @param {number} speed
          */
-        updateJump: function (deltaTime, speed) {
+        updateJump: function(deltaTime, speed) {
             var msPerFrame = Trex.animFrames[this.status].msPerFrame;
             var framesElapsed = deltaTime / msPerFrame;
 
@@ -1907,7 +1906,7 @@ particlesJS('particles-js', {
         /**
          * Set the speed drop. Immediately cancels the current jump.
          */
-        setSpeedDrop: function () {
+        setSpeedDrop: function() {
             this.speedDrop = true;
             this.jumpVelocity = 1;
         },
@@ -1915,7 +1914,7 @@ particlesJS('particles-js', {
         /**
          * @param {boolean} isDucking.
          */
-        setDuck: function (isDucking) {
+        setDuck: function(isDucking) {
             if (isDucking && this.status != Trex.status.DUCKING) {
                 this.update(0, Trex.status.DUCKING);
                 this.ducking = true;
@@ -1928,7 +1927,7 @@ particlesJS('particles-js', {
         /**
          * Reset the t-rex to running at start of game.
          */
-        reset: function () {
+        reset: function() {
             this.yPos = this.groundYPos;
             this.jumpVelocity = 0;
             this.jumping = false;
@@ -2021,7 +2020,7 @@ particlesJS('particles-js', {
          * Initialise the distance meter to '00000'.
          * @param {number} width Canvas width in px.
          */
-        init: function (width) {
+        init: function(width) {
             var maxDistanceStr = '';
 
             this.calcXPos(width);
@@ -2039,7 +2038,7 @@ particlesJS('particles-js', {
          * Calculate the xPos in the canvas.
          * @param {number} canvasWidth
          */
-        calcXPos: function (canvasWidth) {
+        calcXPos: function(canvasWidth) {
             this.x = canvasWidth - (DistanceMeter.dimensions.DEST_WIDTH *
                 (this.maxScoreUnits + 1));
         },
@@ -2050,7 +2049,7 @@ particlesJS('particles-js', {
          * @param {number} value Digit value 0-9.
          * @param {boolean} opt_highScore Whether drawing the high score.
          */
-        draw: function (digitPos, value, opt_highScore) {
+        draw: function(digitPos, value, opt_highScore) {
             var sourceWidth = DistanceMeter.dimensions.WIDTH;
             var sourceHeight = DistanceMeter.dimensions.HEIGHT;
             var sourceX = DistanceMeter.dimensions.WIDTH * value;
@@ -2096,7 +2095,7 @@ particlesJS('particles-js', {
          * @param {number} distance Pixel distance ran.
          * @return {number} The 'real' distance ran.
          */
-        getActualDistance: function (distance) {
+        getActualDistance: function(distance) {
             return distance ? Math.round(distance * this.config.COEFFICIENT) : 0;
         },
 
@@ -2106,7 +2105,7 @@ particlesJS('particles-js', {
          * @param {number} deltaTime
          * @return {boolean} Whether the acheivement sound fx should be played.
          */
-        update: function (deltaTime, distance) {
+        update: function(deltaTime, distance) {
             var paint = true;
             var playSound = false;
 
@@ -2170,7 +2169,7 @@ particlesJS('particles-js', {
         /**
          * Draw the high score.
          */
-        drawHighScore: function () {
+        drawHighScore: function() {
             this.canvasCtx.save();
             this.canvasCtx.globalAlpha = .8;
             for (var i = this.highScore.length - 1; i >= 0; i--) {
@@ -2184,7 +2183,7 @@ particlesJS('particles-js', {
          * Position of char in the sprite: H - 10, I - 11.
          * @param {number} distance Distance ran in pixels.
          */
-        setHighScore: function (distance) {
+        setHighScore: function(distance) {
             distance = this.getActualDistance(distance);
             var highScoreStr = (this.defaultString +
                 distance).substr(-this.maxScoreUnits);
@@ -2195,7 +2194,7 @@ particlesJS('particles-js', {
         /**
          * Reset the distance meter back to '00000'.
          */
-        reset: function () {
+        reset: function() {
             this.update(0);
             this.acheivement = false;
         }
@@ -2244,7 +2243,7 @@ particlesJS('particles-js', {
         /**
          * Initialise the cloud. Sets the Cloud height.
          */
-        init: function () {
+        init: function() {
             this.yPos = getRandomNum(Cloud.config.MAX_SKY_LEVEL,
                 Cloud.config.MIN_SKY_LEVEL);
             this.draw();
@@ -2253,7 +2252,7 @@ particlesJS('particles-js', {
         /**
          * Draw the cloud.
          */
-        draw: function () {
+        draw: function() {
             this.canvasCtx.save();
             var sourceWidth = Cloud.config.WIDTH;
             var sourceHeight = Cloud.config.HEIGHT;
@@ -2276,7 +2275,7 @@ particlesJS('particles-js', {
          * Update the cloud position.
          * @param {number} speed
          */
-        update: function (speed) {
+        update: function(speed) {
             if (!this.remove) {
                 this.xPos -= Math.ceil(speed);
                 this.draw();
@@ -2292,7 +2291,7 @@ particlesJS('particles-js', {
          * Check if the cloud is visible on the stage.
          * @return {boolean}
          */
-        isVisible: function () {
+        isVisible: function() {
             return this.xPos + Cloud.config.WIDTH > 0;
         }
     };
@@ -2339,7 +2338,7 @@ particlesJS('particles-js', {
          * @param {boolean} activated Whether night mode is activated.
          * @param {number} delta
          */
-        update: function (activated, delta) {
+        update: function(activated, delta) {
             // Moon phase.
             if (activated && this.opacity == 0) {
                 this.currentPhase++;
@@ -2375,7 +2374,7 @@ particlesJS('particles-js', {
             this.drawStars = true;
         },
 
-        updateXPos: function (currentPos, speed) {
+        updateXPos: function(currentPos, speed) {
             if (currentPos < -NightMode.config.WIDTH) {
                 currentPos = this.containerWidth;
             } else {
@@ -2384,7 +2383,7 @@ particlesJS('particles-js', {
             return currentPos;
         },
 
-        draw: function () {
+        draw: function() {
             var moonSourceWidth = this.currentPhase == 3 ? NightMode.config.WIDTH * 2 :
                 NightMode.config.WIDTH;
             var moonSourceHeight = NightMode.config.HEIGHT;
@@ -2426,7 +2425,7 @@ particlesJS('particles-js', {
         },
 
         // Do star placement.
-        placeStars: function () {
+        placeStars: function() {
             var segmentSize = Math.round(this.containerWidth /
                 NightMode.config.NUM_STARS);
 
@@ -2445,7 +2444,7 @@ particlesJS('particles-js', {
             }
         },
 
-        reset: function () {
+        reset: function() {
             this.currentPhase = 0;
             this.opacity = 0;
             this.update(false);
@@ -2470,7 +2469,8 @@ particlesJS('particles-js', {
         this.sourceDimensions = {};
         this.dimensions = HorizonLine.dimensions;
         this.sourceXPos = [this.spritePos.x, this.spritePos.x +
-            this.dimensions.WIDTH];
+            this.dimensions.WIDTH
+        ];
         this.xPos = [];
         this.yPos = 0;
         this.bumpThreshold = 0.5;
@@ -2495,7 +2495,7 @@ particlesJS('particles-js', {
         /**
          * Set the source dimensions of the horizon line.
          */
-        setSourceDimensions: function () {
+        setSourceDimensions: function() {
 
             for (var dimension in HorizonLine.dimensions) {
                 if (IS_HIDPI) {
@@ -2517,14 +2517,14 @@ particlesJS('particles-js', {
         /**
          * Return the crop x position of a type.
          */
-        getRandomType: function () {
+        getRandomType: function() {
             return Math.random() > this.bumpThreshold ? this.dimensions.WIDTH : 0;
         },
 
         /**
          * Draw the horizon line.
          */
-        draw: function () {
+        draw: function() {
             this.canvasCtx.drawImage(Runner.imageSprite, this.sourceXPos[0],
                 this.spritePos.y,
                 this.sourceDimensions.WIDTH, this.sourceDimensions.HEIGHT,
@@ -2543,7 +2543,7 @@ particlesJS('particles-js', {
          * @param {number} pos Line position.
          * @param {number} increment
          */
-        updateXPos: function (pos, increment) {
+        updateXPos: function(pos, increment) {
             var line1 = pos;
             var line2 = pos == 0 ? 1 : 0;
 
@@ -2562,7 +2562,7 @@ particlesJS('particles-js', {
          * @param {number} deltaTime
          * @param {number} speed
          */
-        update: function (deltaTime, speed) {
+        update: function(deltaTime, speed) {
             var increment = Math.floor(speed * (FPS / 1000) * deltaTime);
 
             if (this.xPos[0] <= 0) {
@@ -2576,7 +2576,7 @@ particlesJS('particles-js', {
         /**
          * Reset horizon to the starting position.
          */
-        reset: function () {
+        reset: function() {
             this.xPos[0] = 0;
             this.xPos[1] = HorizonLine.dimensions.WIDTH;
         }
@@ -2633,7 +2633,7 @@ particlesJS('particles-js', {
         /**
          * Initialise the horizon. Just add the line and a cloud. No obstacles.
          */
-        init: function () {
+        init: function() {
             this.addCloud();
             this.horizonLine = new HorizonLine(this.canvas, this.spritePos.HORIZON);
             this.nightMode = new NightMode(this.canvas, this.spritePos.MOON,
@@ -2648,7 +2648,7 @@ particlesJS('particles-js', {
          *     ease in section.
          * @param {boolean} showNightMode Night mode activated.
          */
-        update: function (deltaTime, currentSpeed, updateObstacles, showNightMode) {
+        update: function(deltaTime, currentSpeed, updateObstacles, showNightMode) {
             this.runningTime += deltaTime;
             this.horizonLine.update(deltaTime, currentSpeed);
             this.nightMode.update(showNightMode);
@@ -2664,7 +2664,7 @@ particlesJS('particles-js', {
          * @param {number} deltaTime
          * @param {number} currentSpeed
          */
-        updateClouds: function (deltaTime, speed) {
+        updateClouds: function(deltaTime, speed) {
             var cloudSpeed = this.cloudSpeed / 1000 * deltaTime * speed;
             var numClouds = this.clouds.length;
 
@@ -2683,7 +2683,7 @@ particlesJS('particles-js', {
                 }
 
                 // Remove expired clouds.
-                this.clouds = this.clouds.filter(function (obj) {
+                this.clouds = this.clouds.filter(function(obj) {
                     return !obj.remove;
                 });
             } else {
@@ -2696,7 +2696,7 @@ particlesJS('particles-js', {
          * @param {number} deltaTime
          * @param {number} currentSpeed
          */
-        updateObstacles: function (deltaTime, currentSpeed) {
+        updateObstacles: function(deltaTime, currentSpeed) {
             // Obstacles, move to Horizon layer.
             var updatedObstacles = this.obstacles.slice(0);
 
@@ -2727,7 +2727,7 @@ particlesJS('particles-js', {
             }
         },
 
-        removeFirstObstacle: function () {
+        removeFirstObstacle: function() {
             this.obstacles.shift();
         },
 
@@ -2735,7 +2735,7 @@ particlesJS('particles-js', {
          * Add a new obstacle.
          * @param {number} currentSpeed
          */
-        addNewObstacle: function (currentSpeed) {
+        addNewObstacle: function(currentSpeed) {
             var obstacleTypeIndex = getRandomNum(0, Obstacle.types.length - 1);
             var obstacleType = Obstacle.types[obstacleTypeIndex];
 
@@ -2764,7 +2764,7 @@ particlesJS('particles-js', {
          * Maximum duplication is set in config value MAX_OBSTACLE_DUPLICATION.
          * @return {boolean}
          */
-        duplicateObstacleCheck: function (nextObstacleType) {
+        duplicateObstacleCheck: function(nextObstacleType) {
             var duplicateCount = 0;
 
             for (var i = 0; i < this.obstacleHistory.length; i++) {
@@ -2778,7 +2778,7 @@ particlesJS('particles-js', {
          * Reset the horizon layer.
          * Remove existing obstacles and reposition the horizon line.
          */
-        reset: function () {
+        reset: function() {
             this.obstacles = [];
             this.horizonLine.reset();
             this.nightMode.reset();
@@ -2789,7 +2789,7 @@ particlesJS('particles-js', {
          * @param {number} width Canvas width.
          * @param {number} height Canvas height.
          */
-        resize: function (width, height) {
+        resize: function(width, height) {
             this.canvas.width = width;
             this.canvas.height = height;
         },
@@ -2797,7 +2797,7 @@ particlesJS('particles-js', {
         /**
          * Add a new cloud to the horizon.
          */
-        addCloud: function () {
+        addCloud: function() {
             this.clouds.push(new Cloud(this.canvas, this.spritePos.CLOUD,
                 this.dimensions.WIDTH));
         }
