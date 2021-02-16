@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: #252934F1;
+    background-color: #252934F9;
     background-image: url("https://source.unsplash.com/3840x2160/?mountain,forest/");
     background-blend-mode: multiply;
     background-repeat: no-repeat;
@@ -217,4 +217,24 @@ a:hover {
 
 .office i {
     color: #DC3E15;
+}
+
+#particles-js canvas {
+    display: block;
+    vertical-align: bottom;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+    -webkit-transition: opacity .8s ease, -webkit-transform 1.4s ease;
+    transition: opacity .8s ease, transform 1.4s ease
+}
+
+#particles-js {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -10;
+    top: 0;
+    left: 0
 }
