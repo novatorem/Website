@@ -118,7 +118,7 @@
 		padding: 1rem;
 		overflow: hidden;
 	}
-	
+
 	.container:hover {
 		overflow-x: scroll;
 	}
