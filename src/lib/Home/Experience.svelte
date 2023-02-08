@@ -16,7 +16,7 @@
 		<h1 class="text-4xl ml-2">Experience</h1>
 	</a>
 	<div class="work">
-		<a class="inline-flex items-center justify-left text-left w-full mb-6" href="#work" id="work">
+		<a class="inline-flex items-center justify-left text-left w-full" href="#work" id="work">
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				width="24"
@@ -84,7 +84,7 @@
 
 	<div class="education">
 		<a
-			class="inline-flex items-center justify-left text-left w-full mb-6"
+			class="inline-flex items-center justify-left text-left w-full"
 			href="#education"
 			id="education"
 		>

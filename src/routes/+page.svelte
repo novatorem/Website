@@ -12,6 +12,12 @@
 	<title>Andrew Novac</title>
 </svelte:head>
 
+<div class="h-0 m-0">
+	<a href="#">
+		<img width="42" height="42" src="favicon.png" alt="Website logo" class="logo z-10 cursor-pointer h-6 w-6 fixed top-5 left-6 grayscale" />
+	</a>
+</div>
+
 <Theme />
 <Hero />
 <div class="divider" />
@@ -23,3 +29,9 @@
 <div class="divider" />
 <About />
 <Footer />
+
+<style>
+.logo:hover {
+	filter: grayscale(0%);
+}
+</style>

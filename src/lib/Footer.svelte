@@ -1,5 +1,5 @@
 <footer
-	class="footer items-center p-4 bg-neutral text-neutral-content justify-between grid-flow-col"
+	class="footer items-center p-4 bg-neutral text-neutral-content justify-between grid-flow-col mt-12"
 >
 	<div class="items-center grid-flow-col">
 		<img width="24" height="24" src="favicon.png" alt="Website logo" class="grayscale" />
