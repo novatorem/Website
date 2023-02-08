@@ -1,21 +1,15 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	onMount(async () => {
-		const projects = document.getElementById('projects');
-		const projectsScrollWidth = projects!.scrollWidth;
 
-		setInterval(() => {
-			if (projects!.scrollLeft !== projectsScrollWidth && !projects!.matches(':hover')) {
-				projects!.scrollTo(projects!.scrollLeft + 1, 0);
-			}
-		}, 50);
+	onMount(async () => {
+		autoSlider();
 	});
 
 	interface Project {
-		title: string;
-		description: string;
 		link: string;
+		title: string;
 		image: string;
+		description: string;
 	}
 
 	const Projects: Project[] = [
@@ -29,109 +23,105 @@
 		{
 			title: 'Cover Hack',
 			description: 'Create custom cover letters where users can input reactive fields',
-			link: 'XXX',
+			link: 'https://cover-hack.novac.dev/',
 			image: '/images/projects/coverhack.png'
 		},
 		{
 			title: 'StreamWeaver',
 			description:
 				'A cross-platform application for virtual events and performances, transmitting data globally',
-			link: 'XXX',
+			link: 'https://www.liminalet.com/streamweaver-lite',
 			image: '/images/projects/streamweaver.png'
 		},
 		{
 			title: 'Plan',
 			description: 'Turn an idea into an actual website or app, in a course-like format',
-			link: 'XXX',
-			image: 'https://images.unsplash.com/photo-1589586502913-822aa129d420'
+			link: 'https://plan.novac.dev',
+			image: '/images/projects/plan.png'
 		},
 		{
 			title: 'Robotics',
 			description: 'Collision detection, integrated motion planning, dynamic tracking, and pathing',
-			link: 'XXX',
+			link: 'https://github.com/novatorem/Robotics',
 			image: '/images/projects/robotics.png'
 		},
 		{
 			title: 'Emergency Response Aid',
 			description:
 				'Team application designed as an intermediatory to help users seek medical attention',
-			link: 'XXX',
+			link: 'https://github.com/novatorem/ERA-Emergency-Response-Aid',
 			image: '/images/projects/era.png'
 		}
 	];
+
+	function autoSlider() {
+		let slide = 0;
+		const carouselBox = document.getElementById('carouselBox');
+		setInterval(() => {
+			if (slide >= carouselBox!.scrollWidth) {
+				slide = 0;
+			} else {
+				slide += carouselBox!.scrollWidth / Projects.length;
+			}
+			carouselBox!.scrollLeft = slide;
+		}, 3000);
+	}
 </script>
 
-<a class="inline-flex items-center justify-center text-center w-full" href="#Projects">
-	<svg
-		xmlns="http://www.w3.org/2000/svg"
-		width="24"
-		height="24"
-		viewBox="0 0 24 24"
-		fill="none"
-		stroke="currentColor"
-		stroke-width="2"
-		stroke-linecap="round"
-		stroke-linejoin="round"
-		><path d="M18 8V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h8" /><path
-			d="M10 19v-3.96 3.15"
-		/><path d="M7 19h5" /><rect x="16" y="12" width="6" height="10" rx="2" /></svg
-	>
+<div class="flex flex-wrap items-center justify-between m-6 max-w-screen-xl lg:mx-auto">
+	<a class="inline-flex items-center justify-left w-full my-12" href="#projects" id="projects">
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			width="24"
+			height="24"
+			viewBox="0 0 24 24"
+			fill="none"
+			stroke="currentColor"
+			stroke-width="2"
+			stroke-linecap="round"
+			stroke-linejoin="round"
+			><path d="M18 8V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h8" /><path
+				d="M10 19v-3.96 3.15"
+			/><path d="M7 19h5" /><rect x="16" y="12" width="6" height="10" rx="2" /></svg
+		>
 
-	<h1 class="text-3xl ml-2">Projects</h1>
-</a>
+		<h1 class="text-4xl ml-2">Projects</h1>
+	</a>
 
-<div class="flex flex-wrap items-center justify-center m-2 overflow-x-hidden">
-	<div
-		class="container lg:max-w-screen-xl justify-center overflow-x-auto flex min-h-[600px]"
-		id="projects"
-	>
-		{#each Projects as project, i}
-			<div class="project card card-compact w-96 bg-base-100 m-6">
-				<figure>
-					<a href={project.link} class="max-h-[200px] min-h-[200px] min-w-full object-cover">
-						<img
-							class="max-h-[200px] min-h-[200px] min-w-full object-cover"
-							src={project.image}
-							alt="Shoes"
-						/>
-					</a>
-				</figure>
+	<div class="flex flex-wrap items-center justify-center m-2 overflow-x-hidden">
+		<div
+			class="carousel carousel-center max-w-md p-4 space-x-4 rounded-box min-h-[500px] lg:max-w-screen-xl"
+			id="carouselBox"
+		>
+			{#each Projects as project, i}
+				<div id="slide{i}" class="carousel-item project card card-compact w-96 bg-base-100 m-6">
+					<figure>
+						<a href={project.link} class="max-h-[200px] min-h-[200px] min-w-full object-cover">
+							<img
+								class="max-h-[200px] min-h-[200px] min-w-full object-cover"
+								src={project.image}
+								alt="Project screenshot"
+							/>
+						</a>
+					</figure>
 
-				<div class="card-body max-h-[150px] min-h-[150px]">
-					<h2 class="card-title">{project.title}</h2>
-					<p class="max-h-[100px] min-h-[100px]">
-						{project.description}
-					</p>
-					<div class="card-actions justify-end">
-						<a class="btn" href={project.link}>View</a>
+					<div class="card-body max-h-[150px] min-h-[150px]">
+						<h2 class="card-title">{project.title}</h2>
+						<p class="max-h-[75px] min-h-[75px]">
+							{project.description}
+						</p>
+						<div class="card-actions justify-end">
+							<a class="btn" href={project.link}>View</a>
+						</div>
 					</div>
 				</div>
-			</div>
-		{/each}
+			{/each}
+		</div>
+
+		<div class="flex justify-center w-full gap-2">
+			{#each Projects as _, i}
+				<a href="#slide{i}" class="btn btn-xs">{i + 1}</a>
+			{/each}
+		</div>
 	</div>
 </div>
-
-<style>
-	.container {
-		justify-content: space-between;
-		align-items: center;
-		padding: 1rem;
-		overflow: hidden;
-	}
-	
-	.container:hover {
-		overflow-x: scroll;
-	}
-
-	.container .project {
-		min-width: 300px;
-	}
-
-	.project {
-		max-width: 360px;
-	}
-
-	.container .project:not(:last-child) {
-		margin-right: 15px;
-	}
-</style>
