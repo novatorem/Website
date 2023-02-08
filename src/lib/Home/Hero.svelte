@@ -17,7 +17,9 @@
 </script>
 
 <div class="hero min-h-screen">
-	<div class="hero-content flex-col lg:flex-row max-w-[100vw]">
+	<div
+		class="hero-content flex-col max-w-[100vw] w-full justify-start lg:flex-row lg:max-w-screen-xl"
+	>
 		<img
 			src="/images/headshot.png"
 			class="max-w-sm rounded-lg lg:mr-6"
@@ -36,9 +38,9 @@
 							>novatorem</span
 						>{' ='}</code
 					></pre>
-				<pre data-prefix="1"><code>{'{'}</code></pre>
-				<pre data-prefix="2"><code id="typewriter" class="text-success" /></pre>
-				<pre data-prefix="3"><code>{'}'}</code></pre>
+				<pre data-prefix="2"><code>{'{'}</code></pre>
+				<pre data-prefix="3"><code id="typewriter" class="text-success" /></pre>
+				<pre data-prefix="4"><code>{'}'}</code></pre>
 			</div>
 		</div>
 	</div>

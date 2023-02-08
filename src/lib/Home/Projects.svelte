@@ -1,6 +1,6 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
 	import { register } from 'swiper/element/bundle';
-	register();
 
 	interface Project {
 		link: string;
@@ -50,6 +50,34 @@
 			image: '/images/projects/era.png'
 		}
 	];
+
+	// Preferably, we'd want to pass this directly as parameters
+	// But passing as parameters results in a number of run-time errors
+	onMount(async () => {
+		register();
+		const swiperEl = <any>document.querySelector('swiper-container');
+		const swiperParams = {
+			slidesPerView: 1,
+			rewind: true,
+			spaceBetween: 20,
+			autoplay: {
+				delay: 3000
+			},
+			pagination: {
+				dynamicBullets: true
+			},
+			breakpoints: {
+				640: {
+					slidesPerView: 2
+				},
+				1024: {
+					slidesPerView: 3
+				}
+			}
+		};
+		(<any>Object).assign(swiperEl, swiperParams);
+		swiperEl!.initialize();
+	});
 </script>
 
 <div class="flex flex-wrap items-center justify-between m-6 max-w-screen-xl lg:mx-auto">
@@ -75,17 +103,7 @@
 	<div
 		class="flex flex-wrap items-center justify-center m-2 overflow-x-hidden w-full lg:max-w-screen-xl"
 	>
-		<swiper-container
-			rewind="true"
-			space-between={20}
-			slides-per-view={3}
-			autoplay={{
-				delay: 3000
-			}}
-			pagination={{
-				dynamicBullets: true
-			}}
-		>
+		<swiper-container init="false">
 			{#each Projects as project, i}
 				<swiper-slide
 					id="slide{i}"

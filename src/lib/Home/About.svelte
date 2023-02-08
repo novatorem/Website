@@ -22,11 +22,88 @@
 	</a>
 
 	<div class="flex flex-wrap items-center justify-around w-full text-left">
-		<p class="py-6">
+		<p class="pb-6">
 			Thank you for visiting my portfolio page! I appreciate your interest in my work and
 			achievements. If you'd like to learn more about me and what I do, be sure to check out my
 			other pages. Connect with me on my social media profiles for updates on my latest projects and
 			musings.
 		</p>
+
+		<label for="modal" class="btn">Technologies & Credits</label>
+
+		<input type="checkbox" id="modal" class="modal-toggle" />
+		<label for="modal" class="modal modal-bottom cursor-pointer sm:modal-middle">
+			<label class="modal-box" for="">
+				<h3 class="font-bold text-lg mb-4">Technologies & Credits</h3>
+				<div class="overflow-x-auto w-full">
+					<table class="table table-zebra w-full">
+						<thead>
+							<tr>
+								<th />
+								<th>Source</th>
+								<th>Description</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<img
+										class="w-6 h-6 object-contain"
+										src="/images/about/svelte.png"
+										alt="Source logo"
+									/>
+								</td>
+								<th><a href="https://kit.svelte.dev/">SvelteKit</a></th>
+								<th>Front-end framework </th>
+							</tr>
+							<tr>
+								<td>
+									<img
+										class="w-6 h-6 object-contain"
+										src="/images/about/tailwind.png"
+										alt="Source logo"
+									/>
+								</td>
+								<th><a href="https://tailwindcss.com/">TailwindCSS</a></th>
+								<th>CSS framework </th>
+							</tr>
+							<tr>
+								<td>
+									<img
+										class="w-6 h-6 object-contain"
+										src="/images/about/daisy.ico"
+										alt="Source logo"
+									/>
+								</td>
+								<th><a href="https://daisyui.com/">DaisyUI</a></th>
+								<th>Component library </th>
+							</tr>
+							<tr>
+								<td>
+									<img
+										class="w-6 h-6 object-contain"
+										src="/images/about/swiper.png"
+										alt="Source logo"
+									/>
+								</td>
+								<th><a href="https://swiperjs.com/">SwiperJS</a></th>
+								<th>Carousel component </th>
+							</tr>
+							<tr>
+								<td>
+									<img
+										class="w-6 h-6 object-contain"
+										src="/images/about/lucide.png"
+										alt="Source logo"
+									/>
+								</td>
+								<th><a href="https://lucide.dev/icon/activity">Lucide</a></th>
+								<th>Icons library </th>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</label>
+		</label>
 	</div>
 </div>
