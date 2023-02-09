@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { register } from 'swiper/element/bundle';
+	import projects from '../Data/projects.json?raw';
 
 	interface Project {
 		link: string;
@@ -8,48 +9,7 @@
 		image: string;
 		description: string;
 	}
-
-	const Projects: Project[] = [
-		{
-			title: 'Melodify',
-			description:
-				'Spotify interface with user stats, music videos, pane views, suggestions, and more',
-			link: 'https://github.com/novatorem/Melodify',
-			image: '/images/projects/melodify.png'
-		},
-		{
-			title: 'Cover Hack',
-			description: 'Create custom cover letters where users can input reactive fields',
-			link: 'https://cover-hack.novac.dev/',
-			image: '/images/projects/coverhack.png'
-		},
-		{
-			title: 'StreamWeaver',
-			description:
-				'A cross-platform application for virtual events and performances, transmitting data globally',
-			link: 'https://www.liminalet.com/streamweaver-lite',
-			image: '/images/projects/streamweaver.png'
-		},
-		{
-			title: 'Plan',
-			description: 'Turn an idea into an actual website or app, in a course-like format',
-			link: 'https://plan.novac.dev',
-			image: '/images/projects/plan.png'
-		},
-		{
-			title: 'Robotics',
-			description: 'Collision detection, integrated motion planning, dynamic tracking, and pathing',
-			link: 'https://github.com/novatorem/Robotics',
-			image: '/images/projects/robotics.png'
-		},
-		{
-			title: 'Emergency Response Aid',
-			description:
-				'Team application designed as an intermediatory to help users seek medical attention',
-			link: 'https://github.com/novatorem/ERA-Emergency-Response-Aid',
-			image: '/images/projects/era.png'
-		}
-	];
+	let Projects: Project[] = JSON.parse(projects);
 
 	// Preferably, we'd want to pass this directly as parameters
 	// But passing as parameters results in a number of run-time errors

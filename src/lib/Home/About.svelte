@@ -49,7 +49,7 @@
 								<td>
 									<img
 										class="w-6 h-6 object-contain"
-										src="/images/about/svelte.png"
+										src="/images/about/svelte.webp"
 										alt="Source logo"
 									/>
 								</td>
@@ -60,7 +60,7 @@
 								<td>
 									<img
 										class="w-6 h-6 object-contain"
-										src="/images/about/tailwind.png"
+										src="/images/about/tailwind.webp"
 										alt="Source logo"
 									/>
 								</td>
@@ -82,7 +82,7 @@
 								<td>
 									<img
 										class="w-6 h-6 object-contain"
-										src="/images/about/swiper.png"
+										src="/images/about/swiper.webp"
 										alt="Source logo"
 									/>
 								</td>
@@ -93,7 +93,7 @@
 								<td>
 									<img
 										class="w-6 h-6 object-contain"
-										src="/images/about/lucide.png"
+										src="/images/about/lucide.webp"
 										alt="Source logo"
 									/>
 								</td>

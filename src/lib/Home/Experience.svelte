@@ -49,7 +49,7 @@
 
 					<div class="stat">
 						<div class="stat-title text-left">Toronto, ON</div>
-						<div class="stat-desc text-left">September 2020 - Current</div>
+						<div class="stat-desc text-left">Sep 2020 - Current</div>
 					</div>
 				</div>
 			</li>
@@ -170,17 +170,17 @@
 	}
 
 	.step-icon-uoft:after {
-		background-image: url('/images/experience/uoft.png');
+		background-image: url('/images/experience/uoft.webp');
 		background-size: 75%;
 	}
 
 	.step-icon-ib:after {
-		background-image: url('/images/experience/ib.png');
+		background-image: url('/images/experience/ib.webp');
 		background-size: 60%;
 	}
 
 	.step-icon-bibf:after {
-		background-image: url('/images/experience/bibf.png');
+		background-image: url('/images/experience/bibf.webp');
 		background-size: 75%;
 	}
 </style>

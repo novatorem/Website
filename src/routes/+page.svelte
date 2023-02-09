@@ -1,11 +1,13 @@
 <script lang="ts">
+	import { MetaTags } from 'svelte-meta-tags';
+
 	import Theme from '$lib/Theme.svelte';
-	import Footer from '$lib/Footer.svelte';
 	import Hero from '$lib/Home/Hero.svelte';
 	import Projects from '$lib/Home/Projects.svelte';
 	import Experience from '$lib/Home/Experience.svelte';
 	import Activity from '$lib/Home/Activity.svelte';
 	import About from '$lib/Home/About.svelte';
+	import Footer from '$lib/Footer.svelte';
 
 	function smoothlyScrollUp() {
 		window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -39,6 +41,34 @@
 <div class="divider" />
 <About />
 <Footer />
+
+<MetaTags
+	title="Andrew Novac"
+	titleTemplate="%s | The Homepage"
+	description="The homepage of Andrew Novac, software developer in Toronto, ON"
+	canonical="https://novac.dev"
+	openGraph={{
+		url: 'https://novac.dev',
+		title: 'Andrew Novac',
+		description: 'The homepage of Andrew Novac, software developer in Toronto, ON',
+		images: [
+			{
+				url: '/images/openGraph/image-01.webp',
+				width: 800,
+				height: 600,
+				alt: 'Website preview'
+			},
+			{
+				url: '/images/openGraph/image-02.webp',
+				width: 900,
+				height: 800,
+				alt: 'Website preview'
+			},
+			{ url: '/images/openGraph/image-03.webp' }
+		],
+		site_name: 'novac'
+	}}
+/>
 
 <style>
 	.logo:hover {

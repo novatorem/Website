@@ -21,7 +21,7 @@
 		class="hero-content flex-col max-w-[100vw] w-full justify-start lg:flex-row lg:max-w-screen-xl"
 	>
 		<img
-			src="/images/headshot.png"
+			src="/images/headshot.webp"
 			class="max-w-sm rounded-lg lg:mr-6"
 			alt="Drawing of Andrew Novac's headshot"
 		/>
