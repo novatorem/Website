@@ -1,63 +1,38 @@
-# Website
-Personal website with multiple subpages for projects 
+# create-svelte
 
-Main page: [novac.dev](https://novac.dev)
+Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
 
-Consists of:
-* [AD&Conquer](https://novac.dev/x/ADC)
-* [Terminal](https://novac.dev/x/intro)
-* [Mandala](https://novac.dev/x/mandala)
-* [Journey](https://novac.dev/x/journey)
-* [Outlook](https://novac.dev/x/outlook)
-* [404](https://novac.dev/404)
-* [Home](https://novac.dev/x/home) 
-    * [Home #1](https://novac.dev/x/home1)
-    * [Home #2](https://novac.dev/x/home2)
-    * [Home #3](https://novac.dev/x/home3)
-    * [Home #4](https://novac.dev/x/home4)
+## Creating a project
 
-## Technology
+If you're seeing this, you've probably already done this step. Congrats!
 
-### [GatsbyJS](https://www.gatsbyjs.org/)
+```bash
+# create a new project in the current directory
+npm create svelte@latest
 
-Gatsby is a free and open source framework based on React that helps developers build blazing fast websites and apps.
-
-### [Tailwind CSS](https://tailwindcss.com/)
-
-A utility-first CSS framework for rapidly building custom designs. Tailwind CSS is a highly customizable, low-level CSS framework that gives you all of the building blocks you need to build bespoke designs
-
-## Building from Source
-
-Since the project has been set up with Gatsby, the build process has become easier than ever.
-**Just follow the steps to get started:**
-
-1. Make sure you have Node/NPM installed on your computer, then run the following commands:
-
-```console
-npm install -g gatsby-cli
+# create a new project in my-app
+npm create svelte@latest my-app
 ```
 
-2. Clone the repository and go into the working directory
+## Developing
 
-```console
-git clone https://github.com/Novatorem/Website.git
-cd Website
+Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+
+```bash
+npm run dev
+
+# or start the server and open the app in a new browser tab
+npm run dev -- --open
 ```
 
-3. Then, just run this command to install the necessary dependencies.
+## Building
 
-```console
-npm install
+To create a production version of your app:
+
+```bash
+npm run build
 ```
 
-4. Locally work on the website via `gatsby-cli`.
+You can preview the production build with `npm run preview`.
 
-```console
-gatsby develop
-```
-
-## Netlify
-
-[![Netlify Status](https://api.netlify.com/api/v1/badges/fe6b65bf-64de-498f-9ae1-72e127ad003c/deploy-status)](https://app.netlify.com/sites/novatorem/deploys)
-
-**Build command**: `gatsby build`
+> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
