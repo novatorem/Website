@@ -1,0 +1,8 @@
+[build]
+  command = "gatsby build"
+  publish = "public"
+
+[[redirects]]
+  from = "/.well-known/webfinger"
+  to = "https://universeodon.com/.well-known/webfinger?resource=acct:Novatorem@universeodon.com"
+  status = 200
