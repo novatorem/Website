@@ -1,18 +1,9 @@
-# create-svelte
+# novac.dev
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
-
-## Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+Master deployment:  
+[![Netlify Status](https://api.netlify.com/api/v1/badges/fe6b65bf-64de-498f-9ae1-72e127ad003c/deploy-status)](https://app.netlify.com/sites/novatorem/deploys)  
+Main deployment:  
+[![Netlify Status](https://api.netlify.com/api/v1/badges/fe6b65bf-64de-498f-9ae1-72e127ad003c/deploy-status?branch=main)](https://app.netlify.com/sites/novatorem/deploys)
 
 ## Developing
 
@@ -34,5 +25,3 @@ npm run build
 ```
 
 You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
