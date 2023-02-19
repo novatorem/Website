@@ -1,9 +1,7 @@
 # novac.dev
 
-Master deployment:  
+Deployment:  
 [![Netlify Status](https://api.netlify.com/api/v1/badges/fe6b65bf-64de-498f-9ae1-72e127ad003c/deploy-status)](https://app.netlify.com/sites/novatorem/deploys)  
-Main deployment:  
-[![Netlify Status](https://api.netlify.com/api/v1/badges/fe6b65bf-64de-498f-9ae1-72e127ad003c/deploy-status?branch=main)](https://app.netlify.com/sites/novatorem/deploys)
 
 ## Developing
 
