@@ -21,9 +21,12 @@
 		<h1 class="text-3xl ml-2">About</h1>
 	</a>
 
-	<div class="flex flex-wrap items-center justify-around m-6 w-full">
-		<div class="max-w-xl">
-			<p class="py-6">This is it.</p>
-		</div>
+	<div class="flex flex-wrap items-center justify-around w-full text-left">
+		<p class="py-6">
+			Thank you for visiting my portfolio page! I appreciate your interest in my work and
+			achievements. If you'd like to learn more about me and what I do, be sure to check out my
+			other pages. Connect with me on my social media profiles for updates on my latest projects and
+			musings.
+		</p>
 	</div>
 </div>

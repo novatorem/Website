@@ -3,12 +3,11 @@
 
 	onMount(async () => {
 		var i = 0;
-		var content = '\tdeveloper, reader, curator, techie';
-		document.getElementById('typewriter')!.innerHTML = '';
+		var codeBlurb = '\tdeveloper, reader, curator, techie';
 
 		function typeWriter() {
-			if (i < content.length) {
-				document.getElementById('typewriter')!.innerHTML += content.charAt(i);
+			if (i < codeBlurb.length) {
+				document.getElementById('typewriter')!.innerHTML += codeBlurb.charAt(i);
 				i++;
 				setTimeout(typeWriter, 50);
 			}
@@ -38,9 +37,7 @@
 						>{' ='}</code
 					></pre>
 				<pre data-prefix="1"><code>{'{'}</code></pre>
-				<pre data-prefix="2"><code id="typewriter" class="text-success"
-						>{'    Developer, Reader, Curator, Techie'}</code
-					></pre>
+				<pre data-prefix="2"><code id="typewriter" class="text-success" /></pre>
 				<pre data-prefix="3"><code>{'}'}</code></pre>
 			</div>
 		</div>

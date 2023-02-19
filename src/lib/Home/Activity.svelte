@@ -14,9 +14,14 @@
 
 		<h1 class="text-3xl ml-2">Activity</h1>
 	</a>
-	<div class="flex flex-wrap items-center justify-around m-6 w-full">
+	<div class="flex flex-wrap items-center justify-around mx-6 w-full">
 		<div class="mockup-window bg-base-300 lg:max-w-screen-xl w-full">
-			<div class="flex justify-center px-4 py-16 border-t border-base-300">
+			<p class="p-4">
+				Music plays a significant role in my life and brings me joy. If you'd like to get a glimpse
+				into my musical preferences, here's a Spotify widget showcasing my recent listening habits.
+			</p>
+
+			<div class="flex justify-center p-4 border-t border-base-300">
 				<iframe
 					title="Spotify embed"
 					src="https://open.spotify.com/embed/playlist/37i9dQZF1EporX1WaV5moq"

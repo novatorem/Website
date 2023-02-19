@@ -1,9 +1,6 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
-
-	onMount(async () => {
-		autoSlider();
-	});
+	import { register } from 'swiper/element/bundle';
+	register();
 
 	interface Project {
 		link: string;
@@ -53,19 +50,6 @@
 			image: '/images/projects/era.png'
 		}
 	];
-
-	function autoSlider() {
-		let slide = 0;
-		const carouselBox = document.getElementById('carouselBox');
-		setInterval(() => {
-			if (slide >= carouselBox!.scrollWidth) {
-				slide = 0;
-			} else {
-				slide += carouselBox!.scrollWidth / Projects.length;
-			}
-			carouselBox!.scrollLeft = slide;
-		}, 3000);
-	}
 </script>
 
 <div class="flex flex-wrap items-center justify-between m-6 max-w-screen-xl lg:mx-auto">
@@ -88,17 +72,29 @@
 		<h1 class="text-4xl ml-2">Projects</h1>
 	</a>
 
-	<div class="flex flex-wrap items-center justify-center m-2 overflow-x-hidden">
-		<div
-			class="carousel carousel-center max-w-md p-4 space-x-4 rounded-box min-h-[500px] lg:max-w-screen-xl"
-			id="carouselBox"
+	<div
+		class="flex flex-wrap items-center justify-center m-2 overflow-x-hidden w-full lg:max-w-screen-xl"
+	>
+		<swiper-container
+			rewind="true"
+			space-between={20}
+			slides-per-view={3}
+			autoplay={{
+				delay: 3000
+			}}
+			pagination={{
+				dynamicBullets: true
+			}}
 		>
 			{#each Projects as project, i}
-				<div id="slide{i}" class="carousel-item project card card-compact w-96 bg-base-100 m-6">
+				<swiper-slide
+					id="slide{i}"
+					class="project card card-compact w-96 bg-base-100 min-h-[450px]"
+				>
 					<figure>
 						<a href={project.link} class="max-h-[200px] min-h-[200px] min-w-full object-cover">
 							<img
-								class="max-h-[200px] min-h-[200px] min-w-full object-cover"
+								class="max-h-[200px] min-h-[200px] min-w-full object-cover rounded-box"
 								src={project.image}
 								alt="Project screenshot"
 							/>
@@ -114,14 +110,8 @@
 							<a class="btn" href={project.link}>View</a>
 						</div>
 					</div>
-				</div>
+				</swiper-slide>
 			{/each}
-		</div>
-
-		<div class="flex justify-center w-full gap-2">
-			{#each Projects as _, i}
-				<a href="#slide{i}" class="btn btn-xs">{i + 1}</a>
-			{/each}
-		</div>
+		</swiper-container>
 	</div>
 </div>
