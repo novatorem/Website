@@ -4,7 +4,7 @@
 	import Hero from '$lib/Home/Hero.svelte';
 	import Projects from '$lib/Home/Projects.svelte';
 	import Experience from '$lib/Home/Experience.svelte';
-	import Fun from '$lib/Home/Fun.svelte';
+	import Activity from '$lib/Home/Activity.svelte';
 	import About from '$lib/Home/About.svelte';
 </script>
 
@@ -19,7 +19,7 @@
 <div class="divider" />
 <Experience />
 <div class="divider" />
-<Fun />
+<Activity />
 <div class="divider" />
 <About />
 <Footer />
