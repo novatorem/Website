@@ -1,0 +1,23 @@
+[
+	{
+		"institution": "University of Toronto",
+		"role": "CS & Maths",
+		"location": "Toronto, ON",
+		"duration": "2014 - 2019",
+		"short": "uoft"
+	},
+	{
+		"institution": "Modern Knowledge School",
+		"role": "International Baccalaureate",
+		"location": "Manama, BH",
+		"duration": "2012 - 2014",
+		"short": "ib"
+	},
+	{
+		"institution": "BI Banking & Finance",
+		"role": "Crown Prince Scholarship",
+		"location": "Manama, BH",
+		"duration": "2012 - 2014",
+		"short": "bibf"
+	}
+]

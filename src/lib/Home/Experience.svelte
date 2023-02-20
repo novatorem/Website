@@ -1,3 +1,19 @@
+<script lang="ts">
+	import work from '../Data/work.json?raw';
+	import education from '../Data/education.json?raw';
+
+	interface experience {
+		institution: string;
+		role: string;
+		location: string;
+		duration: string;
+		short: string;
+	}
+
+	let Work: experience[] = JSON.parse(work);
+	let Education: experience[] = JSON.parse(education);
+</script>
+
 <div class="flex flex-wrap items-center justify-between m-6 max-w-screen-xl lg:mx-auto">
 	<a class="inline-flex items-center justify-left w-full my-12" href="#experience" id="experience">
 		<svg
@@ -15,7 +31,7 @@
 
 		<h1 class="text-4xl ml-2">Experience</h1>
 	</a>
-	<div class="work">
+	<div class="work max-w-full">
 		<a class="inline-flex items-center justify-left text-left w-full" href="#work" id="work">
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
@@ -39,50 +55,31 @@
 
 			<h1 class="text-2xl ml-2">Work</h1>
 		</a>
-		<ul class="steps steps-vertical overflow-hidden">
-			<li data-content="" class="step h-[250px] step-icon-savvyy">
-				<div class="stats stats-vertical overflow-hidden bg-base-200 min-w-[310px] max-w-[310px]">
-					<div class="stat">
-						<div class="stat-value text-xl text-left">Savvyy AI</div>
-						<div class="stat-desc text-left">Backend Software Developer</div>
-					</div>
+		<div class="overflow-x-auto">
+			<ul class="steps md:steps-vertical md:min-w-[400px]">
+				{#each Work as work}
+					<li
+						data-content=""
+						class="step h-[250px] step-icon-{work.short} !min-w-[320px] max-w-[320px] m-1"
+					>
+						<div class="stats stats-vertical bg-base-200 min-w-[310px] max-w-[310px]">
+							<div class="stat">
+								<div class="stat-value text-xl text-left">{work.institution}</div>
+								<div class="stat-desc text-left">{work.role}</div>
+							</div>
 
-					<div class="stat">
-						<div class="stat-title text-left">Toronto, ON</div>
-						<div class="stat-desc text-left">Sep 2020 - Current</div>
-					</div>
-				</div>
-			</li>
-			<li data-content="" class="step h-[250px] step-icon-cast">
-				<div class="stats stats-vertical overflow-hidden bg-base-200 min-w-[310px] max-w-[310px]">
-					<div class="stat">
-						<div class="stat-value text-xl text-left">Cast Soft</div>
-						<div class="stat-desc text-left">Software Developer</div>
-					</div>
-
-					<div class="stat">
-						<div class="stat-title text-left">Toronto, ON</div>
-						<div class="stat-desc text-left">Jan 2020 - Aug 2020</div>
-					</div>
-				</div>
-			</li>
-			<li data-content="" class="step h-[250px] step-icon-cast">
-				<div class="stats stats-vertical overflow-hidden bg-base-200 min-w-[310px] max-w-[310px]">
-					<div class="stat">
-						<div class="stat-value text-xl text-left">Cast Soft</div>
-						<div class="stat-desc text-left">Research Developer Intern</div>
-					</div>
-
-					<div class="stat">
-						<div class="stat-title text-left">Toronto, ON</div>
-						<div class="stat-desc text-left">May 2018 - Aug 2019</div>
-					</div>
-				</div>
-			</li>
-		</ul>
+							<div class="stat">
+								<div class="stat-title text-left">{work.location}</div>
+								<div class="stat-desc text-left">{work.duration}</div>
+							</div>
+						</div>
+					</li>
+				{/each}
+			</ul>
+		</div>
 	</div>
 
-	<div class="education">
+	<div class="education max-w-full">
 		<a
 			class="inline-flex items-center justify-left text-left w-full"
 			href="#education"
@@ -103,49 +100,28 @@
 
 			<h1 class="text-2xl ml-2">Education</h1>
 		</a>
-		<ul class="steps steps-vertical overflow-hidden">
-			<li data-content="" class="step h-[250px] step-icon-uoft">
-				<div class="stats stats-vertical overflow-hidden bg-base-200 min-w-[310px] max-w-[310px]">
-					<div class="stat">
-						<div class="stat-value text-xl text-left">University of Toronto</div>
-						<div class="stat-title text-left">CS & Maths</div>
-					</div>
+		<div class="overflow-x-auto">
+			<ul class="steps md:steps-vertical md:min-w-[400px]">
+				{#each Education as education}
+					<li
+						data-content=""
+						class="step h-[250px] step-icon-{education.short} !min-w-[320px] max-w-[320px] m-1"
+					>
+						<div class="stats stats-vertical bg-base-200 min-w-[310px] max-w-[310px]">
+							<div class="stat">
+								<div class="stat-value text-xl text-left">{education.institution}</div>
+								<div class="stat-title text-left">{education.role}</div>
+							</div>
 
-					<div class="stat">
-						<div class="stat-title text-left">Toronto, ON</div>
-						<div class="stat-desc text-left">2014 - 2019</div>
-					</div>
-				</div>
-			</li>
-			<li data-content="" class="step h-[250px] step-icon-ib">
-				<div class="stats stats-vertical overflow-hidden bg-base-200 min-w-[310px] max-w-[310px]">
-					<div class="stat">
-						<div class="stat-value text-xl text-left">Modern Knowledge School</div>
-						<div class="stat-title text-left">International Baccalaureate</div>
-					</div>
-
-					<div class="stat">
-						<div class="stat-title text-left">Manama, BH</div>
-						<div class="stat-desc text-left">2012 - 2014</div>
-					</div>
-				</div>
-			</li>
-			<li data-content="" class="step h-[250px] step-icon-bibf">
-				<div
-					class="stats stats-vertical overflow-hidden bg-base-200 min-w-[310px] max-w-[310px] min-w-[310px] max-w-[310px]"
-				>
-					<div class="stat">
-						<div class="stat-value text-xl text-left">BI Banking & Finance</div>
-						<div class="stat-title text-left">Crown Prince Scholarship</div>
-					</div>
-
-					<div class="stat">
-						<div class="stat-title text-left">Manama, BH</div>
-						<div class="stat-desc text-left">2012 - 2014</div>
-					</div>
-				</div>
-			</li>
-		</ul>
+							<div class="stat">
+								<div class="stat-title text-left">{education.location}</div>
+								<div class="stat-desc text-left">{education.duration}</div>
+							</div>
+						</div>
+					</li>
+				{/each}
+			</ul>
+		</div>
 	</div>
 </div>
 
