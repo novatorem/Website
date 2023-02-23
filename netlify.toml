@@ -2,7 +2,7 @@
   command = "npm run build"
   publish = "build"
 
-[[redirects]]
-  from = "/.well-known/webfinger"
-  to = "https://universeodon.com/.well-known/webfinger?resource=acct:Novatorem@universeodon.com"
-  status = 200
+# [[redirects]]
+#   from = "/.well-known/webfinger"
+#   to = "https://universeodon.com/.well-known/webfinger?resource=acct:Novatorem@universeodon.com"
+#   status = 200
