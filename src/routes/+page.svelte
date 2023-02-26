@@ -6,6 +6,10 @@
 	import Experience from '$lib/Home/Experience.svelte';
 	import Activity from '$lib/Home/Activity.svelte';
 	import About from '$lib/Home/About.svelte';
+
+	function smoothlyScrollUp() {
+		window.scrollTo({ top: 0, behavior: 'smooth' });
+	}
 </script>
 
 <svelte:head>
@@ -13,15 +17,15 @@
 </svelte:head>
 
 <div class="h-0 m-0">
-	<a href="#">
+	<button on:click={smoothlyScrollUp}>
 		<img
 			width="42"
 			height="42"
 			src="favicon.png"
 			alt="Website logo"
-			class="logo z-10 cursor-pointer h-6 w-6 fixed top-5 left-6 grayscale"
+			class="logo z-10 cursor-pointer h-8 w-8 fixed top-5 left-6 grayscale"
 		/>
-	</a>
+	</button>
 </div>
 
 <Theme />
