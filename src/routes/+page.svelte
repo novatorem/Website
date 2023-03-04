@@ -45,12 +45,12 @@
 <MetaTags
 	title="Andrew Novac"
 	titleTemplate="%s | The Homepage"
-	description="The homepage of Andrew Novac, software developer in Toronto, ON"
+	description="The homepage of Andrew Novac - software developer in Toronto"
 	canonical="https://novac.dev"
 	openGraph={{
 		url: 'https://novac.dev',
 		title: 'Andrew Novac',
-		description: 'The homepage of Andrew Novac, software developer in Toronto, ON',
+		description: 'The homepage of Andrew Novac - software developer in Toronto',
 		images: [
 			{
 				url: '/images/openGraph/image-01.webp',
