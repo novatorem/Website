@@ -1,0 +1,44 @@
+[
+	{
+		"title": "Melodify",
+		"description": "Spotify interface with user stats, music videos, pane views, suggestions, and more",
+		"link": "https://github.com/novatorem/Melodify",
+		"image": "/images/projects/melodify.webp"
+	},
+	{
+		"title": "Cover Hack",
+		"description": "Create custom cover letters where users can input reactive fields",
+		"link": "https://cover-hack.novac.dev/",
+		"image": "/images/projects/coverhack.webp"
+	},
+	{
+		"title": "StreamWeaver",
+		"description": "A cross-platform application for virtual events and performances, transmitting data globally",
+		"link": "https://www.liminalet.com/streamweaver-lite",
+		"image": "/images/projects/streamweaver.webp"
+	},
+	{
+		"title": "Plan",
+		"description": "Turn an idea into an actual website or app, in a course-like format",
+		"link": "https://plan.novac.dev",
+		"image": "/images/projects/plan.webp"
+	},
+	{
+		"title": "AKA",
+		"description": "Link shortener using serverless programming with custom short codes",
+		"link": "https://aka.novae.one",
+		"image": "/images/projects/aka.webp"
+	},
+	{
+		"title": "Robotics",
+		"description": "Collision detection, integrated motion planning, dynamic tracking, and pathing",
+		"link": "https://github.com/novatorem/Robotics",
+		"image": "/images/projects/robotics.webp"
+	},
+	{
+		"title": "Emergency Response Aid",
+		"description": "Team application designed as an intermediatory to help users seek medical attention",
+		"link": "https://github.com/novatorem/ERA-Emergency-Response-Aid",
+		"image": "/images/projects/era.webp"
+	}
+]
