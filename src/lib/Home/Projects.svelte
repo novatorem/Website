@@ -113,7 +113,7 @@
 		>
 		<input type="checkbox" id="projectsModal" class="modal-toggle" />
 		<label for="projectsModal" class="modal modal-bottom cursor-pointer sm:modal-middle">
-			<label class="modal-box" for=""><GithubProjects /></label>
+			<label class="modal-box max-h-[50%] lg:max-h-[75%]" for=""><GithubProjects /></label>
 		</label>
 	</div>
 </div>

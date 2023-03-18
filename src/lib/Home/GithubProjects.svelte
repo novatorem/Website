@@ -18,6 +18,7 @@
 	});
 </script>
 
+<label for="projectsModal" class="btn btn-sm btn-circle sticky right-2 top-2 z-10">✕</label>
 <div class="flex flex-wrap items-center justify-center m-6 max-w-screen-xl mx-auto gap-6">
 	{#each repos as repo}
 		<a href={repo.html_url} class="card w-96 bg-base-200 shadow-xl">
