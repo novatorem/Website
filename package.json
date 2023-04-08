@@ -17,6 +17,7 @@
 		"@tsconfig/svelte": "^3.0.0",
 		"@typescript-eslint/eslint-plugin": "^5.52.0",
 		"@typescript-eslint/parser": "^5.52.0",
+		"@vercel/analytics": "^0.1.11",
 		"autoprefixer": "^10.4.13",
 		"daisyui": "^2.50.2",
 		"eslint": "^8.34.0",
