@@ -105,9 +105,9 @@
 				{#each Education as education}
 					<li
 						data-content=""
-						class="step h-[250px] step-icon-{education.short} !min-w-[320px] max-w-[320px] m-1"
+						class="step h-[250px] step-icon-{education.short} !min-w-[330px] max-w-[330px] m-1"
 					>
-						<div class="stats stats-vertical bg-base-200 min-w-[310px] max-w-[310px]">
+						<div class="stats stats-vertical bg-base-200 min-w-[320px] max-w-[320px]">
 							<div class="stat">
 								<div class="stat-value text-xl text-left">{education.institution}</div>
 								<div class="stat-title text-left">{education.role}</div>
