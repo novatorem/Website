@@ -39,7 +39,7 @@
 				</div>
 			</label>
 		</label>
-		<a href="https://github.com/novatorem"
+		<a href="https://github.com/novatorem/Website"
 			><svg
 				xmlns="http://www.w3.org/2000/svg"
 				width="24"

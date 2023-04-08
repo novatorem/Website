@@ -6,27 +6,27 @@
 	function handleSwitchDarkMode() {
 		darkMode = !darkMode;
 
-		localStorage.setItem('theme', darkMode ? 'dark' : 'light');
+		localStorage.setItem('theme', darkMode ? 'night' : 'light');
 
 		if (darkMode) {
-			document.documentElement.classList.add('dark');
-			document.documentElement.setAttribute('data-theme', 'dark');
+			document.documentElement.classList.add('night');
+			document.documentElement.setAttribute('data-theme', 'night');
 		} else {
-			document.documentElement.classList.remove('dark');
+			document.documentElement.classList.remove('night');
 			document.documentElement.setAttribute('data-theme', 'light');
 		}
 	}
 
 	if (browser) {
 		if (
-			localStorage.theme === 'dark' ||
+			localStorage.theme === 'night' ||
 			(!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
 		) {
-			document.documentElement.classList.add('dark');
-			document.documentElement.setAttribute('data-theme', 'dark');
+			document.documentElement.classList.add('night');
+			document.documentElement.setAttribute('data-theme', 'night');
 			darkMode = true;
 		} else {
-			document.documentElement.classList.remove('dark');
+			document.documentElement.classList.remove('night');
 			document.documentElement.setAttribute('data-theme', 'light');
 			darkMode = false;
 		}
