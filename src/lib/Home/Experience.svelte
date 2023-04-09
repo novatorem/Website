@@ -34,7 +34,7 @@
 
 	<div class="flex flex-wrap w-full justify-evenly">
 		<div class="work max-w-full">
-			<div class="tooltip" data-tip="Latest three positions">
+			<div class="tooltip tooltip-right" data-tip="Latest three positions">
 				<a class="inline-flex items-center justify-left text-left w-full" href="#work" id="work">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"

@@ -43,7 +43,7 @@
 					<tr>
 						<td>
 							<img
-								class="w-6 h-6 object-contain"
+								class="w-6 h-6 min-w-[1rem] object-contain"
 								src="/images/about/svelte.webp"
 								alt="Source logo"
 							/>
@@ -54,7 +54,7 @@
 					<tr>
 						<td>
 							<img
-								class="w-6 h-6 object-contain"
+								class="w-6 h-6 min-w-[1rem] object-contain"
 								src="/images/about/tailwind.webp"
 								alt="Source logo"
 							/>
@@ -64,7 +64,11 @@
 					</tr>
 					<tr>
 						<td>
-							<img class="w-6 h-6 object-contain" src="/images/about/daisy.ico" alt="Source logo" />
+							<img
+								class="w-6 h-6 min-w-[1rem] object-contain"
+								src="/images/about/daisy.ico"
+								alt="Source logo"
+							/>
 						</td>
 						<th><a href="https://daisyui.com/">DaisyUI</a></th>
 						<th>Component library </th>
@@ -72,7 +76,7 @@
 					<tr>
 						<td>
 							<img
-								class="w-6 h-6 object-contain"
+								class="w-6 h-6 min-w-[1rem] object-contain"
 								src="/images/about/swiper.webp"
 								alt="Source logo"
 							/>
@@ -83,7 +87,7 @@
 					<tr>
 						<td>
 							<img
-								class="w-6 h-6 object-contain"
+								class="w-6 h-6 min-w-[1rem] object-contain"
 								src="/images/about/lucide.webp"
 								alt="Source logo"
 							/>
