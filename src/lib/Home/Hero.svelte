@@ -22,7 +22,7 @@
 	>
 		<img
 			src="/images/headshot.webp"
-			class="max-w-sm rounded-lg lg:mr-6"
+			class="rounded-lg lg:max-w-sm lg:mr-6"
 			alt="Drawing of Andrew Novac's headshot"
 		/>
 		<div>
