@@ -3,42 +3,49 @@
 		"title": "Melodify",
 		"description": "Spotify interface with user stats, music videos, pane views, suggestions, and more",
 		"link": "https://github.com/novatorem/Melodify",
-		"image": "/images/projects/melodify.webp"
+		"image": "/images/projects/melodify.webp",
+		"diffusion": "/images/projects/melodify_ai.webp"
 	},
 	{
 		"title": "Cover Hack",
 		"description": "Create custom cover letters where users can input reactive fields",
 		"link": "https://cover-hack.novac.dev/",
-		"image": "/images/projects/coverhack.webp"
+		"image": "/images/projects/coverhack.webp",
+		"diffusion": "/images/projects/coverhack_ai.webp"
 	},
 	{
 		"title": "StreamWeaver",
 		"description": "A cross-platform application for virtual events and performances, transmitting data globally",
 		"link": "https://www.liminalet.com/streamweaver-lite",
-		"image": "/images/projects/streamweaver.webp"
+		"image": "/images/projects/streamweaver.webp",
+		"diffusion": "/images/projects/streamweaver_ai.webp"
 	},
 	{
 		"title": "Plan",
 		"description": "Turn an idea into an actual website or app, in a course-like format",
 		"link": "https://plan.novac.dev",
-		"image": "/images/projects/plan.webp"
+		"image": "/images/projects/plan.webp",
+		"diffusion": "/images/projects/plan_ai.webp"
 	},
 	{
 		"title": "AKA",
 		"description": "Link shortener using serverless programming with custom short codes",
 		"link": "https://aka.novae.one",
-		"image": "/images/projects/aka.webp"
+		"image": "/images/projects/aka.webp",
+		"diffusion": "/images/projects/aka_ai.webp"
 	},
 	{
 		"title": "Robotics",
 		"description": "Collision detection, integrated motion planning, dynamic tracking, and pathing",
 		"link": "https://github.com/novatorem/Robotics",
-		"image": "/images/projects/robotics.webp"
+		"image": "/images/projects/robotics.webp",
+		"diffusion": "/images/projects/robotics_ai.webp"
 	},
 	{
 		"title": "Emergency Response Aid",
 		"description": "Team application designed as an intermediatory to help users seek medical attention",
 		"link": "https://github.com/novatorem/ERA-Emergency-Response-Aid",
-		"image": "/images/projects/era.webp"
+		"image": "/images/projects/era.webp",
+		"diffusion": "/images/projects/era_ai.webp"
 	}
 ]

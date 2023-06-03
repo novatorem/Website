@@ -8,9 +8,22 @@
 		link: string;
 		title: string;
 		image: string;
+		diffusion: string;
 		description: string;
 	}
 	let Projects: Project[] = JSON.parse(projects);
+
+	async function diffuse(project: Project) {
+		var element: HTMLImageElement;
+		element = document.getElementById(project.title)! as HTMLImageElement;
+		element.src = project.diffusion;
+	}
+
+	async function reveal(project: Project) {
+		var element: HTMLImageElement;
+		element = document.getElementById(project.title)! as HTMLImageElement;
+		element.src = project.image;
+	}
 
 	// Preferably, we'd want to pass this directly as parameters
 	// But passing as parameters results in a number of run-time errors
@@ -70,11 +83,17 @@
 					id="slide{i}"
 					class="project card card-compact w-96 bg-base-100 min-h-[450px]"
 				>
-					<figure>
+					<figure
+						on:mouseover={() => reveal(project)}
+						on:mouseout={() => diffuse(project)}
+						on:focus={() => reveal(project)}
+						on:blur={() => diffuse(project)}
+					>
 						<a href={project.link} class="max-h-[200px] min-h-[200px] min-w-full object-cover">
 							<img
+								id={project.title}
 								class="max-h-[200px] min-h-[200px] min-w-full object-cover rounded-box"
-								src={project.image}
+								src={project.diffusion}
 								alt="Project screenshot"
 							/>
 						</a>
