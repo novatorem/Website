@@ -95,6 +95,17 @@
 						<th><a href="https://lucide.dev/icon/activity">Lucide</a></th>
 						<th>Icons library </th>
 					</tr>
+					<tr>
+						<td>
+							<img
+								class="w-6 h-6 min-w-[1rem] object-contain"
+								src="/images/about/stability_ai.webp"
+								alt="Source logo"
+							/>
+						</td>
+						<th><a href="https://github.com/Stability-AI/stablediffusion">Stable Diffusion</a></th>
+						<th>AI Image Generation </th>
+					</tr>
 				</tbody>
 			</table>
 		</div>
