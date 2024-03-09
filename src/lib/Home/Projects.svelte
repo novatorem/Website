@@ -74,9 +74,7 @@
 		<h1 class="text-4xl ml-2">Projects</h1>
 	</a>
 
-	<div
-		class="flex flex-wrap items-center justify-center m-2 overflow-x-hidden w-full lg:max-w-screen-xl"
-	>
+	<div class="items-center justify-center m-2 overflow-x-hidden w-full lg:max-w-screen-xl">
 		<swiper-container init="false">
 			{#each Projects as project, i}
 				<swiper-slide

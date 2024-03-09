@@ -66,7 +66,7 @@
 			},
 			{ url: '/images/openGraph/image-03.webp' }
 		],
-		site_name: 'novac'
+		siteName: 'novac'
 	}}
 />
 

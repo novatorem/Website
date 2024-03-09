@@ -17,8 +17,12 @@
 	<div class="flex flex-wrap items-center justify-around mx-6 w-full">
 		<div class="mockup-window bg-base-300 lg:max-w-screen-xl w-full">
 			<p class="p-4">
-				Music plays a significant role in my life and brings me joy. If you'd like to get a glimpse
-				into my musical preferences, here's a Spotify widget showcasing my recent listening habits.
+				In a realm bathed in the glow of countless screens, a portal awaits, beckoning you to delve
+				into the echoes of my recent sonic journeys. Here, amidst the ever-churning digital
+				landscape, lies a collection of melodies that have resonated with my inner self. Like the
+				distant strains of a forgotten lullaby, or the rhythmic pulse of a bustling marketplace,
+				these songs hold the power to move you. So, step forward, intrepid explorer, and let these
+				echoes guide you through the tapestry of musical melodies.
 			</p>
 
 			<div class="flex justify-center p-4 border-t border-base-300">
