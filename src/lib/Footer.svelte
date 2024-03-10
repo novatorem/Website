@@ -3,7 +3,6 @@
 >
 	<div class="items-center grid-flow-col">
 		<img width="24" height="24" src="favicon.png" alt="Website logo" class="grayscale" />
-		<p>Andrew Novac</p>
 	</div>
 	<div class="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
 		<label for="mail" class="cursor-pointer"
@@ -55,7 +54,7 @@
 				/><path d="M9 18c-4.51 2-5-2-7-2" /></svg
 			>
 		</a>
-		<a href="https://github.com/andrew-novac"
+		<a href="https://www.linkedin.com/in/andrew-novac"
 			><svg
 				xmlns="http://www.w3.org/2000/svg"
 				width="24"

@@ -139,7 +139,7 @@
 		margin: 0 auto 0 0;
 	}
 
-	.step-icon-savvyy:after,
+	.step-icon-qt:after,
 	.step-icon-cast:after,
 	.step-icon-uoft:after,
 	.step-icon-ib:after,
@@ -148,8 +148,8 @@
 		background-position: center;
 	}
 
-	.step-icon-savvyy:after {
-		background-image: url('/images/experience/savvyy.webp');
+	.step-icon-qt:after {
+		background-image: url('/images/experience/qt.webp');
 		background-size: 50%;
 	}
 
