@@ -24,17 +24,18 @@
 				these songs hold the power to move you. So, step forward, intrepid explorer, and let these
 				echoes guide you through the tapestry of musical melodies.
 			</p>
-
-			<div class="flex justify-center p-4 border-t border-base-300">
+			<div class="flex justify-center p-4 border-t border-base-300 bg-transparent">
 				<iframe
-					title="Spotify embed"
-					src="https://open.spotify.com/embed/playlist/37i9dQZF1EporX1WaV5moq"
+					title="Spotify On Repeat"
+					style="border-radius:12px"
+					src="https://open.spotify.com/embed/playlist/5SJQE2w7ACPBVBQBrnDtak?utm_source=generator&theme=0"
 					width="100%"
 					height="500"
 					frameBorder="0"
-					class="rounded-xl"
-					allow="encrypted-media"
-				/>
+					class="rounded-xl bg-transparent"
+					allow="encrypted-media;"
+					loading="lazy"
+				></iframe>
 			</div>
 		</div>
 	</div>
