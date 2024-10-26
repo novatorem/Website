@@ -140,6 +140,7 @@
 	}
 
 	.step-icon-qt:after,
+	.step-icon-savvyy:after,
 	.step-icon-cast:after,
 	.step-icon-uoft:after,
 	.step-icon-ib:after,
@@ -150,6 +151,11 @@
 
 	.step-icon-qt:after {
 		background-image: url('/images/experience/qt.webp');
+		background-size: 50%;
+	}
+
+	.step-icon-savvyy:after {
+		background-image: url('/images/experience/savvyy.webp');
 		background-size: 50%;
 	}
 

@@ -17,7 +17,7 @@ npm run dev -- --open
 
 ## Debugging
 
-Use VS Code, and with the command pallete, execute:
+Use VS Code, and with the command palette, execute:
 
 ```
 Debug: JavaScript Debug Terminal

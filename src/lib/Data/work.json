@@ -3,21 +3,21 @@
 		"institution": "Questrade",
 		"role": "Backend Engineer",
 		"location": "Toronto, ON",
-		"duration": "Sep 2020 - Current",
+		"duration": "August 2023 - Current",
 		"short": "qt"
 	},
 	{
-		"institution": "Cast Soft",
-		"role": "Software Developer",
+		"institution": "Savvyy AI",
+		"role": "Software Engineer",
 		"location": "Toronto, ON",
-		"duration": "Jan 2020 - Aug 2020",
-		"short": "cast"
+		"duration": "August 2020 - August 2023",
+		"short": "savvyy"
 	},
 	{
 		"institution": "Cast Soft",
-		"role": "Research Developer Intern",
+		"role": "Research Developer Intern / Software Developer",
 		"location": "Toronto, ON",
-		"duration": "May 2018 - Aug 2019",
+		"duration": "May 2018 - Aug 2019 / Jan 2020 - Aug 2020",
 		"short": "cast"
 	}
 ]
