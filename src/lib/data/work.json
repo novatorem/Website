@@ -1,0 +1,44 @@
+[
+	{
+		"id": "qt-senior",
+		"institution": "Questrade",
+		"role": "Senior Backend Engineer",
+		"location": "Toronto, ON",
+		"duration": "Jan 2026 – now",
+		"short": "qt",
+		"tint": { "day": "#151916", "night": "#c4ffb1" }
+	},
+	{
+		"id": "qt",
+		"institution": "Questrade",
+		"role": "Backend Engineer",
+		"location": "Toronto, ON",
+		"duration": "Aug 2023 – Dec 2025",
+		"short": "qt",
+		"tint": { "day": "#151916", "night": "#c4ffb1" }
+	},
+	{
+		"id": "savvyy",
+		"institution": "Savvyy AI",
+		"role": "Software Engineer",
+		"location": "Toronto, ON",
+		"duration": "Aug 2020 – Aug 2023",
+		"short": "savvyy"
+	},
+	{
+		"id": "cast-developer",
+		"institution": "Cast Soft",
+		"role": "Software Developer",
+		"location": "Toronto, ON",
+		"duration": "Jan 2020 – Aug 2020",
+		"short": "cast"
+	},
+	{
+		"id": "cast-intern",
+		"institution": "Cast Soft",
+		"role": "Research Developer Intern",
+		"location": "Toronto, ON",
+		"duration": "May 2018 – Aug 2019",
+		"short": "cast"
+	}
+]
