@@ -1,0 +1,60 @@
+[
+	{
+		"title": "Rez·onate",
+		"description": "Know what your close friends are up to, with real-time status for the people who matter",
+		"link": "https://rez.novac.dev",
+		"image": "/images/projects/rez.jpg",
+		"width": 1280,
+		"height": 800
+	},
+	{
+		"title": "Melodify",
+		"description": "Spotify interface with user stats, music videos, pane views, suggestions, and more",
+		"link": "https://github.com/novatorem/Melodify",
+		"image": "/images/projects/melodify.webp",
+		"width": 800,
+		"height": 450
+	},
+	{
+		"title": "Page Forge",
+		"description": "A dynamic page creator with easy features for forging custom pages",
+		"link": "https://page-forge.novac.dev",
+		"image": "/images/projects/page-forge.jpg",
+		"width": 1901,
+		"height": 955,
+		"focus": "left top"
+	},
+	{
+		"title": "StreamWeaver",
+		"description": "A cross-platform application for virtual events and performances, transmitting data globally",
+		"link": "https://www.liminalet.com/streamweaver-lite",
+		"image": "/images/projects/streamweaver.jpg",
+		"width": 1000,
+		"height": 500,
+		"focus": "left top"
+	},
+	{
+		"title": "Plan",
+		"description": "Turn an idea into an actual website or app, in a course-like format",
+		"link": "https://plan.novac.dev",
+		"image": "/images/projects/plan.jpg",
+		"width": 1400,
+		"height": 812
+	},
+	{
+		"title": "AKA",
+		"description": "Link shortener using serverless programming with custom short codes",
+		"link": "https://aka.novae.one",
+		"image": "/images/projects/aka.jpg",
+		"width": 1400,
+		"height": 708
+	},
+	{
+		"title": "Robotics",
+		"description": "Collision detection, integrated motion planning, dynamic tracking, and pathing",
+		"link": "https://github.com/novatorem/Robotics",
+		"image": "/images/projects/robotics.webp",
+		"width": 720,
+		"height": 720
+	}
+]

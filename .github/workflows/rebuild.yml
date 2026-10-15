@@ -1,0 +1,64 @@
+name: Rebuild
+
+# The Bookshelf and song previews are fetched at build time, so a daily rebuild keeps them current.
+# Pick one way to deploy:
+# - Netlify, Vercel, Cloudflare Pages, Render: create a build (deploy) hook on the host and save its
+#   URL as the DEPLOY_HOOK_URL repository secret. The host builds with its own HARDCOVER_TOKEN and
+#   keeps the last good deploy live if a build fails.
+# - GitHub Pages: set the DEPLOY_TO_PAGES repository variable to `true` and save HARDCOVER_TOKEN as
+#   a repository secret. This workflow then builds and publishes the site itself, on every push too.
+#   Pages serves from the domain root only with a custom domain (novac.dev).
+
+on:
+  schedule:
+    - cron: '17 9 * * *' # daily at 09:17 UTC
+  push:
+    branches: [main, master]
+  workflow_dispatch:
+
+jobs:
+  hook:
+    # Hosts with git integration already build on push
+    if: vars.DEPLOY_TO_PAGES != 'true' && github.event_name != 'push'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger the host's build hook
+        env:
+          DEPLOY_HOOK_URL: ${{ secrets.DEPLOY_HOOK_URL }}
+        run: |
+          if [ -z "$DEPLOY_HOOK_URL" ]; then
+            echo "::notice::DEPLOY_HOOK_URL is not set, so there is nothing to rebuild"
+            exit 0
+          fi
+          curl --fail --silent --show-error --retry 3 -X POST -d '{}' "$DEPLOY_HOOK_URL" > /dev/null
+
+  pages:
+    if: vars.DEPLOY_TO_PAGES == 'true'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    concurrency:
+      group: pages
+      cancel-in-progress: false
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      # A failed Hardcover lookup fails here, and Pages keeps serving the previous deploy
+      - run: npm run build
+        env:
+          HARDCOVER_TOKEN: ${{ secrets.HARDCOVER_TOKEN }}
+      - uses: actions/configure-pages@v6
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: build
+      - id: deploy
+        uses: actions/deploy-pages@v5

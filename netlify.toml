@@ -1,8 +1,10 @@
+# Node comes from .nvmrc, which Netlify reads automatically
 [build]
   command = "npm run build"
   publish = "build"
 
-# [[redirects]]
-#   from = "/.well-known/webfinger"
-#   to = "https://universeodon.com/.well-known/webfinger?resource=acct:Novatorem@universeodon.com"
-#   status = 200
+# Static assets are content-hashed by Vite, so they can be cached forever
+[[headers]]
+  for = "/_app/immutable/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
