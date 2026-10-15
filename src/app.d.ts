@@ -1,12 +1,6 @@
-// See https://kit.svelte.dev/docs/types#app
-// for information about these interfaces
+// App-wide types (https://svelte.dev/docs/kit/types#app.d.ts); none are needed yet
 declare global {
-	namespace App {
-		// interface Error {}
-		// interface Locals {}
-		// interface PageData {}
-		// interface Platform {}
-	}
+	namespace App {}
 }
 
 export {};
