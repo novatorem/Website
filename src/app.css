@@ -119,8 +119,9 @@
 			color 1.1s var(--ease-out);
 	}
 	.gust[data-gust='loose'] {
-		font-stretch: 125%;
-		letter-spacing: 0.06em;
+		/* SectionTitle narrows these on small screens so the loose heading fits one line */
+		font-stretch: var(--loose-stretch, 125%);
+		letter-spacing: var(--loose-tracking, 0.06em);
 		color: var(--spent);
 	}
 
@@ -131,7 +132,7 @@
 	}
 
 	.section-title {
-		font-size: clamp(3.5rem, 11vw, 9rem);
+		font-size: clamp(3rem, 11vw, 9rem);
 		margin-bottom: clamp(2rem, 4vw, 3.5rem);
 		overflow-wrap: anywhere;
 	}
