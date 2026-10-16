@@ -2,6 +2,7 @@
 	import projects from '#lib/data/projects.json';
 	import Icon from '#lib/components/Icon.svelte';
 	import SectionTitle from '#lib/components/SectionTitle.svelte';
+	import { shotAt, shotSrcset } from '#lib/shots.ts';
 	import Repos from './Repos.svelte';
 
 	type Project = (typeof projects)[number] & { focus?: string };
@@ -15,7 +16,9 @@
 	<img
 		class="shot {className}"
 		class:shown
-		src={project.image}
+		src={shotAt(project.image, Math.min(project.width, 1280))}
+		srcset={shotSrcset(project.image, project.width)}
+		sizes="(max-width: 56rem) 92vw, 42vw"
 		alt=""
 		width={project.width}
 		height={project.height}

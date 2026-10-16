@@ -9,51 +9,59 @@ export type Palette = {
 };
 
 // Custom properties may hold light-dark() values, so resolve them through a real element
-export function readPalette(): Palette {
+export function resolveColors<T extends string>(names: readonly T[]): Record<T, string> {
 	const probe = document.createElement('span');
 	probe.style.display = 'none';
 	document.body.append(probe);
-	const resolve = (name: string) => {
+	const colors = {} as Record<T, string>;
+	for (const name of names) {
 		probe.style.color = `var(${name})`;
-		return getComputedStyle(probe).color;
-	};
-	const palette = {
-		settled: [resolve('--particle-1'), resolve('--particle-2'), resolve('--particle-3')],
-		flash: resolve('--particle-flash'),
-		spent: resolve('--particle-spent'),
-		night: currentLight() === 'night'
-	};
+		colors[name] = getComputedStyle(probe).color;
+	}
 	probe.remove();
-	return palette;
+	return colors;
 }
 
-// A star, with an optional four-pointed spark
-export function drawStar(
-	ctx: CanvasRenderingContext2D,
-	x: number,
-	y: number,
-	size: number,
-	spark: boolean
-) {
+export function readPalette(): Palette {
+	const c = resolveColors([
+		'--particle-1',
+		'--particle-2',
+		'--particle-3',
+		'--particle-flash',
+		'--particle-spent'
+	] as const);
+	return {
+		settled: [c['--particle-1'], c['--particle-2'], c['--particle-3']],
+		flash: c['--particle-flash'],
+		spent: c['--particle-spent'],
+		night: currentLight() === 'night'
+	};
+}
+
+// The glyphs add to the current path; the caller begins and fills it
+
+// A star (its four-pointed spark, when it has one, is drawn separately with drawSpark)
+export function traceStar(ctx: CanvasRenderingContext2D, x: number, y: number, size: number) {
 	const r = size * 0.55;
-	ctx.beginPath();
+	ctx.moveTo(x + r, y);
 	ctx.arc(x, y, r, 0, Math.PI * 2);
-	ctx.fill();
-	if (spark) {
-		ctx.fillRect(x - r * 3, y - 0.4, r * 6, 0.8);
-		ctx.fillRect(x - 0.4, y - r * 3, 0.8, r * 6);
-	}
+}
+
+export function drawSpark(ctx: CanvasRenderingContext2D, x: number, y: number, size: number) {
+	const r = size * 0.55;
+	ctx.fillRect(x - r * 3, y - 0.4, r * 6, 0.8);
+	ctx.fillRect(x - 0.4, y - r * 3, 0.8, r * 6);
 }
 
 // A leaf: a pointed ellipse turned by `rot`
-export function drawLeaf(
+export function traceLeaf(
 	ctx: CanvasRenderingContext2D,
 	x: number,
 	y: number,
 	size: number,
 	rot: number
 ) {
-	ctx.beginPath();
-	ctx.ellipse(x, y, size * 1.15, size * 0.5, rot, 0, Math.PI * 2);
-	ctx.fill();
+	const rx = size * 1.15;
+	ctx.moveTo(x + Math.cos(rot) * rx, y + Math.sin(rot) * rx);
+	ctx.ellipse(x, y, rx, size * 0.5, rot, 0, Math.PI * 2);
 }

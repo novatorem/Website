@@ -1,6 +1,6 @@
 # novac.dev
 
-Andrew Novac's homepage: a prerendered SvelteKit site deployed to Netlify.
+Andrew Novac's homepage: a prerendered SvelteKit site, deployed as static files to GitHub Pages, Cloudflare Pages or Vercel.
 
 ![GitHub deployments](https://img.shields.io/github/deployments/novatorem/website/Production?label=deployment)
 
@@ -30,11 +30,12 @@ src/
     +page.server.ts        build-time data: song previews and the bookshelf, fetched in parallel
     +error.svelte          404 page
     covers/                Hardcover covers, resized to WebP at build (prerendered, never proxied live)
+    shots/                 project screenshots as WebP at 640px and up to 1280px, made at build for srcset
   lib/
     site.ts                profile and service URLs
     theme.ts               day/night light: follows the OS until the visitor picks one
     storm/storm.ts         the canvas particle "storm" that condenses words
-    server/                build-time loaders: itunes.ts (song previews), hardcover.ts (bookshelf), covers.ts (cover sizes)
+    server/                build-time loaders: itunes.ts (song previews), hardcover.ts (bookshelf), covers.ts (cover sizes); lib/shots.ts lists screenshot widths
     components/            shared UI: Nav, LightToggle, Icon (+ icons.ts), MailDialog, SectionTitle
     sections/              homepage sections: Hero, Work, Repos, Record, SayHi (contact, portrait and credits)
       on-repeat/           music player: OnRepeat (section), Deck, Tracklist, player.svelte.ts (state)
@@ -45,6 +46,8 @@ static/images/             screenshots and logos; each raster carries an embedde
 scripts/tab-icons.mjs      redraws the static/favicon* tab icons from src/lib/logo.ts and the app.css colours
 ```
 
+Design decisions live in `DESIGN.md` (visual system) and `PRODUCT.md` (audience and content rules).
+
 ## Adding content
 
 - **Project:** add an entry to `src/lib/data/projects.json` with its screenshot in `static/images/projects/`, plus the image's `width`, `height` and, for wide shots, a `focus` crop anchor.
@@ -52,6 +55,16 @@ scripts/tab-icons.mjs      redraws the static/favicon* tab icons from src/lib/lo
 - **Song:** add `title`, `artist`, `spotifyId` and (if Apple has it) `itunesId` to `tracks.json`.
 - **Bookshelf:** comes from Hardcover at build time. Create a token at https://hardcover.app/account/api, put it in `.env` as `HARDCOVER_TOKEN` (see `.env.example`), and set the same variable on your host. Without a token the section links to the Hardcover profile; with a token, a failed lookup fails the build so the last good deploy stays live.
 
+## Deploying
+
+The build is plain static files in `build/` (Node version from `.nvmrc`). Each host needs `HARDCOVER_TOKEN` for the Bookshelf.
+
+- **GitHub Pages:** in the repository settings, set Pages to deploy from GitHub Actions and add the custom domain (the site uses root paths, so it needs `novac.dev` rather than a `/repo` subpath). Add the `DEPLOY_TO_PAGES` variable set to `true` and `HARDCOVER_TOKEN` as a secret; `.github/workflows/rebuild.yml` then builds and publishes on every push and once a day. `static/.nojekyll` keeps Pages from running Jekyll, which would drop the `_app` folder.
+- **Cloudflare Pages:** connect the repository with build command `npm run build` and output directory `build`, and add `HARDCOVER_TOKEN` as an environment variable. `static/_headers` caches the hashed assets for a year.
+- **Vercel:** import the repository; `vercel.json` sets the build command, the `build` output and the asset caching. Add `HARDCOVER_TOKEN` as an environment variable.
+
+All three serve `404.html` for unknown paths and keep the last good deploy live if a build fails.
+
 ## Daily rebuild
 
-The shelf and song previews are fetched at build time, so `.github/workflows/rebuild.yml` rebuilds the site every day. Its header explains the setup for each host: a build hook URL as the `DEPLOY_HOOK_URL` secret (Netlify, Vercel, Cloudflare Pages, Render), or `DEPLOY_TO_PAGES=true` to build and publish on GitHub Pages. GitHub pauses scheduled workflows after 60 days without repository activity; re-enable it from the Actions tab if that happens.
+The shelf and song previews are fetched at build time, so `.github/workflows/rebuild.yml` rebuilds the site every day. On GitHub Pages it rebuilds and publishes by itself; on Cloudflare Pages or Vercel, create a deploy hook and save its URL as the `DEPLOY_HOOK_URL` repository secret. GitHub pauses scheduled workflows after 60 days without repository activity; re-enable it from the Actions tab if that happens.
