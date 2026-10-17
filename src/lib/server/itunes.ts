@@ -27,7 +27,7 @@ export async function loadTracks(fetch: typeof globalThis.fetch): Promise<Track[
 		for (const result of body.results) found.set(result.trackId, result);
 	} catch (err) {
 		// A production build fails instead of quietly deploying a player with no previews;
-		// Netlify then keeps the last good deploy live
+		// the host then keeps the last good deploy live
 		if (building) throw new Error('Could not load song previews from iTunes', { cause: err });
 		console.warn('Could not load song previews:', err);
 	}

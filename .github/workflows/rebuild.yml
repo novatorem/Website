@@ -2,9 +2,9 @@ name: Rebuild
 
 # The Bookshelf and song previews are fetched at build time, so a daily rebuild keeps them current.
 # Pick one way to deploy:
-# - Netlify, Vercel, Cloudflare Pages, Render: create a build (deploy) hook on the host and save its
-#   URL as the DEPLOY_HOOK_URL repository secret. The host builds with its own HARDCOVER_TOKEN and
-#   keeps the last good deploy live if a build fails.
+# - Cloudflare Pages or Vercel: create a deploy hook on the host and save its URL as the
+#   DEPLOY_HOOK_URL repository secret. The host builds with its own HARDCOVER_TOKEN and keeps the
+#   last good deploy live if a build fails.
 # - GitHub Pages: set the DEPLOY_TO_PAGES repository variable to `true` and save HARDCOVER_TOKEN as
 #   a repository secret. This workflow then builds and publishes the site itself, on every push too.
 #   Pages serves from the domain root only with a custom domain (novac.dev).
