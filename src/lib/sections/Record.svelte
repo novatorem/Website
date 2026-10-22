@@ -1,6 +1,7 @@
 <script lang="ts">
 	import work from '#lib/data/work.json';
 	import education from '#lib/data/education.json';
+	import { asset } from '#lib/assets.ts';
 	import Icon from '#lib/components/Icon.svelte';
 	import SectionTitle from '#lib/components/SectionTitle.svelte';
 
@@ -40,13 +41,13 @@
 					<!-- A one-colour brand mark, painted in the brand's own day and night colours -->
 					<span
 						class="mark"
-						style:--logo="url(/images/experience/{entry.short}.png)"
+						style:--logo="url({asset(`/images/experience/${entry.short}.png`)})"
 						style:--day={entry.tint.day}
 						style:--night={entry.tint.night}
 					></span>
 				{:else}
 					<img
-						src="/images/experience/{entry.short}.png"
+						src={asset(`/images/experience/${entry.short}.png`)}
 						alt=""
 						width="20"
 						height="20"

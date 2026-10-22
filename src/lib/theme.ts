@@ -1,3 +1,5 @@
+import { asset } from '#lib/assets.ts';
+
 // The light follows the OS until the visitor picks one; a pick lives on <html data-theme>
 export type Light = 'day' | 'night';
 
@@ -35,7 +37,9 @@ export function paintTabIcon() {
 	const icon = document.getElementById('tab-icon');
 	if (!(icon instanceof HTMLLinkElement)) return;
 	const forced = document.documentElement.dataset.theme;
-	const href = forced === 'day' || forced === 'night' ? `/favicon-${forced}.svg` : '/favicon.svg';
+	const href = asset(
+		forced === 'day' || forced === 'night' ? `/favicon-${forced}.svg` : '/favicon.svg'
+	);
 	if (icon.href === new URL(href, location.href).href) return;
 	// Replaced rather than edited: Chrome ignores href changes on an existing icon link
 	const next = icon.cloneNode() as HTMLLinkElement;

@@ -33,6 +33,7 @@ src/
     shots/                 project screenshots as WebP at 640px and up to 1280px, made at build for srcset
   lib/
     site.ts                profile and service URLs
+    assets.ts              static asset URLs that respect the deployment base path
     theme.ts               day/night light: follows the OS until the visitor picks one
     storm/storm.ts         the canvas particle "storm" that condenses words
     server/                build-time loaders: itunes.ts (song previews), hardcover.ts (bookshelf), covers.ts (cover sizes); lib/shots.ts lists screenshot widths
@@ -59,7 +60,7 @@ Design decisions live in `DESIGN.md` (visual system) and `PRODUCT.md` (audience 
 
 The build is plain static files in `build/` (Node version from `.nvmrc`). Each host needs `HARDCOVER_TOKEN` for the Bookshelf.
 
-- **GitHub Pages:** in the repository settings, set Pages to deploy from GitHub Actions and add the custom domain (the site uses root paths, so it needs `novac.dev` rather than a `/repo` subpath). Add the `DEPLOY_TO_PAGES` variable set to `true` and `HARDCOVER_TOKEN` as a secret; `.github/workflows/rebuild.yml` then builds and publishes on every push and once a day. `static/.nojekyll` keeps Pages from running Jekyll, which would drop the `_app` folder.
+- **GitHub Pages:** in the repository settings, set Pages to deploy from GitHub Actions. Add the `DEPLOY_TO_PAGES` variable set to `true` and `HARDCOVER_TOKEN` as a secret; `.github/workflows/rebuild.yml` builds for the `/Website` project subpath and publishes on every push and once a day. `static/.nojekyll` keeps Pages from running Jekyll, which would drop the `_app` folder.
 - **Cloudflare Pages:** connect the repository with build command `npm run build` and output directory `build`, and add `HARDCOVER_TOKEN` as an environment variable. `static/_headers` caches the hashed assets for a year.
 - **Vercel:** import the repository; `vercel.json` sets the build command, the `build` output and the asset caching. Add `HARDCOVER_TOKEN` as an environment variable.
 
@@ -67,4 +68,4 @@ All three serve `404.html` for unknown paths and keep the last good deploy live 
 
 ## Daily rebuild
 
-The shelf and song previews are fetched at build time, so `.github/workflows/rebuild.yml` rebuilds the site every day. On GitHub Pages it rebuilds and publishes by itself; on Cloudflare Pages or Vercel, create a deploy hook and save its URL as the `DEPLOY_HOOK_URL` repository secret. GitHub pauses scheduled workflows after 60 days without repository activity; re-enable it from the Actions tab if that happens.
+The shelf and song previews are fetched at build time, so `.github/workflows/rebuild.yml` rebuilds the site every day. GitHub Pages builds and publishes when `DEPLOY_TO_PAGES` is `true`; Cloudflare Pages or Vercel can also rebuild from the same schedule through a deploy hook. To enable Vercel, create a hook under **Project Settings → Git → Deploy Hooks** for the production branch, then save its URL as the `DEPLOY_HOOK_URL` repository secret under **GitHub repository Settings → Secrets and variables → Actions**. Set `HARDCOVER_TOKEN` in the Vercel project's production environment variables. Pages and Vercel can both deploy daily; on pushes, Pages publishes through Actions and Vercel uses its Git integration. GitHub pauses scheduled workflows after 60 days without repository activity; re-enable it from the Actions tab if that happens.

@@ -27,7 +27,7 @@
 			if (forced) {
 				const icon = document.getElementById('tab-icon');
 				const next = icon.cloneNode();
-				next.href = `/favicon-${forced}.svg`;
+				next.href = `%sveltekit.assets%/favicon-${forced}.svg`;
 				icon.replaceWith(next);
 			}
 		</script>

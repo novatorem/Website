@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { asset } from '#lib/assets.ts';
 	import Icon from '#lib/components/Icon.svelte';
 	import { site } from '#lib/site.ts';
 
@@ -17,7 +18,7 @@
 		<div class="contact">
 			<img
 				class="avatar"
-				src="/images/avatar.png"
+				src={asset('/images/avatar.png')}
 				alt="Illustrated portrait of Andrew Novac"
 				width="99"
 				height="132"

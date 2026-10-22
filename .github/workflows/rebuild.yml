@@ -1,13 +1,9 @@
 name: Rebuild
 
 # The Bookshelf and song previews are fetched at build time, so a daily rebuild keeps them current.
-# Pick one way to deploy:
-# - Cloudflare Pages or Vercel: create a deploy hook on the host and save its URL as the
-#   DEPLOY_HOOK_URL repository secret. The host builds with its own HARDCOVER_TOKEN and keeps the
-#   last good deploy live if a build fails.
-# - GitHub Pages: set the DEPLOY_TO_PAGES repository variable to `true` and save HARDCOVER_TOKEN as
-#   a repository secret. This workflow then builds and publishes the site itself, on every push too.
-#   Pages serves from the domain root only with a custom domain (novac.dev).
+# - GitHub Pages: set DEPLOY_TO_PAGES to `true`; this workflow builds and publishes the site.
+# - Cloudflare Pages or Vercel: save a host deploy hook URL as DEPLOY_HOOK_URL. The host builds
+#   with its own HARDCOVER_TOKEN. Both approaches can run together on the daily schedule.
 
 on:
   schedule:
@@ -19,7 +15,7 @@ on:
 jobs:
   hook:
     # Hosts with git integration already build on push
-    if: vars.DEPLOY_TO_PAGES != 'true' && github.event_name != 'push'
+    if: github.event_name != 'push'
     runs-on: ubuntu-latest
     steps:
       - name: Trigger the host's build hook
@@ -56,6 +52,7 @@ jobs:
       - run: npm run build
         env:
           HARDCOVER_TOKEN: ${{ secrets.HARDCOVER_TOKEN }}
+          BASE_PATH: /Website
       - uses: actions/configure-pages@v6
       - uses: actions/upload-pages-artifact@v5
         with:

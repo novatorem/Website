@@ -2,6 +2,7 @@
 	"extends": "$app/tsconfig",
 	"compilerOptions": {
 		"allowJs": true,
+		"allowImportingTsExtensions": true,
 		"checkJs": true,
 		"resolveJsonModule": true,
 		"skipLibCheck": true,
